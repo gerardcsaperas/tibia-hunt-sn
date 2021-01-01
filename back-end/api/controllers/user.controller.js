@@ -1,5 +1,5 @@
-import userService from '../services/user';
-import { queryToMongoFilter } from '../utils/queryToMongoFilter';
+const userService = require('../services/user.service');
+const { queryToMongoFilter } = require('../utils/queryToMongoFilter');
 
 /*
 type:    GET
