@@ -1,11 +1,33 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const validator = require('validator');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 
 const userSchema = new Schema({
-
+	username: {
+		type: String,
+		unique: true,
+		trim: true,
+		required: true
+	},
+	email: {
+		type: String,
+		unique: true,
+		lowercase: true,
+		required: true,
+		trim: true,
+		validate: {
+			validator: email => validator.isEmail(email),
+			message: '"{VALUE}" is not a valid email'
+		}
+	},
+	password: {
+		type: String,
+		required: true,
+		minLength: 8
+	},
     tokens: [String]
 },
 {
@@ -31,12 +53,10 @@ userSchema.statics.findByCredentials = async (email, password) => {
 };
 
 // Generate authentication token for users
-userSchema.methods.generateAuthToken = async () => {
+userSchema.methods.generateAuthToken = async function() {
 	const user = this;
 
 	const token = jwt.sign({ _id: user._id.toString() }, process.env.JWT_TOKEN, { expiresIn: '30 days' });
-
-	console.log(token);
 
 	user.tokens = user.tokens.concat(token);
 	await user.save();

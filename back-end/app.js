@@ -18,7 +18,7 @@ let routeFiles = fs.readdirSync(__dirname + routesDir);
 
 routeFiles.forEach( fileName => {
     let route = require(__dirname + routesDir + fileName);
-    app.use(route);
+    app.use(process.env.API_BASE_PATH, route);
 });
 
 app.listen(PORT, () => {

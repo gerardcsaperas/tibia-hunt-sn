@@ -1,3 +1,4 @@
+const User = require('../models/user');
 const userService = require('../services/user.service');
 const { queryToMongoFilter } = require('../utils/queryToMongoFilter');
 
@@ -7,6 +8,9 @@ desc:    Get a user by Id
 auth:    Private
 */
 async function findById(req, res) {
+
+    return res.send('test')
+
     const user = await userService.find(req.user._id);
 
     console.log(user);
@@ -18,15 +22,19 @@ desc:    Create a new user
 auth:    Public
 */
 async function create(req, res) {
+
     const user = new User(req.body);
 
 	try {
-		const password = await bcrypt.hash(user.password, 12);
-		user.password = password;
 
-		const token = await user.generateAuthToken();
-		res.status(201).send({ user, token });
+        const token = await user.generateAuthToken();
+
+        await user.save()
+
+        res.status(201).send({ user, token });
+        
 	} catch (e) {
+        console.log(e.message);
 		res.status(400).send(e);
 	}
 }

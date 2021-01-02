@@ -3,7 +3,7 @@ const auth  = require('../middleware/auth');
 const userController = require('../controllers/user.controller.js');
 const router = new express.Router();
 
-router.get('/user', auth, userController.findById);
+router.get('/user/:id', auth, userController.findById);
 router.post('/user', userController.create);
 router.put('/user', auth, userController.update);
 router.put('/user/notifications', auth, userController.updateNotifications);
