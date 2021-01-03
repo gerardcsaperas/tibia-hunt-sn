@@ -4,6 +4,8 @@ const User = require('../models/user');
 const auth = async (req, res, next) => {
 
 	if (process.env.NODE_ENV === 'development') {
+		const user = await User.findById(process.env.DEV_UID)
+		req.user = user;
 		return next()
 	}
 

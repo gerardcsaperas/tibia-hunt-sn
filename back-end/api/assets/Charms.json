@@ -1,0 +1,21 @@
+[
+  { "name": "Wound", "type": "Offensive" },
+  { "name": "Enflame", "type": "Offensive" },
+  { "name": "Poison", "type": "Offensive" },
+  { "name": "Freeze", "type": "Offensive" },
+  { "name": "Zap", "type": "Offensive" },
+  { "name": "Curse (Charm)", "type": "Offensive" },
+  { "name": "Cripple", "type": "Offensive" },
+  { "name": "Parry", "type": "Defensive" },
+  { "name": "Dodge", "type": "Defensive" },
+  { "name": "Adrenaline Burst", "type": "Defensive" },
+  { "name": "Numb", "type": "Defensive" },
+  { "name": "Cleanse", "type": "Defensive" },
+  { "name": "Bless", "type": "Passive" },
+  { "name": "Scavenge", "type": "Passive" },
+  { "name": "Gut", "type": "Passive" },
+  { "name": "Low Blow", "type": "Passive" },
+  { "name": "Divine Wrath", "type": "Offensive" },
+  { "name": "Vampiric Embrace", "type": "Passive" },
+  { "name": "Void's Call", "type": "Passive" }
+]

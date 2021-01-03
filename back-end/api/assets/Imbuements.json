@@ -1,0 +1,488 @@
+[
+  {
+    "name": "Basic Scorch",
+    "Amount converted": "10%",
+    "Required Astral Sources": "25 Fiery Hearts",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Scorch",
+    "Amount converted": "25%",
+    "Required Astral Sources": "25 Fiery Hearts, 5 Green Dragon Scales",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Scorch",
+    "Amount converted": "50%",
+    "Required Astral Sources": "25 Fiery Hearts, 5 Green Dragon Scales, 5 Demon Horns",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Venom",
+    "Amount converted": "10%",
+    "Required Astral Sources": "25 Swamp Grass",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Venom",
+    "Amount converted": "25%",
+    "Required Astral Sources": "25 Swamp Grass, 20 Poisonous Slimes",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Venom",
+    "Amount converted": "50%",
+    "Required Astral Sources": "25 Swamp Grass, 20 Poisonous Slimes, 2 Slime Hearts",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Frost",
+    "Amount converted": "10%",
+    "Required Astral Sources": "25 Frosty Hearts",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Frost",
+    "Amount converted": "25%",
+    "Required Astral Sources": "25 Frosty Hearts, 10 Seacrest Hair",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Frost",
+    "Amount converted": "50%",
+    "Required Astral Sources": "25 Frosty Hearts, 10 Seacrest Hair, 5 Polar Bear Paws",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Electrify",
+    "Amount converted": "10%",
+    "Required Astral Sources": "25 Rorc Feathers",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Electrify",
+    "Amount converted": "25%",
+    "Required Astral Sources": "25 Rorc Feathers, 5 Peacock Feather Fans",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Electrify",
+    "Amount converted": "50%",
+    "Required Astral Sources": "25 Rorc Feathers, 5 Peacock Feather Fans, 1 Energy Vein",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Reap",
+    "Amount converted": "10%",
+    "Required Astral Sources": "25 Piles of Grave Earth",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Reap",
+    "Amount converted": "25%",
+    "Required Astral Sources": "25 Piles of Grave Earth, 20 Demonic Skeletal Hands",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Reap",
+    "Amount converted": "50%",
+    "Required Astral Sources": "25 Piles of Grave Earth, 20 Demonic Skeletal Hands, 5 Petrified Screams",
+    "Available for": "Melee Weapons, Bows and Crossbows",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Vampirism",
+    "Amount leeched": "5%",
+    "Required Astral Sources": "25 Vampire Teeth",
+    "Available for": "All Weapons* and Armors",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Vampirism",
+    "Amount leeched": "10%",
+    "Required Astral Sources": "25 Vampire Teeth, 15 Bloody Pincers",
+    "Available for": "All Weapons* and Armors",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Vampirism",
+    "Amount leeched": "25%",
+    "Required Astral Sources": "25 Vampire Teeth, 15 Bloody Pincers, 5 Piece of Dead Brain",
+    "Available for": "All Weapons* and Armors",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Void",
+    "Amount leeched": "3%",
+    "Required Astral Sources": "25 Rope Belts",
+    "Available for": "All Weapons and Helmets",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Void",
+    "Amount leeched": "5%",
+    "Required Astral Sources": "25 Rope Belts, 25 Silencer Claws",
+    "Available for": "All Weapons and Helmets",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Void",
+    "Amount leeched": "8%",
+    "Required Astral Sources": "25 Rope Belts, 25 Silencer Claws, 5 Some Grimeleech Wings",
+    "Available for": "All Weapons and Helmets",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Strike",
+    "Extra Chance": "10%",
+    "Critical Damage increased by": "15%",
+    "Required Astral Sources": "20 Protective Charms",
+    "Available for": "Melee Weapons, Bows, Crossbows and some special wands and rods*",
+    "type": "Attack"
+  },
+  {
+    "name": "Intricate Strike",
+    "Extra Chance": "10%",
+    "Critical Damage increased by": "25%",
+    "Required Astral Sources": "20 Protective Charms, 25 Sabreteeth",
+    "Available for": "Melee Weapons, Bows, Crossbows and some special wands and rods*",
+    "type": "Attack"
+  },
+  {
+    "name": "Powerful Strike",
+    "Extra Chance": "10%",
+    "Critical Damage increased by": "50%",
+    "Required Astral Sources": "20 Protective Charms, 25 Sabreteeth, 5 Vexclaw Talons",
+    "Available for": "Melee Weapons, Bows, Crossbows and some special wands and rods*",
+    "type": "Attack"
+  },
+  {
+    "name": "Basic Lich Shroud",
+    "Protection percent **": "2%",
+    "Required Astral Sources": "25 Flasks of Embalming Fluid",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Lich Shroud",
+    "Protection percent **": "5%",
+    "Required Astral Sources": "25 Flasks of Embalming Fluid, 20 Gloom Wolf Furs",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Lich Shroud",
+    "Protection percent **": "10%",
+    "Required Astral Sources": "25 Flasks of Embalming Fluid, 20 Gloom Wolf Furs, 5 Mystical Hourglasses",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Snake Skin",
+    "Protection percent": "3%",
+    "Required Astral Sources": "25 Pieces of Swampling Wood",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Snake Skin",
+    "Protection percent": "8%",
+    "Required Astral Sources": "25 Pieces of Swampling Wood, 20 Snake Skins",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Snake Skin",
+    "Protection percent": "15%",
+    "Required Astral Sources": "25 Pieces of Swampling Wood, 20 Snake Skins, 10 Brimstone Fangs",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Dragon Hide",
+    "Protection percent": "3%",
+    "Required Astral Sources": "20 Green Dragon Leathers",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Dragon Hide",
+    "Protection percent": "8%",
+    "Required Astral Sources": "20 Green Dragon Leathers, 10 Blazing Bones",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Dragon Hide",
+    "Protection percent": "15%",
+    "Required Astral Sources": "20 Green Dragon Leathers, 10 Blazing Bones, 5 Draken Sulphur",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Quara Scale",
+    "Protection percent": "3%",
+    "Required Astral Sources": "25 Winter Wolf Furs",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Quara Scale",
+    "Protection percent": "8%",
+    "Required Astral Sources": "25 Winter Wolf Furs, 15 Thick Furs",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Quara Scale",
+    "Protection percent": "15%",
+    "Required Astral Sources": "25 Winter Wolf Furs, 15 Thick Furs, 10 Deepling Warts",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Cloud Fabric",
+    "Protection percent": "3%",
+    "Required Astral Sources": "20 Wyvern Talismans",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Cloud Fabric",
+    "Protection percent": "8%",
+    "Required Astral Sources": "20 Wyvern Talismans, 15 Crawler Head Platings",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Cloud Fabric",
+    "Protection percent": "15%",
+    "Required Astral Sources": "20 Wyvern Talismans, 15 Crawler Head Platings, 10 Wyrm Scales",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Demon Presence",
+    "Protection percent": "3%",
+    "Required Astral Sources": "25 Cultish Robes",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Demon Presence",
+    "Protection percent": "8%",
+    "Required Astral Sources": "25 Cultish Robes, 25 Cultish Masks",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Demon Presence",
+    "Protection percent": "15%",
+    "Required Astral Sources": "25 Cultish Robes, 25 Cultish Masks, 20 Hellspawn Tails",
+    "Available for": "All* Armors, Shields and Spellbooks",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Vibrancy",
+    "Chance": "15%",
+    "Required Astral Sources": "20 Wereboar Hooves",
+    "Available for": "Boots",
+    "type": "Protective"
+  },
+  {
+    "name": "Intricate Vibrancy",
+    "Chance": "25%",
+    "Required Astral Sources": "20 Wereboar Hooves, 15 Crystallized Anger",
+    "Available for": "Boots",
+    "type": "Protective"
+  },
+  {
+    "name": "Powerful Vibrancy",
+    "Chance": "50%",
+    "Required Astral Sources": "20 Wereboar Hooves, 15 Crystallized Anger, 5 Quills",
+    "Available for": "Boots",
+    "type": "Protective"
+  },
+  {
+    "name": "Basic Swiftness",
+    "Speed increased": "10",
+    "Required Astral Sources": "15 Damselfly Wings",
+    "Available for": "Boots",
+    "type": "Support"
+  },
+  {
+    "name": "Intricate Swiftness",
+    "Speed increased": "15",
+    "Required Astral Sources": "15 Damselfly Wings, 25 Compasses",
+    "Available for": "Boots",
+    "type": "Support"
+  },
+  {
+    "name": "Powerful Swiftness",
+    "Speed increased": "30",
+    "Required Astral Sources": "15 Damselfly Wings, 25 Compasses, 20 Waspoid Wings",
+    "Available for": "Boots",
+    "type": "Support"
+  },
+  {
+    "name": "Basic Featherweight",
+    "Extra Capacity": "3%",
+    "Required Astral Sources": "20 Fairy Wings",
+    "Available for": "Backpacks",
+    "type": "Support"
+  },
+  {
+    "name": "Intricate Featherweight",
+    "Extra Capacity": "8%",
+    "Required Astral Sources": "20 Fairy Wings, 10 Little Bowls of Myrrh",
+    "Available for": "Backpacks",
+    "type": "Support"
+  },
+  {
+    "name": "Powerful Featherweight",
+    "Extra Capacity": "15%",
+    "Required Astral Sources": "20 Fairy Wings, 10 Little Bowls of Myrrh, 5 Goosebump Leather",
+    "Available for": "Backpacks",
+    "type": "Support"
+  },
+  {
+    "name": "Basic Chop",
+    "Skill increased": "1",
+    "Required Astral Sources": "20 Orc Teeth",
+    "Available for": "All Helmets and Axe Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Chop",
+    "Skill increased": "2",
+    "Required Astral Sources": "20 Orc Teeth, 25 Battle Stones",
+    "Available for": "All Helmets and Axe Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Chop",
+    "Skill increased": "4",
+    "Required Astral Sources": "20 Orc Teeth, 25 Battle Stones, 20 Moohtant Horns",
+    "Available for": "All Helmets and Axe Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Basic Slash",
+    "Skill increased": "1",
+    "Required Astral Sources": "25 Lion's Manes",
+    "Available for": "All Helmets and Sword Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Slash",
+    "Skill increased": "2",
+    "Required Astral Sources": "25 Lion's Manes, 25 Mooh'tah Shells",
+    "Available for": "All Helmets and Sword Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Slash",
+    "Skill increased": "4",
+    "Required Astral Sources": "25 Lion's Manes, 25 Mooh'tah Shells, 5 War Crystals",
+    "Available for": "All Helmets and Sword Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Basic Bash",
+    "Skill increased": "1",
+    "Required Astral Sources": "20 Cyclops Toes",
+    "Available for": "All Helmets and Club Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Bash",
+    "Skill increased": "2",
+    "Required Astral Sources": "20 Cyclops Toes, 15 Ogre Nose Rings",
+    "Available for": "All Helmets and Club Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Bash",
+    "Skill increased": "4",
+    "Required Astral Sources": "20 Cyclops Toes, 15 Ogre Nose Rings, 10 Warmaster's Wristguards",
+    "Available for": "All Helmets and Club Weapons",
+    "type": "Skills"
+  },
+  {
+    "name": "Basic Precision",
+    "Skill increased": "1",
+    "Required Astral Sources": "25 Elven Scouting Glasses",
+    "Available for": "All Helmets and Bows",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Precision",
+    "Skill increased": "2",
+    "Required Astral Sources": "25 Elven Scouting Glasses, 20 Elven Hoofs",
+    "Available for": "All Helmets and Bows",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Precision",
+    "Skill increased": "4",
+    "Required Astral Sources": "25 Elven Scouting Glasses, 20 Elven Hoofs, 10 Metal Spikes",
+    "Available for": "All Helmets and Bows",
+    "type": "Skills"
+  },
+  {
+    "name": "Basic Blockade",
+    "Shielding increased": "1",
+    "Required Astral Sources": "20 Pieces of Scarab Shell",
+    "Available for": "All Helmets, Shields and Spellbooks",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Blockade",
+    "Shielding increased": "2",
+    "Required Astral Sources": "20 Pieces of Scarab Shell, 25 Brimstone Shells",
+    "Available for": "All Helmets, Shields and Spellbooks",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Blockade",
+    "Shielding increased": "4",
+    "Required Astral Sources": "20 Pieces of Scarab Shell, 25 Brimstone Shells, 25 Frazzle Skins",
+    "Available for": "All Helmets, Shields and Spellbooks",
+    "type": "Skills"
+  },
+  {
+    "name": "Basic Epiphany",
+    "Extra Magic Level": "1",
+    "Required Astral Sources": "25 Elvish Talismans",
+    "Available for": "All Wands and mage-exclusive Helmets*",
+    "type": "Skills"
+  },
+  {
+    "name": "Intricate Epiphany",
+    "Extra Magic Level": "2",
+    "Required Astral Sources": "25 Elvish Talismans, 15 Broken Shamanic Staffs",
+    "Available for": "All Wands and mage-exclusive Helmets*",
+    "type": "Skills"
+  },
+  {
+    "name": "Powerful Epiphany",
+    "Extra Magic Level": "4",
+    "Required Astral Sources": "25 Elvish Talismans, 15 Broken Shamanic Staffs, 15 Strands of Medusa Hair",
+    "Available for": "All Wands and mage-exclusive Helmets*",
+    "type": "Skills"
+  }
+]
