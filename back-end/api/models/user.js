@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 const validator = require('validator');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
@@ -28,6 +28,24 @@ const userSchema = new Schema({
 		required: true,
 		minLength: 8
 	},
+	avatar: {
+		type: String //HERE POST from React ?
+	},
+	country: {
+		type: String,
+		required: false,
+		trim: true
+	},
+	stars: {
+		type: Number,
+		default: 0,
+		min: 0,
+		max: 5
+	},
+	characters: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Character'
+	}],
     tokens: [String]
 },
 {
@@ -110,6 +128,6 @@ userSchema.pre('remove', async function (next) {
 });
 
 // Create a new model for user
-const User = mongoose.model('User', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;

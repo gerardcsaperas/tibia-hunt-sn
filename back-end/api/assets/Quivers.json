@@ -1,0 +1,6 @@
+[
+  { "name": "Blue Quiver", "image": "item-icon", "type": "Quivers" },
+  { "name": "Jungle Quiver", "image": "item-icon", "type": "Quivers" },
+  { "name": "Quiver", "image": "item-icon", "type": "Quivers" },
+  { "name": "Red Quiver", "image": "item-icon", "type": "Quivers" }
+]

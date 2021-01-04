@@ -1,0 +1,82 @@
+[
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/56/Small_Health_Potion.gif/revision/latest?cb=20170904190038&path-prefix=en",
+    "name": "Small Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e2/Health_Potion.gif/revision/latest?cb=20171128183347&path-prefix=en",
+    "name": "Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/78/Strong_Health_Potion.gif/revision/latest/scale-to-width-down/32?cb=20171128183348&amp;path-prefix=en",
+    "name": "Strong Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/91/Great_Health_Potion.gif/revision/latest/scale-to-width-down/32?cb=20171128183349&amp;path-prefix=en",
+    "name": "Great Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7b/Ultimate_Health_Potion.gif/revision/latest/scale-to-width-down/32?cb=20160416080121&amp;path-prefix=en",
+    "name": "Ultimate Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/55/Supreme_Health_Potion.gif/revision/latest/scale-to-width-down/32?cb=20160415182102&amp;path-prefix=en",
+    "name": "Supreme Health Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/43/Mana_Potion.gif/revision/latest/scale-to-width-down/32?cb=20170904190239&amp;path-prefix=en",
+    "name": "Mana Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3c/Strong_Mana_Potion.gif/revision/latest/scale-to-width-down/32?cb=20171128183348&amp;path-prefix=en",
+    "name": "Strong Mana Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5b/Great_Mana_Potion.gif/revision/latest/scale-to-width-down/32?cb=20071207044312&amp;path-prefix=en",
+    "name": "Great Mana Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b8/Ultimate_Mana_Potion.gif/revision/latest/scale-to-width-down/32?cb=20160415181417&amp;path-prefix=en",
+    "name": "Ultimate Mana Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/08/Great_Spirit_Potion.gif/revision/latest/scale-to-width-down/32?cb=20080408150451&amp;path-prefix=en",
+    "name": "Great Spirit Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f0/Ultimate_Spirit_Potion.gif/revision/latest/scale-to-width-down/32?cb=20160415181740&amp;path-prefix=en",
+    "name": "Ultimate Spirit Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/54/Antidote_Potion.gif/revision/latest/scale-to-width-down/32?cb=20170904190454&amp;path-prefix=en",
+    "name": "Antidote Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ad/Mastermind_Potion.gif/revision/latest/scale-to-width-down/32?cb=20070702202541&amp;path-prefix=en",
+    "name": "Mastermind Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c0/Berserk_Potion.gif/revision/latest/scale-to-width-down/32?cb=20170904191017&amp;path-prefix=en",
+    "name": "Berserk Potion",
+    "type": "Potions"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/99/Bullseye_Potion.gif/revision/latest/scale-to-width-down/32?cb=20070621174715&amp;path-prefix=en",
+    "name": "Bullseye Potion",
+    "type": "Potions"
+  }
+]

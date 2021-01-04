@@ -1,0 +1,432 @@
+[
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f2/Ornamented_Brooch.gif/revision/latest/scale-to-width-down/32?cb=20110923000029&amp;path-prefix=en",
+    "name": "Ornamented Brooch",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/18/Gill_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20120622164101&amp;path-prefix=en",
+    "name": "Gill Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/18/Silver_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050602205437&amp;path-prefix=en",
+    "name": "Silver Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c6/Ancient_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614175355&amp;path-prefix=en",
+    "name": "Ancient Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c6/Scarab_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614184752&amp;path-prefix=en",
+    "name": "Scarab Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e1/Bronze_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20051003195432&amp;path-prefix=en",
+    "name": "Bronze Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6e/Paw_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20051221122616&amp;path-prefix=en",
+    "name": "Paw Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/35/Demonbone_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20061216131428&amp;path-prefix=en",
+    "name": "Demonbone Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ed/Terra_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20071215050422&amp;path-prefix=en",
+    "name": "Terra Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5a/Koshei%27s_Ancient_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20170623064819&amp;path-prefix=en",
+    "name": "Koshei's Ancient Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/53/Sapphire_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20080518222118&amp;path-prefix=en",
+    "name": "Sapphire Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d6/Glacier_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20080620144036&amp;path-prefix=en",
+    "name": "Glacier Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b5/Jerom%27s_Family_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20120403181016&amp;path-prefix=en",
+    "name": "Jerom's Family Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/35/Lightning_Pendant.gif/revision/latest/scale-to-width-down/32?cb=20081203150155&amp;path-prefix=en",
+    "name": "Lightning Pendant",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/31/Magma_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20081203150013&amp;path-prefix=en",
+    "name": "Magma Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d3/Leviathan%27s_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20170906143215&amp;path-prefix=en",
+    "name": "Leviathan's Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/41/Shockwave_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20090619202015&amp;path-prefix=en",
+    "name": "Shockwave Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/16/Sacred_Tree_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20170906143340&amp;path-prefix=en",
+    "name": "Sacred Tree Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b3/Friendship_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20150125161151&amp;path-prefix=en",
+    "name": "Friendship Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d2/Beetle_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20091130013002&amp;path-prefix=en",
+    "name": "Beetle Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/10/Lucky_Clover_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20091201093445&amp;path-prefix=en",
+    "name": "Lucky Clover Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c3/Wailing_Widow%27s_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20091202003245&amp;path-prefix=en",
+    "name": "Wailing Widow's Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/06/Necklace_of_the_Deep.gif/revision/latest/scale-to-width-down/32?cb=20111129193638&amp;path-prefix=en",
+    "name": "Necklace of the Deep",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3f/Bonfire_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20111204172739&amp;path-prefix=en",
+    "name": "Bonfire Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3f/Golden_Scorpion_Pendant.gif/revision/latest/scale-to-width-down/32?cb=20111130235341&amp;path-prefix=en",
+    "name": "Golden Scorpion Pendant",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fa/Golden_Hyena_Pendant.gif/revision/latest/scale-to-width-down/32?cb=20111130232028&amp;path-prefix=en",
+    "name": "Golden Hyena Pendant",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d0/Bronze_Medal.gif/revision/latest/scale-to-width-down/32?cb=20090329134741&amp;path-prefix=en",
+    "name": "Bronze Medal",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Silver_Medal.gif/revision/latest/scale-to-width-down/32?cb=20090329134744&amp;path-prefix=en",
+    "name": "Silver Medal",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7d/Gold_Medal.gif/revision/latest/scale-to-width-down/32?cb=20090329134747&amp;path-prefix=en",
+    "name": "Gold Medal",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b4/Prismatic_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20120622164103&amp;path-prefix=en",
+    "name": "Prismatic Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/21/Lion_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20200611034741&amp;path-prefix=en",
+    "name": "Lion Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/57/The_Cobra_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20190701193850&amp;path-prefix=en",
+    "name": "The Cobra Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/13/Amulet_of_Loss.gif/revision/latest/scale-to-width-down/32?cb=20050614175324&amp;path-prefix=en",
+    "name": "Amulet of Loss",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cf/Wolf_Tooth_Chain.gif/revision/latest/scale-to-width-down/32?cb=20170906173522&amp;path-prefix=en",
+    "name": "Wolf Tooth Chain",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3e/Crystal_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20170906143101&amp;path-prefix=en",
+    "name": "Crystal Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b0/Dragon_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20120424123714&amp;path-prefix=en",
+    "name": "Dragon Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f1/Elven_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614180126&amp;path-prefix=en",
+    "name": "Elven Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/16/Garlic_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20050614184042&amp;path-prefix=en",
+    "name": "Garlic Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/84/Golden_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20120403183412&amp;path-prefix=en",
+    "name": "Golden Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/42/Platinum_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050531085148&amp;path-prefix=en",
+    "name": "Platinum Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Protection_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614184446&amp;path-prefix=en",
+    "name": "Protection Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Stone_Skin_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20120411043545&amp;path-prefix=en",
+    "name": "Stone Skin Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f4/Star_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614185030&amp;path-prefix=en",
+    "name": "Star Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ee/Bronze_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614175419&amp;path-prefix=en",
+    "name": "Bronze Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c6/Broken_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20050614190006&amp;path-prefix=en",
+    "name": "Broken Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3f/Silver_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20050614184815&amp;path-prefix=en",
+    "name": "Silver Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e1/Ruby_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20050614184606&amp;path-prefix=en",
+    "name": "Ruby Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Scarf.gif/revision/latest/scale-to-width-down/32?cb=20070205185214&amp;path-prefix=en",
+    "name": "Scarf",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/66/Strange_Talisman.gif/revision/latest/scale-to-width-down/32?cb=20170906173721&amp;path-prefix=en",
+    "name": "Strange Talisman",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/50/Shrunken_Head_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20130903162130&amp;path-prefix=en",
+    "name": "Shrunken Head Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/dc/Jade_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20150604111454&amp;path-prefix=en",
+    "name": "Jade Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/74/Gearwheel_Chain.gif/revision/latest/scale-to-width-down/32?cb=20140615115451&amp;path-prefix=en",
+    "name": "Gearwheel Chain",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/78/Glooth_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20140613221927&amp;path-prefix=en",
+    "name": "Glooth Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c9/The_Lion%27s_Heart.gif/revision/latest/scale-to-width-down/32?cb=20141124102246&amp;path-prefix=en",
+    "name": "The Lion's Heart",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/83/Strange_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20141205151333&amp;path-prefix=en",
+    "name": "Strange Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bb/Werewolf_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20150624114533&amp;path-prefix=en",
+    "name": "Werewolf Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7e/Enchanted_Werewolf_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20150703182442&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2f/Ferumbras%27_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20151112195348&amp;path-prefix=en",
+    "name": "Ferumbras' Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/27/Onyx_Pendant.gif/revision/latest/scale-to-width-down/32?cb=20151112195349&amp;path-prefix=en",
+    "name": "Onyx Pendant",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f5/Ancient_Amulet_%28Quest%29.gif/revision/latest/scale-to-width-down/32?cb=20160325133304&amp;path-prefix=en",
+    "name": "Ancient Amulet (Quest)",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ae/Collar_of_Red_Plasma.gif/revision/latest/scale-to-width-down/32?cb=20160423124730&amp;path-prefix=en",
+    "name": "Collar of Red Plasma",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e5/Collar_of_Green_Plasma.gif/revision/latest/scale-to-width-down/32?cb=20160423124830&amp;path-prefix=en",
+    "name": "Collar of Green Plasma",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b0/Collar_of_Blue_Plasma.gif/revision/latest/scale-to-width-down/32?cb=20160423124928&amp;path-prefix=en",
+    "name": "Collar of Blue Plasma",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/15/Rubbish_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20170713175850&amp;path-prefix=en",
+    "name": "Rubbish Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d6/Glowing_Rubbish_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20170913040736&amp;path-prefix=en",
+    "name": "Glowing Rubbish Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a9/Foxtail_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20171108141316&amp;path-prefix=en",
+    "name": "Foxtail Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b1/Suspicious_Device.gif/revision/latest/scale-to-width-down/32?cb=20171108161856&amp;path-prefix=en",
+    "name": "Suspicious Device",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/21/Sleep_Shawl.gif/revision/latest/scale-to-width-down/32?cb=20181107123138&amp;path-prefix=en",
+    "name": "Sleep Shawl",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ef/Pendulet.gif/revision/latest/scale-to-width-down/32?cb=20181107123138&amp;path-prefix=en",
+    "name": "Pendulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Enchanted_Pendulet.gif/revision/latest/scale-to-width-down/32?cb=20181119224317&amp;path-prefix=en",
+    "name": "Enchanted Pendulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/66/Enchanted_Sleep_Shawl.gif/revision/latest/scale-to-width-down/32?cb=20181119224345&amp;path-prefix=en",
+    "name": "Enchanted Sleep Shawl",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d8/Rainbow_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20181212132918&amp;path-prefix=en",
+    "name": "Rainbow Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Amulet_of_Theurgy.gif/revision/latest/scale-to-width-down/32?cb=20190701193322&amp;path-prefix=en",
+    "name": "Amulet of Theurgy",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8d/Enchanted_Theurgic_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20190701193449&amp;path-prefix=en",
+    "name": "Enchanted Theurgic Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/00/Note_About_Two_Souls.gif/revision/latest/scale-to-width-down/32?cb=20190701193638&amp;path-prefix=en",
+    "name": "Note About Two Souls",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7d/Jade_Amulet_%28Replica%29.gif/revision/latest/scale-to-width-down/32?cb=20190706152914&amp;path-prefix=en",
+    "name": "Jade Amulet (Replica)",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/0a/Rainbow_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20190701193641&amp;path-prefix=en",
+    "name": "Rainbow Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1a/Traditional_Neckerchief.gif/revision/latest/scale-to-width-down/32?cb=20191009142236&amp;path-prefix=en",
+    "name": "Traditional Neckerchief",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Traditional_Gamsbart_Hat.gif/revision/latest/scale-to-width-down/32?cb=20191009142235&amp;path-prefix=en",
+    "name": "Traditional Gamsbart Hat",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ef/Exotic_Amulet.gif/revision/latest/scale-to-width-down/32?cb=20201106173113&amp;path-prefix=en",
+    "name": "Exotic Amulet",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/02/Sapphire_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133854&amp;path-prefix=en",
+    "name": "Sapphire Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/88/Emerald_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133854&amp;path-prefix=en",
+    "name": "Emerald Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6e/Garnet_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133855&amp;path-prefix=en",
+    "name": "Garnet Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/28/Diamond_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133856&amp;path-prefix=en",
+    "name": "Diamond Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a7/Rhodolith_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133858&amp;path-prefix=en",
+    "name": "Rhodolith Necklace",
+    "type": "Amulets_and_Necklaces"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/83/Amethyst_Necklace.gif/revision/latest/scale-to-width-down/32?cb=20201111133901&amp;path-prefix=en",
+    "name": "Amethyst Necklace",
+    "type": "Amulets_and_Necklaces"
+  }
+]

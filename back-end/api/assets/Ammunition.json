@@ -1,0 +1,112 @@
+[
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/69/Arrow.gif/revision/latest?cb=20050520003245&amp;path-prefix=en",
+    "name": "Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bd/Burst_Arrow.gif/revision/latest?cb=20150720234318&amp;path-prefix=en",
+    "name": "Burst Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f4/Crystalline_Arrow.gif/revision/latest?cb=20120622174807&amp;path-prefix=en",
+    "name": "Crystalline Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/46/Diamond_Arrow.gif/revision/latest?cb=20170713181123&amp;path-prefix=en",
+    "name": "Diamond Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/02/Earth_Arrow.gif/revision/latest?cb=20071215061000&amp;path-prefix=en",
+    "name": "Earth Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/90/Envenomed_Arrow.gif/revision/latest?cb=20120622190155&amp;path-prefix=en",
+    "name": "Envenomed Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/da/Flaming_Arrow.gif/revision/latest?cb=20101222214308&amp;path-prefix=en",
+    "name": "Flaming Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8c/Flash_Arrow.gif/revision/latest?cb=20150125151320&amp;path-prefix=en",
+    "name": "Flash Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3f/Onyx_Arrow.gif/revision/latest?cb=20070623041334&amp;path-prefix=en",
+    "name": "Onyx Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/62/Poison_Arrow.gif/revision/latest?cb=20050528000835&amp;path-prefix=en",
+    "name": "Poison Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/16/Shiver_Arrow.gif/revision/latest?cb=20101222214827&amp;path-prefix=en",
+    "name": "Shiver Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Simple_Arrow.gif/revision/latest?cb=20150720234320&amp;path-prefix=en",
+    "name": "Simple Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2e/Sniper_Arrow.gif/revision/latest?cb=20150720234322&amp;path-prefix=en",
+    "name": "Sniper Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d7/Tarsal_Arrow.gif/revision/latest?cb=20111212212926&amp;path-prefix=en",
+    "name": "Tarsal Arrow",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/74/Bolt.gif/revision/latest?cb=20150720234317&amp;path-prefix=en",
+    "name": "Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fc/Drill_Bolt.gif/revision/latest?cb=20120622190148&amp;path-prefix=en",
+    "name": "Drill Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a6/Infernal_Bolt.gif/revision/latest?cb=20090704070449&amp;path-prefix=en",
+    "name": "Infernal Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/72/Piercing_Bolt.gif/revision/latest?cb=20150720234319&amp;path-prefix=en",
+    "name": "Piercing Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Power_Bolt.gif/revision/latest?cb=20150720234319&amp;path-prefix=en",
+    "name": "Power Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/32/Prismatic_Bolt.gif/revision/latest?cb=20120622190103&amp;path-prefix=en",
+    "name": "Prismatic Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a8/Spectral_Bolt.gif/revision/latest?cb=20170713181440&amp;path-prefix=en",
+    "name": "Spectral Bolt",
+    "type": "Ammunition"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Vortex_Bolt.gif/revision/latest?cb=20111212213313&amp;path-prefix=en",
+    "name": "Vortex Bolt",
+    "type": "Ammunition"
+  }
+]

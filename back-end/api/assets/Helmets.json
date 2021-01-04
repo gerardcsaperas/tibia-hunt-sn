@@ -1,0 +1,577 @@
+[
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bd/Amazon_Helmet.gif/revision/latest?cb=20120726135747&amp;path-prefix=en",
+    "name": "Amazon Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bb/Ancient_Tiara.gif/revision/latest?cb=20060222192731&amp;path-prefix=en",
+    "name": "Ancient Tiara",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a2/Bandana.gif/revision/latest?cb=20170904200448&amp;path-prefix=en",
+    "name": "Bandana",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/47/Batwing_Hat.gif/revision/latest?cb=20170904200612&amp;path-prefix=en",
+    "name": "Batwing Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/44/Blue_Spectacles.gif/revision/latest?cb=20171205105749&amp;path-prefix=en",
+    "name": "Blue Spectacles",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b0/Bonelord_Helmet.gif/revision/latest?cb=20051228162517&amp;path-prefix=en",
+    "name": "Bonelord Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/dc/Brass_Helmet.gif/revision/latest?cb=20051204105435&amp;path-prefix=en",
+    "name": "Brass Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9e/Broken_Visor.gif/revision/latest?cb=20131126171926&amp;path-prefix=en",
+    "name": "Broken Visor",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e1/Ceremonial_Mask.gif/revision/latest?cb=20171114000521&amp;path-prefix=en",
+    "name": "Ceremonial Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/88/Chain_Helmet.gif/revision/latest?cb=20170904200721&amp;path-prefix=en",
+    "name": "Chain Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6c/Charmer%27s_Tiara.gif/revision/latest?cb=20060804184642&amp;path-prefix=en",
+    "name": "Charmer's Tiara",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a2/Cobra_Crown.gif/revision/latest?cb=20101126232120&amp;path-prefix=en",
+    "name": "Cobra Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5b/Cobra_Hood.gif/revision/latest?cb=20190701193331&amp;path-prefix=en",
+    "name": "Cobra Hood",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/03/Crest_of_the_Deep_Seas.gif/revision/latest?cb=20141127150245&amp;path-prefix=en",
+    "name": "Crest of the Deep Seas",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cc/Crown_Helmet.gif/revision/latest?cb=20051004233810&amp;path-prefix=en",
+    "name": "Crown Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d5/Crown.gif/revision/latest?cb=20051003133453&amp;path-prefix=en",
+    "name": "Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Crusader_Helmet.gif/revision/latest?cb=20050531092848&amp;path-prefix=en",
+    "name": "Crusader Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/34/Damaged_Helmet.gif/revision/latest?cb=20180203191251&amp;path-prefix=en",
+    "name": "Damaged Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/09/Dark_Helmet.gif/revision/latest?cb=20170904200812&amp;path-prefix=en",
+    "name": "Dark Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/04/Dark_Whispers.gif/revision/latest?cb=20181107131746&amp;path-prefix=en",
+    "name": "Dark Whispers",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Dark_Wizard%27s_Crown_%28Activated%29.gif/revision/latest?cb=20150930212757&amp;path-prefix=en",
+    "name": "Dark Wizard's Crown (Activated)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/21/Dark_Wizard%27s_Crown.gif/revision/latest?cb=20150930205355&amp;path-prefix=en",
+    "name": "Dark Wizard's Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4e/Demon_Helmet.gif/revision/latest?cb=20050611022335&amp;path-prefix=en",
+    "name": "Demon Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/dc/Depth_Galea.gif/revision/latest?cb=20111201005847&amp;path-prefix=en",
+    "name": "Depth Galea",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bf/Devil_Helmet.gif/revision/latest?cb=20170904200901&amp;path-prefix=en",
+    "name": "Devil Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f8/Dragon_Scale_Helmet.gif/revision/latest?cb=20060912030536&amp;path-prefix=en",
+    "name": "Dragon Scale Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b9/Dwarven_Helmet.gif/revision/latest?cb=20060222135025&amp;path-prefix=en",
+    "name": "Dwarven Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c6/Elite_Draken_Helmet.gif/revision/latest?cb=20100630203749&amp;path-prefix=en",
+    "name": "Elite Draken Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/77/Enchanted_Werewolf_Helmet_%28Axe%29.gif/revision/latest?cb=20161128170308&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Helmet (Axe)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c3/Enchanted_Werewolf_Helmet_%28Club%29.gif/revision/latest?cb=20161128170315&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Helmet (Club)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/88/Enchanted_Werewolf_Helmet_%28Distance%29.gif/revision/latest?cb=20161128170324&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Helmet (Distance)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/63/Enchanted_Werewolf_Helmet_%28Magic%29.gif/revision/latest?cb=20161128170331&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Helmet (Magic)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/13/Enchanted_Werewolf_Helmet_%28Sword%29.gif/revision/latest?cb=20161128170339&amp;path-prefix=en",
+    "name": "Enchanted Werewolf Helmet (Sword)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/65/Falcon_Circlet.gif/revision/latest?cb=20180605182034&amp;path-prefix=en",
+    "name": "Falcon Circlet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b9/Falcon_Coif.gif/revision/latest?cb=20180605182034&amp;path-prefix=en",
+    "name": "Falcon Coif",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a2/Feather_Headdress.gif/revision/latest?cb=20051217163003&amp;path-prefix=en",
+    "name": "Feather Headdress",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b6/Ferumbras%27_Candy_Hat.gif/revision/latest?cb=20161108195933&amp;path-prefix=en",
+    "name": "Ferumbras' Candy Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8f/Ferumbras%27_Hat.gif/revision/latest?cb=20170904201002&amp;path-prefix=en",
+    "name": "Ferumbras' Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6e/Flower_Wreath.gif/revision/latest?cb=20090601123257&amp;path-prefix=en",
+    "name": "Flower Wreath",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/13/Fur_Cap.gif/revision/latest?cb=20170904201108&amp;path-prefix=en",
+    "name": "Fur Cap",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/34/Galea_Mortis.gif/revision/latest?cb=20190701193451&amp;path-prefix=en",
+    "name": "Galea Mortis",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/24/Gill_Gugel.gif/revision/latest?cb=20120622174234&amp;path-prefix=en",
+    "name": "Gill Gugel",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/11/Glacier_Mask.gif/revision/latest?cb=20071217004014&amp;path-prefix=en",
+    "name": "Glacier Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/97/Gnome_Helmet.gif/revision/latest?cb=20171108141047&amp;path-prefix=en",
+    "name": "Gnome Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7f/Golden_Crown.gif/revision/latest?cb=20200419223514&amp;path-prefix=en",
+    "name": "Golden Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/60/Golden_Helmet.gif/revision/latest?cb=20050530002925&amp;path-prefix=en",
+    "name": "Golden Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Gryphon_Mask.gif/revision/latest?cb=20190701193456&amp;path-prefix=en",
+    "name": "Gryphon Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c7/Hat_of_the_Mad.gif/revision/latest?cb=20170904201451&amp;path-prefix=en",
+    "name": "Hat of the Mad",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/65/Helmet_of_Nature.gif/revision/latest?cb=20090702110746&amp;path-prefix=en",
+    "name": "Helmet of Nature",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/09/Helmet_of_Ultimate_Terror.gif/revision/latest?cb=20190808171849&amp;path-prefix=en",
+    "name": "Helmet of Ultimate Terror",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d7/Helmet_of_the_Ancients_%28Enchanted%29.gif/revision/latest?cb=20050611163550&amp;path-prefix=en",
+    "name": "Helmet of the Ancients (Enchanted)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/af/Helmet_of_the_Ancients.gif/revision/latest?cb=20060527110606&amp;path-prefix=en",
+    "name": "Helmet of the Ancients",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/39/Helmet_of_the_Deep.gif/revision/latest?cb=20170904201645&amp;path-prefix=en",
+    "name": "Helmet of the Deep",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/23/Helmet_of_the_Lost.gif/revision/latest?cb=20121129191607&amp;path-prefix=en",
+    "name": "Helmet of the Lost",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1a/Horned_Helmet.gif/revision/latest?cb=20050611164913&amp;path-prefix=en",
+    "name": "Horned Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/79/Horseman_Helmet.gif/revision/latest?cb=20050921195213&amp;path-prefix=en",
+    "name": "Horseman Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e6/Incandescent_Crown.gif/revision/latest?cb=20170730140333&amp;path-prefix=en",
+    "name": "Incandescent Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c6/Iron_Crown.gif/revision/latest?cb=20170730140227&amp;path-prefix=en",
+    "name": "Iron Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/95/Iron_Helmet.gif/revision/latest?cb=20120403180648&amp;path-prefix=en",
+    "name": "Iron Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/52/Jade_Hat.gif/revision/latest?cb=20091129024210&amp;path-prefix=en",
+    "name": "Jade Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/70/Jester_Hat.gif/revision/latest?cb=20071205231745&amp;path-prefix=en",
+    "name": "Jester Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/98/Krimhorn_Helmet.gif/revision/latest?cb=20070622213248&amp;path-prefix=en",
+    "name": "Krimhorn Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/00/Laurel_Wreath.gif/revision/latest?cb=20111204173013&amp;path-prefix=en",
+    "name": "Laurel Wreath",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/db/Leaf_Crown.gif/revision/latest?cb=20170730135951&amp;path-prefix=en",
+    "name": "Leaf Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Leather_Helmet.gif/revision/latest?cb=20050601144039&amp;path-prefix=en",
+    "name": "Leather Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c7/Legion_Helmet.gif/revision/latest?cb=20050808112038&amp;path-prefix=en",
+    "name": "Legion Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/30/Lightning_Headband.gif/revision/latest?cb=20071218060610&amp;path-prefix=en",
+    "name": "Lightning Headband",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/86/Lion_Spangenhelm.gif/revision/latest?cb=20200611034242&amp;path-prefix=en",
+    "name": "Lion Spangenhelm",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d9/Mage_Hat.gif/revision/latest?cb=20170904201805&amp;path-prefix=en",
+    "name": "Mage Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/22/Mage%27s_Cap.gif/revision/latest?cb=20110701105322&amp;path-prefix=en",
+    "name": "Mage's Cap",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Magician_Hat.gif/revision/latest?cb=20120726135834&amp;path-prefix=en",
+    "name": "Magician Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c5/Magma_Monocle.gif/revision/latest?cb=20071215072656&amp;path-prefix=en",
+    "name": "Magma Monocle",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e8/Mighty_Helm_of_Green_Sparks.gif/revision/latest?cb=20090625165541&amp;path-prefix=en",
+    "name": "Mighty Helm of Green Sparks",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5c/Mining_Helmet.gif/revision/latest?cb=20141213104641&amp;path-prefix=en",
+    "name": "Mining Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9c/Mystic_Turban.gif/revision/latest?cb=20120726135558&amp;path-prefix=en",
+    "name": "Mystic Turban",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fc/Odd_Hat.gif/revision/latest?cb=20090627170416&amp;path-prefix=en",
+    "name": "Odd Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Pair_of_Earmuffs.gif/revision/latest?cb=20170904201145&amp;path-prefix=en",
+    "name": "Pair of Earmuffs",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/42/Party_Hat.gif/revision/latest?cb=20070109011716&amp;path-prefix=en",
+    "name": "Party Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/15/Pirate_Hat.gif/revision/latest?cb=20170904201324&amp;path-prefix=en",
+    "name": "Pirate Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2c/Porcelain_Mask.gif/revision/latest?cb=20161108200043&amp;path-prefix=en",
+    "name": "Porcelain Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d0/Post_Officer%27s_Hat.gif/revision/latest?cb=20050610024446&amp;path-prefix=en",
+    "name": "Post Officer's Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/68/Prismatic_Helmet.gif/revision/latest?cb=20120622164102&amp;path-prefix=en",
+    "name": "Prismatic Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4d/Ragnir_Helmet.gif/revision/latest?cb=20070622213150&amp;path-prefix=en",
+    "name": "Ragnir Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/14/Reflecting_Crown.gif/revision/latest?cb=20170730140452&amp;path-prefix=en",
+    "name": "Reflecting Crown",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9e/Royal_Helmet.gif/revision/latest?cb=20070626214908&amp;path-prefix=en",
+    "name": "Royal Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2c/Rubber_Cap.gif/revision/latest?cb=20140613223150&amp;path-prefix=en",
+    "name": "Rubber Cap",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6d/Rusty_Winged_Helmet.gif/revision/latest?cb=20161108195935&amp;path-prefix=en",
+    "name": "Rusty Winged Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e4/Santa_Hat.gif/revision/latest?cb=20061211204907&amp;path-prefix=en",
+    "name": "Santa Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/62/Sedge_Hat.gif/revision/latest?cb=20100823162121&amp;path-prefix=en",
+    "name": "Sedge Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/40/Shamanic_Mask.gif/revision/latest?cb=20151113115126&amp;path-prefix=en",
+    "name": "Shamanic Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3c/Shroud_of_Despair.gif/revision/latest?cb=20151112195350&amp;path-prefix=en",
+    "name": "Shroud of Despair",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7a/Silver_Mask.gif/revision/latest?cb=20190701193755&amp;path-prefix=en",
+    "name": "Silver Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/11/Skull_Helmet.gif/revision/latest?cb=20170904201922&amp;path-prefix=en",
+    "name": "Skull Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8e/Soldier_Helmet.gif/revision/latest?cb=20050531202841&amp;path-prefix=en",
+    "name": "Soldier Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/aa/Sphinx_Tiara.gif/revision/latest?cb=20190701193757&amp;path-prefix=en",
+    "name": "Sphinx Tiara",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Spooky_Hood.gif/revision/latest?cb=20191113131239&amp;path-prefix=en",
+    "name": "Spooky Hood",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cd/Steel_Helmet.gif/revision/latest?cb=20050531085331&amp;path-prefix=en",
+    "name": "Steel Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2e/Strange_Helmet.gif/revision/latest?cb=20050609230809&amp;path-prefix=en",
+    "name": "Strange Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cb/Studded_Helmet.gif/revision/latest?cb=20061213001312&amp;path-prefix=en",
+    "name": "Studded Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/af/Terra_Helmet.gif/revision/latest?cb=20190701193849&amp;path-prefix=en",
+    "name": "Terra Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/30/Terra_Hood.gif/revision/latest?cb=20120403183449&amp;path-prefix=en",
+    "name": "Terra Hood",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/0f/The_Crown_of_the_Percht_Queen_%28Fire%29.gif/revision/latest?cb=20181212132918&amp;path-prefix=en",
+    "name": "The Crown of the Percht Queen (Fire)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e5/The_Crown_of_the_Percht_Queen_%28Ice%29.gif/revision/latest?cb=20181212132918&amp;path-prefix=en",
+    "name": "The Crown of the Percht Queen (Ice)",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/ce/The_Epic_Wisdom.gif/revision/latest?cb=20180125135903&amp;path-prefix=en",
+    "name": "The Epic Wisdom",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e8/Tiara_of_Power.gif/revision/latest?cb=20160425191910&amp;path-prefix=en",
+    "name": "Tiara of Power",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/59/Tribal_Mask.gif/revision/latest?cb=20051125201217&amp;path-prefix=en",
+    "name": "Tribal Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d1/Viking_Helmet.gif/revision/latest?cb=20171223204759&amp;path-prefix=en",
+    "name": "Viking Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/13/Visage_of_the_End_Days.gif/revision/latest?cb=20151112195351&amp;path-prefix=en",
+    "name": "Visage of the End Days",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/de/Warrior_Helmet.gif/revision/latest?cb=20050611020531&amp;path-prefix=en",
+    "name": "Warrior Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/63/Werewolf_Helmet.gif/revision/latest?cb=20150624115057&amp;path-prefix=en",
+    "name": "Werewolf Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Winged_Helmet.gif/revision/latest?cb=20171214210907&amp;path-prefix=en",
+    "name": "Winged Helmet",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4b/Witch_Hat.gif/revision/latest?cb=20091204231739&amp;path-prefix=en",
+    "name": "Witch Hat",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/68/Wood_Cape.gif/revision/latest?cb=20091229222706&amp;path-prefix=en",
+    "name": "Wood Cape",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f6/Yalahari_Mask.gif/revision/latest?cb=20170904202045&amp;path-prefix=en",
+    "name": "Yalahari Mask",
+    "type": "Helmets"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2f/Zaoan_Helmet.gif/revision/latest?cb=20091202011847&amp;path-prefix=en",
+    "name": "Zaoan Helmet",
+    "type": "Helmets"
+  }
+]

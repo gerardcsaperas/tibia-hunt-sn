@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Angelic Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Angelic_Axe.gif/revision/latest?cb=20081211101107&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Axe of Destruction",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/33/Axe_of_Destruction.gif/revision/latest?cb=20171024221646&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/31/Axe.gif/revision/latest?cb=20080704084311&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Barbarian Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/da/Barbarian_Axe.gif/revision/latest?cb=20120403183410&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Battle Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/40/Battle_Axe.gif/revision/latest?cb=20120403183410&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Beastslayer Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fb/Beastslayer_Axe.gif/revision/latest?cb=20180203130736&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Butcher's Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Butcher%27s_Axe.gif/revision/latest?cb=20070830115738&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Chopper of Destruction",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a2/Chopper_of_Destruction.gif/revision/latest?cb=20171024221750&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Cobra Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Cobra_Axe.gif/revision/latest?cb=20190701193328&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Crude Umbral Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/31/Crude_Umbral_Axe.gif/revision/latest?cb=20150803201219&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Crude Umbral Chopper",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f9/Crude_Umbral_Chopper.gif/revision/latest?cb=20131207112418&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Crystalline Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e8/Crystalline_Axe.gif/revision/latest?cb=20120622190625&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Daramian Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/01/Daramian_Axe.gif/revision/latest?cb=20091121040114&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Daramian Waraxe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Daramian_Waraxe.gif/revision/latest?cb=20060725132324&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Deepling Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/24/Deepling_Axe.gif/revision/latest?cb=20111201020239&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Demonwing Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1e/Demonwing_Axe.gif/revision/latest?cb=20171107215407&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Double Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f5/Double_Axe.gif/revision/latest?cb=20120411042803&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Dragon Lance",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2c/Dragon_Lance.gif/revision/latest?cb=20070716053659&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Drakinata",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9d/Drakinata.gif/revision/latest?cb=20091130212916&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Dreaded Cleaver",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8e/Dreaded_Cleaver.gif/revision/latest?cb=20070624090425&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Dwarven Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5e/Dwarven_Axe.gif/revision/latest?cb=20050531222410&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Earth Barbaric Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/30/Earth_Barbaric_Axe_Replica.gif/revision/latest?cb=20180526174958&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Earth Headchopper Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c7/Earth_Headchopper_Replica.gif/revision/latest?cb=20180526175134&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Earth Heroic Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/ba/Earth_Heroic_Axe_Replica.gif/revision/latest?cb=20180526175136&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Earth Knight Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/51/Earth_Knight_Axe_Replica.gif/revision/latest?cb=20180526175139&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Earth War Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2e/Earth_War_Axe_Replica.gif/revision/latest?cb=20180526175208&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Energy Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6f/Energy_Axe_Replica.gif/revision/latest?cb=20180527152015&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Energy Headchopper Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e8/Energy_Headchopper_Replica.gif/revision/latest?cb=20180527152732&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Energy Heroic Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/96/Energy_Heroic_Axe_Replica.gif/revision/latest?cb=20180527152827&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Energy Knight Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c7/Energy_Knight_Axe_Replica.gif/revision/latest?cb=20180527152938&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Energy War Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/18/Energy_War_Axe_Replica.gif/revision/latest?cb=20180527153842&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Execowtioner Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/80/Execowtioner_Axe.gif/revision/latest?cb=20140615121927&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Executioner",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cb/Executioner.gif/revision/latest?cb=20081215212542&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Falcon Battleaxe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/16/Falcon_Battleaxe.gif/revision/latest?cb=20180605182032&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Farmer's Avenger",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Farmer%27s_Avenger.gif/revision/latest?cb=20180618012753&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fiery Barbarian Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/93/Fiery_Barbarian_Axe_Replica.gif/revision/latest?cb=20180528142517&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fiery Headchopper Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b5/Fiery_Headchopper_Replica.gif/revision/latest?cb=20180528142520&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fiery Heroic Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c5/Fiery_Heroic_Axe_Replica.gif/revision/latest?cb=20180528142521&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fiery Knight Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7b/Fiery_Knight_Axe_Replica.gif/revision/latest?cb=20180528142521&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fiery War Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5c/Fiery_War_Axe_Replica.gif/revision/latest?cb=20180528142525&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Fire Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/31/Fire_Axe.gif/revision/latest?cb=20050602205357&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Glooth Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Glooth_Axe.gif/revision/latest?cb=20140615121245&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Glorious Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c0/Glorious_Axe.gif/revision/latest?cb=20180218194246&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Golden Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1a/Golden_Axe.gif/revision/latest?cb=20181109130932&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Golden Sickle",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/33/Golden_Sickle.gif/revision/latest?cb=20170904192108&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Great Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b8/Great_Axe.gif/revision/latest?cb=20150803215256&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Guardian Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/67/Guardian_Axe.gif/revision/latest?cb=20120403183448&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Guardian Halberd",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/72/Guardian_Halberd.gif/revision/latest?cb=20081210183755&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Halberd",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d9/Halberd.gif/revision/latest?cb=20050620174515&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Hand Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c1/Hand_Axe.gif/revision/latest?cb=20120411042923&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Hatchet",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5d/Hatchet.gif/revision/latest?cb=20170904192312&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Headchopper",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/52/Headchopper.gif/revision/latest?cb=20070624190637&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Heavy Trident",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9f/Heavy_Trident.gif/revision/latest?cb=20111231010507&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Hellforged Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1e/Hellforged_Axe.gif/revision/latest?cb=20150803212058&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Heroic Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/03/Heroic_Axe.gif/revision/latest?cb=20070624190641&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Hive Scythe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d4/Hive_Scythe.gif/revision/latest?cb=20111201015145&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ice Hatchet",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Ice_Hatchet.gif/revision/latest?cb=20181212132818&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Icy Barbarian Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Icy_Barbarian_Axe_Replica.gif/revision/latest?cb=20180528171739&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Icy Headchopper Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6e/Icy_Headchopper_Replica.gif/revision/latest?cb=20180528171744&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Icy Heroic Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/da/Icy_Heroic_Axe_Replica.gif/revision/latest?cb=20180528171744&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Icy Knight Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b8/Icy_Knight_Axe_Replica.gif/revision/latest?cb=20180528171745&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Icy War Axe Replica",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7f/Icy_War_Axe_Replica.gif/revision/latest?cb=20180528171748&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Impaler",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f8/Impaler.gif/revision/latest?cb=20090311233149&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Knight Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4e/Knight_Axe.gif/revision/latest?cb=20050531084704&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Lion Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/89/Lion_Axe.gif/revision/latest?cb=20200624173803&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Mino Lance",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Mino_Lance.gif/revision/latest?cb=20140615122455&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Mythril Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/12/Mythril_Axe.gif/revision/latest?cb=20090412115011&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Naginata",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fc/Naginata.gif/revision/latest?cb=20120403183448&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Noble Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/17/Noble_Axe.gif/revision/latest?cb=20071214030120&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Obsidian Lance",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Obsidian_Lance.gif/revision/latest?cb=20150803211637&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ogre Choppa",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c4/Ogre_Choppa.gif/revision/latest?cb=20151113115054&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Orcish Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/68/Orcish_Axe.gif/revision/latest?cb=20170904192555&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ornamented Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d4/Ornamented_Axe.gif/revision/latest?cb=20080723142910&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Phantasmal Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/44/Phantasmal_Axe.gif/revision/latest?cb=20191108185715&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Plague Bite",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f7/Plague_Bite.gif/revision/latest?cb=20151112183814&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ravager's Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fe/Ravager%27s_Axe.gif/revision/latest?cb=20060603192535&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ravenwing",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/02/Ravenwing.gif/revision/latest?cb=20180101111615&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Reaper's Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Reaper%27s_Axe.gif/revision/latest?cb=20180101111615&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Rift Lance",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/03/Rift_Lance.gif/revision/latest?cb=20151211160703&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ripper Lance",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Ripper_Lance.gif/revision/latest?cb=20051201152659&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Royal Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4d/Royal_Axe.gif/revision/latest?cb=20070624190559&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Ruthless Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c2/Ruthless_Axe.gif/revision/latest?cb=20180101111613&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Scythe of the Reaper",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cd/Scythe_of_the_Reaper.gif/revision/latest?cb=20090703162116&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Sickle",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/67/Sickle.gif/revision/latest?cb=20170904192214&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Solar Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/af/Solar_Axe.gif/revision/latest?cb=20080624144217&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Soulbiter",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/42/Soulbiter.gif/revision/latest?cb=20200611020053&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Souleater (Axe)",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4a/Souleater_%28Axe%29.gif/revision/latest?cb=20200611020053&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Steel Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a7/Steel_Axe.gif/revision/latest?cb=20170906122810&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Stonecutter Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c4/Stonecutter_Axe.gif/revision/latest?cb=20050620182904&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Throwing Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Throwing_Axe.gif/revision/latest?cb=20201106144001&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Titan Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1e/Titan_Axe.gif/revision/latest?cb=20070628170547&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Twin Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a8/Twin_Axe.gif/revision/latest?cb=20050619020942&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Umbral Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b0/Umbral_Axe.gif/revision/latest?cb=20150803201228&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Umbral Chopper",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/27/Umbral_Chopper.gif/revision/latest?cb=20131207112408&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Umbral Master Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Umbral_Master_Axe.gif/revision/latest?cb=20150803201234&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Umbral Master Chopper",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9a/Umbral_Master_Chopper.gif/revision/latest?cb=20131207112353&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Vile Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/78/Vile_Axe.gif/revision/latest?cb=20070724002013&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "War Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7a/War_Axe.gif/revision/latest?cb=20070830115254&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Warrior's Axe",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d2/Warrior%27s_Axe.gif/revision/latest?cb=20111201014535&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  },
+  {
+    "name": "Zaoan Halberd",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a8/Zaoan_Halberd.gif/revision/latest?cb=20091130212645&amp;path-prefix=en",
+    "type": "Axe_Weapons"
+  }
+]
