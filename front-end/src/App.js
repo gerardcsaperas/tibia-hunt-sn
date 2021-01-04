@@ -1,9 +1,11 @@
+import React from "react";
 import './App.css';
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <p>Posta el component que vulguis directament aquí per testejarlo sense rutes</p>
+      <HomePage/>
     </div>
   );
 }
