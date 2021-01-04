@@ -3,10 +3,9 @@ import "./styles/HomePage.css";
 
 
 
-
 function HomePage() {
     return (
-        <div id="home">
+      <div id="home">
             <div className="title">
                 <h3>Tibia Hunting Records</h3>   
             </div>
