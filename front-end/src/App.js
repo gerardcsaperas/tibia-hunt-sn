@@ -1,9 +1,15 @@
 import React from "react";
 import './App.css';
-import HomePage from "./components/HomePage";
+
+
+// Components
 import MyNavBar from "./components/MyNavBar";
+import HomePage from "./components/HomePage";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
+import MyRecords from "./components/MyRecords";
+
+
 
 
 
@@ -16,6 +22,7 @@ function App() {
       {/* <HomePage/> */}
       {/* <SignUp/> */}
       {/* <LogIn/> */}
+      <MyRecords/>
     </div>
   );
 }

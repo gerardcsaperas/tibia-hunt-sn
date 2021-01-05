@@ -73,7 +73,7 @@ function SignUp() {
     </div>
 
     <div className="buttons__box">
-      <button className="button" onClick={this.handleSignUp}>Sign Up</button>
+      <button className="button" /*onClick={this.handleSignUp}*/>Sign Up</button>
     </div>
   </Fragment>
     
