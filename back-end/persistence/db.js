@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { characterUpdater } = require('../api/utils/characterUpdater');
 
 mongoose.connect(
   process.env.DB_URI,
@@ -10,5 +11,6 @@ mongoose.connect(
   },
   () => {
     console.log("Connected to DB...");
+    characterUpdater();
   }
 );
