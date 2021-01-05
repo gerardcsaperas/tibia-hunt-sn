@@ -24,4 +24,10 @@ input {
     height: 20px;
 }
 
-
+.buttons__box {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 1.5rem;
+}
