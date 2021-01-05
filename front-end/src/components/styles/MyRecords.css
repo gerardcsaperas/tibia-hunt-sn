@@ -37,3 +37,13 @@ h1 {
     height: 20px;
     width: 150px;
 }
+
+.loupe {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 620px;
+    bottom: 200px;
+   
+
+}
