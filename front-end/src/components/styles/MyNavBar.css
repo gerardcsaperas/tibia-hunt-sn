@@ -1,43 +1,57 @@
+@import './Library.css';
+
 #navbar {
-    background-color: #051122;
+    background-color: var(--background-blue);
     width: 100%;
     height: 40px;
     color: #FBD34D;
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
+h5 {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
 
-.profile{
+div#navbar__left-box {
+    margin-left: 2vw;
+    display: flex;
+}
+
+div#navbar__right-box {
+    margin-right: 2vw;
+    display: flex;
+}
+
+.brand { 
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+/* .profile{
     position: relative;
     right: 75px;
-    
 }
 
 .notifications{
     position: relative;
     right: 75px;
-   
-}
+} */
 
-.brand { 
-    position: relative;
-    left: 35px;
-    color: white;
-}
-
+/* 
 .newRecord{
     position: relative;
-    left: 100px;
-     
+    left: 100px;    
 }
 
 .huntingRecords{
     position: relative;
     left: 100px;
- 
-}
+} */
 
