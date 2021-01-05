@@ -27,6 +27,11 @@ async function findById(req, res) {
 
     try {
         const user = await User.findById(req.params.id);
+
+        if(!user) {
+            return res.status(404).json({ message: `We couldn't find user with id ${req.params.id}` })
+        }
+        
         res.status(200).send(user);
     } catch(e) {
         console.log(`There was an error retrieving user ${req.params.id}. Error: ${e.message}`);
@@ -90,24 +95,6 @@ async function update(req, res) {
 }
 
 /*
-type:    PUT
-desc:    Update user's notifications
-auth:    Private
-*/
-function updateNotifications(req, res) {
-    return null;
-}
-/*
-type:    GET
-desc:    Get a user's notifications
-auth:    Private
-*/
-
-function findNotifications(req, res) {
-    return null;
-}
-
-/*
 type:    DELETE
 desc:    Delete a profile
 auth:    Private
@@ -127,7 +114,5 @@ module.exports = {
     findById,
     create,
     update,
-    updateNotifications,
-    findNotifications,
     remove
 }
