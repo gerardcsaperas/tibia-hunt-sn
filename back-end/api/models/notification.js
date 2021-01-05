@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
-const Notification = new Schema({
+const notificationSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
