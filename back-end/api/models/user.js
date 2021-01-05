@@ -8,9 +8,18 @@ const jwt = require('jsonwebtoken');
 const userSchema = new Schema({
 	username: {
 		type: String,
-		unique: true,
 		trim: true,
-		required: true
+		required: true,
+		validate: {
+			validator: async function(email) {
+				const user = await this.constructor.findOne({ email });
+				if(user) {
+					return false;
+				}
+				return true;
+			},
+			message: props => 'The specified email address is already in use.'
+		}
 	},
 	email: {
 		type: String,
@@ -18,10 +27,22 @@ const userSchema = new Schema({
 		lowercase: true,
 		required: true,
 		trim: true,
-		validate: {
-			validator: email => validator.isEmail(email),
-			message: '"{VALUE}" is not a valid email'
-		}
+		validate: [
+			{
+				validator: email => validator.isEmail(email),
+				message: '"{VALUE}" is not a valid email'
+			},
+			{
+				validator: async function(email) {
+					const user = await this.constructor.findOne({ email });
+					if(user) {
+						return false;
+					}
+					return true;
+				  },
+				  message: props => 'The specified email address is already in use.'
+			},
+		]
 	},
 	password: {
 		type: String,
@@ -42,10 +63,6 @@ const userSchema = new Schema({
 		min: 0,
 		max: 5
 	},
-	characters: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Character'
-	}],
     tokens: [String]
 },
 {
