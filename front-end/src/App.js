@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="App">
       <MyNavBar/>
-      <HomePage/>
-      <SignUp/>
-      <LogIn/>
+      {/* <HomePage/> */}
+      {/* <SignUp/> */}
+      {/* <LogIn/> */}
     </div>
   );
 }
