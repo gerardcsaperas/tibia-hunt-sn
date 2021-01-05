@@ -6,7 +6,7 @@
 }
 
 .lore {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .buttons__box {
@@ -14,6 +14,6 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    bottom: 2rem;
+    bottom: 2.5rem;
 }
 
