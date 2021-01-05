@@ -1,4 +1,3 @@
-const { json } = require('express');
 const axios = require('axios');
 const Character = require('../models/character');
 const { queryToMongoFilter } = require('../utils/queryToMongoFilter');
@@ -18,7 +17,6 @@ async function findMine(req, res) {
         console.log(`Error retrieving characters for user ${req.user._id}. Error: ${e.message}`)
         res.status(400).json({ message: `Error retrieving characters for user ${req.user._id}. Error: ${e.message}` })
     }
-    return null
 }
 
 /*
@@ -51,6 +49,10 @@ async function update(req, res) {
 
     try {
         const character = await Character.findById(req.params.id);
+
+        if(!character) {
+            return res.status(404).json({ message: `We couldn't find character with id ${req.params.id}` })
+        }
 
         updates.forEach((update) => (character[update] = req.body[update]));
 
@@ -94,10 +96,11 @@ async function updateTibiaData() {
 
         // Update every character according to Tibia Data's information
         characters.forEach( async (character) => {
-            const response = await axios.get(`https://api.tibiadata.com/v2/characters/${character.characterName}.json`)
+            const response = await axios.get(`https://api.tibiadata.com/v2/characters/${character.name}.json`);
+            const data = response.data.characters.data;
             const updates = ['vocation', 'level', 'world']
 
-            updates.forEach((update) => (character[update] = response.characters.data[update]));
+            updates.forEach((update) => (character[update] = data[update]));
             
             character.save()
             return;
