@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './custom/Button/Button';
 import "./styles/HomePage.css";
 
 
@@ -6,10 +7,10 @@ import "./styles/HomePage.css";
 function HomePage() {
     return (
       <div id="home">
-            <div className="title">
+            <div className="home-page__title">
                 <h3>Tibia Hunting Records</h3>   
             </div>
-              <div className="contentBackground">
+              <div className="home-page__box">
                 <div className="content">
                   <div className="text">
                     <p className="lore">Dear tibians,</p>
