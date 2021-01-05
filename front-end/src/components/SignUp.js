@@ -31,8 +31,10 @@ function SignUp() {
                   <input type="text" name="name" />
               </label>
           </form>
+
+          <p className="toLogin">Already a member?<u>Login</u></p>
     </div>
-    
+
     <div className="buttons__box">
       <button className="button">Sign Up</button>
     </div>
