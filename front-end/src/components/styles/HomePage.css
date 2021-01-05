@@ -1,0 +1,72 @@
+#home {
+    /* background-image: url(/images/tibia-background-artwork.jpg); */
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    background-color: #574B43;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #808080;
+    width: 370px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.contentBackground {
+    background-color: #DEBB9D;
+    border: 1px solid #808080;
+    height: 480px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content {
+    background-color: #FFF1DA;
+    border: 1px solid #793D03;
+    color: black;
+    height: 470px;
+    width: 360px;
+}
+
+.text {
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.lore {
+    padding-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    background: linear-gradient(to bottom, #005EEE, #00088F, #005EEE, #00088F, #005EEE);
+    color: #FBD34D;
+    border: 1px solid #FFD700;
+    border-radius: 2.5px;
+    height: 30px;
+    width: 125px;
+    font-weight: 600;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+    /* -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black; */
+    
+}
+
