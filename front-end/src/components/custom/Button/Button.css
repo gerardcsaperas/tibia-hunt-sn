@@ -1,0 +1,11 @@
+Button.button {
+    background: linear-gradient(to bottom, #005EEE, #00088F, #005EEE, #00088F, #005EEE);
+    color: #FBD34D;
+    border: 1px solid #FFD700;
+    border-radius: 2.5px;
+    height: 30px;
+    width: 125px;
+    font-weight: 600;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;    
+}
