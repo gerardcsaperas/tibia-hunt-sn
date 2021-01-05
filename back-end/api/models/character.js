@@ -60,7 +60,7 @@ const characterSchema = new Schema({
             min: 0
         }
     }            
-})
+}, {timestamps: true})
 
 const Character = model('Character', characterSchema)
 
