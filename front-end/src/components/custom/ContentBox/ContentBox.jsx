@@ -1,20 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './ContentBox.scss';
 
-function ContentBox(props) {
+// Redux Store
+import { useSelector } from 'react-redux'
+import { selectViewport } from '../../layout/viewportSlice'
 
-    const frameHeight = `${parseInt(props.height.split('px')[0]) - 40}px`;
+function ContentBox(props) {  
 
-    return (
-        <div className="ContentBox" style={{height: props.height, width: props.width}}>
+    const windowDimensions = useSelector(selectViewport);
+
+    const height = parseInt(props.height);
+    const frameHeight = height - 40;
+    const contentBoxHeight = frameHeight - 8;
+    const width = parseInt(props.width);
+    const contentBoxWidth = width - 8
+
+    const desktopComponent = (
+        <div className="ContentBox" style={{height: height, width: width}}>
             <div className="ContentBox__title">
                 <h3>{props.title}</h3>
             </div>
-            <div className="ContentBox__frame" style={{height: frameHeight}}>
-                <div className="ContentBox__content">{props.content}</div>
+            <div className="ContentBox__frame" style={{height: frameHeight, width: width}}>
+                <div className="ContentBox__content" style={{height: contentBoxHeight, width: contentBoxWidth}}>{props.content}</div>
             </div>
         </div>
     )
+
+    const mobileComponent = (
+        <h1 style={{color: "white"}}>Hi! I'm mobile, motherfucker! Reactive! Boooyah!</h1>
+    )
+
+    return windowDimensions.width > 1024 ? desktopComponent : mobileComponent;
 }
 
 export default ContentBox
