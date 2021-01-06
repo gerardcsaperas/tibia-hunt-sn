@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import Button from './custom/Button/Button';
 import ContentBox from './custom/ContentBox/ContentBox';
 import "./styles/HomePage.css";
 
