@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-// Own Components
-import HomePage from './components/HomePage';
-import MyNavBar from './components/MyNavBar';
-import Profile from './components/user/Profile';
 
+// Own Components
+import MyNavBar from "./components/MyNavBar";
+import HomePage from "./components/HomePage";
+import SignUp from "./components/SignUp";
+import LogIn from "./components/LogIn";
+import Profile from './components/user/Profile';
+import MyRecords from "./components/MyRecords";
 
 // Utils
 import isTokenValid from './utils/isTokenValid';

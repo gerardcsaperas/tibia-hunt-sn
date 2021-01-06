@@ -1,0 +1,49 @@
+.filters {
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E1D8C6;
+    border: 1px solid black;
+    height: 220px;
+    width: 700px;
+    box-shadow: 3px 3px 1px grey;
+}
+
+h1 {
+    padding-top: 0.5%;
+    padding-left: 2%;
+    margin: 0;
+    font-size: 20px;
+    color: #545454;
+}
+
+.grill {
+    padding-top: 3%;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-content: space-around;
+}
+
+.dividers {
+    margin: 0;
+    font-size: 14px;
+}
+
+.selector {
+    height: 20px;
+    width: 150px;
+}
+
+.loupe {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 620px;
+    bottom: 200px;
+   
+
+}
