@@ -30,20 +30,19 @@ import {
 
 function App() {
 
-  const authenticated = true //useSelector(selectUser).authenticated;
+  const authenticated = useSelector(selectUser).authenticated;
 	const dispatch = useDispatch()
 
 	// Check if user is already authenticated.
 	useEffect(() => {
-		const user = JSON.parse(localStorage.getItem('user'));
-	console.log(process.env.NODE_ENV);
-	console.log('authenticated', authenticated)
-	
-    if (process.env.NODE_ENV == "development") {
-      dispatch(authenticate());
-    }
+		const user = JSON.parse(localStorage.getItem('TibiaHuntingRecordsUser'));
+		console.log(user);
+		
+    // if (process.env.NODE_ENV == "development") {
+    //   dispatch(authenticate());
+    // }
 		// If token is stored in local storage, see if token is valid
-		if (user.token) {
+		if (user && user.token) {
 			let isAuthenticated = async () => await isTokenValid(user.token);
 			// If token is valid, user is authenticated
 			// set all values for user
@@ -70,11 +69,17 @@ function App() {
   return (
     <Router>
       <Route>
-				<MyNavBar props={authenticated}/>
-			</Route>
+			<MyNavBar props={authenticated}/>
+		</Route>
       <Switch>
         <Route exact path="/" >
 					{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
+		</Route>
+		<Route exact path="/login" >
+					{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
+		</Route>
+		<Route exact path="/signup" >
+					{ authenticated ? <Redirect to="/profile" /> : <SignUp /> }
 		</Route>
 		<Route exact path="/profile" >
 					{ authenticated ? <Profile /> : <Redirect to="/login" /> }

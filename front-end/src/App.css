@@ -23,3 +23,11 @@ body {
     font-size: 12px;
     text-shadow: 1px 1px 1px black;    
 }
+
+a.button {
+    text-decoration: none;
+    font-family: 'Arial';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

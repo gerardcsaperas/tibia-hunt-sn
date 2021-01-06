@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react';
+
+import { Link } from 'react-router-dom';
+
 import ContentBox from './custom/ContentBox/ContentBox';
 import "./styles/HomePage.css";
 
@@ -15,8 +18,8 @@ function HomePage() {
         <p className="lore">Join us in this exciting quest and share your best achievents in this wonderful game called tibia!</p>
       </div>
       <div className="buttons__box">
-        <button className="button">Create an account</button>
-        <button className="button">Hunting Records</button>
+        <Link className="button" to="/login">Create an account</Link>
+        <Link className="button" to="/hunting-records">Hunting Records</Link>
       </div>
     </Fragment>
   )

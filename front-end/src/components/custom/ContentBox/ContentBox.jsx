@@ -30,7 +30,7 @@ function ContentBox(props) {
         <h1 style={{color: "white"}}>Hi! I'm mobile, motherfucker! Reactive! Boooyah!</h1>
     )
 
-    return windowDimensions.width > 1024 ? desktopComponent : mobileComponent;
+    return windowDimensions.width > 700 ? desktopComponent : mobileComponent;
 }
 
 export default ContentBox
