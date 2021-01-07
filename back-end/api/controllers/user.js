@@ -53,8 +53,6 @@ async function create(req, res) {
 
         const token = await user.generateAuthToken();
 
-        await user.save()
-
         res.status(201).send({ user, token });
         
 	} catch (e) {
