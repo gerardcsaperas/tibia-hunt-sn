@@ -120,9 +120,9 @@ function MyRecords() {
                 <div className="basicInfo" >
                     <h1 className="location">Demons, Edron</h1>
                     <div className="details">
-                        <p className="info">Lunatek, 250 ED</p>
+                        <p className="charInfo">Lunatek, 250 ED</p>
                         <p className="info">Exp/h: 1.500.000/h</p>
-                        <p className="info">Exp Ratio: 150%</p>
+                        <p className="expRatio">Exp Ratio: 150%</p>
                         <p className="info">Profit/h: 250.000/h</p>
                     </div>
                 <div className="socialMedia">
