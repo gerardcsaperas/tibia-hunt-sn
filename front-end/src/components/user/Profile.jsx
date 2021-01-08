@@ -12,9 +12,9 @@ function Profile() {
         ['Country:', 'Poland']
     ]
     const mockCharData = [
-        ['Jararu', 'Master Sorcerer', '111'],
-        ['Topotamadre', 'Royal Paladin', '222'],
-        ['Elpuma', 'Elite Knight', '333']
+        ['Jararu', 'Sorcerer', '111'],
+        ['Topotamadre', 'RP', '222'],
+        ['Elpuma', 'EK', '333']
     ]
 
     const content = (
