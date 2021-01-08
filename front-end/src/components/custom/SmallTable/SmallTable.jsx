@@ -7,7 +7,14 @@ function SmallTable(props) {
     
     const rows = props.data.map( (row, index) =>
         <div className="SmallTable-row" style={{background: differentEvenOdd(index)}}>
-            {row.map( string => <p>{string}</p>)}
+            {row.map( string => {
+                if (string.length > 10) {
+                    return <p>{`${string.slice(0, 7)}...`}</p>
+                } else {
+                    return <p>{string}</p>
+                }
+                
+            })}
         </div>
     )
 
