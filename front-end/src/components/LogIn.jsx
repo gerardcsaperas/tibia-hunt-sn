@@ -50,7 +50,7 @@ function LogIn() {
   const content = (
     <Fragment>
     <div className="logIn">
-      <form class="login-form">
+      <form className="login-form">
         <div className="form-input-row">
           <label className="dividers"> Email Adress:</label>
           <input type="email" name="email" onChange={(e) => updateEmail(e)} autoComplete="off"/>
