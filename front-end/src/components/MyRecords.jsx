@@ -1,12 +1,21 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from './custom/ContentBox/ContentBox';
+// import axios from "axios";
+// import { API_URL } from "../../config";
+// import HuntSummary from './custom/HuntSummary/HuntSummary';
 import "./styles/MyRecords.css";
+
+
+// // Redux
+// import { useSelector } from 'react-redux'
+// import {
+// 	selectUser
+// } from './userSlice'
 
 
 
 
 function MyRecords() {
-
     // const handleSearch = (e) => {
     //     let search = e.currentTarget.value.toLowerCase();
     //     let cloneChallenges = this.state.challenges.filter((item) => {
@@ -112,26 +121,27 @@ function MyRecords() {
 
         <ol>
             <li className="recordSummary">
-                <div className="lootPicContainer">
-                    <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
-                </div>
-
-                <div className="basicInfo" >
-                    <h1 className="location">Demons, Edron</h1>
-                    <div className="details">
-                        <p className="charInfo">Lunatek, 250 ED</p>
-                        <p className="info">Exp/h: 1.500.000/h</p>
-                        <p className="expRatio">Exp Ratio: 150%</p>
-                        <p className="info">Profit/h: 250.000/h</p>
+                    <div className="lootPicContainer">
+                        <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
                     </div>
-                <div className="socialMedia">
-                    <i class="far fa-thumbs-up"> 0</i>
-                    <i class="far fa-thumbs-down"> 0</i>
-                    <i class="far fa-comment"> 0</i>
-                </div>
-                
-                </div>
-            </li>
+
+                    <div className="basicInfo" >
+                        <h1 className="location">Demons, Edron</h1>
+                        <div className="details">
+                            <p className="charInfo">Lunatek, 250 ED</p>
+                            <p className="info">Exp/h: 1.500.000/h</p>
+                            <p className="expRatio">Exp Ratio: 150%</p>
+                            <p className="info">Profit/h: 250.000/h</p>
+                        </div>
+                    <div className="socialMedia">
+                        <i class="far fa-thumbs-up"> 0</i>
+                        <i class="far fa-thumbs-down"> 0</i>
+                        <i class="far fa-comment"> 0</i>
+                    </div>
+                    
+                    </div>
+                </li>
+            {/* <HuntSummary/> */}
         </ol>
     </Fragment>
   )
