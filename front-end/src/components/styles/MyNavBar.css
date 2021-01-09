@@ -11,19 +11,24 @@
     align-items: center;
 }
 
-h5 {
+a, h5 {
     margin-left: 1vw;
     margin-right: 1vw;
+    color: gold;
+    text-decoration: none;
 }
 
 div#navbar__left-box {
     margin-left: 2vw;
     display: flex;
+    align-items: center;
+    z-index: 1;
 }
 
 div#navbar__right-box {
     margin-right: 2vw;
     display: flex;
+    z-index: 1;
 }
 
 .brand { 
@@ -34,24 +39,8 @@ div#navbar__right-box {
     color: white;
 }
 
-/* .profile{
-    position: relative;
-    right: 75px;
+i {
+    font-size: 20px;
+    margin-right: 5px;
 }
-
-.notifications{
-    position: relative;
-    right: 75px;
-} */
-
-/* 
-.newRecord{
-    position: relative;
-    left: 100px;    
-}
-
-.huntingRecords{
-    position: relative;
-    left: 100px;
-} */
 

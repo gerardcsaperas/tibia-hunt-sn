@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles/MyNavBar.css";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -7,13 +8,13 @@ function MyNavBar() {
     return (
         <div id="navbar">
             <div id="navbar__left-box">
-                <h5 className="profile">Profile</h5>
-                <h5 className="notifications">Notifications</h5>
+                <NavLink to="/profile"><i className="fas fa-user"></i>Profile</NavLink>
+                <h5 className="/notifications"><i className="fas fa-bell"></i>Notifications</h5>
             </div>
             <h2 className="brand">Tibia Hunting Records</h2>
             <div id="navbar__right-box">
-                <h5 className="newRecord">New Record</h5>
-                <h5 className="huntingRecords">Hunting Records</h5>
+                <NavLink to="/new_record"><i className="fas fa-plus-circle"></i>New Record</NavLink>
+                <NavLink to="/hunting_records"><i className="fas fa-dragon"></i>Hunting Records</NavLink>
             </div>
         </div>
     )

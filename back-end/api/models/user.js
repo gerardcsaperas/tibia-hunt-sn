@@ -11,14 +11,14 @@ const userSchema = new Schema({
 		trim: true,
 		required: true,
 		validate: {
-			validator: async function(email) {
-				const user = await this.constructor.findOne({ email });
+			validator: async function(username) {
+				const user = await this.constructor.findOne({ username });
 				if(user) {
 					return false;
 				}
 				return true;
 			},
-			message: props => 'The specified email address is already in use.'
+			message: () => 'The specified username already exists.'
 		}
 	},
 	email: {
@@ -40,7 +40,7 @@ const userSchema = new Schema({
 					}
 					return true;
 				  },
-				  message: props => 'The specified email address is already in use.'
+				  message: () => 'The specified email address is already in use.'
 			},
 		]
 	},

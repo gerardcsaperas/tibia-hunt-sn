@@ -76,10 +76,12 @@ function App() {
 					{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
 		</Route>
 		<Route exact path="/login" >
-					{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
+					{/* { authenticated ? <Redirect to="/profile" /> : <LogIn /> } */}
+					<LogIn />
 		</Route>
 		<Route exact path="/signup" >
-					{ authenticated ? <Redirect to="/profile" /> : <SignUp /> }
+					{/* authenticated ? <Redirect to="/profile" /> : <SignUp /> */}
+					<SignUp />
 		</Route>
 		<Route exact path="/profile" >
 					{ authenticated ? <Profile /> : <Redirect to="/login" /> }
