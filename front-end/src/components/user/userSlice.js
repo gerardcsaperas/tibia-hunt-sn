@@ -8,8 +8,8 @@ export const userSlice = createSlice({
         authenticated: false
     },
     reducers: {
-        setUser: (state, action) => {
-            state.user = action.payload
+        setUsername: (state, action) => {
+            state.username = action.payload
         },
         setToken: (state, action) => {
             state.token = action.payload
@@ -23,7 +23,7 @@ export const userSlice = createSlice({
     }
 })
 
-export const { setUser, setToken, setUid, authenticate } = userSlice.actions
+export const { setUsername, setToken, setUid, authenticate } = userSlice.actions
 
 export const selectUser = state => state.user
 

@@ -17,7 +17,7 @@ import isTokenValid from './utils/isTokenValid';
 // State Store
 import { useSelector, useDispatch } from 'react-redux'
 import {
-	setUser,
+	setUsername,
 	setToken,
 	setUid,
 	authenticate,
@@ -30,7 +30,7 @@ import {
 
 function App() {
 
-  const authenticated = useSelector(selectUser).authenticated;
+  	const authenticated = useSelector(selectUser).authenticated;
 	const dispatch = useDispatch()
 
 	// Check if user is already authenticated.
@@ -48,7 +48,7 @@ function App() {
 			// set all values for user
 			if (isAuthenticated) {
 				dispatch(authenticate());
-				dispatch(setUser(user.user.name));
+				dispatch(setUsername(user.user.username));
 				dispatch(setUid(user.user._id));
 				dispatch(setToken(user.token));
 			}
