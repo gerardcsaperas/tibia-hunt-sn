@@ -46,6 +46,8 @@ h1 {
     bottom: 200px;
 }
 
+/*------------------------------------------------------------------*/
+
 .recordSummary {
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     position: absolute;
@@ -63,8 +65,9 @@ h1 {
     padding: 0px;
 }
 
+
 .lootPicture {
-    
+    border: 1px solid black;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
@@ -104,8 +107,16 @@ h1 {
 }
 
 .socialMedia {
+    padding-top:1%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.socialMedia i {
+    font-size: 16px;
+    margin:0px;
+    padding: 10px;
 }
 
 .charInfo {

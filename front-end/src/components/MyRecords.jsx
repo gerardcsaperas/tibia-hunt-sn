@@ -24,7 +24,7 @@ function MyRecords() {
     <Fragment>
         <div className="filters">
         <h1>Filters</h1>
-          <img className="loupe" src="/images/Loupe.gif" alt="Loupe" />
+          <img className="loupe" src="/assets/Loupe.gif" alt="Loupe" />
             <form className="grill">
               <label className="dividers">
                   Level:
@@ -113,7 +113,7 @@ function MyRecords() {
         <ol>
             <li className="recordSummary">
                 <div className="lootPicContainer">
-                    <img className="lootPicture" src="/images/tibia-background-artwork.jpg" alt="defaultImg"></img>
+                    <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
                 </div>
 
                 <div className="basicInfo" >
@@ -125,9 +125,9 @@ function MyRecords() {
                         <p className="info">Profit/h: 250.000/h</p>
                     </div>
                 <div className="socialMedia">
-                    <i class="far fa-thumbs-up"></i>
-                    <i class="far fa-thumbs-down"></i>
-                    <i class="fas fa-comment"></i>
+                    <i class="far fa-thumbs-up"> 0</i>
+                    <i class="far fa-thumbs-down"> 0</i>
+                    <i class="far fa-comment"> 0</i>
                 </div>
                 
                 </div>
