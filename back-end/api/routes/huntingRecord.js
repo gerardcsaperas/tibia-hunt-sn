@@ -9,6 +9,7 @@ router.get('/huntingRecord/:id', huntingRecordController.findById)
 router.post('/huntingRecord', auth, huntingRecordController.create);
 router.put('/huntingRecord/:id', auth, huntingRecordController.update);
 router.put('/huntingRecord/:id/like', auth, huntingRecordController.patchLikes);
+router.put('/huntingRecord/:id/dislike', auth, huntingRecordController.patchDislikes);
 router.delete('/huntingRecord/:id', auth, huntingRecordController.remove);
 
 module.exports = router;

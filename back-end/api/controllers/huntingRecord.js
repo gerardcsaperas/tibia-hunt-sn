@@ -115,6 +115,27 @@ async function patchLikes(req, res) {
 }
 
 /*
+type:    PUT
+desc:    Like/Unlike a Hunting Record
+auth:    Private
+*/
+async function patchDislikes(req, res) {
+    try {
+        const huntingRecord = await HuntingRecord.findById(req.params.id);
+
+        if (!huntingRecord) {
+            return res.status(404).json({ message: `We couldn't find hunting record with id ${req.params.id}` })
+        }
+
+        const updatedHuntingRecord = await huntingRecord.patchDislikes(req.user._id);
+        res.status(201).send(updatedHuntingRecord);
+	} catch (e) {
+        console.log(`There was an error updating your hunting record. Error: ${e.message}`);
+		res.status(400).json({ message: `There was an error updating your hunting record. Error: ${e.message}` })
+	}
+}
+
+/*
 type:    DELETE
 desc:    Remove a Hunting Record
 auth:    Private
