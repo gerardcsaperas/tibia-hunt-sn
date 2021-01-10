@@ -1,0 +1,38 @@
+.FormBox {
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E1D8C6;
+    border: 1px solid black;
+    min-height: 250px;
+    width: 270px;
+    box-shadow: 3px 3px 1px grey;
+    display: flex;
+    flex-direction: column;
+
+    div.form-input-row {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin-top: 5px;
+        height: 20px;
+    }
+
+    a {
+        margin-left: 5px;
+    }
+
+    form,
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
