@@ -38,11 +38,11 @@ h1 {
 }
 
 .loupe {
-    width: 50px;
+    width: 40px;
     height: auto;
     position: absolute;
-    left: 620px;
-    bottom: 200px;
+    left: 750px;
+    bottom: 360px;
 }
 
 /*------------------------------------------------------------------*/

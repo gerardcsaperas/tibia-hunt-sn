@@ -63,12 +63,13 @@ function MyRecords() {
         }
     ]
 
+    
 
   const content = (
     <Fragment>
         <div className="filters">
         <h1>Filters</h1>
-          <img className="loupe" src="./assets/Loupe.gif" alt="Loupe" />
+          <img className="loupe" src="./images/Loupe.gif" alt="Loupe" />
             <form className="grill">
               <label className="dividers">
                   Level:
@@ -116,16 +117,42 @@ function MyRecords() {
               </label>
             </form>
         </div>
+        
 
+        <ol>
+            {
+                mockHuntData.map((huntingRecord, index) => {
+                    return <HuntSummary data={huntingRecord} key={index} />
+                })
 
-        <ol className="recordSummaryList">
-            <li className="recordSummary">
-                <HuntSummary title="huntList" data={mockHuntData} />  
-            </li>
+            }
         </ol>
+        
+        {/* <ol>
+            <li >
+
+            TypeError: Cannot read property 'map' of undefined 
+            {
+                huntList.map((huntingRecord, index) => {
+                    return <HuntSummary data={huntingRecord} key={index}/>
+                })
+            }
+           
+            </li>
+        </ol> */}
 
     </Fragment>
   )
+  
+//   Failed to compile
+//   const list = huntList.map( (huntingRecord, index) => {
+//       return <HuntSummary data={huntingRecord} key={index}
+//     })
+
+
+
+
+
 
     return (
     <ContentBox

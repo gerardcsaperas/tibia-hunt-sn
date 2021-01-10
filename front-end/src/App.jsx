@@ -96,7 +96,7 @@ function App() {
 			</Route>
 			<Route exact path="/hunting-record" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
-				{/* <MyRecords /> */}
+				<MyRecords />
 			</Route>
       	</Switch>
     </Router>

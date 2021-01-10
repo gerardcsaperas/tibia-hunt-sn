@@ -1,5 +1,4 @@
 import React from 'react';
-import ContentBox from '../custom/ContentBox/ContentBox';
 import {Link} from 'react-router-dom';
 import './HuntSummary.css';
 
@@ -9,14 +8,14 @@ import './HuntSummary.css';
 
 function HuntSummary(props) {
 
-    if (!props.data || props.data.length === 0) {
-        return null;
-    }
+    // if (!props.data || props.data.length === 0) {
+    //     return null;
+    // }
 
     console.log(props.data)
 
-    const content = (
-        <Link>
+    return (
+            <Link>
                 <div className="recordSummary">
                         <div className="lootPicContainer">
                             <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
@@ -38,16 +37,7 @@ function HuntSummary(props) {
                         
                         </div>
                 </div>
-        </Link>
-    )
-
-    return (
-        <ContentBox
-          height="700px"
-          width="980px"
-          title="My Records"
-          content={content}
-        ></ContentBox>
+            </Link>
     )
 }
 
