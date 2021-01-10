@@ -5,13 +5,17 @@ function SmallTable(props) {
 
     const differentEvenOdd = (index) => (index % 2 > 0 ? '#E1D8C6' : '#F5EFE4') 
     
+    if (!props.data || props.data.length === 0) {
+        return null;
+    }
+
     const rows = props.data.map( (row, index) =>
-        <div className="SmallTable-row" style={{background: differentEvenOdd(index)}}>
-            {row.map( string => {
+        <div key={index} className="SmallTable-row" style={{background: differentEvenOdd(index)}}>
+            {row.map( (string, index) => {
                 if (string.length > 10) {
-                    return <p>{`${string.slice(0, 7)}...`}</p>
+                    return <p key={index}>{`${string.slice(0, 7)}...`}</p>
                 } else {
-                    return <p>{string}</p>
+                    return <p key={index}>{string}</p>
                 }
                 
             })}
