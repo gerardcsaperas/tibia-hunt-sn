@@ -33,7 +33,7 @@ function MyRecords() {
     <Fragment>
         <div className="filters">
         <h1>Filters</h1>
-          <img className="loupe" src="/assets/Loupe.gif" alt="Loupe" />
+          <img className="loupe" src={"./assets/Loupe.gif"} alt="Loupe" />
             <form className="grill">
               <label className="dividers">
                   Level:

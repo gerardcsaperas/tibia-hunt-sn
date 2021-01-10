@@ -12,7 +12,7 @@ import {
 } from './userSlice'
 
 
-function HuntSummary() {
+function HuntSummary(props) {
 
     const user = useSelector(selectUser);
 
@@ -39,35 +39,20 @@ function HuntSummary() {
             const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);
             
             if (response.status === 200 && response.data.length > 0) {
-                const huntList = response.data.map(hunt => {
-                    return [hunt.huntPicture,
-                            hunt.city, 
-                            hunt.spot, 
-                            hunt.expH, 
-                            hunt.profitH, 
-                            hunt.expRatio, 
-                            hunt.likes, 
-                            hunt.dislikes, 
-                            hunt.comments]
-                })
-                setHuntList([...huntList])
-            }
+                    return setHuntList([...response.data])      
+                }
 
-          } catch(e) {
-            console.error(e);
-          }
+        }   
+            catch(e) {
+                console.error(e);
+            }
     }
 
     const mockHuntData = [
-        ['huntPicture:', 'Pic_id'],
-        ['city:', 'Edron'],
-        ['spot:', 'Demons'],
-        ['expH:', '1.500.000/h'],
-        ['profitH:', '250.000/h'],
-        ['expRatio:', '150%'],
-        ['likes:', '50'],
-        ['dislikes:', '1'],
-        ['comments:', '29']
+        {huntPicture: "Pic_id", spot: {city: "edron", name: "demons"}, expH: '1.500.000/h','profitH:', '250.000/h', 'expRatio:', '150%',
+        'likes:', '50',
+        'dislikes:', '1',
+        'comments:', '29'
     ]
 
     const content = (
@@ -78,7 +63,7 @@ function HuntSummary() {
                         </div>
     
                         <div className="basicInfo" >
-                            <h1 className="location">Demons, Edron</h1>
+                            <h1 className="location">{`${props.spot.name}, ${props.spot.city}`}</h1>
                             <div className="details">
                                 <p className="charInfo">Lunatek, 250 ED</p>
                                 <p className="info">Exp/h: 1.500.000/h</p>

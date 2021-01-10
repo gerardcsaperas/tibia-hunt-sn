@@ -86,7 +86,7 @@ function App() {
 		<Route exact path="/profile" >
 					{ authenticated ? <Profile /> : <Redirect to="/login" /> }
 		</Route>
-		<Route exact path="/huntingRecord" >
+		<Route exact path="/hunting-record" >
 					{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
 					<MyRecords />
 		</Route>
