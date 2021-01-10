@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import axios from "axios";
-import { API_URL } from "../config";
+import { API_URL } from '../../config';
 import {Link} from 'react-router-dom';
-import ContentBox from './custom/ContentBox/ContentBox';
-import "./styles/LogIn.css";
+import ContentBox from '../custom/ContentBox/ContentBox';
+import FormBox from '../custom/FormBox/FormBox';
 
 
 
@@ -47,23 +47,25 @@ function LogIn() {
     }
   };
 
-  const content = (
-    <Fragment>
-    <div className="logIn">
-      <form className="login-form">
+  const form = (
+    <form className="login-form">
         <div className="form-input-row">
-          <label className="dividers"> Email Adress:</label>
+          <label>Email Adress:</label>
           <input type="email" name="email" onChange={(e) => updateEmail(e)} autoComplete="off"/>
         </div>
         <div className="form-input-row">
-          <label className="dividers">Password:</label>
+          <label>Password:</label>
           <input type="password" name="password" onChange={(e) => updatePassword(e)} autoComplete="off"/>
         </div>
         {error ? <p style={{color: "red"}}>Invalid credentials</p> : null }
-      </form>
-      <p className="toSignUp">Not a member yet?<Link to="/signup">Sign Up</Link></p>
-    </div>
-    <div className="buttons__box">
+        <p>Not a member yet?<Link to="/signup">Sign Up</Link></p>
+    </form>
+  )
+
+  const content = (
+    <Fragment>
+    <FormBox form={form} />
+    <div className="buttons__box absolute-bot">
       <button className="button" type="submit" onClick={handleLogIn}>Login</button>
     </div>
   </Fragment>
@@ -72,8 +74,7 @@ function LogIn() {
 
     return (
     <ContentBox
-      height="400px"
-      width="370px"
+      width="370"
       title="Login"
       content={content}
     ></ContentBox>
