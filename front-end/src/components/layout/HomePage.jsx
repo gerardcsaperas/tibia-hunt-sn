@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import ContentBox from './custom/ContentBox/ContentBox';
-import "./styles/HomePage.css";
+import ContentBox from '../custom/ContentBox/ContentBox';
+import "./HomePage.css";
 
 
 
