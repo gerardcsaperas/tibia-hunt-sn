@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 
 // Own Components
-import MyNavBar from "./components/MyNavBar";
-import HomePage from "./components/HomePage";
-import SignUp from "./components/SignUp";
-import LogIn from "./components/LogIn";
+import MyNavBar from "./components/layout/MyNavBar";
+import HomePage from "./components/layout/HomePage";
+import SignUp from "./components/user/SignUp";
+import LogIn from "./components/user/LogIn";
 import Profile from './components/user/Profile';
-import MyRecords from "./components/MyRecords";
+import NewCharacter from './components/character/NewCharacter';
+import MyRecords from "./components/huntingRecords/MyRecords";
 
 // Utils
 import isTokenValid from './utils/isTokenValid';
@@ -85,6 +86,9 @@ function App() {
 		</Route>
 		<Route exact path="/profile" >
 					{ authenticated ? <Profile /> : <Redirect to="/login" /> }
+		</Route>
+		<Route exact path="/characters/new">
+					{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
 		</Route>
       </Switch>
     </Router>
