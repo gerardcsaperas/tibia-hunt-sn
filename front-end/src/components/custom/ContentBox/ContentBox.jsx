@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import ScaleLoader from "react-spinners/ScaleLoader";
 import './ContentBox.scss';
 
 // Redux Store

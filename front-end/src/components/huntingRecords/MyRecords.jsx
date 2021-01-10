@@ -1,39 +1,74 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../custom/ContentBox/ContentBox';
-// import axios from "axios";
-// import { API_URL } from "../../config";
-// import HuntSummary from './custom/HuntSummary/HuntSummary';
+import axios from "axios";
+import { API_URL } from "../../config";
+import HuntSummary from '../huntingRecords/HuntSummary';
 import "./MyRecords.css";
 
 
-// // Redux
-// import { useSelector } from 'react-redux'
-// import {
-// 	selectUser
-// } from './userSlice'
 
 
+// Redux
+import { useSelector } from 'react-redux'
+import { selectUser } from '../user/userSlice'
 
 
 function MyRecords() {
-    // const handleSearch = (e) => {
-    //     let search = e.currentTarget.value.toLowerCase();
-    //     let cloneChallenges = this.state.challenges.filter((item) => {
-    //       return (
-    //         item.title.toLowerCase().includes(search) ||
-    //         item.description.toLowerCase().includes(search)
-    //       );
-    //     });
-    //     this.setState({
-    //       filteredChallenges: cloneChallenges,
-    //     });
-    //   };
+
+    const user = useSelector(selectUser);
+
+    const [ huntList, setHuntList ] = useState();
+
+    // Get hunt list on component initialization
+    useEffect(() => {
+        getHuntList();
+    }, [])
+
+    useEffect(() => {
+        console.log(huntList);
+    }, [huntList])
+
+    // Function used to retrieve user hunt list
+    const getHuntList = async() => {
+        try {
+            const config = {
+                      headers: {
+                          'Authorization': `Bearer ${user.token}`
+                      }
+                  };
+
+            const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);
+            
+            if (response.status === 200 && response.data.length > 0) {
+                    return setHuntList([...response.data])      
+                }
+
+        }   
+            catch(e) {
+                console.error(e);
+            }
+    }
+
+    const mockHuntData = [
+        {
+        huntPicture: "Pic_id", 
+        spot: {city: "edron", name: "demons"}, 
+        teamComp: {name: "Lunatek", level: "250", vocation: "ED"},
+        expH: '1.500.000/h', 
+        profitH: '250.000/h',
+        expRatio: '150%', 
+        likes: '50', 
+        dislikes: '1',
+        comments:'29'
+        }
+    ]
+
 
   const content = (
     <Fragment>
         <div className="filters">
         <h1>Filters</h1>
-          <img className="loupe" src={"./assets/Loupe.gif"} alt="Loupe" />
+          <img className="loupe" src="./assets/Loupe.gif" alt="Loupe" />
             <form className="grill">
               <label className="dividers">
                   Level:
@@ -81,68 +116,14 @@ function MyRecords() {
               </label>
             </form>
         </div>
-{/* 
-        <ol className="list">
-          {this.state.huntingRecord.map((record) => {
-            const {picture, location, city, characterName, level, vocation, expRatio, expH, profitH, likesCount, dislikesCount, commentsCount } = user;
-            return (
-              <Link to={`/hunting-record/${_id}`}>
-                  <li className="recordSummary">
-                    {username} {points} points
-                  </li> 
-              </Link>
 
-            <Link to={`/hunting-record/${_id}`}>
-                <li className="recordSummary">
-                    <div className="lootPicContainer">
-                        {picture}
-                    </div>
 
-                    <div className="basicInfo" >
-                        <h1 className="location">{location}, {city}</h1>
-                        <div className="details">
-                            <p className="info">{characterName}, {level} {vocation}</p>
-                            <p className="info">Exp/h: {expH}</p>
-                            <p className="info">Exp Ratio: {expRatio}</p>
-                            <p className="info">Profit/h: {profitH}</p>
-                        </div>
-
-                        <div className="socialMedia">
-                            <i class="far fa-thumbs-up">{likesCount}</i>
-                            <i class="far fa-thumbs-down">{dislikesCount}</i>
-                            <i class="fas fa-comment">{commentsCount}</i>
-                        </div>
-                    </div>
-                </li>
-            </Link>
-            );
-          })}
-        </ol> */}
-
-        <ol>
+        <ol className="recordSummaryList">
             <li className="recordSummary">
-                    <div className="lootPicContainer">
-                        <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
-                    </div>
-
-                    <div className="basicInfo" >
-                        <h1 className="location">Demons, Edron</h1>
-                        <div className="details">
-                            <p className="charInfo">Lunatek, 250 ED</p>
-                            <p className="info">Exp/h: 1.500.000/h</p>
-                            <p className="expRatio">Exp Ratio: 150%</p>
-                            <p className="info">Profit/h: 250.000/h</p>
-                        </div>
-                    <div className="socialMedia">
-                        <i class="far fa-thumbs-up"> 0</i>
-                        <i class="far fa-thumbs-down"> 0</i>
-                        <i class="far fa-comment"> 0</i>
-                    </div>
-                    
-                    </div>
-                </li>
-            {/* <HuntSummary/> */}
+                <HuntSummary title="huntList" data={mockHuntData} />  
+            </li>
         </ol>
+
     </Fragment>
   )
 
