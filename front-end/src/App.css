@@ -31,3 +31,19 @@ a.button {
     justify-content: center;
     align-items: center;
 }
+
+.buttons__box {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 2.5rem;
+}
+
+.absolute-bot {
+    position: absolute;
+    bottom: 20px;
+    margin: 0;
+}
