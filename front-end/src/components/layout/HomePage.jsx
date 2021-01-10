@@ -26,8 +26,7 @@ function HomePage() {
 
     return (
     <ContentBox
-      height="480px"
-      width="370px"
+      width="370"
       title="Tibia Hunting Records"
       content={content}
     ></ContentBox>
