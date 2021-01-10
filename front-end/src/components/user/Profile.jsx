@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../custom/ContentBox/ContentBox';
 import axios from "axios";
+import {Link} from 'react-router-dom';
 import { API_URL } from "../../config";
 import './Profile.scss';
 
@@ -18,15 +19,12 @@ function Profile() {
     const user = useSelector(selectUser);
 
     const [ characters, setCharacters ] = useState();
+    const [ loading, setLoading ] = useState(true);
 
     // Get characters on component initialization
     useEffect(() => {
         getCharacters();
     }, [])
-
-    useEffect(() => {
-        console.log(characters);
-    }, [characters])
 
     // Function used to retrieve user characters
     const getCharacters = async() => {
@@ -43,7 +41,8 @@ function Profile() {
                 const characters = response.data.map(char => {
                     return [char.name, char.vocation, char.level]
                 })
-                setCharacters([...characters])
+                setCharacters([...characters]);
+                setLoading(false);
             }
 
           } catch(e) {
@@ -58,12 +57,15 @@ function Profile() {
     const mockCharData = [
         ['Jararu', 'Sorcerer', '111'],
         ['Topotamadre', 'RP', '222'],
+        ['Elpuma', 'EK', '333'],
+        ['Jararu', 'Sorcerer', '111'],
+        ['Topotamadre', 'RP', '222'],
         ['Elpuma', 'EK', '333']
     ]
 
     const content = (
-        <Fragment>
-            <i className="fas fa-cog"></i>
+        <div className="Profile">
+            <Link to="/edit-profile"><i className="fas fa-cog"></i></Link>
             <div className="image-box">
                 <img className="profile-image" src=""/>
             </div>
@@ -74,6 +76,7 @@ function Profile() {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star-half"></i>
+                <Link to="/star-system"><i className="help fas fa-question-circle"></i></Link>
             </div>
             <SmallTable
             title="Account Information"
@@ -83,14 +86,19 @@ function Profile() {
             title="Characters"
             data={mockCharData}
             />
-        </Fragment>
+            <Link className="link" to="/characters/new"><i className="fas fa-plus-circle"></i>Add New Character</Link>
+            <div className="buttons__box">
+                <Link className="button" to="/new-hunting-record">Create New Record</Link>
+                <Link className="button" to="/my-hunting-records">My Records</Link>
+            </div>
+        </div>
       )
     
         return (
         <ContentBox
-          height="500"
           width="370"
           title="Profile"
+          loading={loading}
           content={content}
         ></ContentBox>
         )
