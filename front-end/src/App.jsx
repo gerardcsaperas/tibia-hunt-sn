@@ -5,12 +5,14 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 
 // Own Components
 import MyNavBar from "./components/layout/MyNavBar";
+import Logo from "./components/layout/Logo";
 import HomePage from "./components/layout/HomePage";
 import SignUp from "./components/user/SignUp";
 import LogIn from "./components/user/LogIn";
 import Profile from './components/user/Profile';
 import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
+
 
 // Utils
 import isTokenValid from './utils/isTokenValid';
@@ -72,6 +74,7 @@ function App() {
     		<Route>
 				<MyNavBar props={authenticated}/>
 			</Route>
+			<Logo/>
     	<Switch>
         	<Route exact path="/" >
 				{/* { authenticated ? <Redirect to="/profile" /> : <HomePage /> } */}
