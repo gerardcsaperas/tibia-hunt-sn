@@ -3,7 +3,7 @@ import ContentBox from '../custom/ContentBox/ContentBox';
 // import axios from "axios";
 // import { API_URL } from "../../config";
 // import HuntSummary from './custom/HuntSummary/HuntSummary';
-import "./styles/MyRecords.css";
+import "./MyRecords.css";
 
 
 // // Redux
