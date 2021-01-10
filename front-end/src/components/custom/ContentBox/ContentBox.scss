@@ -1,3 +1,5 @@
+@import '../../styles/Library.scss';
+
 div.ContentBox {
     position: absolute;
     top: 50%;
@@ -27,5 +29,12 @@ div.ContentBox {
         background-color: #FFF1DA;
         border: 1px solid #793D03;
         color: black;
+
+        .loading {
+            position: absolute;
+            top: 42%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
