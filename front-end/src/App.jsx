@@ -69,29 +69,33 @@ function App() {
 
   return (
     <Router>
-      <Route>
-			<MyNavBar props={authenticated}/>
-		</Route>
-      <Switch>
-        <Route exact path="/" >
-					{/* { authenticated ? <Redirect to="/profile" /> : <HomePage /> } */}
-					<HomePage />
-		</Route>
-		<Route exact path="/login" >
-					{/* { authenticated ? <Redirect to="/profile" /> : <LogIn /> } */}
-					<LogIn />
-		</Route>
-		<Route exact path="/signup" >
-					{/* authenticated ? <Redirect to="/profile" /> : <SignUp /> */}
-					<SignUp />
-		</Route>
-		<Route exact path="/profile" >
-					{ authenticated ? <Profile /> : <Redirect to="/login" /> }
-		</Route>
-		<Route exact path="/characters/new">
-					{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
-		</Route>
-      </Switch>
+    		<Route>
+				<MyNavBar props={authenticated}/>
+			</Route>
+    	<Switch>
+        	<Route exact path="/" >
+				{/* { authenticated ? <Redirect to="/profile" /> : <HomePage /> } */}
+				<HomePage />
+			</Route>
+			<Route exact path="/login" >
+				{/* { authenticated ? <Redirect to="/profile" /> : <LogIn /> } */}
+				<LogIn />
+			</Route>
+			<Route exact path="/signup" >
+				{/* authenticated ? <Redirect to="/profile" /> : <SignUp /> */}
+				<SignUp />
+			</Route>
+			<Route exact path="/profile" >
+				{ authenticated ? <Profile /> : <Redirect to="/login" /> }
+			</Route>
+			<Route exact path="/characters/new">
+				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
+			</Route>
+			<Route exact path="/hunting-record" >
+				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
+				<MyRecords />
+			</Route>
+      	</Switch>
     </Router>
   );
 }
