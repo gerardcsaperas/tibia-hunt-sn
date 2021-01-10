@@ -100,6 +100,9 @@ const huntingRecordSchema = new Schema({
         }
     },
     teamComp: [{
+        name: {
+            type: String
+        },
         vocation: {
             type: String,
             required: true
@@ -113,6 +116,10 @@ const huntingRecordSchema = new Schema({
     opComment: String,
     comments: [commentSchema],
     likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }],
+    dislikes: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
     }]
