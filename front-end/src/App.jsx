@@ -74,7 +74,8 @@ function App() {
 		</Route>
       <Switch>
         <Route exact path="/" >
-					{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
+					{/* { authenticated ? <Redirect to="/profile" /> : <HomePage /> } */}
+					<HomePage />
 		</Route>
 		<Route exact path="/login" >
 					{/* { authenticated ? <Redirect to="/profile" /> : <LogIn /> } */}
