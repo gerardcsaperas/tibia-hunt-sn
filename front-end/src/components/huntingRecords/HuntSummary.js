@@ -15,26 +15,29 @@ function HuntSummary(props) {
 
     console.log(props.data)
 
+    const { huntPicture, spot, teamComp, expH, expRatio, profitH, likes, dislikes, comments } = props.data
+
     return (
-            <Link>
+            <Link to="/record-details">
                 <div className="recordSummary">
                         <div className="lootPicContainer">
-                            <img className="lootPicture" src="/assets/tibia-background-artwork.jpg" alt="defaultImg"></img>
+                            <img className="lootPicture" src={`${huntPicture}`} alt="defaultImg"></img>
                         </div>
     
                         <div className="basicInfo" >
-                            <h1 className="location">{`${props.spot.name}, ${props.spot.city}`}</h1>
+                            <h1 className="location">{`${spot.name}, ${spot.city}`}</h1>
                             <div className="details">
-                                <p className="charInfo">{`${props.teamComp.name}, ${props.teamComp.level} ${props.teamComp.vocation}`}</p>
-                                <p className="info">Exp/h: {`${props.expH}`}</p>
-                                <p className="expRatio">Exp Ratio: {`${props.expRatio}`}</p>
-                                <p className="info">Profit/h: {`${props.profitH}`}</p>
+                                <p className="charInfo">{`${teamComp.name}, ${teamComp.level} ${teamComp.vocation}`}</p>
+                                <p className="info">Exp/h: {`${expH}`}</p>
+                                <p className="expRatio">Exp Ratio: {`${expRatio}`}</p>
+                                <p className="info">Profit/h: {`${profitH}`}</p>
                             </div>
-                        <div className="socialMedia">
-                            <i class="far fa-thumbs-up"> {`${props.likes.length}`}</i>
-                            <i class="far fa-thumbs-down"> {`${props.dislikes.length}`}</i>
-                            <i class="far fa-comment"> {`${props.comments.length}`}</i>
-                        </div>
+
+                            <div className="socialMedia">
+                                <i class="far fa-thumbs-up"> {`${likes.length}`}</i>
+                                <i class="far fa-thumbs-down"> {`${dislikes.length}`}</i>
+                                <i class="far fa-comment"> {`${comments.length}`}</i>
+                            </div>
                         
                         </div>
                 </div>

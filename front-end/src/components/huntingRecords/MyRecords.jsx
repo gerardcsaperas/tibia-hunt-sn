@@ -51,11 +51,23 @@ function MyRecords() {
 
     const mockHuntData = [
         {
-        huntPicture: "Pic_id", 
+        huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
         spot: {city: "edron", name: "demons"}, 
         teamComp: {name: "Lunatek", level: "250", vocation: "ED"},
         expH: '1.500.000/h', 
         profitH: '250.000/h',
+        expRatio: '150%', 
+        likes: '50', 
+        dislikes: '1',
+        comments:'29'
+        },
+
+        {
+        huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
+        spot: {city: "yalahar", name: "hellspawns"}, 
+        teamComp: {name: "Shovii", level: "260", vocation: "RP"},
+        expH: '500.000/h', 
+        profitH: '150.000/h',
         expRatio: '150%', 
         likes: '50', 
         dislikes: '1',
@@ -119,39 +131,21 @@ function MyRecords() {
         </div>
         
 
-        <ol>
-            {
-                mockHuntData.map((huntingRecord, index) => {
-                    return <HuntSummary data={huntingRecord} key={index} />
-                })
+        <ol className="listContainer">
+            <li className="recordsList">
+                {
+                    mockHuntData.map((huntingRecord, index) => {
+                        return <HuntSummary data={huntingRecord} key={index} />
+                    })
 
-            }
+                }
+            </li>        
         </ol>
         
-        {/* <ol>
-            <li >
-
-            TypeError: Cannot read property 'map' of undefined 
-            {
-                huntList.map((huntingRecord, index) => {
-                    return <HuntSummary data={huntingRecord} key={index}/>
-                })
-            }
-           
-            </li>
-        </ol> */}
-
+       
     </Fragment>
   )
   
-//   Failed to compile
-//   const list = huntList.map( (huntingRecord, index) => {
-//       return <HuntSummary data={huntingRecord} key={index}
-//     })
-
-
-
-
 
 
     return (
