@@ -1,0 +1,576 @@
+[
+ {
+   "Name": "Adra",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "October 21, 2020"
+ },
+ {
+   "Name": "Antica",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "January 07, 1997"
+ },
+ {
+   "Name": "Assombra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Astera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "January 25, 2005"
+ },
+ {
+   "Name": "Belluma",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "April 16, 2019"
+ },
+ {
+   "Name": "Belobra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "December 13, 2016"
+ },
+ {
+   "Name": "Bona",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Calmera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "April 17, 2003"
+ },
+ {
+   "Name": "Carnera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Retro Open PvP",
+   "Online since": "August 08, 2018"
+ },
+ {
+   "Name": "Celebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "October 29, 2018"
+ },
+ {
+   "Name": "Celesta",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "November 24, 2004"
+ },
+ {
+   "Name": "Concorda",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "September 25, 2019"
+ },
+ {
+   "Name": "Cosera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Damora",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "December 07, 2017"
+ },
+ {
+   "Name": "Descubra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "December 07, 2017"
+ },
+ {
+   "Name": "Dibra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "April 16, 2019"
+ },
+ {
+   "Name": "Duna",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Open PvP",
+   "Online since": "May 16, 2017"
+ },
+ {
+   "Name": "Emera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Retro Open PvP",
+   "Online since": "February 26, 2020"
+ },
+ {
+   "Name": "Epoca",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Estela",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "October 19, 2017"
+ },
+ {
+   "Name": "Faluna",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "April 10, 2018"
+ },
+ {
+   "Name": "Ferobra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "November 22, 2016"
+ },
+ {
+   "Name": "Firmera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Retro Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Funera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Furia",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Garnera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "August 14, 2014"
+ },
+ {
+   "Name": "Gentebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "December 12, 2017"
+ },
+ {
+   "Name": "Gladera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Harmonia",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "March 30, 2004"
+ },
+ {
+   "Name": "Helera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "August 8, 2017"
+ },
+ {
+   "Name": "Honbra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "April 18, 2017"
+ },
+ {
+   "Name": "Impera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "October 19, 2017"
+ },
+ {
+   "Name": "Inabra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "December 12, 2017"
+ },
+ {
+   "Name": "Javibra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Open PvP",
+   "Online since": "February 26, 2020"
+ },
+ {
+   "Name": "Jonera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 10, 2018"
+ },
+ {
+   "Name": "Kalibra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "December 12, 2017"
+ },
+ {
+   "Name": "Kenora",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "June 24, 2014"
+ },
+ {
+   "Name": "Libertabra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "July 29, 2020"
+ },
+ {
+   "Name": "Lobera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Luminera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "July 20, 2005"
+ },
+ {
+   "Name": "Lutabra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Open PvP",
+   "Online since": "December 12, 2017"
+ },
+ {
+   "Name": "Macabra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "August 8, 2017"
+ },
+ {
+   "Name": "Menera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "July 13, 2006"
+ },
+ {
+   "Name": "Mitigera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "September 25, 2019"
+ },
+ {
+   "Name": "Monza",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Nefera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Noctera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 18, 2017"
+ },
+ {
+   "Name": "Nossobra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Open PvP",
+   "Online since": "August 08, 2018"
+ },
+ {
+   "Name": "Olera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "December 07, 2017"
+ },
+ {
+   "Name": "Ombra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "April 10, 2018"
+ },
+ {
+   "Name": "Pacembra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "March 27, 2020"
+ },
+ {
+   "Name": "Pacera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Optional PvP",
+   "Online since": "March 30, 2004"
+ },
+ {
+   "Name": "Peloria",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "October 19, 2017"
+ },
+ {
+   "Name": "Premia",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "April 03, 2002"
+ },
+ {
+   "Name": "Pyra",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Open PvP",
+   "Online since": "August 08, 2018"
+ },
+ {
+   "Name": "Quelibra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "December 12, 2017"
+ },
+ {
+   "Name": "Quintera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "October 19, 2017"
+ },
+ {
+   "Name": "Ragna",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "July 29, 2020"
+ },
+ {
+   "Name": "Refugia",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "July 20, 2005"
+ },
+ {
+   "Name": "Relania",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Relembra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Retro Open PvP",
+   "Online since": "May 16, 2017"
+ },
+ {
+   "Name": "Secura",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Optional PvP",
+   "Online since": "November 04, 2002"
+ },
+ {
+   "Name": "Serdebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "November 22, 2016"
+ },
+ {
+   "Name": "Serenebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "September 25, 2019"
+ },
+ {
+   "Name": "Solidera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Talera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Torpera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 16, 2019"
+ },
+ {
+   "Name": "Tortura",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Hardcore PvP",
+   "Online since": "August 8, 2017"
+ },
+ {
+   "Name": "Unica",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Retro Open PvP",
+   "Online since": "February 26, 2020"
+ },
+ {
+   "Name": "Utobra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "October 21, 2020"
+ },
+ {
+   "Name": "Venebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "February 06, 2019"
+ },
+ {
+   "Name": "Vita",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "April 18, 2017"
+ },
+ {
+   "Name": "Vunira",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "October 19, 2017"
+ },
+ {
+   "Name": "Wintera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "April 19, 2018"
+ },
+ {
+   "Name": "Wizera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "October 21, 2020"
+ },
+ {
+   "Name": "Xandebra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "March 27, 2020"
+ },
+ {
+   "Name": "Xylona",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Open PvP",
+   "Online since": "May 27, 2020"
+ },
+ {
+   "Name": "Yonabra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Optional PvP",
+   "Online since": "May 27, 2020"
+ },
+ {
+   "Name": "Ysolera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Open PvP",
+   "Online since": "May 27, 2020"
+ },
+ {
+   "Name": "Zenobra",
+   "FIELD2": "",
+   "Location": "Brazil",
+   "Type": "Open PvP",
+   "Online since": "May 27, 2020"
+ },
+ {
+   "Name": "Zuna",
+   "FIELD2": "",
+   "Location": "United Kingdom",
+   "Type": "Hardcore PvP",
+   "Online since": "October 26, 2017"
+ },
+ {
+   "Name": "Zunera",
+   "FIELD2": "",
+   "Location": "USA",
+   "Type": "Hardcore PvP",
+   "Online since": "October 26, 2017"
+ }
+]
