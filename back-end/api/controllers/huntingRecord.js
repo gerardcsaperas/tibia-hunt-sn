@@ -157,5 +157,6 @@ module.exports = {
     create,
     update,
     patchLikes,
+    patchDislikes,
     remove
 }
