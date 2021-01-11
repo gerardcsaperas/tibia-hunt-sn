@@ -1,14 +1,15 @@
 import axios from 'axios';
+import { API_URL } from "../config";
 
 export default async function isTokenValid(token) {
 	const options = {
 		headers: {
-		Authorization: `Bearer ${token}`
+			'Authorization': `Bearer ${token}`
 		}
 	}
 
 	try {
-		const user = await axios.get(`/user`, options)
+		const user = await axios.get(`${API_URL}/user`, options)
 
 		if (user) {
 			return true
