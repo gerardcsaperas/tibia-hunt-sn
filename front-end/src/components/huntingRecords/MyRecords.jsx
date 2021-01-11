@@ -15,6 +15,41 @@ import { selectUser } from '../user/userSlice'
 
 function MyRecords() {
 
+    //Code to Filter List of Hunting Records
+    const [searchLevel, setSearchLevel] = useState();
+    const [searchExpH, setSearchExpH] = useState();
+    const [searchProfitH, setSearchProfitH] = useState();
+    const [searchVocation, setSearchVocation] = useState();
+    const [searchCity, setSearchCity] = useState();
+    const [searchTeamComp, setSearchTeamComp] = useState();
+    const [searchExpRatio, setSearchExpRatio] = useState();
+    const [searchEvent, setSearchEvent] = useState();
+    const [searchDifficulty, setSearchDifficulty] = useState();
+
+    const [searchResults, setSearchResults] = useState([]);
+
+    
+    const handleChange = event => {
+        setSearchLevel||
+        setSearchExpH||
+        setSearchProfitH||
+        setSearchVocation||
+        setSearchCity||
+        setSearchTeamComp||
+        setSearchExpRatio||
+        setSearchEvent||
+        setSearchDifficulty(event.target.value);
+    };
+    useEffect(() => {
+    const results = mockLevelData.filter(person =>
+      person.toLowerCase().includes(searchLevel)
+    );
+    setSearchResults(results);
+    }, [searchLevel]);
+
+
+
+    //Code to display List of Hunting Records
     const user = useSelector(selectUser);
 
     const [ huntList, setHuntList ] = useState();
@@ -75,7 +110,69 @@ function MyRecords() {
         }
     ]
 
-    
+    const mockLevelData = [
+        "0-100",
+        "100-200",
+        "200-300",
+        "300-400",
+        "400-500"
+    ]
+
+    const mockExpHData = [
+        "0-100.000/h",
+        "500.000-1.000.000/h",
+        "1.000.000-2.000.000/h"
+    ]
+
+    const mockProfitHData = [
+        "0-100.000/h",
+        "500.000-1.000.000/h",
+        "1.000.000-2.000.000/h"
+    ]
+
+    const mockVocationData = [
+        "EK",
+        "RP",
+        "ED",
+        "MS"
+    ]
+
+    const mockCityData = [
+        "Edron",
+        "Venore",
+        "Carlin",
+        "thais",
+        "Yalahar"
+    ]
+
+    const mockTeamCompData = [
+        "Solo",
+        "Duo",
+        "Trio",
+        "Full-Team"
+    ]
+
+    const mockExpRatioData = [
+        "100%",
+        "150%",
+        "200%",
+        "225%",
+        "300%"
+    ]
+
+    const mockEventData = [
+        "Double Exp",
+        "Double Loot",
+        "Rapid Respawn",
+        "Creature Boost"
+    ]
+
+    const mockDifficultyData = [
+        "Easy",
+        "Medium",
+        "High"
+    ]
+
 
   const content = (
     <Fragment>
@@ -85,50 +182,89 @@ function MyRecords() {
             <form className="grill">
               <label className="dividers">
                   Level:
-                  <select className="selector"/>
+                   <select className="selector" onChange={handleChange}>
+                        {mockLevelData.map((level, index) => {
+                        return <option>{level}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Vocation:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockVocationData.map((voc, index) => {
+                        return <option>{voc}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Exp Ratio:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockExpRatioData.map((expRatio, index) => {
+                        return <option>{expRatio}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Exp/h:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockExpHData.map((expH, index) => {
+                        return <option>{expH}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   City:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockCityData.map((city, index) => {
+                        return <option>{city}</option>
+                        })}
+                  </select>
               </label>
+             
 
               <label className="dividers">
                   Special Event:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockEventData.map((event, index) => {
+                        return <option>{event}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Profit/h:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockProfitHData.map((profitH, index) => {
+                        return <option>{profitH}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Team:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockTeamCompData.map((team, index) => {
+                        return <option>{team}</option>
+                        })}
+                  </select>
               </label>
 
               <label className="dividers">
                   Difficulty:
-                  <select className="selector"/>
+                  <select className="selector" onChange={handleChange}>
+                        {mockDifficultyData.map((Difficulty, index) => {
+                        return <option>{Difficulty}</option>
+                        })}
+                  </select>
               </label>
+
             </form>
         </div>
+       
         
 
         <ol className="listContainer">
@@ -145,7 +281,7 @@ function MyRecords() {
        
     </Fragment>
   )
-  
+ 
 
 
     return (

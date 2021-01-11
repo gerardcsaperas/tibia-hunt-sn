@@ -12,9 +12,6 @@ function HuntSummary(props) {
          return null;
     }
     
-
-    console.log(props.data)
-
     const { huntPicture, spot, teamComp, expH, expRatio, profitH, likes, dislikes, comments } = props.data
 
     return (
