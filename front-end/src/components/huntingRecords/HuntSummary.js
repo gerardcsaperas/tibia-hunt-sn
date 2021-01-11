@@ -8,9 +8,10 @@ import './HuntSummary.css';
 
 function HuntSummary(props) {
 
-    // if (!props.data || props.data.length === 0) {
-    //     return null;
-    // }
+    if (!props.data) {
+         return null;
+    }
+    
 
     console.log(props.data)
 
