@@ -9,6 +9,7 @@ import HomePage from "./components/layout/HomePage";
 import SignUp from "./components/user/SignUp";
 import LogIn from "./components/user/LogIn";
 import Profile from './components/user/Profile';
+import EditProfile from './components/user/EditProfile';
 import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
 
@@ -19,6 +20,7 @@ import isTokenValid from './utils/isTokenValid';
 import { useSelector, useDispatch } from 'react-redux'
 import {
 	setUsername,
+	setEmail,
 	setToken,
 	setUid,
 	authenticate,
@@ -31,25 +33,26 @@ import {
 
 function App() {
 
-  	const authenticated = useSelector(selectUser).authenticated;
+	const authenticated = useSelector(selectUser).authenticated;
 	const dispatch = useDispatch()
 
 	// Check if user is already authenticated.
 	useEffect(() => {
 		const user = JSON.parse(localStorage.getItem('TibiaHuntingRecordsUser'));
-		console.log(user);
-		
     // if (process.env.NODE_ENV == "development") {
     //   dispatch(authenticate());
     // }
 		// If token is stored in local storage, see if token is valid
 		if (user && user.token) {
-			let isAuthenticated = async () => await isTokenValid(user.token);
+			const checkAuthentication = async () => await isTokenValid(user.token);
+			let isAuthenticated = checkAuthentication();
 			// If token is valid, user is authenticated
 			// set all values for user
 			if (isAuthenticated) {
+				console.log('here')
 				dispatch(authenticate());
 				dispatch(setUsername(user.user.username));
+				dispatch(setEmail(user.user.email));
 				dispatch(setUid(user.user._id));
 				dispatch(setToken(user.token));
 			}
@@ -74,11 +77,11 @@ function App() {
 			</Route>
     	<Switch>
         	<Route exact path="/" >
-				{/* { authenticated ? <Redirect to="/profile" /> : <HomePage /> } */}
+				{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
 				<HomePage />
 			</Route>
 			<Route exact path="/login" >
-				{/* { authenticated ? <Redirect to="/profile" /> : <LogIn /> } */}
+				{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
 				<LogIn />
 			</Route>
 			<Route exact path="/signup" >
@@ -87,6 +90,10 @@ function App() {
 			</Route>
 			<Route exact path="/profile" >
 				{ authenticated ? <Profile /> : <Redirect to="/login" /> }
+			</Route>
+			<Route exact path="/edit-profile" >
+				{/* { authenticated ? <EditProfile /> : <Redirect to="/login" /> } */}
+				<EditProfile />
 			</Route>
 			<Route exact path="/characters/new">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
