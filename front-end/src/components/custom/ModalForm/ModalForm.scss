@@ -1,0 +1,45 @@
+
+div.ModalFormBg {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    div.ModalForm {
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #808080;
+
+        .ModalForm__title {
+            background-color: #574B43;
+            height: 40px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            border-bottom: 1px solid #808080;
+            font-size: 18px;
+        }
+
+        .ModalForm__frame {
+            background-color: #DEBB9D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+        }
+
+        .ModalForm__content {
+            background-color: #FFF1DA;
+            border: 1px solid #793D03;
+            color: black;
+            min-height: 100px;
+            padding: 20px;
+            min-width: 320px;
+        }
+    }
+}
