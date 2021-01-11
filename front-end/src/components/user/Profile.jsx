@@ -30,10 +30,10 @@ function Profile() {
     const getCharacters = async() => {
         try {
             const config = {
-                      headers: {
-                          'Authorization': `Bearer ${user.token}`
-                      }
-                  };
+                    headers: {
+                        'Authorization': `Bearer ${user.token}`
+                }
+            };
 
             const response = await axios.get(`${API_URL}/character`, config);
             
@@ -45,9 +45,9 @@ function Profile() {
                 setLoading(false);
             }
 
-          } catch(e) {
+        } catch(e) {
             console.error(e);
-          }
+        }
     }
     
     const mockUserData = [
