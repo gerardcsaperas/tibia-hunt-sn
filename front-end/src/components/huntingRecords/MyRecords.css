@@ -1,14 +1,13 @@
 .filters {
     font-family: Verdana,Arial,Times New Roman,sans-serif;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #E1D8C6;
     border: 1px solid black;
     height: 220px;
     width: 700px;
     box-shadow: 3px 3px 1px grey;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -39,21 +38,21 @@ h1 {
 }
 
 .loupe {
-    width: 50px;
+    width: 40px;
     height: auto;
     position: absolute;
-    left: 620px;
-    bottom: 200px;
+    left: 750px;
+    bottom: 360px;
 }
 
 /*------------------------------------------------------------------*/
 
+.recordSummaryList {
+    padding: 0px;
+}
+
 .recordSummary {
     font-family: Verdana,Arial,Times New Roman,sans-serif;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #E1D8C6;
     border: 1px solid black;
     height: 140px;

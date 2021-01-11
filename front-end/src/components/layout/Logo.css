@@ -1,0 +1,32 @@
+.logoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logo {
+    width: 250px;
+    padding-top: 1%;
+}
+
+.chainsLeft {
+    position:absolute;
+    right: 55%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.chainsRight {
+    position:absolute;
+    left: 55%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.chain {
+    height: 15px;
+}
+
