@@ -65,7 +65,7 @@ function LogIn() {
   const content = (
     <Fragment>
     <FormBox form={form} />
-    <div className="buttons__box absolute-bot">
+    <div className="buttons__box">
       <button className="button" type="submit" onClick={handleLogIn}>Login</button>
     </div>
   </Fragment>
