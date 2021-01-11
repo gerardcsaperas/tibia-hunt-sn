@@ -5,7 +5,8 @@ body {
     background-image: url("./assets/tibia-background-artwork.jpg");
     background-color: var(--background-blue);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: 0px 40px;
+    background-size: 100%;
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     font-size: 13px;
     width: 100%;
@@ -25,6 +26,7 @@ body {
 }
 
 a.button {
+    height: 30px;
     text-decoration: none;
     font-family: 'Arial';
     display: flex;
@@ -42,8 +44,14 @@ a.button {
     bottom: 2.5rem;
 }
 
-.absolute-bot {
-    position: absolute;
-    bottom: 20px;
-    margin: 0;
+p.error {
+    color: red;
+    font-size: 10px;
+}
+
+p.form-tip {
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
 }

@@ -1,10 +1,10 @@
 @import '../../styles/Library.scss';
 
 div.ContentBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #808080;
 
     .ContentBox__title {
@@ -23,18 +23,15 @@ div.ContentBox {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 4px;
     }
 
     .ContentBox__content {
         background-color: #FFF1DA;
         border: 1px solid #793D03;
         color: black;
-
-        .loading {
-            position: absolute;
-            top: 42%;
-            left: 45%;
-            transform: translate(-50%, -50%);
-        }
+        min-height: 100px;
+        padding: 20px;
+        width: 100%;
     }
 }

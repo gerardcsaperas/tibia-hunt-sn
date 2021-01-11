@@ -7,7 +7,6 @@ import FormBox from '../custom/FormBox/FormBox';
 import { setUser } from './userSlice';
 
 
-//HERE
 function SignUp() {
 
   const [ username, setUsername ] = useState('');
@@ -93,7 +92,7 @@ function SignUp() {
   const content = (
     <Fragment>
       <FormBox form={form} />
-      <div className="buttons__box absolute-bot">
+      <div className="buttons__box">
         <button className="button" onClick={handleSignUp}>Sign Up</button>
       </div>
     </Fragment> 
