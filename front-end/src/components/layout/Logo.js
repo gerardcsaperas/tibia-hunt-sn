@@ -17,7 +17,7 @@ function Logo() {
             </div>
             
             <Link to="/">
-                <img className="logo" src="../images/logo3-HD.jpg" alt="logo"></img>
+                <img className="logo" src="../images/logo-definitiu-HD.jpg" alt="logo"></img>
             </Link>
             
 
