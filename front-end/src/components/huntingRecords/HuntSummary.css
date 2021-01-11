@@ -1,17 +1,15 @@
 .recordSummary {
     font-family: Verdana,Arial,Times New Roman,sans-serif;
-    position: absolute;
     background-color: #E1D8C6;
     border: 1px solid black;
     height: 140px;
     width: 530px;
     box-shadow: 3px 3px 1px grey;
     display: flex;
-    margin: 0px;
     list-style: none;
     padding: 0px;
+    margin-top: 7%;
 }
-
 
 .lootPicture {
     border: 1px solid black;
@@ -23,6 +21,7 @@
 }
 
 .basicInfo {
+    text-decoration: none;
     color:black;
     width: 100%;
 }
