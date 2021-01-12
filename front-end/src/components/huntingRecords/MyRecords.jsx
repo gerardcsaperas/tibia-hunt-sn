@@ -71,16 +71,18 @@ function MyRecords() {
     const getHuntList = async() => {
         try {
             const config = {
-                      headers: {
-                          'Authorization': `Bearer ${user.token}`
-                      }
-                  };
+                       headers: {
+                           'Authorization': `Bearer ${user.token}`
+                       }
+                   };
 
             const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);
-            
+    
+
             if (response.status === 200 && response.data.length > 0) {
-                    return setHuntList([...response.data])      
-                }
+                    return setHuntList([...response.data])     
+            }
+                console.log(response.data)   
 
         }   
             catch(e) {
@@ -88,30 +90,34 @@ function MyRecords() {
             }
     }
 
-    const mockHuntData = [
-        {
-        huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
-        spot: {city: "edron", name: "demons"}, 
-        teamComp: {name: "Lunatek", level: "250", vocation: "ED"},
-        expH: '1.500.000/h', 
-        profitH: '250.000/h',
-        expRatio: '150%', 
-        likes: '50', 
-        dislikes: '1',
-        comments:'29'
-        },
+    
 
-        {
-        huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
-        spot: {city: "yalahar", name: "hellspawns"}, 
-        teamComp: {name: "Shovii", level: "260", vocation: "RP"},
-        expH: '500.000/h', 
-        profitH: '150.000/h',
-        expRatio: '150%', 
-        likes: '50', 
-        dislikes: '1',
-        comments:'29'
-        }
+    
+
+     const mockHuntData = [
+         {
+         huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
+         spot: {city: "edron", name: "demons"}, 
+         teamComp: {name: "Lunatek", level: "250", vocation: "ED"},
+         expH: '1.500.000/h', 
+         profitH: '250.000/h',
+         expRatio: '150%', 
+         likes: '50', 
+         dislikes: '1',
+         comments:'29'
+         },
+
+         {
+         huntPicture: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tibiahof.com%2Fiview%2F302&psig=AOvVaw1zfiJwVaQ6bzFZXLpXt73r&ust=1610447355867000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMj79InWk-4CFQAAAAAdAAAAABAJ", 
+         spot: {city: "yalahar", name: "hellspawns"}, 
+         teamComp: {name: "Shovii", level: "260", vocation: "RP"},
+         expH: '500.000/h', 
+         profitH: '150.000/h',
+         expRatio: '150%', 
+         likes: '50', 
+         dislikes: '1',
+         comments:'29'
+         }
     ]
 
     const mockLevelData = [
@@ -176,6 +182,7 @@ function MyRecords() {
         "Medium",
         "High"
     ]
+
 
 
   const content = (
@@ -274,18 +281,20 @@ function MyRecords() {
         <ol className="listContainer">
             <li className="recordsList">
                 {
-                    mockHuntData.map((huntingRecord, index) => {
-                        return <HuntSummary data={huntingRecord} key={index} />
+                    {/* if (huntList.length > 0) {
+                        return huntList.map((huntingRecord, index) => {
+                        <HuntSummary data={huntingRecord} key={index} />
                     })
-
+                    } */}
                 }
             </li>        
         </ol>
         
+        
        
     </Fragment>
   )
- 
+  
 
 
     return (
