@@ -22,7 +22,8 @@ body {
     width: 125px;
     font-weight: 600;
     font-size: 12px;
-    text-shadow: 1px 1px 1px black;    
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;    
 }
 
 a.button {
