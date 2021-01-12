@@ -22,6 +22,12 @@ function HuntDetails() {
       getHuntDetails();
     }, [])
 
+    useEffect(() => {
+      console.log(huntDetails)
+
+      
+    }, [huntDetails] )
+
     // Function used to retrieve Hunting Details
     const getHuntDetails = async() => {
         try {
@@ -31,31 +37,12 @@ function HuntDetails() {
                 }
             };
 
-            const response = await axios.get(`${API_URL}/huntingRecord/:id`, config);
+            let id = this.props.match.params.challengeID;
+            const response = await axios.get(`${API_URL}/huntingRecord/${id}`, config);
             console.log(response)
             
-            if (response.status === 200 && response.data.length > 0) {
-                const huntDetails = response.data.map(details => {
-                    return [details.spot, 
-                            details.supplies, 
-                            details.imbuements,
-                            details.charms,
-                            details.preys,
-                            details.huntPicture,
-                            details.expH,
-                            details.profitH,
-                            details.expRatio,
-                            details.specialEvents,
-                            details.teamComp,
-                            details.opComment,
-                            details.comments,
-                            details.likes,
-                            details.dislikes,
-                            details.timestamps,
-                            details.user
-                            ]
-                })
-                setHuntDetails([...huntDetails]);
+            if (response.status === 200 && response.data > 0) {
+                setHuntDetails(response.data);
             }
 
         } catch(e) {
