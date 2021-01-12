@@ -70,114 +70,127 @@ function HuntDetails() {
 
   const content = (
     <Fragment>
-        <div>
+        <div id="huntDetails">
           <div className="leftOrganiser">
-            <div>
-              <img src="" alt="profilePic"></img>
+            <div className="userInformation">
+              <img src="/images/default_user.jpg" alt="profilePic"></img>
               <p>User Name</p>
               <p>Ranking</p>
             </div>
 
             <div className="setContainer">
-              <div>
+              <div className="headLine">
                 <p>Set</p>
               </div>
 
-              <div>
-                <img src="" alt="set"></img>
+              <div className="set">
+                <img src="/images/set.jpg" alt="set"></img>
               </div>
             </div>
 
             <div className="charInfoContainer">
-              <div>
+              <div className="headLine">
                 <p>Character Information</p>
               </div>
-              <div>
-                <p>Character: Tociclao</p>
+              <div className="infoLight">
+                <p>Character:</p>
+                <p>Tociclao</p>
               </div>
-              <div>
-                <p>Vocation: EK</p>
+              <div className="infoDark">
+                <p>Vocation:</p>
+                <p>EK</p>
               </div>
-              <div>
-                <p>Level: 300</p>
+              <div className="infoLight">
+                <p>Level:</p>
+                <p>300</p>
+
               </div>
-              <div>
-                <p>Skills: 109/104</p>
+              <div className="infoDark">
+                <p>Skills:</p>
+                <p>109/104</p>
               </div>
-              <div>
-                <p>Magic level: 10</p>
+              <div className="infoLight">
+                <p>Magic level:</p>
+                <p>10</p>
               </div>
             </div>
 
             <div className="basicInformation">
-              <div>
+              <div className="headLine">
                 <p>Basic Information</p>
               </div>
-              <div>
-                <p>Exp/h: 3.200.000/h</p>
+              <div className="infoLight">
+                <p>Exp/h:</p>
+                <p>3.200.000/h</p>
               </div>
-              <div>
-                <p>Exp ratio: 150%</p>
+              <div className="infoDark">
+                <p>Exp ratio: </p>
+                <p>150%</p>
               </div>
-              <div>
-                <p>Profit/h: 700.000/h</p>
+              <div className="infoLight">
+                <p>Profit/h:</p>
+                <p>700.000/h</p>
               </div>
-              <div>
-                <p>Difficulty: Medium</p>
+              <div className="infoDark">
+                <p>Difficulty:</p>
+                <p>Medium</p>
               </div>
             </div>
 
             <div className="team">
-              <div>
+              <div className="headLine">
                 <p>Team</p>
               </div>
-              <div>
-                <p>EK(Tociclao) 300</p>
+              <div className="infoLight">
+                <p>EK(Tociclao)</p>
+                <p>300</p>
               </div>
-              <div>
+              <div className="infoDark">
                 <p>ED</p>
+                <p>250</p>
               </div>
-              <div>
+              <div className="infoLight">
                 <p>MS</p>
+                <p>250</p>
               </div>
             </div>
 
             <div className="supplies">
-              <div>
+              <div className="headLine">
                 <p>Supplies</p>
               </div>
-              <div>
+              <div className="suppliesContent">
                 <img src="" alt="supplies"></img>
               </div>
             </div>
 
-            <div className="imbuements">
-              <div>
+            <div className="supplies">
+              <div className="headLine">
                 <p>Imbuements</p>
               </div>
-              <ol>
-                <li>2x Powerful Void</li>
-                <li>2x Powerful Leech</li>
-                <li>1x Powerful Strike</li>
+              <ol className="suppliesContent">
+                <li>- 2x Powerful Void</li>
+                <li>- 2x Powerful Leech</li>
+                <li>- 1x Powerful Strike</li>
               </ol>
             </div>
 
-            <div className="prey">
-              <div>
+            <div className="supplies">
+              <div className="headLine">
                 <p>Preys</p>
               </div>
-              <ol>
-                <li>Dodge</li>
-                <li>Inflame</li>
-                <li>Parry</li>
+              <ol className="suppliesContent">
+                <li>- Dodge</li>
+                <li>- Inflame</li>
+                <li>- Parry</li>
               </ol>
             </div>
 
-            <div className="event">
-              <div>
+            <div className="supplies">
+              <div className="headLine">
                 <p>Special Event</p>
               </div>
-              <div>
+              <div className="suppliesContent">
                 <p>Rapid Respawn</p>
               </div>
             </div>
@@ -186,12 +199,12 @@ function HuntDetails() {
 
 
           <div className="rightOrganiser">
-            <div>
-              <img src="" alt="lootPic"></img>
+            <div className="lootPicDetail">
+              <img src="/images/default_user.jpg" alt="lootPic"></img>
             </div>
 
-            <div className="comment">
-              <div className="date">
+            <div className="commentBox">
+              <div className="headLine">
                 <p>2020 Dec 30, 12:30pm</p>
               </div>
 

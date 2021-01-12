@@ -1,0 +1,185 @@
+#huntDetails {
+    display: flex;
+}
+
+/*---- Left Side ----- */
+
+.leftOrganiser {
+    width: 25%;
+    margin-top: 2%;
+}
+
+.userInformation {
+    text-align: center; 
+}
+
+.setContainer {
+    margin-top: 10%;
+    width: 280px;
+    height: 240px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.headLine {
+    height: 20px;
+    background: #545454;
+    color: white;
+}
+
+.headLine p {
+    height: 20px;
+    margin:0;
+    align-items: center;
+    padding-left: 2%;
+    font-size: 14px;;
+    font-weight: 600;
+}
+
+#huntDetails .set {
+    background: #F5EFE4;
+    height: 91.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.charInfoContainer {
+    margin-top: 10%;
+    width: 280px;
+    height: 120px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.infoLight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F5EFE4;
+    height: 20px;
+}
+
+.infoLight p {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0;
+}
+
+.infoDark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E1D8C6;
+    height: 20px;
+}
+
+.infoDark p {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0;
+}
+
+#huntDetails .basicInformation {
+    height: 100px;
+    margin-top: 10%;
+    width: 280px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#huntDetails .team {
+    height: 80px;
+    margin-top: 10%;
+    width: 280px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#huntDetails .supplies {
+    height: 80px;
+    margin-top: 10%;
+    width: 280px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.suppliesContent {
+    padding-left: 2%;
+    background: #F5EFE4;
+    height: 75%;
+}
+
+.supplies ol {
+    padding: 0;
+    margin:0;
+    padding-left: 2%;
+}
+
+.supplies li {
+    list-style: none;
+}
+
+.suppliesContent p {
+    padding: 0;
+    margin:0;
+}
+
+/*---- Right Side ----*/
+
+.rightOrganiser {
+    width: 75%;
+}
+
+.lootPicDetail {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.lootPicDetail img {
+    width: 35rem;
+}
+
+.commentBox {
+    height: 120px;
+    margin-top: 5%;
+    margin-right: 0px;
+    width: 95%;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.commentBox .headLine {
+    height: 20px;
+    background: #545454;
+    color: white;
+    align-content: center;
+}
+
+.commentBox .headLine p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 2%;
+}
+
+.commentContent {
+    background: #F1E0C6;
+    display: flex;
+}
+
+.commentContent .leftData {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+.commentContent .RightData {
+    width: 75%;
+}
+
+
+
+
+
+
+
+
