@@ -3,6 +3,8 @@ import ContentBox from '../custom/ContentBox/ContentBox';
 import axios from "axios";
 import { API_URL } from "../../config";
 import HuntSummary from '../huntingRecords/HuntSummary';
+
+
 import "./MyRecords.css";
 
 
@@ -77,6 +79,7 @@ function MyRecords() {
                    };
 
             const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);
+            console.log(response)
     
 
             if (response.status === 200 && response.data.length > 0) {
@@ -281,11 +284,12 @@ function MyRecords() {
         <ol className="listContainer">
             <li className="recordsList">
                 {
-                    {/* if (huntList.length > 0) {
-                        return huntList.map((huntingRecord, index) => {
-                        <HuntSummary data={huntingRecord} key={index} />
+                    huntList && huntList.length > 0 ? 
+                         huntList.map((huntingRecord, index) => {
+                        return <HuntSummary data={huntingRecord} key={index} />
+                               
                     })
-                    } */}
+                     : null
                 }
             </li>        
         </ol>

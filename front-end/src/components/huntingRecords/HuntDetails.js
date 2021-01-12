@@ -6,13 +6,68 @@ import { API_URL } from "../../config";
 import './HuntDetails.css';
 
 
-
-
+// Redux
+import { useSelector } from 'react-redux'
+import { selectUser } from '../user/userSlice'
 
 
 function HuntDetails() {
 
-    
+  const user = useSelector(selectUser);
+
+  const [ huntDetails, setHuntDetails ] = useState();
+
+    // Get hunting details on component initialization
+    useEffect(() => {
+      getHuntDetails();
+    }, [])
+
+    // Function used to retrieve Hunting Details
+    const getHuntDetails = async() => {
+        try {
+            const config = {
+                    headers: {
+                        'Authorization': `Bearer ${user.token}`
+                }
+            };
+
+            const response = await axios.get(`${API_URL}/huntingRecord/:id`, config);
+            console.log(response)
+            
+            if (response.status === 200 && response.data.length > 0) {
+                const huntDetails = response.data.map(details => {
+                    return [details.spot, 
+                            details.supplies, 
+                            details.imbuements,
+                            details.charms,
+                            details.preys,
+                            details.huntPicture,
+                            details.expH,
+                            details.profitH,
+                            details.expRatio,
+                            details.specialEvents,
+                            details.teamComp,
+                            details.opComment,
+                            details.comments,
+                            details.likes,
+                            details.dislikes,
+                            details.timestamps,
+                            details.user
+                            ]
+                })
+                setHuntDetails([...huntDetails]);
+            }
+
+        } catch(e) {
+            console.error(e);
+        }
+    }
+
+
+
+  
+  
+
   const content = (
     <Fragment>
         <div>
@@ -142,12 +197,19 @@ function HuntDetails() {
 
               <div className="commentContent">
                 <div className="leftData">
-                <div></div>
-
+                  <div>
+                    <p>User Name</p>
+                    <p>Ranking</p>
+                    <p>Posts: 234</p>
+                  </div>
                 </div>
 
                 <div className="rightData">
+                  <p>Wow, man. I really loved this place. Today I was making  820 k/h profit actually. I play on a very 
+                      populated Optional PVP, so maybe that’s why.
 
+                      Incredible respawn! Thank you for sharing!
+                      Jow </p>
                 </div>
               </div>
             </div>
