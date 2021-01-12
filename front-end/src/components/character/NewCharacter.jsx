@@ -205,6 +205,7 @@ function NewCharacter(props) {
           { !success ? <FormBox form={form} /> : successMsg }
           <div className="buttons__box">
             { page === 1 ? <button className="button" onClick={() => nextPage()}>Next</button> : null }
+            { page === 1 ? <Link className="button" to="/profile">Back</Link> : null }
             { page === 2 ? <button className="button" onClick={() => setPage(1)}>Back</button> : null }
             { page === 2 ? <button className="button" onClick={() => saveCharacter()}>Save</button> : null }
           </div>
