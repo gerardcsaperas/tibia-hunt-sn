@@ -77,13 +77,10 @@ desc:    Edit a profile
 auth:    Private
 */
 async function update(req, res) {
-    
-    const updates = Object.keys(req.body);
-
-    updates.forEach((update) => (req.user[update] = req.body[update]));
 
     try {
         await req.user.save();
+
         res.status(201).send(req.user);
 	} catch (e) {
         console.log(`There was an error updating your user. Error: ${e.message}`);
