@@ -47,6 +47,10 @@ function MyRecords() {
     setSearchResults(results);
     }, [searchLevel]);
 
+    useEffect(() => {
+        console.log(searchLevel)
+    }, [searchLevel])
+
 
 
     //Code to display List of Hunting Records
@@ -149,7 +153,7 @@ function MyRecords() {
         "Solo",
         "Duo",
         "Trio",
-        "Full-Team"
+        "Full-Team +"
     ]
 
     const mockExpRatioData = [
