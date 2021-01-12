@@ -21,8 +21,10 @@ function EditProfile() {
     const [ username, setUsername ] = useState();
     const [ newUsername, setNewUsername ] = useState();
     const [ password, setPassword ] = useState();
+    const [ passwordRequiredError, setPasswordRequiredError ] = useState(false);
     const [ newPassword, setNewPassword ] = useState();
     const [ repeatNewPassword, setRepeatNewPassword ] = useState();
+    const [ passwordsDontMatch, setPasswordsDontMatch ] = useState(false);
     const [ email, setEmail ] = useState();
     const [ newEmail, setNewEmail ] = useState();
     const [ modalForm, setModalForm ] = useState(false);
@@ -33,6 +35,39 @@ function EditProfile() {
         setModalForm(true);
     }
 
+    const saveProfileAuth = async () => {
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+
+        if (!password) {
+            return setPasswordRequiredError(true);
+        }
+
+        if (modalTarget === 'password' && newPassword !== repeatNewPassword) {
+            return setPasswordsDontMatch(true);
+        }
+        
+        try {
+            const body = JSON.stringify({ newUsername, newEmail, newPassword, password });
+            const response = await axios.put(`${API_URL}/user`, body, config);
+
+            if (response.status === 201) {
+                console.log('success')
+            }
+
+        } catch(e) {
+            console.log(e.message);
+        }
+    }
+
+    useEffect(() => {
+        console.log(newUsername)
+    }, [newUsername])
+
     const saveProfile = () => {
         console.log('save')
     }
@@ -41,12 +76,12 @@ function EditProfile() {
         <div className="form">
             <div className="form-input-row">
                 <label>New Username</label>
-                <input type="text" name="username" onChange={(e) => setUsername(e.target.value)} autoComplete="off"/>
+                <input type="text" name="username" onChange={(e) => setNewUsername(e.target.value)} autoComplete="off"/>
             </div>
             <div className="form-input-row">
                 <label>Repeat Password</label>
                 <input type="password" name="password" onChange={(e) => setPassword(e.target.value)} autoComplete="off"/>
-                <p className="form-tip">You are trying to change sensitive data. We need you to provide your password.</p>
+                <p className="form-tip" style={ passwordRequiredError ? {color: 'red'} : null}>You are trying to change sensitive data. We need you to provide your password.</p>
             </div>
         </div>
     )
@@ -60,6 +95,7 @@ function EditProfile() {
             <div className="form-input-row">
                 <label>Repeat New Password</label>
                 <input type="password" name="repeat-password" onChange={(e) => setRepeatNewPassword(e.target.value)} autoComplete="off"/>
+                { passwordsDontMatch ? <p className="form-tip form-error">Passwords doesn't match.</p> : null }
             </div>
             <div className="form-input-row">
                 <label>Old Password</label>
@@ -100,8 +136,8 @@ function EditProfile() {
         <Fragment>
         <FormBox form={switchModalForm(modalTarget)} />
         <div className="buttons__box">
-            <button className="button" onClick={saveProfile}>Save</button>
             <button className="button" onClick={() => setModalForm(false)}>Back</button>
+            <button className="button" onClick={saveProfileAuth}>Save</button>
         </div>
         </Fragment> 
     )
