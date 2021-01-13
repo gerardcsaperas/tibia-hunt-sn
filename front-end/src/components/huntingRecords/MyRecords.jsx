@@ -65,37 +65,32 @@ function MyRecords() {
         getHuntList();
     }, [])
 
-    useEffect(() => {
-        console.log(huntList);
-    }, [huntList])
-
     // Function used to retrieve user hunt list
     const getHuntList = async() => {
         try {
             const config = {
                        headers: {
                            'Authorization': `Bearer ${user.token}`
+                       },
+                       params: {
+                           one: 'two',
+                           three: 4,
+                           five: [6, 7, 8, 9],
+                           itworks: "yeah"
                        }
                    };
 
-            const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);
-            console.log(response)
-    
+            const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);    
 
             if (response.status === 200 && response.data.length > 0) {
                     return setHuntList([...response.data])     
-            }
-                console.log(response.data)   
+            }  
 
         }   
             catch(e) {
                 console.error(e);
             }
     }
-
-    
-
-    
 
      const mockHuntData = [
          {
