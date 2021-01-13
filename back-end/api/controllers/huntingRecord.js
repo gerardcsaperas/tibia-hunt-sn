@@ -9,7 +9,6 @@ auth:    Public
 async function find(req, res) {
 
     const filter = queryToMongoFilter(req.query);
-    console.log(JSON.stringify(filter));
 
     try {
         const huntingRecords = await HuntingRecord.find()
@@ -26,6 +25,9 @@ desc:    Get my Hunting Records
 auth:    Private
 */
 async function findMine(req, res) {
+
+    const filter = queryToMongoFilter(req.query);
+
     try {
         const huntingRecords = await HuntingRecord.find({ user: req.user._id })
         res.status(200).send(huntingRecords);
@@ -42,7 +44,7 @@ auth:    Public
 */
 async function findById(req, res) {
     try {
-        const huntingRecord = await HuntingRecord.findById(req.params.id)
+        const huntingRecord = await (await HuntingRecord.findById(req.params.id)).populate('spot')
 
         if(!huntingRecord) {
             return res.status(404).json({ message: `We couldn't find hunting record with id ${req.params.id}` })

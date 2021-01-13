@@ -1,7 +1,7 @@
 const { query } = require("../models/comment");
 
 function queryToMongoFilter(queryParams) {
-    console.log(queryParams);
+    console.log('queryParams', queryParams);
     var andFilter = []
     let filter = {
         conditions: {
