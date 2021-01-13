@@ -8,7 +8,7 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    
     bottom: 0;
     text-align: center;
 }

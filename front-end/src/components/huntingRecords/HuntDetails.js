@@ -13,17 +13,30 @@ import { selectUser } from '../user/userSlice'
 
 function HuntDetails() {
 
+  let charms;
+  let huntUser;
+  let expH
+
+  
   const user = useSelector(selectUser);
 
   const [ huntDetails, setHuntDetails ] = useState();
 
+  if (huntDetails) {
+    const {charms, comments, createdAt, dislikes, expH, expRatio, huntPicture, imbuements, likes, opComment, preys, profitH, specialEvents, spot, supplies, teamComp, _id, set } = huntDetails
+    const huntUser = huntDetails.user;
+  } 
+  
     // Get hunting details on component initialization
     useEffect(() => {
       getHuntDetails();
     }, [])
 
     useEffect(() => {
-      console.log(huntDetails)
+      if (huntDetails) {
+        huntUser = huntDetails.user
+        expH = huntDetails.expH
+      }
     }, [huntDetails] )
 
     // Function used to retrieve Hunting Details
@@ -40,7 +53,7 @@ function HuntDetails() {
             console.log(response.data)
             // ${id}
 
-            const {charms, comments, createdAt, dislikes, expH, expRatio, huntPicture, imbuements, likes, opComment, preys, profitH, specialEvents, spot, supplies, teamComp, _id, user, set } = response.data
+            
 
             if (response.status === 200 && response.data > 0) {
                 setHuntDetails(response.data);
@@ -52,13 +65,14 @@ function HuntDetails() {
     }
 
 
-  const content = (
+  const content = huntDetails ? (
+
     <Fragment>
         <div id="huntDetails">
           <div className="leftOrganiser">
             <div className="userInformation">
               <img src="/images/default_user.jpg" alt="profilePic"></img>
-              <p>{/* <p>{`${user}`}</p> */}</p>
+              {/* <p>{huntUser}</p> */}
               <p>{/* <p>{`${user.rank}`}</p> */}</p>
             </div>
 
@@ -105,7 +119,7 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Exp/h:</p>
-                {/* <p>{`${expH}`}</p> */}
+                <p>{expH}</p>
               </div>
               <div className="infoDark">
                 <p>Exp ratio: </p>
@@ -207,7 +221,7 @@ function HuntDetails() {
 
         </div>
     </Fragment>
-  )
+  ) : null
   
 
 
