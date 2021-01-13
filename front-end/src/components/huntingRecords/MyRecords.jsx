@@ -278,9 +278,8 @@ function MyRecords() {
 
             </form>
         </div>
-       
+      
         
-
         <ol className="listContainer">
             <li className="recordsList">
                 {

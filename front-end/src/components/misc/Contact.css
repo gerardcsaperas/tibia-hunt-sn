@@ -1,0 +1,22 @@
+#contact {
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+#contact .lore {
+    padding-bottom: 15px;
+}
+
+#contact .reach {
+    margin: 0;
+    padding-bottom: 5px;
+
+}
+
+#contact .email {
+    margin: 0;
+    padding-bottom: 15px;
+
+}

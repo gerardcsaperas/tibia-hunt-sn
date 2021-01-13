@@ -24,8 +24,6 @@ function HuntDetails() {
 
     useEffect(() => {
       console.log(huntDetails)
-
-      
     }, [huntDetails] )
 
     // Function used to retrieve Hunting Details
@@ -37,10 +35,13 @@ function HuntDetails() {
                 }
             };
 
-            let id = this.props.match.params.challengeID;
-            const response = await axios.get(`${API_URL}/huntingRecord/${id}`, config);
-            console.log(response)
-            
+            const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);
+            const id = response.data._id
+            console.log(response.data)
+            // ${id}
+
+            const {charms, comments, createdAt, dislikes, expH, expRatio, huntPicture, imbuements, likes, opComment, preys, profitH, specialEvents, spot, supplies, teamComp, _id, user, set } = response.data
+
             if (response.status === 200 && response.data > 0) {
                 setHuntDetails(response.data);
             }
@@ -51,18 +52,14 @@ function HuntDetails() {
     }
 
 
-
-  
-  
-
   const content = (
     <Fragment>
         <div id="huntDetails">
           <div className="leftOrganiser">
             <div className="userInformation">
               <img src="/images/default_user.jpg" alt="profilePic"></img>
-              <p>User Name</p>
-              <p>Ranking</p>
+              <p>{/* <p>{`${user}`}</p> */}</p>
+              <p>{/* <p>{`${user.rank}`}</p> */}</p>
             </div>
 
             <div className="setContainer">
@@ -71,7 +68,7 @@ function HuntDetails() {
               </div>
 
               <div className="set">
-                <img src="/images/set.jpg" alt="set"></img>
+                <img src="/images/set.jpg" alt="set">{/* <p>{`${set}`}</p> */}</img>
               </div>
             </div>
 
@@ -81,24 +78,24 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Character:</p>
-                <p>Tociclao</p>
+                <p>{/* <p>{`${character.name}`}</p> */}</p>
               </div>
               <div className="infoDark">
                 <p>Vocation:</p>
-                <p>EK</p>
+                <p>{/* <p>{`${character.vocation}`}</p> */}</p>
               </div>
               <div className="infoLight">
                 <p>Level:</p>
-                <p>300</p>
+                <p>{/* <p>{`${character.level}`}</p> */}</p>
 
               </div>
               <div className="infoDark">
                 <p>Skills:</p>
-                <p>109/104</p>
+                <p>{/* <p>{`${character.skills}`}</p> */}</p>
               </div>
               <div className="infoLight">
                 <p>Magic level:</p>
-                <p>10</p>
+                <p>{/* <p>{`${character.magicLevel}`}</p> */}</p>
               </div>
             </div>
 
@@ -108,19 +105,19 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Exp/h:</p>
-                <p>3.200.000/h</p>
+                {/* <p>{`${expH}`}</p> */}
               </div>
               <div className="infoDark">
                 <p>Exp ratio: </p>
-                <p>150%</p>
+                {/* <p>{`${expRatio}`}</p> */}
               </div>
               <div className="infoLight">
                 <p>Profit/h:</p>
-                <p>700.000/h</p>
+                {/* <p>{`${profitH}`}</p> */}
               </div>
               <div className="infoDark">
                 <p>Difficulty:</p>
-                <p>Medium</p>
+                {/* <p>{`${difficulty}`}</p> */}
               </div>
             </div>
 
@@ -129,8 +126,8 @@ function HuntDetails() {
                 <p>Team</p>
               </div>
               <div className="infoLight">
-                <p>EK(Tociclao)</p>
-                <p>300</p>
+                {/* <p>{`${expRatio}`}</p>
+                <p>{`${teamComp.level}`}</p> */}
               </div>
               <div className="infoDark">
                 <p>ED</p>
@@ -147,7 +144,7 @@ function HuntDetails() {
                 <p>Supplies</p>
               </div>
               <div className="suppliesContent">
-                <img src="" alt="supplies"></img>
+                <img src="" alt="supplies">{/* <p>{`${supplies}`}</p> */}</img>
               </div>
             </div>
 
@@ -156,9 +153,7 @@ function HuntDetails() {
                 <p>Imbuements</p>
               </div>
               <ol className="suppliesContent">
-                <li>- 2x Powerful Void</li>
-                <li>- 2x Powerful Leech</li>
-                <li>- 1x Powerful Strike</li>
+              {/* <li>{`${imbuements}`}</li> */}
               </ol>
             </div>
 
@@ -167,9 +162,7 @@ function HuntDetails() {
                 <p>Preys</p>
               </div>
               <ol className="suppliesContent">
-                <li>- Dodge</li>
-                <li>- Inflame</li>
-                <li>- Parry</li>
+                <li>{/* <p>{`${imbuements}`}</p> */}</li>
               </ol>
             </div>
 
@@ -177,9 +170,9 @@ function HuntDetails() {
               <div className="headLine">
                 <p>Special Event</p>
               </div>
-              <div className="suppliesContent">
-                <p>Rapid Respawn</p>
-              </div>
+              <ol className="suppliesContent">
+                <li>{/* <p>{`${specialEvents}`}</p> */}</li>
+              </ol>
             </div>
 
           </div>
@@ -192,24 +185,20 @@ function HuntDetails() {
 
             <div className="commentBox">
               <div className="headLine">
-                <p>2020 Dec 30, 12:30pm</p>
+                <p>{/* <p>{`${createdAt}`}</p> */}</p>
               </div>
 
               <div className="commentContent">
                 <div className="leftData">
                   <div>
-                    <p>User Name</p>
-                    <p>Ranking</p>
-                    <p>Posts: 234</p>
+                    <p>{/* <p>{`${user}`}</p> */}</p>
+                    <p>{/* <p>{`${user.rank}`}</p> */}</p>
+                    <p>{/* <p>{`${user.posts}`}</p> */}</p>
                   </div>
                 </div>
 
                 <div className="rightData">
-                  <p>Wow, man. I really loved this place. Today I was making  820 k/h profit actually. I play on a very 
-                      populated Optional PVP, so maybe that’s why.
-
-                      Incredible respawn! Thank you for sharing!
-                      Jow </p>
+                  <p>{/* <p>{`${opComment}`}</p> */}</p>
                 </div>
               </div>
             </div>

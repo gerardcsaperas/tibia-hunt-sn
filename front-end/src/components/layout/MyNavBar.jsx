@@ -35,6 +35,10 @@ function MyNavBar() {
                 <NavLink to="/hunting-record"><i className="fas fa-dragon"></i>Hunting Records</NavLink>  
             </div>
 
+            <div className="contact">
+                <NavLink to="/contact"><i class="far fa-address-book"></i>Contact</NavLink>  
+            </div>
+
         </div>
     )
 }

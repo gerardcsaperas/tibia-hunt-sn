@@ -14,6 +14,8 @@ import EditProfile from './components/user/EditProfile';
 import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
 import HuntDetails from "./components/huntingRecords/HuntDetails";
+import Contact from "./components/misc/Contact";
+
 
 
 // Utils
@@ -83,6 +85,9 @@ function App() {
         	<Route exact path="/" >
 				{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
 				{/* <HomePage /> */}
+			</Route>
+			<Route exact path="/contact" >
+				<Contact />
 			</Route>
 			<Route exact path="/login" >
 				{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
