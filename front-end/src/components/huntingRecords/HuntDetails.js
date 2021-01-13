@@ -13,11 +13,6 @@ import { selectUser } from '../user/userSlice'
 
 function HuntDetails() {
 
-  let charms;
-  let huntUser;
-  let expH
-
-  
   const user = useSelector(selectUser);
 
   const [ huntDetails, setHuntDetails ] = useState();
@@ -32,13 +27,6 @@ function HuntDetails() {
       getHuntDetails();
     }, [])
 
-    useEffect(() => {
-      if (huntDetails) {
-        huntUser = huntDetails.user
-        expH = huntDetails.expH
-      }
-    }, [huntDetails] )
-
     // Function used to retrieve Hunting Details
     const getHuntDetails = async() => {
         try {
@@ -48,15 +36,10 @@ function HuntDetails() {
                 }
             };
 
-            const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);
-            const id = response.data._id
-            console.log(response.data)
-            // ${id}
+            const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);          
 
-            
-
-            if (response.status === 200 && response.data > 0) {
-                setHuntDetails(response.data);
+            if (response.status === 200 && response.data) {
+              setHuntDetails(response.data);
             }
 
         } catch(e) {
@@ -65,9 +48,30 @@ function HuntDetails() {
     }
 
 
-  const content = huntDetails ? (
+  const renderFragment = () => {
+      const {
+          charms,
+          comments,
+          createdAt,
+          dislikes,
+          expH,
+          expRatio,
+          huntPicture,
+          imbuements,
+          likes,
+          opComment,
+          preys,
+          profitH,
+          specialEvents,
+          spot,
+          supplies,
+          teamComp,
+          _id,
+          set
+      } = huntDetails
+      const huntUser = huntDetails.user;
 
-    <Fragment>
+      return (<Fragment>
         <div id="huntDetails">
           <div className="leftOrganiser">
             <div className="userInformation">
@@ -123,11 +127,11 @@ function HuntDetails() {
               </div>
               <div className="infoDark">
                 <p>Exp ratio: </p>
-                {/* <p>{`${expRatio}`}</p> */}
+                <p>{expRatio}</p>
               </div>
               <div className="infoLight">
                 <p>Profit/h:</p>
-                {/* <p>{`${profitH}`}</p> */}
+                <p>{profitH}</p>
               </div>
               <div className="infoDark">
                 <p>Difficulty:</p>
@@ -220,8 +224,11 @@ function HuntDetails() {
           </div>
 
         </div>
-    </Fragment>
-  ) : null
+    </Fragment>)
+
+  }
+
+  const content = huntDetails ? renderFragment() : null
   
 
 

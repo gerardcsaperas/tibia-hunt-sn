@@ -12,7 +12,7 @@ function HuntSummary(props) {
          return null;
     }
     console.log(props)
-    
+
     const { huntPicture, spot, teamComp, expH, expRatio, profitH, likes, dislikes, comments, _id } = props.data
 
     return (
@@ -25,7 +25,7 @@ function HuntSummary(props) {
                         <div className="basicInfo" >
                             <h1 className="location">{`${spot.name}, ${spot.city}`}</h1>
                             <div className="details">
-                                <p className="charInfo">{`${teamComp.name}, ${teamComp.level} ${teamComp.vocation}`}</p>
+                                <p className="charInfo">{`${teamComp[0].name}, ${teamComp[0].level} ${teamComp[0].vocation}`}</p> 
                                 <p className="info">Exp/h: {`${expH}` + "/h"}</p>
                                 <p className="expRatio">Exp Ratio: {`${expRatio}`*100 + "%"}</p>
                                 <p className="info">Profit/h: {`${profitH}` + "/h"}</p>
