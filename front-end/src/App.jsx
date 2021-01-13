@@ -13,6 +13,10 @@ import Profile from './components/user/Profile';
 import EditProfile from './components/user/EditProfile';
 import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
+import HuntDetails from "./components/huntingRecords/HuntDetails";
+import Contact from "./components/misc/Contact";
+import Footer from "./components/layout/Footer";
+
 
 
 // Utils
@@ -81,11 +85,14 @@ function App() {
     	<Switch>
         	<Route exact path="/" >
 				{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
-				<HomePage />
+				{/* <HomePage /> */}
+			</Route>
+			<Route exact path="/contact" >
+				<Contact />
 			</Route>
 			<Route exact path="/login" >
 				{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
-				<LogIn />
+				{/* <LogIn /> */}
 			</Route>
 			<Route exact path="/signup" >
 				{/* authenticated ? <Redirect to="/profile" /> : <SignUp /> */}
@@ -101,11 +108,17 @@ function App() {
 			<Route exact path="/characters/new">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
 			</Route>
-			<Route exact path="/hunting-record" >
+			<Route exact path="/hunting-records" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
 				<MyRecords />
 			</Route>
+			<Route exact path="/record-details/:recordID" >
+				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
+				<HuntDetails />
+			</Route>
       	</Switch>
+
+		<Footer />
     </Router>
   );
 }
