@@ -1,4 +1,5 @@
 const HuntingRecord = require('../models/huntingRecord');
+const queryToMongoFilter = require('../utils/queryToMongoFilter');
 
 /*
 type:    GET
@@ -6,6 +7,10 @@ desc:    Get all Hunting Records
 auth:    Public
 */
 async function find(req, res) {
+
+    const filter = queryToMongoFilter(req.query);
+    console.log(JSON.stringify(filter));
+
     try {
         const huntingRecords = await HuntingRecord.find()
         res.status(200).send(huntingRecords);
