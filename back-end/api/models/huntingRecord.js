@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 const commentSchema = require('./comment');
-const Comment = require('./comment');
 
 const huntingRecordSchema = new Schema({
     user: {
@@ -21,7 +20,7 @@ const huntingRecordSchema = new Schema({
             required: true,
             min: 0
         },
-        _id: false
+        id: false
     }],
     imbuements: [{
         imbuement: {
@@ -33,7 +32,7 @@ const huntingRecordSchema = new Schema({
             required: true,
             min: 0
         },
-        _id: false
+        id: false
     }],
     charms: [{
         charm: {
@@ -45,7 +44,7 @@ const huntingRecordSchema = new Schema({
             required: true,
             min: 0
         },
-        _id: false
+        id: false
     }],
     preys: {
         loot: {
@@ -81,6 +80,11 @@ const huntingRecordSchema = new Schema({
         type: Number,
         default: 1.5
     },
+    difficulty: {
+        type: String,
+        default: "Easy",
+        enum: ["Easy", "Medium", "Hard", "Extreme"]
+    },
     specialEvents: {
         doubleExp: {
             type: Boolean,
@@ -111,7 +115,7 @@ const huntingRecordSchema = new Schema({
             type: Number,
             required: true
         },
-        _id: false
+        id: false
     }],
     opComment: String,
     comments: [commentSchema],
