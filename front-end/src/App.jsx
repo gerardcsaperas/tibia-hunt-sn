@@ -55,7 +55,6 @@ function App() {
 			// If token is valid, user is authenticated
 			// set all values for user
 			if (isAuthenticated) {
-				console.log('here')
 				dispatch(authenticate());
 				dispatch(setUsername(user.user.username));
 				dispatch(setEmail(user.user.email));
@@ -85,25 +84,21 @@ function App() {
     	<Switch>
         	<Route exact path="/" >
 				{ authenticated ? <Redirect to="/profile" /> : <HomePage /> }
-				{/* <HomePage /> */}
 			</Route>
 			<Route exact path="/contact" >
 				<Contact />
 			</Route>
 			<Route exact path="/login" >
 				{ authenticated ? <Redirect to="/profile" /> : <LogIn /> }
-				{/* <LogIn /> */}
 			</Route>
 			<Route exact path="/signup" >
-				{/* authenticated ? <Redirect to="/profile" /> : <SignUp /> */}
-				<SignUp />
+				{ authenticated ? <Redirect to="/profile" /> : <SignUp /> }
 			</Route>
 			<Route exact path="/profile" >
 				{ authenticated ? <Profile /> : <Redirect to="/login" /> }
 			</Route>
 			<Route exact path="/edit-profile" >
-				{/* { authenticated ? <EditProfile /> : <Redirect to="/login" /> } */}
-				<EditProfile />
+				{ authenticated ? <EditProfile /> : <Redirect to="/login" /> }
 			</Route>
 			<Route exact path="/characters/new">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
