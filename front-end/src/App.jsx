@@ -15,6 +15,7 @@ import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
 import HuntDetails from "./components/huntingRecords/HuntDetails";
 import Contact from "./components/misc/Contact";
+import Footer from "./components/layout/Footer";
 
 
 
@@ -107,7 +108,7 @@ function App() {
 			<Route exact path="/characters/new">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
 			</Route>
-			<Route exact path="/hunting-record" >
+			<Route exact path="/hunting-records" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
 				<MyRecords />
 			</Route>
@@ -116,6 +117,8 @@ function App() {
 				<HuntDetails />
 			</Route>
       	</Switch>
+
+		<Footer />
     </Router>
   );
 }
