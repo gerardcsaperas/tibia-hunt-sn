@@ -5,8 +5,10 @@ body {
     background-image: url("./assets/tibia-background-artwork.jpg");
     background-color: var(--background-blue);
     background-repeat: no-repeat;
-    background-position: 0px 40px;
-    background-size: 100%;
+    /* background-position: 0px 40px; */
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: 93%;
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     font-size: 13px;
     width: 100%;
