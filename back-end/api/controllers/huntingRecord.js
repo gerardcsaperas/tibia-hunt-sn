@@ -7,7 +7,7 @@ auth:    Public
 */
 async function find(req, res) {
     try {
-        const huntingRecords = await HuntingRecord.find()
+        const huntingRecords = await HuntingRecord.find().populate("spot")
         res.status(200).send(huntingRecords);
     } catch(e) {
         console.log(`Error retrieving hunting records. Error: ${e.message}`)
@@ -22,7 +22,7 @@ auth:    Private
 */
 async function findMine(req, res) {
     try {
-        const huntingRecords = await HuntingRecord.find({ user: req.user._id })
+        const huntingRecords = await HuntingRecord.find({ user: req.user._id }).populate("spot")
         res.status(200).send(huntingRecords);
     } catch(e) {
         console.log(`Error retrieving hunting records for user ${req.user._id}. Error: ${e.message}`)
@@ -37,7 +37,7 @@ auth:    Public
 */
 async function findById(req, res) {
     try {
-        const huntingRecord = await HuntingRecord.findById(req.params.id)
+        const huntingRecord = await HuntingRecord.findById(req.params.id).populate("spot")
 
         if(!huntingRecord) {
             return res.status(404).json({ message: `We couldn't find hunting record with id ${req.params.id}` })
