@@ -9,29 +9,57 @@ import './Profile.scss';
 import SmallTable from '../custom/SmallTable/SmallTable'
 import StarSytemModal from '../misc/StarSystemModal';
 
-// Redux
-import { useSelector } from 'react-redux'
+// State Store
+import { useSelector, useDispatch } from 'react-redux'
 import {
+	setUsername,
+    setEmail,
+    setCountry,
+    setStars,
 	selectUser
 } from './userSlice'
 
 function Profile() {
     const user = useSelector(selectUser);
+    const dispatch = useDispatch();
 
     const [ characters, setCharacters ] = useState();
     const [ loading, setLoading ] = useState(true);
 
     // Get characters on component initialization
     useEffect(() => {
+        getUser();
         getCharacters();
     }, [])
+
+    const getUser = async() => {
+        try {
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            };
+
+            const response = await axios.get(`${API_URL}/user`, config);
+            
+            if (response.status === 200 && response.data) {
+                dispatch(setUsername(response.data.username));
+				dispatch(setEmail(response.data.email));
+                dispatch(setCountry(response.data.country));
+                dispatch(setStars(response.data.stars));
+            }
+
+        } catch(e) {
+            console.error(e);
+        }
+    }
 
     // Function used to retrieve user characters
     const getCharacters = async() => {
         try {
             const config = {
-                    headers: {
-                        'Authorization': `Bearer ${user.token}`
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
                 }
             };
 
@@ -50,18 +78,40 @@ function Profile() {
         }
     }
     
-    const mockUserData = [
-        ['User Name:', 'Jararu'],
-        ['Country:', 'Poland']
-    ]
-    const mockCharData = [
-        ['Jararu', 'Sorcerer', '111'],
-        ['Topotamadre', 'RP', '222'],
-        ['Elpuma', 'EK', '333'],
-        ['Jararu', 'Sorcerer', '111'],
-        ['Topotamadre', 'RP', '222'],
-        ['Elpuma', 'EK', '333']
-    ]
+    const passUserData = () => {
+
+        let country = user.country ? user.country : "N/A"
+
+        return ([
+            [ 'User Name:', user.username ],
+            [ 'Country:',  country]
+        ])
+    }
+
+    const renderStars = () => {
+        
+        const oneStar = <i className="fas fa-star"></i>
+        const halfStar = <i className="fas fa-star-half"></i>
+        const oneEmpty = <i className="fas fa-star" style={{color: "rgba(0, 0, 0, 0.25)"}}></i>
+        const halfEmpty = <i className="fas fa-star-half" style={{color: "rgba(0, 0, 0, 0.25)"}}></i>
+
+        let starsNum = parseInt(user.stars);
+        let halfStarNum = user.stars - starsNum;
+
+        // HERE
+        console.log(starsNum);
+        console.log(halfStarNum);
+
+        return (
+            <Fragment>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star-half"></i>
+            </Fragment>
+        )
+    }
 
     const content = (
         <div className="Profile">
@@ -71,20 +121,16 @@ function Profile() {
             </div>
             <p className="char-name">{user.username}</p>
             <div className="stars-box">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half"></i>
+                { loading ? null : renderStars() }
                 <Link to="/star-system"><i className="help fas fa-question-circle"></i></Link>
             </div>
             <SmallTable
             title="Account Information"
-            data={mockUserData}
+            data={loading ? null : passUserData()}
             />
             <SmallTable
             title="Characters"
-            data={mockCharData}
+            data={!characters ? null : characters}
             />
             <Link className="link" to="/characters/new"><i className="fas fa-plus-circle"></i>Add New Character</Link>
             <div className="buttons__box">

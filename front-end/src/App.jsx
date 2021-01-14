@@ -27,6 +27,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
 	setUsername,
 	setEmail,
+	setCountry,
+	setStars,
 	setToken,
 	setUid,
 	authenticate,
@@ -58,6 +60,8 @@ function App() {
 				dispatch(authenticate());
 				dispatch(setUsername(user.user.username));
 				dispatch(setEmail(user.user.email));
+				dispatch(setCountry(user.user.country));
+				dispatch(setStars(user.user.stars));
 				dispatch(setUid(user.user._id));
 				dispatch(setToken(user.token));
 			}
