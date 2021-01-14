@@ -16,11 +16,6 @@ function HuntDetails() {
   const user = useSelector(selectUser);
 
   const [ huntDetails, setHuntDetails ] = useState();
-
-  if (huntDetails) {
-    const {charms, comments, createdAt, dislikes, expH, expRatio, huntPicture, imbuements, likes, opComment, preys, profitH, specialEvents, spot, supplies, teamComp, _id, set } = huntDetails
-    const huntUser = huntDetails.user;
-  } 
   
     // Get hunting details on component initialization
     useEffect(() => {
