@@ -31,7 +31,8 @@ function HuntDetails() {
                         'Authorization': `Bearer ${user.token}`
                 }
             };
-
+            // const dynamicId = huntDetails._id
+            // console.log (dynamicId)
             const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);          
 
             if (response.status === 200 && response.data) {
@@ -42,7 +43,7 @@ function HuntDetails() {
             console.error(e);
         }
     }
-
+    console.log(huntDetails)
 
   const renderFragment = () => {
       const {
@@ -69,6 +70,10 @@ function HuntDetails() {
       const huntUser = huntDetails.user;
 
       return (<Fragment>
+
+      {/*--------- Here all the content displayed on the left side -----------*/}
+
+        {/*-- User Information -- */}
         <div id="huntDetails">
           <div className="leftOrganiser">
             <div className="userInformation">
@@ -77,6 +82,7 @@ function HuntDetails() {
               <p>{user.rank}</p>
             </div>
 
+            {/*-- Set -- */}
             <div className="setContainer">
               <div className="headLine">
                 <p>Set</p>
@@ -87,6 +93,7 @@ function HuntDetails() {
               </div>
             </div>
 
+            {/*-- Character Information -- */}
             <div className="charInfoContainer">
               <div className="headLine">
                 <p>Character Information</p>
@@ -114,6 +121,8 @@ function HuntDetails() {
               </div>
             </div>
 
+
+            {/*-- Basic Information -- */}
             <div className="basicInformation">
               <div className="headLine">
                 <p>Basic Information</p>
@@ -136,13 +145,14 @@ function HuntDetails() {
               </div>
             </div>
 
+            {/*-- Team -- */}
             <div className="team">
               <div className="headLine">
                 <p>Team</p>
               </div>
               <div className="infoLight">
-                {/* <p>{teamComp.name}</p>
-                <p>{teamComp.level}</p> */}
+                <p>{teamComp[0].name}</p>
+                <p>{teamComp[0].level}</p>
               </div>
               <div className="infoDark">
                 <p>ED</p>
@@ -154,6 +164,7 @@ function HuntDetails() {
               </div>
             </div>
 
+            {/*-- Supplies -- */}
             <div className="supplies">
               <div className="headLine">
                 <p>Supplies</p>
@@ -163,53 +174,73 @@ function HuntDetails() {
               </div>
             </div>
 
+            {/*-- Imbuements -- */}
             <div className="supplies">
               <div className="headLine">
                 <p>Imbuements</p>
               </div>
               <ol className="suppliesContent">
-                <li>{imbuements}</li>
+                <li> {
+                     (!{imbuements}) ? <p>none</p> : <p>{imbuements}</p>
+                     }
+                </li>
               </ol>
             </div>
 
+            {/*-- Charms -- */}        
             <div className="supplies">
               <div className="headLine">
                 <p>Charms</p>
               </div>
               <ol className="suppliesContent">
-                <li>{charms}</li>
+                <li> {
+                     (!{charms}) ? <p>none</p> : <p>{charms}</p>
+                     }
+                </li>
               </ol>
             </div>
 
+            {/*-- Preys -- */}
             <div className="supplies">
               <div className="headLine">
                 <p>Preys</p>
               </div>
               <ol className="suppliesContent">
-                <li>{preys.loot}</li>
+                <li> {
+                     (!{preys}) ? <p>none</p> : <p>{preys.loot}</p>
+                     }
+                </li>
               </ol>
             </div>
 
+            {/*-- Sepcial Events -- */}
             <div className="supplies">
               <div className="headLine">
                 <p>Special Event</p>
               </div>
               <ol className="suppliesContent">
-                <li>{specialEvents[1]}</li>
+                <li> {
+                     (!{specialEvents}) ? <p>none</p> : <p>{specialEvents.doubleExp}</p>
+                     }
+                </li>
               </ol>
             </div>
 
           </div>
 
 
+     {/*--------- Here all the content displayed on the right side --------- */}
+
           <div className="rightOrganiser">
             <div className="lootPicDetail">
               <img src="/images/default_user.jpg" alt="lootPic"></img>
             </div>
 
+
+            {/*-------- OP comment section --------- */}
             <div className="commentBox">
               <div className="headLine">
-                <p><p>{createdAt}</p></p>
+                <p>{createdAt}</p>
               </div>
 
               <div className="commentContent">
@@ -223,12 +254,65 @@ function HuntDetails() {
 
                 <div className="rightData">
                   <p>{opComment}</p>
+                  <div className="rating">
+                    <i class="far fa-thumbs-up"></i>
+                    <p>0</p>
+                    <i class="far fa-thumbs-down"></i>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/*--------- Add a comment secion ---------- */}
+            <div className="commentBox">
+              <div className="headLine">
+              </div>
+
+              <div className="commentContent">
+                <div className="leftData">
+                  <div>
+                    <p>{huntUser}</p>
+                    <p>{user.rank}</p>
+                    <p>{user.posts}</p>
+                  </div>
+                </div>
+
+                <div className="rightData">
+                  <textarea placeholder="Add a comment"></textarea>
+                  <button>Post</button>
+                </div>
+              </div>
+            </div>
+
+            {/*------- Rest of the users comments ---------*/}
+            <div className="commentBox">
+              <div className="headLine">
+                <p>{createdAt}</p>
+              </div>
+
+              <div className="commentContent">
+                <div className="leftData">
+                  <div>
+                    <p>{huntUser}</p>
+                    <p>{user.rank}</p>
+                    <p>{user.posts}</p>
+                  </div>
+                </div>
+
+                <div className="rightData">
+                  <p>{opComment}</p>
+                  <div className="rating">
+                    <i class="far fa-thumbs-up"></i>
+                    <p>0</p>
+                    <i class="far fa-thumbs-down"></i>
+                    <p>0</p>
+                  </div>
                 </div>
               </div>
             </div>
 
           </div>
-
         </div>
     </Fragment>)
 
