@@ -17,10 +17,6 @@ function HuntDetails() {
 
   const [ huntDetails, setHuntDetails ] = useState();
 
-  if (huntDetails) {
-    const {charms, comments, createdAt, dislikes, expH, expRatio, huntPicture, imbuements, likes, opComment, preys, profitH, specialEvents, spot, supplies, teamComp, _id, set } = huntDetails
-    const huntUser = huntDetails.user;
-  } 
   
     // Get hunting details on component initialization
     useEffect(() => {
@@ -67,7 +63,8 @@ function HuntDetails() {
           supplies,
           teamComp,
           _id,
-          set
+          set,
+          difficulty
       } = huntDetails
       const huntUser = huntDetails.user;
 
@@ -76,8 +73,8 @@ function HuntDetails() {
           <div className="leftOrganiser">
             <div className="userInformation">
               <img src="/images/default_user.jpg" alt="profilePic"></img>
-              {/* <p>{huntUser}</p> */}
-              <p>{/* <p>{`${user.rank}`}</p> */}</p>
+              <p>{huntUser}</p>
+              <p>{user.rank}</p>
             </div>
 
             <div className="setContainer">
@@ -86,7 +83,7 @@ function HuntDetails() {
               </div>
 
               <div className="set">
-                <img src="/images/set.jpg" alt="set">{/* <p>{`${set}`}</p> */}</img>
+                <img src="/images/set.jpg" alt="set">{/*<p>{`${set}`}</p>*/}</img>
               </div>
             </div>
 
@@ -96,15 +93,15 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Character:</p>
-                <p>{/* <p>{`${character.name}`}</p> */}</p>
+                {/* <p>{`${character.name}`}</p> */}
               </div>
               <div className="infoDark">
                 <p>Vocation:</p>
-                <p>{/* <p>{`${character.vocation}`}</p> */}</p>
+                {/* <p>{`${character.vocation}`}</p> */}
               </div>
               <div className="infoLight">
                 <p>Level:</p>
-                <p>{/* <p>{`${character.level}`}</p> */}</p>
+                {/* <p>{`${character.level}`}</p> */}
 
               </div>
               <div className="infoDark">
@@ -123,19 +120,19 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Exp/h:</p>
-                <p>{expH}</p>
+                <p>{`${expH}` + "/h"}</p>
               </div>
               <div className="infoDark">
                 <p>Exp ratio: </p>
-                <p>{expRatio}</p>
+                <p>{`${expRatio}`*100 + "%"}</p>
               </div>
               <div className="infoLight">
                 <p>Profit/h:</p>
-                <p>{profitH}</p>
+                <p>{`${profitH}` + "/h"}</p>
               </div>
               <div className="infoDark">
                 <p>Difficulty:</p>
-                {/* <p>{`${difficulty}`}</p> */}
+                <p>{difficulty}</p>
               </div>
             </div>
 
@@ -144,8 +141,8 @@ function HuntDetails() {
                 <p>Team</p>
               </div>
               <div className="infoLight">
-                {/* <p>{`${expRatio}`}</p>
-                <p>{`${teamComp.level}`}</p> */}
+                {/* <p>{teamComp.name}</p>
+                <p>{teamComp.level}</p> */}
               </div>
               <div className="infoDark">
                 <p>ED</p>
@@ -162,7 +159,7 @@ function HuntDetails() {
                 <p>Supplies</p>
               </div>
               <div className="suppliesContent">
-                <img src="" alt="supplies">{/* <p>{`${supplies}`}</p> */}</img>
+                <img src="" alt="supplies">{/*<p>{supplies.amount}</p>*/}</img>
               </div>
             </div>
 
@@ -171,7 +168,16 @@ function HuntDetails() {
                 <p>Imbuements</p>
               </div>
               <ol className="suppliesContent">
-              {/* <li>{`${imbuements}`}</li> */}
+                <li>{imbuements}</li>
+              </ol>
+            </div>
+
+            <div className="supplies">
+              <div className="headLine">
+                <p>Charms</p>
+              </div>
+              <ol className="suppliesContent">
+                <li>{charms}</li>
               </ol>
             </div>
 
@@ -180,7 +186,7 @@ function HuntDetails() {
                 <p>Preys</p>
               </div>
               <ol className="suppliesContent">
-                <li>{/* <p>{`${imbuements}`}</p> */}</li>
+                <li>{preys.loot}</li>
               </ol>
             </div>
 
@@ -189,7 +195,7 @@ function HuntDetails() {
                 <p>Special Event</p>
               </div>
               <ol className="suppliesContent">
-                <li>{/* <p>{`${specialEvents}`}</p> */}</li>
+                <li>{specialEvents[1]}</li>
               </ol>
             </div>
 
@@ -203,20 +209,20 @@ function HuntDetails() {
 
             <div className="commentBox">
               <div className="headLine">
-                <p>{/* <p>{`${createdAt}`}</p> */}</p>
+                <p><p>{createdAt}</p></p>
               </div>
 
               <div className="commentContent">
                 <div className="leftData">
                   <div>
-                    <p>{/* <p>{`${user}`}</p> */}</p>
-                    <p>{/* <p>{`${user.rank}`}</p> */}</p>
-                    <p>{/* <p>{`${user.posts}`}</p> */}</p>
+                    <p>{huntUser}</p>
+                    <p>{user.rank}</p>
+                    <p>{user.posts}</p>
                   </div>
                 </div>
 
                 <div className="rightData">
-                  <p>{/* <p>{`${opComment}`}</p> */}</p>
+                  <p>{opComment}</p>
                 </div>
               </div>
             </div>
@@ -236,7 +242,7 @@ function HuntDetails() {
     <ContentBox
       height="1200px"
       width="1200px"
-      title="Record Details"
+      title="My Records"
       content={content}
     ></ContentBox>
     )
