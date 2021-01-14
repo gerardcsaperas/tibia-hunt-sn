@@ -28,10 +28,6 @@ function NewCharacter(props) {
     const [ tibiaApySync, setApiSync ] = useState(false);
     const [ loading, setLoading ] = useState(false);
     const [ disabledInputs, setDisabledInputs ] = useState(false);
-    
-    // useEffect(() => {
-    //     console.log(characterName);
-    // }, [characterName])
 
     useEffect(() => {
         if (tibiaApySync) {

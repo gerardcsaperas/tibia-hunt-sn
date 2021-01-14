@@ -67,7 +67,7 @@ function Profile() {
         <div className="Profile">
             <Link to="/edit-profile"><i className="fas fa-cog"></i></Link>
             <div className="image-box">
-                <img className="profile-image" src=""/>
+                <img className="profile-image" src="/images/default_user.jpg"/>
             </div>
             <p className="char-name">{user.username}</p>
             <div className="stars-box">

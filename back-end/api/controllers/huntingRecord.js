@@ -1,4 +1,5 @@
 const HuntingRecord = require('../models/huntingRecord');
+const queryToMongoFilter = require('../utils/queryToMongoFilter');
 
 /*
 type:    GET
@@ -6,6 +7,9 @@ desc:    Get all Hunting Records
 auth:    Public
 */
 async function find(req, res) {
+
+    const filter = queryToMongoFilter(req.query);
+
     try {
         const huntingRecords = await HuntingRecord.find().populate("spot")
         res.status(200).send(huntingRecords);
@@ -21,6 +25,9 @@ desc:    Get my Hunting Records
 auth:    Private
 */
 async function findMine(req, res) {
+
+    const filter = queryToMongoFilter(req.query);
+
     try {
         const huntingRecords = await HuntingRecord.find({ user: req.user._id }).populate("spot")
         res.status(200).send(huntingRecords);
