@@ -16,7 +16,7 @@ function Logo() {
                 <img className="chain" src="../images/chain.gif" alt="chain"></img>
             </div>
             
-            <Link to="/">
+            <Link to="/all-records">
                 <img className="logo" src="../images/logo-definitiu-HD.jpg" alt="logo"></img>
             </Link>
             

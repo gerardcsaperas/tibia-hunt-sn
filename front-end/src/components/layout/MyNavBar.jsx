@@ -22,7 +22,7 @@ function MyNavBar() {
             </div>
 
             <div className="section">
-                <NavLink to="/hunting-records"><i className="fas fa-dragon"></i>Hunting Records</NavLink>  
+                <NavLink to="/all-records"><i className="fas fa-dragon"></i>Hunting Records</NavLink>  
             </div>
 
             <div className="contact">
