@@ -18,7 +18,7 @@ function HuntSummary(props) {
             <Link to={`/record-details/${_id}`}>
                 <div className="recordSummary">
                         <div className="lootPicContainer">
-                            <img className="lootPicture" src="/images/default_user.jpg" alt="defaultImg"></img>
+                            <img className="lootPicture" src="/images/default_loot.jpg" alt="defaultImg"></img>
                         </div>
     
                         <div className="basicInfo" >
