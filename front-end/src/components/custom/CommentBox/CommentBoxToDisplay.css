@@ -1,0 +1,59 @@
+#comBoxDisplay {
+    min-height: 120px;
+    width: 95%;
+    margin: 2% auto;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#comBoxDisplay .headLine {
+    height: 20px;
+    background: #545454;
+    color: white;
+    align-content: center;
+}
+
+#comBoxDisplay .headLine p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 1%;
+}
+
+#comBoxDisplay .commentContent {
+    background: #F1E0C6;
+    display: flex;
+    min-height: 120px;
+}
+
+#comBoxDisplay .commentContent .leftData {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+#comBoxDisplay .commentContent .rightData {
+    position: relative;
+    display: flex;
+    width: 75%;
+    align-items: center;
+}
+
+#comBoxDisplay .rightData .rating {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    width: 75px;
+    height: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#comBoxDisplay .rating p {
+    margin: 0px;
+    padding-left: 1%;
+    padding-right: 10%;
+}

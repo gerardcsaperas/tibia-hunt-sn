@@ -13,6 +13,7 @@ import Profile from './components/user/Profile';
 import EditProfile from './components/user/EditProfile';
 import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
+import AllRecords from "./components/huntingRecords/AllRecords";
 import HuntDetails from "./components/huntingRecords/HuntDetails";
 import Contact from "./components/misc/Contact";
 import Footer from "./components/layout/Footer";
@@ -107,9 +108,13 @@ function App() {
 			<Route exact path="/characters/new">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/login" /> }
 			</Route>
-			<Route exact path="/hunting-records" >
+			<Route exact path="/my-records" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
 				<MyRecords />
+			</Route>
+			<Route exact path="/all-records" >
+				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
+				<AllRecords />
 			</Route>
 			<Route exact path="/record-details/:recordID" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
