@@ -1,5 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../custom/ContentBox/ContentBox';
+import CommentBoxToDisplay from '../custom/CommentBox/CommentBoxToDisplay';
+import CommentBoxToComment from '../custom/CommentBox/CommentBoxToComment';
+
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import { API_URL } from "../../config";
@@ -69,7 +72,7 @@ function HuntDetails() {
           difficulty
       } = huntDetails
       const huntUser = huntDetails.user;
-  
+
       console.log(huntDetails)
       console.log(charms)
       console.log(imbuements)
@@ -243,7 +246,7 @@ function HuntDetails() {
             </div>
 
 
-            {/*-------- OP comment section ---------*/}
+            {/* -------- OP comment section --------- */}
             <div className="commentBox">
               <div className="headLine">
                 <p>{createdAt}</p>

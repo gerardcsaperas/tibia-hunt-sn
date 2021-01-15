@@ -1,0 +1,49 @@
+#comBoxComment {
+    min-height: 120px;
+    width: 95%;
+    margin: 2% auto;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#comBoxComment .headLine {
+    height: 20px;
+    background: #545454;
+    color: white;
+    align-content: center;
+}
+
+#comBoxComment .commentContent {
+    background: #F1E0C6;
+    display: flex;
+    min-height: 120px;
+}
+
+#comBoxComment .commentContent .leftData {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+#comBoxComment .commentContent .rightData {
+    position: relative;
+    display: flex;
+    width: 75%;
+    align-items: center;
+}
+
+#comBoxComment .rightData textarea {
+    width: 80%;
+    height: 75%;
+}
+
+#comBoxComment .rightData button {
+    width: 75px;
+    height: 20px;
+    background-color: #545454;
+    color: white;
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: 11%;
+    right: 20px;
+}
