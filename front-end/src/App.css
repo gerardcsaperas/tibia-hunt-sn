@@ -47,8 +47,13 @@ a.button {
     bottom: 2.5rem;
 }
 
-p.error {
+.error {
     color: red;
+    font-size: 10px;
+}
+
+.success {
+    color: green;
     font-size: 10px;
 }
 
