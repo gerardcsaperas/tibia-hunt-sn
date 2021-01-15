@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../custom/ContentBox/ContentBox';
+import StarRatings from 'react-star-ratings';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import { API_URL } from "../../config";
@@ -65,11 +66,13 @@ function Profile() {
 
             const response = await axios.get(`${API_URL}/character`, config);
             
-            if (response.status === 200 && response.data.length > 0) {
-                const characters = response.data.map(char => {
-                    return [char.name, char.vocation, char.level]
-                })
-                setCharacters([...characters]);
+            if (response.status === 200) {
+                if (response.data.length > 0) {
+                    const characters = response.data.map(char => {
+                        return [char.name, char.vocation, char.level]
+                    })
+                    setCharacters([...characters]);
+                }
                 setLoading(false);
             }
 
@@ -89,27 +92,13 @@ function Profile() {
     }
 
     const renderStars = () => {
-        
-        const oneStar = <i className="fas fa-star"></i>
-        const halfStar = <i className="fas fa-star-half"></i>
-        const oneEmpty = <i className="fas fa-star" style={{color: "rgba(0, 0, 0, 0.25)"}}></i>
-        const halfEmpty = <i className="fas fa-star-half" style={{color: "rgba(0, 0, 0, 0.25)"}}></i>
-
-        let starsNum = parseInt(user.stars);
-        let halfStarNum = user.stars - starsNum;
-
-        // HERE
-        console.log(starsNum);
-        console.log(halfStarNum);
-
         return (
-            <Fragment>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half"></i>
-            </Fragment>
+            <StarRatings
+                rating={user.stars}
+                starDimension="20px"
+                starSpacing="1px"
+                starRatedColor="gold"
+            />
         )
     }
 
