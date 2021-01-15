@@ -239,7 +239,7 @@ function HuntDetails() {
      {/*--------- Here all the content displayed on the right side ---------*/}
           <div className="rightOrganiser">
             <div className="lootPicDetail">
-              <img src="/images/default_user.jpg" alt="lootPic"></img>
+              <img src="/images/default_loot.jpg" alt="lootPic"></img>
             </div>
 
 
