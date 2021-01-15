@@ -99,7 +99,7 @@ function HuntDetails() {
               </div>
             </div>
 
-            {/*-- Character Information -- */}
+            {/*-- Character Information --*/}
             <div className="charInfoContainer">
               <div className="headLine">
                 <p>Character Information</p>
@@ -128,7 +128,7 @@ function HuntDetails() {
             </div>
 
 
-            {/*-- Basic Information -- */}
+            {/*-- Basic Information --*/}
             <div className="basicInformation">
               <div className="headLine">
                 <p>Basic Information</p>
@@ -151,7 +151,7 @@ function HuntDetails() {
               </div>
             </div>
 
-            {/*-- Team -- */}
+            {/*-- Team --*/}
             <div className="team">
               <div className="headLine">
                 <p>Team</p>
@@ -170,7 +170,7 @@ function HuntDetails() {
               </div>
             </div>
 
-            {/*-- Supplies -- */}
+            {/*-- Supplies --*/}
             <div className="supplies">
               <div className="headLine">
                 <p>Supplies</p>
@@ -180,7 +180,7 @@ function HuntDetails() {
               </div>
             </div>
 
-            {/*-- Imbuements -- */}
+            {/*-- Imbuements --*/}
             <div className="supplies">
               <div className="headLine">
                 <p>Imbuements</p>
@@ -194,7 +194,7 @@ function HuntDetails() {
             </div>
             
 
-            {/*-- Charms -- */}        
+            {/*-- Charms --*/}        
             <div className="supplies">
               <div className="headLine">
                 <p>Charms</p>
@@ -207,7 +207,7 @@ function HuntDetails() {
               </ol>
             </div>
 
-            {/*-- Preys -- */}
+            {/*-- Preys --*/}
             <div className="supplies">
               <div className="headLine">
                 <p>Preys</p>
@@ -220,7 +220,7 @@ function HuntDetails() {
               </ol>
             </div>
 
-            {/*-- Sepcial Events -- */}
+            {/*-- Sepcial Events --*/}
             <div className="supplies">
               <div className="headLine">
                 <p>Special Event</p>
@@ -236,15 +236,14 @@ function HuntDetails() {
           </div>
 
 
-     {/*--------- Here all the content displayed on the right side --------- */}
-
+     {/*--------- Here all the content displayed on the right side ---------*/}
           <div className="rightOrganiser">
             <div className="lootPicDetail">
               <img src="/images/default_user.jpg" alt="lootPic"></img>
             </div>
 
 
-            {/*-------- OP comment section --------- */}
+            {/*-------- OP comment section ---------*/}
             <div className="commentBox">
               <div className="headLine">
                 <p>{createdAt}</p>
@@ -271,7 +270,7 @@ function HuntDetails() {
               </div>
             </div>
 
-            {/*--------- Add a comment secion ---------- */}
+            {/*--------- Add a comment secion ----------*/}
             <div className="commentBox">
               <div className="headLine">
               </div>
