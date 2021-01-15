@@ -81,7 +81,7 @@ async function update(req, res) {
     try {
         await req.user.save();
 
-        res.status(201).send(req.user);
+        res.status(200).send(req.user);
 	} catch (e) {
         console.log(`There was an error updating your user. Error: ${e.message}`);
 		res.status(400).json({ message: `There was an error updating your user. Error: ${e.message}` })
