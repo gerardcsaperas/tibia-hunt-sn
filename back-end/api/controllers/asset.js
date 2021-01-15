@@ -92,11 +92,26 @@ async function findCharmById(req, res) {
     }
 }
 
+/*
+type:   POST
+desc:   Post images to Cloudinary
+auth:   Private
+*/
+async function postImages(req, res) {
+    try {
+        const fileStr = req.body.data;
+        console.log(fileStr);
+    } catch(e) {
+        console.log(e)
+    }
+}
+
 module.exports = {
     findItems,
     findItemById,
     findImbuements,
     findImbuementById,
     findCharms,
-    findCharmById
+    findCharmById,
+    postImages
 }

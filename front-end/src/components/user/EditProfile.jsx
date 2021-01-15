@@ -16,19 +16,20 @@ function EditProfile() {
 
     const user = useSelector(selectUser);
 
+    const [ fileInputState, setFileInputState ] = useState();
     const [ picture, setPicture ] = useState();
     const [ country, setCountry ] = useState();
-    const [ username, setUsername ] = useState();
     const [ newUsername, setNewUsername ] = useState();
     const [ password, setPassword ] = useState();
     const [ passwordRequiredError, setPasswordRequiredError ] = useState(false);
     const [ newPassword, setNewPassword ] = useState();
     const [ repeatNewPassword, setRepeatNewPassword ] = useState();
     const [ passwordsDontMatch, setPasswordsDontMatch ] = useState(false);
-    const [ email, setEmail ] = useState();
     const [ newEmail, setNewEmail ] = useState();
     const [ modalForm, setModalForm ] = useState(false);
     const [ modalTarget, setModalTarget ] = useState();
+    const [ savedSuccessfully, setSavedSuccessfully ] = useState(false);
+    const [ errorSaving, setErrorSaving ] = useState(false);
 
     const showModalForm = (target) => {
         setModalTarget(target);
@@ -39,7 +40,8 @@ function EditProfile() {
 
         const config = {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         };
 
@@ -55,7 +57,7 @@ function EditProfile() {
             const body = JSON.stringify({ newUsername, newEmail, newPassword, password });
             const response = await axios.put(`${API_URL}/user`, body, config);
 
-            if (response.status === 201) {
+            if (response.status === 200) {
                 console.log('success')
             }
 
@@ -68,8 +70,42 @@ function EditProfile() {
         console.log(newUsername)
     }, [newUsername])
 
-    const saveProfile = () => {
-        console.log('save')
+    const uploadImage = async (base64EncodedImage) => {
+        try {
+            await fetch(`${API_URL}/image/upload`, {
+                method: 'POST',
+                body: JSON.stringify({data: base64EncodedImage}),
+                headers: {'Content-type': 'application/json'}
+            })
+        } catch(e) {
+            console.error(e.message);
+        }
+    }
+
+    const saveProfile = async () => {
+
+        if (picture) {
+            uploadImage(picture);
+        }
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
+            }
+        };
+
+        try {
+            const body = JSON.stringify({ country, picture });
+            const response = await axios.put(`${API_URL}/user`, body, config);
+
+            if (response.status === 200) {
+                setSavedSuccessfully(true);
+            }
+
+        } catch(e) {
+            console.log(e.message);
+        }
     }
 
     const modalFormUsername = (
@@ -108,7 +144,7 @@ function EditProfile() {
         <div className="form">
             <div className="form-input-row">
                 <label>New Email</label>
-                <input type="text" name="email" onChange={(e) => setEmail(e.target.value)} autoComplete="off"/>
+                <input type="text" name="email" onChange={(e) => setNewEmail(e.target.value)} autoComplete="off"/>
             </div>
             <div className="form-input-row">
                 <label>Password</label>
@@ -142,12 +178,31 @@ function EditProfile() {
         </Fragment> 
     )
 
+    const previewFile = (file) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+            setPicture(reader.result);
+        }
+    }
+
+    const handleFileInputChange = (e) => {
+        const file = e.target.files[0];
+        previewFile(file);
+    }
+
     const form = (
         <form className="form">
             <div className="form-input-row">
                 <label>Profile picture</label>
-                <input className="file" type="file" name="picture" onChange={(e) => setPicture(e)} autoComplete="off"/>
+                <input className="file" type="file" name="picture" onChange={(e) => handleFileInputChange(e)} value={fileInputState} autoComplete="off"/>
             </div>
+            { picture && (
+                <img src={picture}
+                alt="chosen"
+                style={{height: '100px'}}
+                />
+            )}
             <div className="form-input-row">
                 <label>Country</label>
                 <select name="country" onChange={(e) => setCountry(e.target.value)}>
@@ -428,6 +483,8 @@ function EditProfile() {
             />
             : null    
         }
+        { savedSuccessfully ? <p style={{textAlign: "center"}}><i className="fas fa-check success" style={{marginRight: "10px"}}></i>Profile saved successfully</p> : null }
+        { errorSaving ? <p className="error">There was an error saving your profile...</p> : null }
         <div className="buttons__box">
             <Link className="button" to="/profile">Back</Link>
             <button className="button" onClick={saveProfile}>Save</button>
