@@ -1,0 +1,150 @@
+#formContainer {
+    margin-top: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#formContainer .setTitle {
+    width: 100%;
+    font-size: 18px;
+
+}
+
+.locationTitle {
+    width: 100%;
+    font-size: 18px;
+}
+
+.teamCompTitle {
+    width: 100%;
+    font-size: 18px;
+}
+
+#formContainer select {
+    height: 20px;
+    width: 170px;
+}
+
+#formContainer p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+#formContainer .set {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+#formContainer .goldenArmor {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+#formContainer .setImgContainer {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+
+#formContainer .location {
+    position: relative;
+    margin-top: 0;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+#formContainer .locationInfo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 100%;
+    height: 80%;
+}
+
+#formContainer .treasureMap {
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+#formContainer .teamComp {
+    position: relative;
+    height: 200px;
+    width: 340px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black; 
+}
+
+#formContainer .partyHat {
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+}
+
+#formContainer .teamCompData {
+    position: absolute;
+    top: 22%;
+    left: 5%;
+}
+
+#formContainer .others {
+    display: flex;
+}
+
+#formContainer .otherMemberSelector {
+    width: 100px;
+}
+
+#formContainer .level {
+    margin-left: 9%;
+}
+
+
+#formContainer .otherLevelSelector {
+    width: 55px;
+}
+
+#formContainer i {
+    font-size: 18px;
+    position: absolute;
+    top: 80%;
+    left: 105%;
+    color: #545454;
+}
+
+.mandatory {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #545454;
+}
+
+#formContainer .buttons__box{
+    margin-top: 5px;
+}
+
+.nextPage {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.nextPage i {
+    padding: 0.1%;
+    color: #545454;
+}
+

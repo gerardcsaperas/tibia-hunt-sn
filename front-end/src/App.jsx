@@ -15,6 +15,7 @@ import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
 import AllRecords from "./components/huntingRecords/AllRecords";
 import HuntDetails from "./components/huntingRecords/HuntDetails";
+import NewHuntingRecord from "./components/huntingRecords/NewHuntingRecord";
 import Contact from "./components/misc/Contact";
 import Footer from "./components/layout/Footer";
 
@@ -119,6 +120,9 @@ function App() {
 			<Route exact path="/record-details/:recordID" >
 				{/* { authenticated ? <Profile /> : <Redirect to="/login" /> } */}
 				<HuntDetails />
+			</Route>
+			<Route exact path="/new-hunting-record">
+				{ authenticated ? <NewHuntingRecord /> : <Redirect to="/login" /> }
 			</Route>
       	</Switch>
 
