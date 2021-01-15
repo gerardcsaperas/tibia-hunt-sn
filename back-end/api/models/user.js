@@ -14,7 +14,7 @@ const userSchema = new Schema({
 			validator: async function(username) {
 				const user = await this.constructor.findOne({ username });
 				if(user) {
-					if(this._id === user._id) {
+					if(this.id === user.id) {
 						return true;
 					}
 					return false;
@@ -39,7 +39,7 @@ const userSchema = new Schema({
 				validator: async function(email) {
 					const user = await this.constructor.findOne({ email });
 					if(user) {
-						if(this._id === user._id) {
+						if(this.id === user.id) {
 							return true;
 						}
 						return false;
