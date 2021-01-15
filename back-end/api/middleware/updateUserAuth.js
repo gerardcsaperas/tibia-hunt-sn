@@ -4,12 +4,11 @@ const updateUserAuth = async (req, res, next) => {
 
     const updates = Object.keys(req.body);
 
-        updates.forEach( async (update) => {
-
+        for (let update of updates) {
                 if (update === 'password') {
                     // New password comes as newPassword in the body.
                     // 'password' is used to validate the current password, not update.
-                    return;
+                    continue;
                 }
 
                 if (
@@ -29,7 +28,7 @@ const updateUserAuth = async (req, res, next) => {
                         return res.status(403).json({ message: 'Wrong password.' })
                     }    
 
-                    switch (req.update) {
+                    switch (update) {
                         case 'newUsername':
                             req.user.username = req.body.newUsername;
                             break;
@@ -43,14 +42,9 @@ const updateUserAuth = async (req, res, next) => {
                 } else {
                     req.user[update] = req.body[update];
                 }
-            });
+            };
     
-        if (res.status === 403) {
-            console.log('here')
-        } else {
-            console.log('next')
-            return next();
-        }
+        return next();
 }
 
 module.exports = updateUserAuth
