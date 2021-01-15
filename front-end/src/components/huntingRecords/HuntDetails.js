@@ -31,6 +31,7 @@ function HuntDetails() {
                         'Authorization': `Bearer ${user.token}`
                 }
             };
+            
             // const dynamicId = huntDetails._id
             // console.log (dynamicId)
             const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);          
@@ -68,9 +69,14 @@ function HuntDetails() {
           difficulty
       } = huntDetails
       const huntUser = huntDetails.user;
+  
+      console.log(huntDetails)
+      console.log(charms)
+      console.log(imbuements)
+      console.log(preys)
+      console.log(specialEvents)
 
       return (<Fragment>
-
       {/*--------- Here all the content displayed on the left side -----------*/}
 
         {/*-- User Information -- */}
@@ -100,7 +106,7 @@ function HuntDetails() {
               </div>
               <div className="infoLight">
                 <p>Character:</p>
-                {/* <p>{`${character.name}`}</p> */}
+                <p>{teamComp[0].name}</p>
               </div>
               <div className="infoDark">
                 <p>Vocation:</p>
@@ -181,11 +187,12 @@ function HuntDetails() {
               </div>
               <ol className="suppliesContent">
                 <li> {
-                     (!{imbuements}) ? <p>none</p> : <p>{imbuements}</p>
+                     imbuements.length == 0 ? <p>none</p> : <p>{imbuements}</p>
                      }
                 </li>
               </ol>
             </div>
+            
 
             {/*-- Charms -- */}        
             <div className="supplies">
@@ -194,7 +201,7 @@ function HuntDetails() {
               </div>
               <ol className="suppliesContent">
                 <li> {
-                     (!{charms}) ? <p>none</p> : <p>{charms}</p>
+                     charms.length == 0 ? <p>none</p> : <p>{charms}</p>
                      }
                 </li>
               </ol>
@@ -207,7 +214,7 @@ function HuntDetails() {
               </div>
               <ol className="suppliesContent">
                 <li> {
-                     (!{preys}) ? <p>none</p> : <p>{preys.loot}</p>
+                     preys.damageBoost && preys.loot && preys.damageReduction && preys.experience == false ? <p>none</p> : <p>{preys.loot}</p>
                      }
                 </li>
               </ol>
@@ -220,7 +227,7 @@ function HuntDetails() {
               </div>
               <ol className="suppliesContent">
                 <li> {
-                     (!{specialEvents}) ? <p>none</p> : <p>{specialEvents.doubleExp}</p>
+                     specialEvents.BoostedCreature && specialEvents.DoubleLoot && specialEvents.RapidRespawn && specialEvents.doubleExp == false ? <p>none</p> : <p>{specialEvents.BoostedCreature}</p>
                      }
                 </li>
               </ol>
