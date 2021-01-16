@@ -35,36 +35,46 @@ const NewHuntRecStep3 = ({ setForm, formData, navigation }) => {
              </div>
 
              {/* Imbuements Section */}
-             <div className="GlobalImbuements">
-               <h1 className="imbuementsTitle">Imbuements</h1>
-               <img className="imbuements" src={"../images/Fire_Sword.gif"}/>
+              <div className="GlobalImbuements">
+                <h1 className="imbuementsTitle">Imbuements</h1>
+                <img className="imbuements" src={"../images/Fire_Sword.gif"}/>
     
-              <div className="others">
-                    <div className="other">
+                  <div className="suppliesContainer">
+                    <div className="supply">
                       <label>Imbuements:</label>
-                      <select className="otherMemberSelector"/>
+                      <select className="suppliesSelector"/>
                     </div>
       
-                    <div className="level">
+                    <div className="amount">
                       <label>Amount:</label>
-                      <input className="levelSelector" type="number"/> 
+                      <input className="amountSelector" type="number"/> 
                     </div>
                     <i className="fas fa-plus-circle"></i>
                   </div>
-             </div>
+                <ol>
+                  <li>- 2x Powerful Void</li>
+                  <li>- 2x Powerful Leech</li>
+                  <li>- 1x Powerful Strike</li>
+                </ol>
+              </div>
 
               {/* Charms Section */}
              <div className="GlobalCharms">
                <h1 className="charmsTitle">Charms</h1>
                <img className="charms" src={"../images/Charm_Expansion.png"}/>
     
-               <div className="locationInfo">
-                <div className="spotContainer">
-                  <label>Charms:</label>
-                  <select className="otherMemberSelector"/>
-                </div>
-                <i className="fas fa-plus-circle"></i>
-               </div>
+               <div className="charmContainer">
+                    <div className="charm">
+                      <label>Charms:</label>
+                      <select className="charmSelector"/>
+                    </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
+                <ol>
+                  <li>- Dodge</li>
+                  <li>- Parry</li>
+                  <li>- Freeze</li>
+                </ol>
              </div>
            </div>
 

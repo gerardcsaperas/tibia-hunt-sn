@@ -248,12 +248,12 @@
     margin-left: 5%;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 21%;
 }
 
 .others i {
-    margin-left: 5%;
-    margin-top: 6%;
+    margin-left: 3%;
+    margin-top: 6.5%;
     font-size: 20px;
 }
 
@@ -407,6 +407,15 @@
 }
 
 
+.lootInfo .selectLoot {
+    padding: 0;
+    margin: 0;
+    height: 18px;
+    border: 1px solid black;
+    width: 180px;
+}
+
+
 /* Preys Properties */
 #formContainer .GlobalPreys {
     position: relative;
@@ -457,6 +466,18 @@
     width: 35px;
 }
 
+.GlobalImbuements ol {
+    margin-top: 2%;
+    margin-left: 6%;
+    list-style: none;
+    padding: 0;
+}
+.GlobalImbuements li {
+    padding: 0.5%;
+}
+
+
+
 /* Charms Properties */
 #formContainer .GlobalCharms {
     position: relative;
@@ -476,6 +497,42 @@
     top: -20px;
     right: 10px;
     width: 40px;
+}
+
+.charm {
+    width: 83%;
+}
+
+.charmContainer {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.charmContainer .charms {
+    width: 83%;
+}
+
+.charmContainer i {
+    margin-top: 7%;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
+.GlobalCharms ol {
+    margin-top: 2%;
+    margin-left: 6%;
+    list-style: none;
+    padding: 0;
+}
+.GlobalCharms li {
+    padding: 0.5%;
+}
+
+.charmSelector {
+    height: 20px;
+    width: 100%;
+    border: 1px solid black;
 }
 
 /* Events Properties */
