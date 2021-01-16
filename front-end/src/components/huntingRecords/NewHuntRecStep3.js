@@ -12,8 +12,8 @@ const NewHuntRecStep3 = ({ setForm, formData, navigation }) => {
         
            <div id="formContainer">
              <div className="set">
-               <h1 className="setTitle">Set*</h1>
-               <img className="goldenArmor" src={"../images/Golden_Armor.gif"}/>
+               <h1 className="setTitle">Imbuements</h1>
+               <img className="goldenArmor" src={"../images/Fire_Sword.gif"}/>
     
                <div className="setImgContainer">
                  <img src={"../images/set.jpg"}/>
@@ -22,8 +22,8 @@ const NewHuntRecStep3 = ({ setForm, formData, navigation }) => {
              </div>
     
              <div className="location">
-               <h1 className="locationTitle">Location*</h1>
-               <img className="treasureMap" src={"../images/Treasure_Map.gif"}/>
+               <h1 className="locationTitle">Preys</h1>
+               <img className="treasureMap" src={"../images/Demon_Trophy.gif"}/>
     
                <div className="locationInfo">
                  <p>City:</p>
@@ -35,8 +35,8 @@ const NewHuntRecStep3 = ({ setForm, formData, navigation }) => {
              </div>
     
              <div className="teamComp">
-               <h1 className="teamCompTitle">Team Comp*</h1>
-               <img className="partyHat" src={"../images/Party_Hat.gif"}/>
+               <h1 className="teamCompTitle">Charms</h1>
+               <img className="partyHat" src={"../images/Charm_Expansion.png"}/>
     
                <div className="teamCompData">
                  <p>Your Character:</p>
