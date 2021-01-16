@@ -39,6 +39,8 @@ const updateUserAuth = async (req, res, next) => {
                             req.user.email = req.body.newEmail;
                             break;
                     }     
+                } else if (update === 'newCountry') {
+                    req.user.country = req.body.newCountry;
                 } else {
                     req.user[update] = req.body[update];
                 }
