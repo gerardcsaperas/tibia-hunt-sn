@@ -7,7 +7,6 @@
 
 /* Set Properties */
 #formContainer .setTitle {
-    width: 100%;
     font-size: 18px;
 }
 
@@ -19,7 +18,6 @@
     box-shadow: 3px 3px 1px grey;
     border: 1px solid black;
 }
-
 
 #formContainer .goldenArmor {
     position: absolute;
@@ -170,8 +168,7 @@
 
 #formContainer .locationInfo {
     margin-top: 15%;
-    margin-left: 8%;
-    
+    margin-left: 8.5%; 
 }
 
 .locationInfo .cityContainer {
@@ -198,7 +195,6 @@
     border-width: 0px;
     border: 1px solid black;
 }
-
 
 
 /* Team Comp Properties */
@@ -261,7 +257,6 @@
     font-size: 20px;
 }
 
-
 .teamCompData .otherMemberSelector {
     width: 98%;
     height: 20px;
@@ -287,6 +282,141 @@
 }
 
 
+/* Supplies Properties */
+#formContainer .GlobalSupplies {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+#formContainer .suppliesTitle {
+    font-size: 18px;
+}
+
+#formContainer .backpack {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+/* Experience Properties */
+#formContainer .GlobalExperience {
+    position: relative;
+    margin-top: 0;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+#formContainer .xpBoost {
+    height: 45px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+.experienceTitle {
+    font-size: 18px;
+}
+
+
+/* Loot Properties */
+#formContainer .GlobalLoot {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.lootTitle {
+    font-size: 18px;
+}
+
+#formContainer .loot {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+}
+
+
+/* Preys Properties */
+#formContainer .GlobalPreys {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.preysTitle {
+    font-size: 18px;
+}
+
+#formContainer .preys {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+#formContainer .preysInfo {
+    margin-top: 10%;
+    margin-left: 8.5%; 
+}
+
+.preysInfo .preyContainer {
+    margin-top: 5%;
+}
+
+/* Imbuements Properties */
+#formContainer .GlobalImbuements {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.imbuementsTitle {
+    font-size: 18px;
+}
+
+#formContainer .imbuements {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 35px;
+}
+
+/* Charms Properties */
+#formContainer .GlobalCharms {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.charmsTitle {
+    font-size: 18px;
+}
+
+#formContainer .charms {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 40px;
+}
+
 
 /* Footer Properties */
 #formContainer i {
@@ -300,8 +430,16 @@
     color: #545454;
 }
 
-#formContainer .buttons__box{
-    margin-top: 5px;
+.buttons_NHR {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons_NHR .button {
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .nextPage {

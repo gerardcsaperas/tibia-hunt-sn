@@ -5,66 +5,85 @@ import "./NewHuntingRecord.css";
 const NewHuntRecStep2 = ({ setForm, formData, navigation }) => {
   const { firstName, lastName, nickName } = formData;
 
-  const { previous, next } = navigation;
+  const { next, previous } = navigation;
 
   const content = (
          <Fragment>
         
            <div id="formContainer">
-             <div className="set">
-               <h1 className="setTitle">Supplies*</h1>
-               <img className="goldenArmor" src={"../images/Backpack.gif"}/>
-    
-               <div className="setImgContainer">
-                 <img src={"../images/set.jpg"}/>
-               </div>
-              
+
+              {/* Supplies Section */}
+             <div className="GlobalSupplies">
+               <h1 className="suppliesTitle">Supplies*</h1>
+               <img className="backpack" src={"../images/Backpack.gif"}/>
+
+               {/* Supplies */}
+               <div className="others">
+                    <div className="other">
+                      <label>Supplies:</label>
+                      <select className="otherMemberSelector"/>
+                    </div>
+      
+                    <div className="level">
+                      <label>Amount:</label>
+                      <input className="levelSelector" type="number"/> 
+                    </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
+
+                  {/* Ammunition */}
+                  <div className="others">
+                    <div className="other">
+                      <label>Ammunition:</label>
+                      <select className="otherMemberSelector"/>
+                    </div>
+      
+                    <div className="level">
+                      <label>Amount:</label>
+                      <input className="levelSelector" type="number"/> 
+                    </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
+
              </div>
-    
-             <div className="location">
-               <h1 className="locationTitle">Experience*</h1>
-               <img className="treasureMap" src={"../images/XP_Boost.png"}/>
+
+             {/* Experience Section */}
+             <div className="GlobalExperience">
+               <h1 className="experienceTitle">Experience*</h1>
+               <img className="xpBoost" src={"../images/XP_Boost.png"}/>
     
                <div className="locationInfo">
-                 <p>City:</p>
-                 <select></select>
-                 <p>Spot Name:</p>
-                 <select></select>
+                <div className="cityContainer">
+                  <label>Exp Ratio:</label>
+                  <select className="selectCity"/>
+                </div>
+                <div className="spotContainer">
+                  <label>Exp/h:</label>
+                  <input className="selectSpot" type="number"/>
+                </div>
                </div>
-              
              </div>
+
+              {/* Loot Section */}
+             <div className="GlobalLoot">
+               <h1 className="lootTitle">Loot*</h1>
+               <img className="loot" src={"../images/Treasure_Chest.gif"}/>
     
-             <div className="teamComp">
-               <h1 className="teamCompTitle">Loot*</h1>
-               <img className="partyHat" src={"../images/Treasure_Chest.gif"}/>
-    
-               <div className="teamCompData">
-                 <p>Your Character:</p>
-                 <select></select>
-    
-                 <div className="others">
-                   <div className="other">
-                     <p>Other Members:</p>
-                     <select className="otherMemberSelector"></select>
-                   </div>
-    
-                   <div className="level">
-                     <p>Level:</p>
-                     <select className="otherLevelSelector"></select>
-                    
-                   </div>
-                   <i className="fas fa-plus-circle"></i>
-                 </div>
-               
+               <div className="locationInfo">
+                <div className="spotContainer">
+                  <label>Profit/h:</label>
+                  <input className="selectLoot" type="number"/>
+                </div>
                </div>
              </div>
            </div>
-    
+
+             {/* Footer Section */}
              <div className="mandatory">
-               <strong>*Mandatory information</strong>
+               <strong>*Mandatory fields</strong>
              </div>
     
-           <div className="buttons__box">
+           <div className="buttons_NHR">
              <button className="button" onClick={previous}>Back</button>
              <button className="button" onClick={next}>Next</button>
            </div>

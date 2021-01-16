@@ -11,6 +11,8 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
          <Fragment>
         
            <div id="formContainer">
+
+             {/* Set Section */}
              <div className="GlobalSet">
                <h1 className="setTitle">Set*</h1>
                <img className="goldenArmor" src={"../images/Golden_Armor.gif"}/>
@@ -28,9 +30,9 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
                  <select className="selectTorch"/>
                  <select className="selectBackpack"/>
                </div>
-              
              </div>
-    
+
+             {/* Location Section */}
              <div className="GlobalLocation">
                <h1 className="locationTitle">Location*</h1>
                <img className="treasureMap" src={"../images/Treasure_Map.gif"}/>
@@ -45,9 +47,9 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
                   <input className="selectSpot" type="text"/>
                 </div>
                </div>
-              
              </div>
-    
+
+             {/* Team Comp Section */}
              <div className="GlobalTeamComp">
                <h1 className="teamCompTitle">Team Comp*</h1>
                <img className="partyHat" src={"../images/Party_Hat.gif"}/>
@@ -81,6 +83,7 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
              </div>
            </div>
     
+             {/* Footer Section */}
              <div className="mandatory">
                <strong>*Mandatory fields</strong>
              </div>
