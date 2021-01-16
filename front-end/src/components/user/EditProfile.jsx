@@ -9,17 +9,24 @@ import ModalForm from '../custom/ModalForm/ModalForm';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
-import { selectUser, setUser } from './userSlice';
+import {
+    selectUser,
+    setUsername,
+    setAvatar,
+    setEmail,
+    setCountry
+} from './userSlice';
 
 
 //HERE
 function EditProfile() {
 
     const user = useSelector(selectUser);
+    const dispatch = useDispatch();
 
     const [ fileInputState, setFileInputState ] = useState();
     const [ picture, setPicture ] = useState();
-    const [ country, setCountry ] = useState();
+    const [ newCountry, setNewCountry ] = useState();
     const [ newUsername, setNewUsername ] = useState();
     const [ password, setPassword ] = useState();
     const [ passwordRequiredError, setPasswordRequiredError ] = useState(false);
@@ -30,6 +37,8 @@ function EditProfile() {
     const [ modalForm, setModalForm ] = useState(false);
     const [ modalTarget, setModalTarget ] = useState();
     const [ savedSuccessfully, setSavedSuccessfully ] = useState(false);
+    const [ savedAuthSuccessfully, setSavedAuthSuccessfully ] = useState(false);
+    const [ errorSavingAuth, setErrorSavingAuth ] = useState(false);
     const [ errorSaving, setErrorSaving ] = useState(false);
 
     const showModalForm = (target) => {
@@ -38,6 +47,8 @@ function EditProfile() {
     }
 
     const saveProfileAuth = async () => {
+
+        console.log('saveProfileAuth')
 
         const config = {
             headers: {
@@ -59,36 +70,33 @@ function EditProfile() {
             const response = await axios.put(`${API_URL}/user`, body, config);
 
             if (response.status === 200) {
-                console.log('success')
+                setSavedAuthSuccessfully(true);
+                dispatch(setUsername(response.data.username));
+                dispatch(setAvatar(response.data.avatar));
+                dispatch(setEmail(response.data.email));
+                setTimeout(() => {
+                    window.location.href = '/profile'
+                }, 1500)
             }
-
         } catch(e) {
-            console.log(e.message);
+            console.error(e.message);
+            setErrorSavingAuth(true);
         }
     }
 
-    useEffect(() => {
-        console.log(newUsername)
-    }, [newUsername])
-
     const uploadImage = async (base64EncodedImage) => {
         try {
-            await fetch(`${API_URL}/image/upload`, {
+            await fetch(`${API_URL}/image/profile`, {
                 method: 'POST',
                 body: JSON.stringify({data: base64EncodedImage}),
                 headers: {'Content-type': 'application/json'}
             })
         } catch(e) {
-            console.error(e.message);
+            console.error(e);
         }
     }
 
     const saveProfile = async () => {
-
-        if (picture) {
-            uploadImage(picture);
-        }
-
         const config = {
             headers: {
                 'Content-Type': 'application/json',
@@ -97,15 +105,30 @@ function EditProfile() {
         };
 
         try {
-            const body = JSON.stringify({ country, picture });
+
+            if (picture) {
+                console.log('picture', picture)
+                await uploadImage(picture);
+            }
+
+            const body = JSON.stringify({ newCountry });
+        
+            console.log(newCountry);
+
             const response = await axios.put(`${API_URL}/user`, body, config);
 
+            console.log(response)
+
             if (response.status === 200) {
+                dispatch(setCountry(response.data.country));
                 setSavedSuccessfully(true);
+                setTimeout(() => {
+                    window.location.href = '/profile'
+                }, 1500)
             }
 
         } catch(e) {
-            console.log(e.message);
+            console.error(e.message);
         }
     }
 
@@ -169,11 +192,16 @@ function EditProfile() {
         }
     }
 
+    const closeModalForm = () => {
+        setErrorSavingAuth(false);
+        setModalForm(false);
+    }
+
     const modalContent = (
         <Fragment>
         <FormBox form={switchModalForm(modalTarget)} />
         <div className="buttons__box">
-            <button className="button" onClick={() => setModalForm(false)}>Back</button>
+            <button className="button" onClick={() => closeModalForm()}>Back</button>
             <button className="button" onClick={saveProfileAuth}>Save</button>
         </div>
         </Fragment> 
@@ -206,7 +234,7 @@ function EditProfile() {
             )}
             <div className="form-input-row">
                 <label>Country</label>
-                <select name="country" onChange={(e) => setCountry(e.target.value)}>
+                <select name="country" onChange={(e) => setNewCountry(e.target.value)}>
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -481,6 +509,8 @@ function EditProfile() {
                 title={`Change ${modalTarget}`}
                 target={modalTarget} 
                 content={modalContent}
+                success={savedAuthSuccessfully}
+                error={errorSavingAuth}
             />
             : null    
         }
