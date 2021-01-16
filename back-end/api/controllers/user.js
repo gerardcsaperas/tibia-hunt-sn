@@ -1,5 +1,6 @@
 const User = require('../models/user');
-const { queryToMongoFilter } = require('../utils/queryToMongoFilter');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 /*
 type:    GET
@@ -61,14 +62,43 @@ async function create(req, res) {
 	}
 }
 
-/*
-type:    PUT
-desc:    Upload picture for user
-auth:    Private
-*/
-async function uploadPicture(req, res) {
+// @route   POST user/login
+// @desc    Log In user and get token
+// @access  Public
+async function login(req, res) {
 
-};
+    const { email, password } = req.body;
+
+    try {
+        console.log(email);
+        let user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(400).json({ errors: [ { msg: 'Invalid credentials 1' } ] });
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if (!isMatch) {
+            return res.status(400).json({ errors: [ { msg: 'Invalid credentials' } ] });
+        }
+
+        // Return jsonwebtoken
+        const payload = {
+            user: {
+                id: user.id
+            }
+        };
+
+        const token = await user.generateAuthToken();
+
+        res.status(200).send({ user, token })
+
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server error');
+    }
+}
 
 
 /*
@@ -108,6 +138,7 @@ module.exports = {
     findMe,
     findById,
     create,
+    login,
     update,
     remove
 }
