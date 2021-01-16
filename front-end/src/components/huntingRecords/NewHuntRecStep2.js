@@ -18,18 +18,18 @@ const NewHuntRecStep2 = ({ setForm, formData, navigation }) => {
                <img className="backpack" src={"../images/Backpack.gif"}/>
 
                {/* Supplies */}
-               <div className="others">
-                    <div className="other">
+                <div className="suppliesContainer">
+                    <div className="supply">
                       <label>Supplies:</label>
-                      <select className="otherMemberSelector"/>
+                      <select className="suppliesSelector"/>
                     </div>
       
-                    <div className="level">
+                    <div className="amount">
                       <label>Amount:</label>
-                      <input className="levelSelector" type="number"/> 
+                      <input className="amountSelector" type="number"/> 
                     </div>
                     <i className="fas fa-plus-circle"></i>
-                  </div>
+                </div>
 
                   {/* Ammunition */}
                   <div className="others">
@@ -69,8 +69,8 @@ const NewHuntRecStep2 = ({ setForm, formData, navigation }) => {
                <h1 className="lootTitle">Loot*</h1>
                <img className="loot" src={"../images/Treasure_Chest.gif"}/>
     
-               <div className="locationInfo">
-                <div className="spotContainer">
+               <div className="lootInfo">
+                <div className="lootContainer">
                   <label>Profit/h:</label>
                   <input className="selectLoot" type="number"/>
                 </div>

@@ -302,6 +302,42 @@
     right: 10px;
 }
 
+.suppliesContainer {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.supply {
+    width: 100px;
+}
+
+.amount {
+    width: 70px;
+    margin-left: 3%;
+}
+
+.suppliesSelector {
+    height: 20px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.amountSelector {
+    height: 18px;
+    width: 60px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.suppliesContainer i {
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
 /* Experience Properties */
 #formContainer .GlobalExperience {
     position: relative;
@@ -343,6 +379,15 @@
     position: absolute;
     top: -40px;
     right: 10px;
+}
+
+#formContainer .lootInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.lootInfo .lootContainer {
+    margin-top: 10%;
 }
 
 
