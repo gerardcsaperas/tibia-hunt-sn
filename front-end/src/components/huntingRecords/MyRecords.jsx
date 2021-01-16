@@ -72,12 +72,12 @@ function MyRecords() {
                        headers: {
                            'Authorization': `Bearer ${user.token}`
                        },
-                       params: {
-                           one: 'two',
-                           three: 4,
-                           five: [6, 7, 8, 9],
-                           itworks: "yeah"
-                       }
+                    //    params: {
+                    //        one: 'two',
+                    //        three: 4,
+                    //        five: [6, 7, 8, 9],
+                    //        itworks: "yeah"
+                    //    }
                    };
 
             const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);    
