@@ -1,6 +1,7 @@
 const Item = require('../models/item');
 const Imbuement = require('../models/imbuement');
 const Charm = require('../models/charm');
+const { Cloudinary } = require('../utils/cloudinary');
 
 /*
 type:    GET
@@ -97,12 +98,25 @@ type:   POST
 desc:   Post images to Cloudinary
 auth:   Private
 */
-async function postImages(req, res) {
+async function postProfileImage(req, res) {
     try {
         const fileStr = req.body.data;
-        console.log(fileStr);
+        const uploaded = await Cloudinary.uploader.upload(fileStr, {
+            upload_preset: 'tibiahuntingrecords_profiles'
+        });
+        
+        if (!uploaded) {
+            throw new Error();
+        }
+
+        const user = req.user;
+        user.avatar = uploaded.secure_url;
+        await user.save();
+
+        res.status(200).send(user);
     } catch(e) {
-        console.log(e)
+        console.log(`There was something wrong when trying to upload your image to Cloudinary. ${e.message}`)
+        res.status(500).json({ message: `There was something wrong when trying to upload your image to Cloudinary. ${e.message}` })
     }
 }
 
@@ -113,5 +127,5 @@ module.exports = {
     findImbuementById,
     findCharms,
     findCharmById,
-    postImages
+    postProfileImage
 }

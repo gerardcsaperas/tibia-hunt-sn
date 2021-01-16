@@ -9,6 +9,6 @@ router.get('/imbuement', assetController.findImbuements);
 router.get('/imbuement/:id', assetController.findImbuementById);
 router.get('/charm', assetController.findCharms);
 router.get('/charm/:id', assetController.findCharmById);
-router.post('/image/upload', auth, assetController.postImages);
+router.post('/image/profile', auth, assetController.postProfileImage);
 
 module.exports = router;
