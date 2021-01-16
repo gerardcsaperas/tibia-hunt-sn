@@ -17,7 +17,7 @@ const NewHuntRecStep2 = ({ setForm, formData, navigation }) => {
                <h1 className="suppliesTitle">Supplies*</h1>
                <img className="backpack" src={"../images/Backpack.gif"}/>
 
-               {/* Supplies */}
+                {/* Supplies */}
                 <div className="suppliesContainer">
                     <div className="supply">
                       <label>Supplies:</label>
@@ -30,20 +30,22 @@ const NewHuntRecStep2 = ({ setForm, formData, navigation }) => {
                     </div>
                     <i className="fas fa-plus-circle"></i>
                 </div>
+                <div className="suppliesList"> Mana Potion x2000</div>
 
                   {/* Ammunition */}
-                  <div className="others">
-                    <div className="other">
+                  <div className="ammunitionContainer">
+                    <div className="supply">
                       <label>Ammunition:</label>
-                      <select className="otherMemberSelector"/>
+                      <select className="suppliesSelector"/>
                     </div>
       
-                    <div className="level">
+                    <div className="amount">
                       <label>Amount:</label>
-                      <input className="levelSelector" type="number"/> 
+                      <input className="amountSelector" type="number"/> 
                     </div>
                     <i className="fas fa-plus-circle"></i>
-                  </div>
+                </div>
+                <div className="suppliesList"> diamond Arrow x1000</div>
 
              </div>
 

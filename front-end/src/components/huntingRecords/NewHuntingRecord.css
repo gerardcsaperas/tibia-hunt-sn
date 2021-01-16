@@ -308,6 +308,12 @@
     margin-left: 5%;
 }
 
+.ammunitionContainer {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
 .supply {
     width: 100px;
 }
@@ -338,6 +344,16 @@
     font-size: 20px;
 }
 
+.ammunitionContainer i {
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.suppliesList {
+    font-size: 10px;
+    margin-left: 5%;
+}
 /* Experience Properties */
 #formContainer .GlobalExperience {
     position: relative;
