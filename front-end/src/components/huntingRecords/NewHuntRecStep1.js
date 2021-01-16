@@ -11,7 +11,7 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
          <Fragment>
         
            <div id="formContainer">
-             <div className="set">
+             <div className="GlobalSet">
                <h1 className="setTitle">Set*</h1>
                <img className="goldenArmor" src={"../images/Golden_Armor.gif"}/>
     
@@ -21,41 +21,52 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
               
              </div>
     
-             <div className="location">
+             <div className="GlobalLocation">
                <h1 className="locationTitle">Location*</h1>
                <img className="treasureMap" src={"../images/Treasure_Map.gif"}/>
     
                <div className="locationInfo">
-                 <p>City:</p>
-                 <select></select>
-                 <p>Spot Name:</p>
-                 <select></select>
+                <div>
+                  <label>City:</label>
+                  <select className="selectCity"/>
+                </div>
+                <div>
+                  <label>Spot Name:</label>
+                  <input className="selectSpot" type="text"/>
+                </div>
                </div>
               
              </div>
     
-             <div className="teamComp">
+             <div className="GlobalTeamComp">
                <h1 className="teamCompTitle">Team Comp*</h1>
                <img className="partyHat" src={"../images/Party_Hat.gif"}/>
     
                <div className="teamCompData">
-                 <p>Your Character:</p>
-                 <select></select>
-    
-                 <div className="others">
-                   <div className="other">
-                     <p>Other Members:</p>
-                     <select className="otherMemberSelector"></select>
-                   </div>
-    
-                   <div className="level">
-                     <p>Level:</p>
-                     <select className="otherLevelSelector"></select>
-                    
-                   </div>
-                   <i className="fas fa-plus-circle"></i>
-                 </div>
-               
+                <div className="leftData">
+                  <label>Your Character:</label>
+                  <select></select>
+      
+                  <div className="others">
+                    <div className="other">
+                      <label>Other Members:</label>
+                      <select className="otherMemberSelector"></select>
+                    </div>
+      
+                    <div className="level">
+                      <label>Level:</label>
+                      <input type="number"/> 
+                    </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
+                </div>
+
+                <div className="rightData">
+                  <label>Team</label>
+                    <ol>
+                      <li></li>
+                    </ol>
+                </div>      
                </div>
              </div>
            </div>

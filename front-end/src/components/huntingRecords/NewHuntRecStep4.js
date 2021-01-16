@@ -29,7 +29,7 @@ const NewHuntRecStep4 = ({ setForm, formData, navigation }) => {
                  <p>City:</p>
                  <select></select>
                  <p>Spot Name:</p>
-                 <select></select>
+                 <input type="text"/>
                </div>
               
              </div>
@@ -39,23 +39,30 @@ const NewHuntRecStep4 = ({ setForm, formData, navigation }) => {
                <img className="partyHat" src={"../images/Norseman_Doll.gif"}/>
     
                <div className="teamCompData">
-                 <p>Your Character:</p>
-                 <select></select>
-    
-                 <div className="others">
-                   <div className="other">
-                     <p>Other Members:</p>
-                     <select className="otherMemberSelector"></select>
-                   </div>
-    
-                   <div className="level">
-                     <p>Level:</p>
-                     <select className="otherLevelSelector"></select>
-                    
-                   </div>
-                   <i className="fas fa-plus-circle"></i>
-                 </div>
-               
+                <div className="leftData">
+                  <label>Your Character:</label>
+                  <select></select>
+      
+                  <div className="others">
+                    <div className="other">
+                    <label>Other Members:</label>
+                    <select className="otherMemberSelector"></select>
+                    </div>
+      
+                    <div className="level">
+                    <p>Level:</p>
+                    <select className="otherLevelSelector"></select>  
+                    </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
+                </div>
+
+                <div className="rightData">
+                  <label>Team</label>
+                    <ol>
+                      <li></li>
+                    </ol>
+                </div>      
                </div>
              </div>
 
