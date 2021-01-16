@@ -20,6 +20,7 @@
     border: 1px solid black;
 }
 
+
 #formContainer .goldenArmor {
     position: absolute;
     top: -15px;
@@ -27,11 +28,123 @@
 }
 
 #formContainer .setImgContainer {
+    position: relative;
     height: 80%;
     width: 100%;
     display: flex;
     justify-content: center; 
 }
+
+.setImgContainer .selectHelmet {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    top: 4px;
+    left: 92px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectBackpack {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    top: 19px;
+    right: 57px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectNecklace {
+    position: absolute;
+    width: 33px;
+    height: 35px;
+    top: 19px;
+    left: 56px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .SelectArmor {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    top: 42.5px;
+    left: 92px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectWeapon {
+    position: absolute; 
+    width: 33px;
+    height: 35px;
+    top: 57px;
+    left: 56px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectShield {
+    position: absolute; 
+    width: 34px;
+    height: 35px;
+    top: 57px;
+    right: 57px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectLegs {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    bottom: 44px;
+    left: 92px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectBoots {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    bottom: 5px;
+    left: 92px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectRing {
+    position: absolute;
+    width: 33px;
+    height: 35px;
+    bottom: 29px;
+    left: 56px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
+.setImgContainer .selectTorch {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    bottom: 29px;
+    right: 57px;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    border: 0px;
+}
+
 
 /* Location Properties */
 #formContainer .GlobalLocation {
@@ -57,8 +170,17 @@
 
 #formContainer .locationInfo {
     margin-top: 15%;
-    height: 80%; 
-    text-align: center;
+    margin-left: 8%;
+    
+}
+
+.locationInfo .cityContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.locationInfo .spotContainer {
+    margin-top: 10%;
 }
 
 #formContainer .selectCity {
@@ -70,7 +192,7 @@
 }
 
 #formContainer .selectSpot {
-    width: 180px;
+    width: 178px;
     height: 18px;
     padding: 0px;
     border-width: 0px;
@@ -103,28 +225,68 @@
 
 #formContainer .teamCompData {
     display: flex;
-    height: 85%;
+    margin-top: 9%;
 }
 
 .teamCompData .leftData {
     width: 75%;
+    margin-left: 5%;
+}
+
+.teamCompData .selectCharacter {
+    width: 180px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.leftData .others {
+    margin-top: 9%;
+    display: flex;
 }
 
 .leftData .other {
-    width: 66%;
+    width: 45%;
 }
 
 .leftData .level {
-    width: 33%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
 }
 
-.otherMemberSelector {
-    width: 100px;
+.others i {
+    margin-left: 5%;
+    margin-top: 6%;
+    font-size: 20px;
+}
+
+
+.teamCompData .otherMemberSelector {
+    width: 98%;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.teamCompData .levelSelector {
+    width: 100%;
+    height: 18px;
+    padding: 0px;
+    border-width: 0px;
+    border: 1px solid black;
 }
 
 .teamCompData .rightData {
     width: 25%;
+    text-align: center;
 }
+
+.rightData .teamMatesList {
+    list-style: none;
+    padding: 0;
+}
+
+
 
 /* Footer Properties */
 #formContainer i {

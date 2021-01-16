@@ -17,6 +17,16 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
     
                <div className="setImgContainer">
                  <img src={"../images/set.jpg"}/>
+                 <select className="selectHelmet"/>
+                 <select className="SelectArmor"/>
+                 <select className="selectLegs"/>
+                 <select className="selectShield"/>
+                 <select className="selectWeapon"/>
+                 <select className="selectRing"/>
+                 <select className="selectNecklace"/>
+                 <select className="selectBoots"/>
+                 <select className="selectTorch"/>
+                 <select className="selectBackpack"/>
                </div>
               
              </div>
@@ -26,11 +36,11 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
                <img className="treasureMap" src={"../images/Treasure_Map.gif"}/>
     
                <div className="locationInfo">
-                <div>
+                <div className="cityContainer">
                   <label>City:</label>
                   <select className="selectCity"/>
                 </div>
-                <div>
+                <div className="spotContainer">
                   <label>Spot Name:</label>
                   <input className="selectSpot" type="text"/>
                 </div>
@@ -45,26 +55,26 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
                <div className="teamCompData">
                 <div className="leftData">
                   <label>Your Character:</label>
-                  <select></select>
+                  <select className="selectCharacter"/>
       
                   <div className="others">
                     <div className="other">
                       <label>Other Members:</label>
-                      <select className="otherMemberSelector"></select>
+                      <select className="otherMemberSelector"/>
                     </div>
       
                     <div className="level">
                       <label>Level:</label>
-                      <input type="number"/> 
+                      <input className="levelSelector" type="number"/> 
                     </div>
                     <i className="fas fa-plus-circle"></i>
                   </div>
                 </div>
 
                 <div className="rightData">
-                  <label>Team</label>
-                    <ol>
-                      <li></li>
+                  <label><strong>Team</strong></label>
+                    <ol className="teamMatesList">
+                      <li>1500 ED</li>
                     </ol>
                 </div>      
                </div>
@@ -72,7 +82,7 @@ const NewHuntRecStep1 = ({ setForm, formData, navigation }) => {
            </div>
     
              <div className="mandatory">
-               <strong>*Mandatory information</strong>
+               <strong>*Mandatory fields</strong>
              </div>
     
            <div className="buttons__box">
