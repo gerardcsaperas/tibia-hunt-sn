@@ -4,17 +4,32 @@ import { API_URL } from '../../config';
 import {Link} from 'react-router-dom';
 import ContentBox from '../custom/ContentBox/ContentBox';
 import FormBox from '../custom/FormBox/FormBox';
-
+import { useSelector, useDispatch } from 'react-redux'
+import {
+	setUsername,
+	setAvatar,
+	setEmail,
+	setCountry,
+	setStars,
+	setToken,
+	setUid,
+	authenticate,
+	selectUser
+} from './userSlice'
 
 
 function LogIn() {
 
-  const [ email, setEmail ] = useState('');
+  const user = useSelector(selectUser);
+	const { authenticated } = user;
+	const dispatch = useDispatch()
+
+  const [ email, setBodyEmail ] = useState('');
   const [ password, setPassword ] = useState('');
   const [ error, setError ] = useState(false);
 
   const updateEmail = (e) => {
-    setEmail(e.target.value);
+    setBodyEmail(e.target.value);
     setError(false);
   }
 
@@ -32,12 +47,21 @@ function LogIn() {
 				}
 			};
 			const body = JSON.stringify({ email, password });
-      const response = await axios.post(`${API_URL}/auth/login`, body, config);
+      const response = await axios.post(`${API_URL}/user/login`, body, config);
       
       if (response.status === 200) {
-				// store the user in localStorage (can only store strings)
-				localStorage.setItem('TibiaHuntingRecordsUser', JSON.stringify(response.data));
-				window.location.href = '/profile';
+        localStorage.setItem('TibiaHuntingRecordsUser', JSON.stringify(response.data));
+        let { username, avatar, email, country, stars, _id } = response.data.user;
+        let { token } = response.data;
+
+        dispatch(setUsername(username));
+				dispatch(setAvatar(avatar));
+				dispatch(setEmail(email));
+				dispatch(setCountry(country));
+				dispatch(setStars(stars));
+				dispatch(setUid(_id));
+				dispatch(setToken(token));
+				dispatch(authenticate());
       } else {
 
       }
