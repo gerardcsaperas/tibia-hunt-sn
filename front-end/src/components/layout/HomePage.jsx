@@ -18,7 +18,7 @@ function HomePage() {
         <p className="lore">Join us in this exciting quest and share your best achievents in this wonderful game called tibia!</p>
       </div>
       <div className="buttons__box">
-        <Link className="button" to="/login">Create an account</Link>
+        <Link className="button" to="/login">Log In</Link>
         <Link className="button" to="/hunting-records">Hunting Records</Link>
       </div>
     </Fragment>
