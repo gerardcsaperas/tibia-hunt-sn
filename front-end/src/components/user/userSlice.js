@@ -11,6 +11,9 @@ export const userSlice = createSlice({
         setUsername: (state, action) => {
             state.username = action.payload
         },
+        setAvatar: (state, action) => {
+            state.avatar = action.payload
+        },
         setEmail: (state, action) => {
             state.email = action.payload
         },
@@ -32,7 +35,7 @@ export const userSlice = createSlice({
     }
 })
 
-export const { setUsername, setEmail, setCountry, setStars, setToken, setUid, authenticate } = userSlice.actions
+export const { setUsername, setAvatar, setEmail, setCountry, setStars, setToken, setUid, authenticate } = userSlice.actions
 
 export const selectUser = state => state.user
 
