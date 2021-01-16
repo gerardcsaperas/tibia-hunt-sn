@@ -417,6 +417,140 @@
     width: 40px;
 }
 
+/* Events Properties */
+#formContainer .GlobalEvents {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.eventsTitle {
+    font-size: 18px;
+}
+
+#formContainer .events {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 35px;
+}
+
+#formContainer .eventsInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.eventsInfo .eventContainer {
+    margin-top: 10%;
+}
+
+/* Difficulty Properties */
+#formContainer .GlobalDifficulty {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.difficultyTitle {
+    font-size: 18px;
+}
+
+#formContainer .difficulty {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 35px;
+}
+
+#formContainer .difficultyInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.difficultyInfo .difficultyContainer {
+    margin-top: 10%;
+}
+
+/* Picture Properties */
+#formContainer .GlobalPicture {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.pictureTitle {
+    font-size: 18px;
+}
+
+#formContainer .picture {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 40px;
+}
+
+#formContainer .pictureInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.pictureInfo .pictureContainer {
+    margin-top: 10%;
+}
+
+.GlobalPicture .selectPicture {
+    width: 80%;
+}
+
+/* Comment Properties */
+#formContainer .GlobalComment {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.commentTitle {
+    font-size: 18px;
+}
+
+#formContainer .comment {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 30px;
+}
+
+#formContainer .commentInfo {
+    margin-top: 10%;
+    height: 80%;
+}
+
+.commentInfo .commentContainer {
+    display: flex;
+    justify-content: center;
+    height: 95%;
+}
+
+.GlobalComment .introduceComment {
+    height: 90%;
+    width: 85%;
+    border: 1px solid black;
+}
+
+
+
 
 /* Footer Properties */
 #formContainer i {

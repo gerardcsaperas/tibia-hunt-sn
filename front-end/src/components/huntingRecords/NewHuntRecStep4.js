@@ -5,74 +5,74 @@ import "./NewHuntingRecord.css";
 const NewHuntRecStep4 = ({ setForm, formData, navigation }) => {
   const { firstName, lastName, nickName } = formData;
 
-  const { previous, next } = navigation;
+  const { next, previous } = navigation;
 
   const content = (
          <Fragment>
         
            <div id="formContainer">
-             <div className="set">
-               <h1 className="setTitle">Events*</h1>
-               <img className="goldenArmor" src={"../images/Tibia_Coins.gif"}/>
-    
-               <div className="setImgContainer">
-                 <img src={"../images/set.jpg"}/>
-               </div>
-              
-             </div>
-    
-             <div className="location">
-               <h1 className="locationTitle">Difficulty*</h1>
-               <img className="treasureMap" src={"../images/Squeezing_Gear_of_Girlpower.gif"}/>
-    
-               <div className="locationInfo">
-                 <p>City:</p>
-                 <select></select>
-                 <p>Spot Name:</p>
-                 <input type="text"/>
-               </div>
-              
-             </div>
-    
-             <div className="teamComp">
-               <h1 className="teamCompTitle">Picture*</h1>
-               <img className="partyHat" src={"../images/Norseman_Doll.gif"}/>
-    
-               <div className="teamCompData">
-                <div className="leftData">
-                  <label>Your Character:</label>
-                  <select></select>
-      
-                  <div className="others">
-                    <div className="other">
-                    <label>Other Members:</label>
-                    <select className="otherMemberSelector"></select>
-                    </div>
-      
-                    <div className="level">
-                    <p>Level:</p>
-                    <select className="otherLevelSelector"></select>  
-                    </div>
-                    <i className="fas fa-plus-circle"></i>
-                  </div>
-                </div>
 
-                <div className="rightData">
-                  <label>Team</label>
-                    <ol>
-                      <li></li>
-                    </ol>
-                </div>      
+              {/* Events Section */}
+              <div className="GlobalEvents">
+               <h1 className="eventsTitle">Events</h1>
+               <img className="events" src={"../images/Tibia_Coins.gif"}/>
+    
+               <div className="eventsInfo">
+                <div className="eventsContainer">
+                  <label>Special Event:</label>
+                  <select className="selectCity"/>
+                </div>
                </div>
-             </div>
+              </div>
+
+              {/* Difficulty Section */}
+              <div className="GlobalDifficulty">
+               <h1 className="difficultyTitle">Difficulty:</h1>
+               <img className="difficulty" src={"../images/Squeezing_Gear_of_Girlpower.gif"}/>
+    
+               <div className="difficultyInfo">
+                <div className="difficultyContainer">
+                  <label>Difficulty:</label>
+                  <select className="selectCity"/>
+                </div>
+               </div>
+              </div>
+
+              {/* Picture Section */}
+              <div className="GlobalPicture">
+               <h1 className="pictureTitle">Picture</h1>
+               <img className="picture" src={"../images/Norseman_Doll.gif"}/>
+    
+               <div className="pictureInfo">
+                <div className="pictureContainer">
+                  <label>Upload:</label>
+                  <input className="selectPicture" type="file"/>
+                </div>
+               </div>
+              </div>
+
+              {/* Comment Section */}
+              <div className="GlobalComment">
+               <h1 className="commentTitle">Comment</h1>
+               <img className="comment" src={"../images/Achievement_Grade_Symbol.gif"}/>
+    
+               <div className="commentInfo">
+                <div className="commentContainer">
+                  <textarea className="introduceComment" type="number"/>
+                </div>
+               </div>
+              </div>
 
            </div>
-    
+
+           
+
+             {/* Footer Section */}
              <div className="mandatory">
-               <strong>*Mandatory information</strong>
+               <strong>*Mandatory fields</strong>
              </div>
     
-           <div className="buttons__box">
+           <div className="buttons_NHR">
              <button className="button" onClick={previous}>Back</button>
              <button className="button" onClick={next}>Save</button>
            </div>
