@@ -14,7 +14,11 @@ function ModalForm(props) {
                     <h3>{props.title}</h3>
                 </div>
                 <div className="ModalForm__frame">
-                    <div className="ModalForm__content">{props.content}</div>
+                    <div className="ModalForm__content">
+                        {props.content}
+                        { props.success ? <p style={{textAlign: "center"}}><i className="fas fa-check success" style={{marginRight: "10px"}}></i>Profile saved successfully</p> : null }
+                        { props.error ? <p className="error" style={{textAlign: "center"}}>Alas! Brave adventurer, there was an error updating your profile. Please try again later.</p> : null }
+                    </div>
                 </div>
             </div>
         </div>
