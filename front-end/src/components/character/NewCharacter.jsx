@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import ContentBox from '../custom/ContentBox/ContentBox';
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { API_URL, vocations } from "../../config";
 import { shortenVocation } from '../../utils/shortenVocation';
 import worlds from '../../assets/worlds.json';
@@ -9,53 +9,24 @@ import FormBox from '../custom/FormBox/FormBox';
 import './NewCharacter.scss';
 
 // Redux
-import { useSelector } from 'react-redux'
-import {
-	selectUser
-} from '../user/userSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectUser } from '../user/userSlice'
+import { addCharacter } from '../character/characterSlice'
 
 function NewCharacter(props) {
     const user = useSelector(selectUser);
+    const dispatch = useDispatch();
     
     const [ characterName, setCharacterName ] = useState('');
     const [ nameError, setNameError ] = useState(false);
-    const updateCharacterName = (characterName) => {
-        setApiSync(false);
-        setNameError(false);
-        setCharacterName(characterName);
-    }
-
-    const [ tibiaApySync, setApiSync ] = useState(false);
+    const [ tibiaApiSync, setApiSync ] = useState(false);
+    const [ charDoesNotExistError, setCharDoesNotExistError ] = useState(false);
     const [ loading, setLoading ] = useState(false);
     const [ disabledInputs, setDisabledInputs ] = useState(false);
-
-    useEffect(() => {
-        if (tibiaApySync) {
-            getTibiaData(characterName);
-            setDisabledInputs(true);
-        } else {
-            setDisabledInputs(false);
-        }
-    }, [tibiaApySync])
-
-    const getTibiaData = async(characterName) => {
-        setLoading(true);
-        const response = await axios.get(`https://api.tibiadata.com/v2/characters/${characterName}.json`);
-        const character = response.data.characters.data;
-        setLevel(character.level);
-        setVocation(shortenVocation(character.vocation));
-        setWorld(character.world);
-        setLoading(false);
-    }
-
     const [ level, setLevel ] = useState(1);
     const [ levelError, setLevelError ] = useState(false);
-    const updateLevel = (level) => {
-        setLevelError(false);
-        setLevel(level);
-    }
-
     const [ vocation, setVocation ] = useState();
+    const [ vocationError, setVocationError ] = useState(false);
     const [ world, setWorld ] = useState();
     const [ axeFighting, setAxeFighting ] = useState(1);
     const [ swordFighting, setSwordFighting ] = useState(1);
@@ -64,6 +35,52 @@ function NewCharacter(props) {
     const [ shielding, setShielding ] = useState(1);
     const [ magicLevel, setMagicLevel ] = useState(1)
     const [ page, setPage ] = useState(1);
+    const [ success, setSuccess ] = useState(false);
+
+    useEffect(() => {
+        if (tibiaApiSync) {
+            getTibiaData(characterName);
+            setDisabledInputs(true);
+        } else {
+            setDisabledInputs(false);
+        }
+    }, [tibiaApiSync])
+
+    const getTibiaData = async(characterName) => {
+        setLoading(true);
+        const response = await axios.get(`https://api.tibiadata.com/v2/characters/${characterName}.json`);
+        
+        if (response.data.characters.error === "Character does not exist.") {
+            setApiSync(false);
+            setDisabledInputs(false);
+            setCharDoesNotExistError(true);
+            setLoading(false);
+            return;
+        }
+
+        const character = response.data.characters.data;
+        setLevel(character.level);
+        setVocation(shortenVocation(character.vocation));
+        setWorld(character.world);
+        setLoading(false);
+    }
+
+    const updateCharacterName = (characterName) => {
+        setApiSync(false);
+        setNameError(false);
+        setCharacterName(characterName);
+    }
+
+    const updateLevel = (level) => {
+        setLevelError(false);
+        setLevel(level);
+    }
+
+    const updateVocation = (vocation) => {
+        setVocationError(false);
+        setVocation(vocation);
+    }
+
     const nextPage = () => {
         if (characterName === '') {
             return setNameError(true);
@@ -73,15 +90,18 @@ function NewCharacter(props) {
             return setLevelError(true);
         }
 
+        if (!vocation) {
+            return setVocationError(true);
+        }
+
         return setPage(2);
     }
-    const [ success, setSuccess ] = useState(false);
 
     const saveCharacter = async () => {
 
         const character = {
             name: characterName,
-            tibiaApySync,
+            tibiaApiSync,
             level,
             vocation,
             world,
@@ -105,9 +125,9 @@ function NewCharacter(props) {
             const response = await axios.post(`${API_URL}/character`, character, config);
             
             if (response.status === 201) {
+                dispatch(addCharacter([character.name, character.vocation, character.level]));
                 setSuccess(true);
                 setPage(3);
-
                 setTimeout(() => {
                     window.location.href = '/profile'
                 }, 1500)
@@ -129,22 +149,23 @@ function NewCharacter(props) {
             </div>
             <div className="form-input-row" style={{flexDirection: "row", alignItems: "center"}}>
                 <label>Sync with Tibia.com?</label>
-                <input type="checkbox" style={{width: "30px"}} onChange={() => setApiSync(!tibiaApySync)} checked={tibiaApySync} disabled={loading}/>
+                <input type="checkbox" style={{width: "30px"}} onChange={() => setApiSync(!tibiaApiSync)} checked={tibiaApiSync} disabled={loading}/>
             </div>
             <div className="form-input-row">
                 <label>Level*</label>
                 <input type="number" name="level" min="1" value={level} onChange={(e) => updateLevel(e.target.value)} autoComplete="off" disabled={disabledInputs} />
-                { levelError ? <p className="error">Please provide a valid for your character.</p> : null}
+                { levelError ? <p className="error">Please provide a valid level for your character.</p> : null}
             </div>
             <div className="form-input-row">
                 <label>Vocation*</label>
-                <select name="vocation" value={vocation} onChange={(e) => setVocation(e.target.value)} autoComplete="off" disabled={disabledInputs}>
+                <select name="vocation" value={vocation} onChange={(e) => updateVocation(e.target.value)} autoComplete="off" disabled={disabledInputs}>
                     {
                         vocations.map( (voc, index) => {
                             return <option key={index} value={voc}>{voc}</option>
                         })
                     }
                 </select>
+                { vocationError ? <p className="error">Please provide a valid vocation for your character.</p> : null}
             </div>
             <div className="form-input-row">
                 <label>World</label>
