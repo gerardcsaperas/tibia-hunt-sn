@@ -1,12 +1,13 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../custom/ContentBox/ContentBox';
+import LikeButtons from '../custom/LikeButtons/LikeButtons'
 import CommentBoxToDisplay from '../custom/CommentBox/CommentBoxToDisplay';
 import CommentBoxToComment from '../custom/CommentBox/CommentBoxToComment';
 
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { API_URL } from "../../config";
-import './HuntDetails.css';
+import './HuntDetails.scss';
 
 
 // Redux
@@ -17,7 +18,9 @@ import { selectUser } from '../user/userSlice'
 function HuntDetails() {
 
   const user = useSelector(selectUser);
-
+  const { uid } = user
+  const authenticated = user.authenticated;
+  let { recordID }  = useParams();
   const [ huntDetails, setHuntDetails ] = useState();
   
     // Get hunting details on component initialization
@@ -34,9 +37,7 @@ function HuntDetails() {
                 }
             };
             
-            // const dynamicId = huntDetails._id
-            // console.log (dynamicId)
-            const response = await axios.get(`${API_URL}/huntingRecord/5ffc916a90bbf949300aa367`, config);          
+            const response = await axios.get(`${API_URL}/huntingRecord/${recordID}`, config);          
 
             if (response.status === 200 && response.data) {
               setHuntDetails(response.data);
@@ -46,47 +47,106 @@ function HuntDetails() {
             console.error(e);
         }
     }
-    console.log(huntDetails)
 
-  const renderFragment = () => {
-      const {
-          charms,
-          comments,
-          createdAt,
-          dislikes,
-          expH,
-          expRatio,
-          huntPicture,
-          imbuements,
-          likes,
-          opComment,
-          preys,
-          profitH,
-          specialEvents,
-          spot,
-          supplies,
-          teamComp,
-          _id,
-          set,
-          difficulty
-      } = huntDetails
-      const huntUser = huntDetails.user;
+    const patchLikes = async () => {
+        try {
+          const config = {
+              headers: {
+                  'Authorization': `Bearer ${user.token}`
+              }
+          };
 
-      console.log(huntDetails)
-      console.log(charms)
-      console.log(imbuements)
-      console.log(preys)
-      console.log(specialEvents)
+          const body = {
+              likes: huntDetails.likes,
+              dislikes: huntDetails.dislikes
+          }
+          
+          await axios.put(`${API_URL}/huntingRecord/${recordID}`, body, config);          
 
-      return (<Fragment>
-      {/*--------- Here all the content displayed on the left side -----------*/}
+        } catch(e) {
+            console.error(e);
+        }
+    }
 
-        {/*-- User Information -- */}
+    const handleHuntingRecordLike = () => {
+
+        const uidDislikesIndex = huntDetails.dislikes.indexOf(uid)
+        let dislikesArray = huntDetails.dislikes
+        uidDislikesIndex !== -1 && (dislikesArray.splice(uidDislikesIndex, 1))
+
+        const uidIndex = huntDetails.likes.indexOf(uid)
+        let likesArray = huntDetails.likes
+        uidIndex === -1 ? likesArray.push(uid) : likesArray.splice(uidIndex, 1)
+
+        setHuntDetails({
+          ...huntDetails,
+          likes: likesArray,
+          dislikes: dislikesArray
+        })
+
+        patchLikes()
+    }
+
+    const handleHuntingRecordDislike = () => {
+        const uidIndex = huntDetails.likes.indexOf(uid)
+        let likesArray = huntDetails.likes
+        uidIndex !== -1 && (huntDetails.likes.splice(uidIndex, 1))
+
+        const uidDislikesIndex = huntDetails.dislikes.indexOf(uid)
+        let dislikesArray = huntDetails.dislikes
+        uidDislikesIndex === -1 ? dislikesArray.push(uid) : dislikesArray.splice(uidIndex, 1)
+
+        setHuntDetails({
+          ...huntDetails,
+          likes: likesArray,
+          dislikes: dislikesArray
+        })
+
+        patchLikes()
+    }
+
+    const renderFragment = () => {
+        const {
+            charms,
+            comments,
+            createdAt,
+            dislikes,
+            expH,
+            expRatio,
+            huntPicture,
+            imbuements,
+            likes,
+            opComment,
+            preys,
+            profitH,
+            specialEvents,
+            spot,
+            supplies,
+            teamComp,
+            _id,
+            set,
+            difficulty
+        } = huntDetails
+        const huntUser = huntDetails.user;
+
+        console.log(comments);
+
+      return (
         <div id="huntDetails">
+          <LikeButtons
+              id="huntDetails__likes"
+              color="white"
+              likes={likes}
+              dislikes={dislikes}
+              handleClickLike={handleHuntingRecordLike}
+              handleClickDislike={handleHuntingRecordDislike}
+              comments={false}
+          />
+          <p className="createdAt">{createdAt}</p>
           <div className="leftOrganiser">
             <div className="userInformation">
               <img src="/images/default_user.jpg" alt="profilePic"></img>
-              <p>{huntUser}</p>
+              <p>{huntUser.username}</p>
               <p>{user.rank}</p>
             </div>
 
@@ -211,15 +271,15 @@ function HuntDetails() {
 
             {/*-- Preys --*/}
             <div className="supplies">
-              <div className="headLine">
-                <p>Preys</p>
-              </div>
-              <ol className="suppliesContent">
-                <li> {
+                <div className="headLine">
+                    <p>Preys</p>
+                </div>
+                <ol className="suppliesContent">
+                    <li> {
                      preys.damageBoost && preys.loot && preys.damageReduction && preys.experience == false ? <p>none</p> : <p>{preys.loot}</p>
                      }
-                </li>
-              </ol>
+                    </li>
+                </ol>
             </div>
 
             {/*-- Sepcial Events --*/}
@@ -239,92 +299,22 @@ function HuntDetails() {
 
 
      {/*--------- Here all the content displayed on the right side ---------*/}
-          <div className="rightOrganiser">
-            <div className="lootPicDetail">
+      <div className="rightOrganiser">
+          <div className="lootPicDetail">
               <img src="/images/default_loot.jpg" alt="lootPic"></img>
-            </div>
-
-
-            {/* -------- OP comment section --------- */}
-            <div className="commentBox">
-              <div className="headLine">
-                <p>{createdAt}</p>
-              </div>
-
-              <div className="commentContent">
-                <div className="leftData">
-                  <div>
-                    <p>{huntUser}</p>
-                    <p>{user.rank}</p>
-                    <p>{user.posts}</p>
-                  </div>
-                </div>
-
-                <div className="rightData">
-                  <p>{opComment}</p>
-                  <div className="rating">
-                    <i class="far fa-thumbs-up"></i>
-                    <p>0</p>
-                    <i class="far fa-thumbs-down"></i>
-                    <p>0</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/*--------- Add a comment secion ----------*/}
-            <div className="commentBox">
-              <div className="headLine">
-              </div>
-
-              <div className="commentContent">
-                <div className="leftData">
-                  <div>
-                    <p>{huntUser}</p>
-                    <p>{user.rank}</p>
-                    <p>{user.posts}</p>
-                  </div>
-                </div>
-
-                <div className="rightData">
-                  <textarea placeholder="Add a comment"></textarea>
-                  <button>Post</button>
-                </div>
-              </div>
-            </div>
-
-            {/*------- Rest of the users comments ---------*/}
-            <div className="commentBox">
-              <div className="headLine">
-                <p>{createdAt}</p>
-              </div>
-
-              <div className="commentContent">
-                <div className="leftData">
-                  <div>
-                    <p>{huntUser}</p>
-                    <p>{user.rank}</p>
-                    <p>{user.posts}</p>
-                  </div>
-                </div>
-
-                <div className="rightData">
-                  <p>{opComment}</p>
-                  <div className="rating">
-                    <i class="far fa-thumbs-up"></i>
-                    <p>0</p>
-                    <i class="far fa-thumbs-down"></i>
-                    <p>0</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
-    </Fragment>)
 
-  }
+          <CommentBoxToDisplay comment={opComment} createdAt={createdAt} user={huntUser} isOp={true}/>
+          {
+            comments.map( comment => {
+              let { _id, text, likes, dislikes, createdAt, user} = comment
+              return <CommentBoxToDisplay id={_id} comment={text} likes={likes} dislikes={dislikes} createdAt={createdAt} user={user} isOp={false}/>
+            })
+          }
+          <CommentBoxToComment />
+      </div>
+  </div>
+  )}
 
   const content = huntDetails ? renderFragment() : null
   
