@@ -1,0 +1,53 @@
+.filters {
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+    background-color: #E1D8C6;
+    border: 1px solid black;
+    width: 700px;
+    box-shadow: 3px 3px 1px grey;
+    margin-top: 5%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    h1 {
+        margin: 0;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: 20px;
+        color: #545454;
+    }
+    
+    .grill {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        column-gap: 10px;
+        row-gap: 15px;
+        justify-content: space-around;
+    }
+    
+    .dividers {
+        margin: 0;
+        font-size: 14px;
+    
+    
+        input {
+            box-sizing: border-box;
+        }
+
+        .selector, input {
+            height: 20px;
+            width: 100%;
+        }
+    }
+    
+    .loupe {
+        width: 40px;
+        height: auto;
+        position: absolute;
+        top: -20px;
+        right: 20px;
+    }
+}
