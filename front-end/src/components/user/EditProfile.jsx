@@ -48,8 +48,6 @@ function EditProfile() {
 
     const saveProfileAuth = async () => {
 
-        console.log('saveProfileAuth')
-
         const config = {
             headers: {
                 'Content-Type': 'application/json',
@@ -86,11 +84,17 @@ function EditProfile() {
 
     const uploadImage = async (base64EncodedImage) => {
         try {
-            await fetch(`${API_URL}/image/profile`, {
-                method: 'POST',
-                body: JSON.stringify({data: base64EncodedImage}),
-                headers: {'Content-type': 'application/json'}
-            })
+
+            const body = JSON.stringify({data: base64EncodedImage});
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${user.token}`
+                }
+            };
+
+            await axios.post(`${API_URL}/image/profile`, body, config);
+
         } catch(e) {
             console.error(e);
         }
@@ -112,19 +116,17 @@ function EditProfile() {
             }
 
             const body = JSON.stringify({ newCountry });
-        
-            console.log(newCountry);
 
             const response = await axios.put(`${API_URL}/user`, body, config);
-
-            console.log(response)
 
             if (response.status === 200) {
                 dispatch(setCountry(response.data.country));
                 setSavedSuccessfully(true);
-                setTimeout(() => {
-                    window.location.href = '/profile'
-                }, 1500)
+                dispatch(setAvatar(response.data.avatar));
+                dispatch(setCountry(response.data.country));
+                // setTimeout(() => {
+                //     window.location.href = '/profile'
+                // }, 1500)
             }
 
         } catch(e) {
