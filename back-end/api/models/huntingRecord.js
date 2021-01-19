@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const commentSchema = require('./comment');
 
 const huntingRecordSchema = new Schema({
     user: {
@@ -118,7 +117,10 @@ const huntingRecordSchema = new Schema({
         id: false
     }],
     opComment: String,
-    comments: [commentSchema],
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Comment'
+    }],
     likes: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -133,12 +135,36 @@ const huntingRecordSchema = new Schema({
 // If like exists, unlike. If like does not exist: like. :-)
 huntingRecordSchema.methods.patchLikes = async function(uid) {
 	const huntingRecord = this;
-    let targetIndex = huntingRecord.likes.indexOf(uid);
     
-    if ( targetIndex === -1) {
+    let dislikeIndex = huntingRecord.dislikes.indexOf(uid);
+    if (dislikeIndex !== -1) {
+        huntingRecord.dislikes.splice(dislikeIndex, 1);
+    }
+
+    let likeIndex = huntingRecord.likes.indexOf(uid);
+    if ( likeIndex === -1) {
         huntingRecord.likes.push(uid)
     } else {
-        huntingRecord.likes.splice(targetIndex, 1)
+        huntingRecord.likes.splice(likeIndex, 1)
+    }
+
+    await huntingRecord.save();
+    return huntingRecord;
+};
+
+huntingRecordSchema.methods.patchDislikes = async function(uid) {
+	const huntingRecord = this;
+    
+    let likeIndex = huntingRecord.likes.indexOf(uid);
+    if (likeIndex !== -1) {
+        huntingRecord.likes.splice(likeIndex, 1);
+    }
+
+    let dislikeIndex = huntingRecord.dislikes.indexOf(uid);
+    if ( dislikeIndex === -1) {
+        huntingRecord.dislikes.push(uid)
+    } else {
+        huntingRecord.dislikes.splice(likeIndex, 1)
     }
 
     await huntingRecord.save();
