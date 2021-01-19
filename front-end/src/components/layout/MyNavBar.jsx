@@ -29,7 +29,7 @@ function MyNavBar() {
             {
                 authenticated &&
                 <div className="section">
-                    <NavLink to="/new_record"><i className="fas fa-plus-circle"></i>New Record</NavLink>      
+                    <NavLink to="/new-hunting-record"><i className="fas fa-plus-circle"></i>New Record</NavLink>      
                 </div>
             }
 
