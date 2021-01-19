@@ -1,8 +1,6 @@
 const { query } = require("../models/comment");
 
 function queryToMongoFilter(queryParams) {
-    console.log('queryParams', queryParams);
-    var andFilter = []
     let filter = {
         conditions: {
             $and: []
@@ -10,12 +8,43 @@ function queryToMongoFilter(queryParams) {
     };
 
     for (const param in queryParams) {
-        console.log(`${param}: ${typeof queryParams[param]}`);
-        filter
-    }
-
-    if (andFilter.length > 0){
-        filter["conditions"]["$and"] = andFilter
+        switch (param) {
+            case 'level':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "teamComp.level": { $lte: queryParams[param] } })
+                break;
+            case 'expH':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "expH": { $gte: queryParams[param] } })
+                break;
+            case 'profitH':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "profitH": { $gte: queryParams[param] } })
+                break;
+            case 'vocation':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "teamComp.vocation": { $regex: queryParams[param], $options: 'i' } })
+                break;
+            case 'difficulty':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "difficulty": queryParams[param] })
+                break;
+            case 'teamComp':
+                switch (queryParams['teamComp']) {
+                    case 'Solo':
+                        filter.conditions.$and.push({ "teamComp": { $size: 1 } })
+                        break;
+                    case 'Duo':
+                        filter.conditions.$and.push({ "teamComp": { $size: 2 } })
+                        break;
+                    case 'Trio':
+                        filter.conditions.$and.push({ "teamComp": { $size: 3 } })
+                        break;
+                    case 'Full Team +':
+                        filter.conditions.$and.push({ "teamComp": { $size: { $gte: 4 } } })
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     if (queryParams.offset) {
@@ -26,6 +55,10 @@ function queryToMongoFilter(queryParams) {
         filter.limit = parseInt(queryParams.limit);
     }
     
+    if (filter.conditions.$and.length === 0) {
+        delete filter.conditions.$and;
+    }
+
     return filter;
 }
 
