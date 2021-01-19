@@ -1,6 +1,25 @@
 #huntDetails {
+    position: relative;
     display: flex;
 
+    #huntDetails__likes.socialMedia {
+        position: absolute;
+        top: -63px;
+        display: flex;
+        i {
+            font-size: 16px;
+            margin:10px;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+
+    .createdAt {
+        position: absolute;
+        top: -65px;
+        right: 0;
+        color: white;
+    }
 }
 
 /*---- Left Side ----- */
