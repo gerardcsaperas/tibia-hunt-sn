@@ -1,8 +1,36 @@
+@import '../../styles/Library.scss';
+
 #comBoxDisplay {
     min-height: 120px;
     width: 95%;
     margin: 2% auto;
     box-shadow: 0 4px 2px -2px gray;
+
+    p.username {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        color: $char-name;
+        -webkit-text-stroke: 1px black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.rating {
+        .socialMedia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            i {
+                font-size: 16px;
+                margin:10px;
+                padding: 0;
+                cursor: pointer;
+            }
+        }
+    }   
 }
 
 #comBoxDisplay .headLine {
