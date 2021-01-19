@@ -2,13 +2,25 @@
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     background-color: #E1D8C6;
     border: 1px solid black;
-    height: 140px;
     width: 530px;
     box-shadow: 3px 3px 1px grey;
     display: flex;
     list-style: none;
     padding: 0px;
     margin-top: 7%;
+
+    .socialMedia {
+        padding-top:1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        i {
+            font-size: 16px;
+            margin:0px;
+            padding: 10px;
+        }
+    }
 }
 
 .lootPicContainer {
@@ -41,10 +53,11 @@
 }
 
 .details {
-    padding-top: 5%;
+    padding: 10px;
+    padding-left: 30px;
     display: grid;
-    grid-template-columns: 120px 150px ;
-    column-gap: 10%;
+    grid-template-columns: 50% 50%;
+    column-gap: 15px;
     row-gap: 15px;
     justify-content: center;
     align-items: center;
@@ -55,22 +68,10 @@
     font-size: 14px;
 }
 
-.socialMedia {
-    padding-top:1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.socialMedia i {
-    font-size: 16px;
-    margin:0px;
-    padding: 10px;
-}
-
 .charInfo {
     margin: 0px;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 .expRatio {
