@@ -1,12 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './HuntSummary.css';
-
-
-
-
+import './HuntSummary.scss';
+import LikeButtons from '../custom/LikeButtons/LikeButtons.jsx';
+// Redux
+import { useSelector } from 'react-redux'
+import { selectUser } from '../user/userSlice'
 
 function HuntSummary(props) {
+
+    const { uid } = useSelector(selectUser);
 
     if (!props.data) {
          return null;
@@ -29,13 +31,14 @@ function HuntSummary(props) {
                                 <p className="expRatio">Exp Ratio: {`${expRatio}`*100 + "%"}</p>
                                 <p className="info">Profit/h: {`${profitH}` + "/h"}</p>
                             </div>
-
-                            <div className="socialMedia">
-                                <i class="far fa-thumbs-up"> {`${likes.length}`}</i>
-                                <i class="far fa-thumbs-down"> {`${dislikes.length}`}</i>
-                                <i class="far fa-comment"> {`${comments.length}`}</i>
-                            </div>
-                        
+                            <LikeButtons
+                            likes={likes}
+                            dislikes={dislikes}
+                            handleClickLike={null}
+                            handleClickDislike={null}
+                            comments={true}
+                            commentsNum={comments.length}
+                            />                     
                         </div>
                 </div>
             </Link>
