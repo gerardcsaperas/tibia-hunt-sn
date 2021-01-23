@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Cobra Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/46/Cobra_Rod.gif/revision/latest?cb=20190701193331&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Deepling Ceremonial Dagger",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1b/Deepling_Ceremonial_Dagger.gif/revision/latest?cb=20180605184106&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Deepling Fork",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9d/Deepling_Fork.gif/revision/latest?cb=20180605184138&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Dream Blossom Staff",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/61/Dream_Blossom_Staff.gif/revision/latest?cb=20170709101724&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Energized Limb",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a7/Energized_Limb.gif/revision/latest?cb=20181107123138&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Falcon Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/61/Falcon_Rod.gif/revision/latest?cb=20180605182039&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Glacial Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8f/Glacial_Rod.gif/revision/latest?cb=20120622174236&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Hailstorm Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1f/Hailstorm_Rod.gif/revision/latest?cb=20141219181003&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Jungle Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ac/Jungle_Rod.gif/revision/latest?cb=20201106151424&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Lion Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/9f/Lion_Rod.gif/revision/latest?cb=20200611032448&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Moonlight Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b4/Moonlight_Rod.gif/revision/latest?cb=20190527132609&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Muck Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/92/Muck_Rod.gif/revision/latest?cb=20120622164104&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Necrotic Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d8/Necrotic_Rod.gif/revision/latest?cb=20190527132830&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Northwind Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6f/Northwind_Rod.gif/revision/latest?cb=20171106163137&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Ogre Scepta",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b4/Ogre_Scepta.gif/revision/latest?cb=20151113115054&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Rod of Destruction",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4e/Rod_of_Destruction.gif/revision/latest?cb=20171024221937&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Shimmer Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8a/Shimmer_Rod.gif/revision/latest?cb=20110701204344&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Snakebite Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Snakebite_Rod.gif/revision/latest?cb=20150120030027&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Sorcerer and Druid Staff",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f0/Sorcerer_and_Druid_Staff.gif/revision/latest?cb=20151003103614&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Soulhexer",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Soulhexer.gif/revision/latest?cb=20200611021029&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Springsprout Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3a/Springsprout_Rod.gif/revision/latest?cb=20171106163137&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Terra Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7e/Terra_Rod.gif/revision/latest?cb=20190527133208&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "The Chiller",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/03/The_Chiller.gif/revision/latest?cb=20140920125513&amp;path-prefix=en",
+    "type": "Rods"
+  },
+  {
+    "name": "Underworld Rod",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cc/Underworld_Rod.gif/revision/latest?cb=20171106163138&amp;path-prefix=en",
+    "type": "Rods"
+  }
+]

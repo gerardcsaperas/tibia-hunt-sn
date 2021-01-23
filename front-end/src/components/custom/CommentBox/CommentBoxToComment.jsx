@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from "axios";
 import { API_URL } from "../../../config";
+import { useParams } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
 import './CommentBoxToComment.scss';
 
@@ -12,13 +13,37 @@ function CommentBoxToComment(props) {
 
     const user = useSelector(selectUser);
     const { username, stars, uid } = user
-
+    let { recordID }  = useParams();
+    const [ text, setText ] = useState();
     if (!props) {
         return null;
     }
 
-    const postComment = () => {
-      console.log('post')
+    const postComment = async () => {
+
+        if (!text || text === '') {
+            return
+        }
+
+        try {
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            };
+  
+            const body = {
+                text
+            }
+            
+            const response = await axios.post(`${API_URL}/comment/${recordID}`, body, config);          
+            if (response.status === 201) {
+                window.location.reload()
+            }
+            
+        } catch(e) {
+              console.error(e);
+        }
     }
 
     return (
@@ -37,7 +62,7 @@ function CommentBoxToComment(props) {
                     </div>
                 </div>
                 <div className="rightData">
-                    <textarea placeholder="Add a comment"></textarea>
+                    <textarea onChange={(e) => setText(e.target.value)} placeholder="Add a comment"></textarea>
                     <button onClick={postComment}>Post</button>
                 </div>
             </div>

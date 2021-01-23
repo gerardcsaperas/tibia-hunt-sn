@@ -1,8 +1,12 @@
 const Spot = require('../models/spot');
+const queryToMongoFilter = require('../utils/queryToMongoFilter');
 
 async function find(req, res) {
+    const filter = queryToMongoFilter(req.query);
+
+    console.log(JSON.stringify(filter.conditions))
     try {
-        const spots = await Spot.find();
+        const spots = await Spot.find(filter.conditions);
         res.status(200).send(spots);
     } catch(e) {
         console.log(`There was an error trying to retrieve spots. Error: ${e.message}.`)

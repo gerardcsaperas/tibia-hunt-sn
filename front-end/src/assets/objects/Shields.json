@@ -1,0 +1,417 @@
+[
+  {
+    "name": "Adamant Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e2/Adamant_Shield.gif/revision/latest?cb=20180912220944&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Amazon Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Amazon_Shield.gif/revision/latest?cb=20050617185050&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Ancient Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ab/Ancient_Shield.gif/revision/latest?cb=20061111113108&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Battle Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e2/Battle_Shield.gif/revision/latest?cb=20080103152539&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Black Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e7/Black_Shield.gif/revision/latest?cb=20050614193117&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Blessed Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1f/Blessed_Shield.gif/revision/latest?cb=20050530010936&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Bone Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Bone_Shield.gif/revision/latest?cb=20050614194415&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Bonelord Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Bonelord_Shield.gif/revision/latest?cb=20150125152647&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Brass Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c3/Brass_Shield.gif/revision/latest?cb=20061213002701&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Broken Wooden Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2f/Broken_Wooden_Shield.gif/revision/latest?cb=20141006142150&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Carapace Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/54/Carapace_Shield.gif/revision/latest?cb=20111117183144&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Castle Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/87/Castle_Shield.gif/revision/latest?cb=20120403183411&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Copper Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cc/Copper_Shield.gif/revision/latest?cb=20050613200042&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Crown Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/41/Crown_Shield.gif/revision/latest?cb=20050531092930&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Dark Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/64/Dark_Shield.gif/revision/latest?cb=20170922215622&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Death Gaze",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2c/Death_Gaze.gif/revision/latest?cb=20151112183813&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Demon Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4f/Demon_Shield.gif/revision/latest?cb=20050601214120&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Depth Scutum",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f4/Depth_Scutum.gif/revision/latest?cb=20111117182917&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Dragon Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/13/Dragon_Shield.gif/revision/latest?cb=20180203191252&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Dwarven Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/58/Dwarven_Shield.gif/revision/latest?cb=20050531074911&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Eagle Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/21/Eagle_Shield.gif/revision/latest?cb=20070115005629&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Ectoplasmic Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/78/Ectoplasmic_Shield.gif/revision/latest?cb=20181107123138&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Eerie Song Book",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fe/Eerie_Song_Book.gif/revision/latest?cb=20170904194101&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Falcon Escutcheon",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ef/Falcon_Escutcheon.gif/revision/latest?cb=20180605182036&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Falcon Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Falcon_Shield.gif/revision/latest?cb=20180605200503&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Fiery Rainbow Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/da/Fiery_Rainbow_Shield.gif/revision/latest?cb=20171107215407&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Gnome Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Gnome_Shield.gif/revision/latest?cb=20171108141114&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Gourd",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ea/Gourd.gif/revision/latest?cb=20160325134154&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Great Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/43/Great_Shield.gif/revision/latest?cb=20050617205415&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Griffin Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fc/Griffin_Shield.gif/revision/latest?cb=20170904194248&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Guardian Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4e/Guardian_Shield.gif/revision/latest?cb=20051030000400&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Haunted Mirror Piece",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6e/Haunted_Mirror_Piece.gif/revision/latest?cb=20130903162133&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Icy Rainbow Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Icy_Rainbow_Shield.gif/revision/latest?cb=20171107215408&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Journal Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/05/Journal_Shield.gif/revision/latest?cb=20171108145004&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Lion Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Lion_Shield.gif/revision/latest?cb=20200611033836&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Mastermind Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/10/Mastermind_Shield.gif/revision/latest?cb=20050601213950&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Mathmaster Shield (Replica)",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Mathmaster_Shield_%28Replica%29.gif/revision/latest?cb=20170803161512&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Mathmaster Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/89/Mathmaster_Shield.gif/revision/latest?cb=20150603185947&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Meat Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5c/Meat_Shield.gif/revision/latest?cb=20090702085255&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Medusa Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fe/Medusa_Shield.gif/revision/latest?cb=20050617185458&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Mino Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bb/Mino_Shield.gif/revision/latest?cb=20140615122139&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Necromancer Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/33/Necromancer_Shield.gif/revision/latest?cb=20070414170605&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Nightmare Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d0/Nightmare_Shield.gif/revision/latest?cb=20070413124237&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Norse Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f0/Norse_Shield.gif/revision/latest?cb=20071216084128&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Ornamented Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fb/Ornamented_Shield.gif/revision/latest?cb=20050615182518&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Ornate Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/41/Ornate_Shield.gif/revision/latest?cb=20111124194543&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Painted Gourd Rattle",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7e/Painted_Gourd_Rattle.gif/revision/latest?cb=20160516081105&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Phoenix Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ef/Phoenix_Shield.gif/revision/latest?cb=20050617190000&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Plate Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/86/Plate_Shield.gif/revision/latest?cb=20120403170206&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Prismatic Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b7/Prismatic_Shield.gif/revision/latest?cb=20120622164104&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Rainbow Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Rainbow_Shield.gif/revision/latest?cb=20150604111914&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Rattling Gourd",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2b/Rattling_Gourd.gif/revision/latest?cb=20160516081718&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Rift Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/12/Rift_Shield.gif/revision/latest?cb=20151112195349&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Rose Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e3/Rose_Shield.gif/revision/latest?cb=20081212174921&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Runic Ice Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/72/Runic_Ice_Shield.gif/revision/latest?cb=20130903162131&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Salamander Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/47/Salamander_Shield.gif/revision/latest?cb=20051201152712&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Scarab Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d1/Scarab_Shield.gif/revision/latest?cb=20050617000429&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Sentinel Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/22/Sentinel_Shield.gif/revision/latest?cb=20051201152727&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Care",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4a/Shield_of_Care.gif/revision/latest?cb=20170904194430&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Corruption",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2b/Shield_of_Corruption.gif/revision/latest?cb=20100628145715&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Destiny (Activated)",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a6/Shield_of_Destiny_%28Activated%29.gif/revision/latest?cb=20160516084338&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Destiny",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5e/Shield_of_Destiny.gif/revision/latest?cb=20160516083406&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Endless Search",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5c/Shield_of_Endless_Search.gif/revision/latest?cb=20190416192550&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of Honour",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Shield_of_Honour.gif/revision/latest?cb=20070302092158&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Shield of the White Knight",
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a5/Shield_of_the_White_Knight.gif/revision/latest?cb=20090711022300&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Silver Chimes",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/62/Silver_Chimes.gif/revision/latest?cb=20180609181444&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Soulbastion",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bd/Soulbastion.gif/revision/latest?cb=20200611023456&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Sparking Rainbow Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/73/Sparking_Rainbow_Shield.gif/revision/latest?cb=20171107215409&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Spike Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6b/Spike_Shield.gif/revision/latest?cb=20121129185330&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Steel Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/17/Steel_Shield.gif/revision/latest?cb=20050614194907&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Strange Good Night Songs",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/0e/Strange_Good_Night_Songs.gif/revision/latest?cb=20140125110154&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Studded Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Studded_Shield.gif/revision/latest?cb=20050613231025&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Tempest Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/00/Tempest_Shield.gif/revision/latest?cb=20070112134452&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Terran Rainbow Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Terran_Rainbow_Shield.gif/revision/latest?cb=20171107215411&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "The Shield Nevermourn",
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/76/The_Shield_Nevermourn.gif/revision/latest?cb=20170922215626&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Tortoise Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Tortoise_Shield.gif/revision/latest?cb=20150803213527&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Tower Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4b/Tower_Shield.gif/revision/latest?cb=20050617184510&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Traditional Stein",
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fa/Traditional_Stein.gif/revision/latest?cb=20191009142237&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Tusk Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e0/Tusk_Shield.gif/revision/latest?cb=20051201153333&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Vampire Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/59/Vampire_Shield.gif/revision/latest?cb=20090319190758&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Viking Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Viking_Shield.gif/revision/latest?cb=20050729014126&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Warrior's Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/51/Warrior%27s_Shield.gif/revision/latest?cb=20111201014114&amp;path-prefix=en",
+    "type": "Shields"
+  },
+  {
+    "name": "Wooden Shield",
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Wooden_Shield.gif/revision/latest?cb=20050613194211&amp;path-prefix=en",
+    "type": "Shields"
+  }
+]

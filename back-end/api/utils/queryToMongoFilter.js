@@ -42,6 +42,12 @@ function queryToMongoFilter(queryParams) {
                         break;
                 }
                 break;
+            case 'name':
+                queryParams[param] !== "" && filter.conditions.$and.push({ "name": { $regex: queryParams[param], $options: 'i' }})
+                break;
+            case 'city':
+                queryParams[param] !== "" &&  filter.conditions.$and.push({ "city": queryParams[param] })
+                break;
             default:
                 break;
         }

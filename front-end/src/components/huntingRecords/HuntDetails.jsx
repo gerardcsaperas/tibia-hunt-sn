@@ -311,7 +311,7 @@ function HuntDetails() {
               return <CommentBoxToDisplay id={_id} comment={text} likes={likes} dislikes={dislikes} createdAt={createdAt} user={user} isOp={false}/>
             })
           }
-          <CommentBoxToComment />
+          { authenticated && (<CommentBoxToComment />) }
       </div>
   </div>
   )}

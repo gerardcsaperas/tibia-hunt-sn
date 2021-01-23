@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { API_URL } from "./config";
 import axios from "axios";
@@ -17,7 +17,7 @@ import NewCharacter from './components/character/NewCharacter';
 import MyRecords from "./components/huntingRecords/MyRecords";
 import AllRecords from "./components/huntingRecords/AllRecords";
 import HuntDetails from "./components/huntingRecords/HuntDetails";
-import NewHuntingRecord from "./components/huntingRecords/NewHuntingRecord";
+import NewHuntingRecord from "./components/huntingRecords/NewHuntingRecord/NewHuntingRecord";
 import Contact from "./components/misc/Contact";
 import Footer from "./components/layout/Footer";
 

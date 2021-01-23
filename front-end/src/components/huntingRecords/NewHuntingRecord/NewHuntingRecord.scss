@@ -1,0 +1,316 @@
+#formContainer {
+    margin-top: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+
+    .setImgContainer {
+
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: url("../../../assets/set.jpg") center no-repeat;
+
+            select, img {
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                border: 0px;
+                color: transparent;
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+            }
+
+            option {
+                color: #545454
+            }
+
+            select {
+                font-display: none;
+            }
+
+            img {
+                background: #2b2b2b;
+            }
+
+            .selectHelmets {
+                top: 55px;
+                left: 101px;
+            }
+            
+            .selectBackpack {                
+                top: 18px;
+                right: 57px;
+            }
+
+            .selectAmulets_and_Necklaces {
+                top: 69px;
+                left: 63.5px;
+            }
+            
+            .selectArmors {
+                top: 90.5px;
+                left: 101px;
+            }
+            
+            .selectWeapons {
+                top: 104.5px;
+                left: 63.5px;
+            }
+            
+            .selectShields {
+                top: 104.5px;
+                right: 65px;
+            }
+            
+            .selectLegs {
+                bottom: 91.5px;
+                left: 101px;
+            }
+            
+            .selectBoots {
+                bottom: 55.5px;
+                left: 101px;
+            }
+            
+            .selectRings {
+                bottom: 77.5px;
+                left: 63.5px;
+            }
+            
+            .selectTorch {
+                bottom: 38px;
+                right: 57px;
+            }
+    }
+    
+    .spot {
+        .spot-dropdown__content {
+            border-left: 1px solid grey;
+            border-right: 1px solid grey;
+            box-sizing: border-box;
+            background-color: white;
+            p {
+                margin: 0;
+                padding: 5px;
+                line-height: 10px;
+            }
+
+            p:hover {
+                cursor: pointer;
+                background: lightgrey;
+            }
+        }
+    }
+
+    .teamComp {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .teamcomp-form__left {
+            i {
+                position: absolute;
+                right: -16px;
+            }
+        }
+        .teamcomp-form__right {
+            height: 100%;
+            text-align: center;
+        }
+    }
+
+    .supplies {
+        select {
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        .supply-images__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            span {
+                font-size: 10px;
+                margin: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Events Properties */
+#formContainer .GlobalEvents {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.eventsTitle {
+    font-size: 18px;
+}
+
+#formContainer .events {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 35px;
+}
+
+#formContainer .eventsInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.eventsInfo .eventContainer {
+    margin-top: 10%;
+}
+
+/* Difficulty Properties */
+#formContainer .GlobalDifficulty {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.difficultyTitle {
+    font-size: 18px;
+}
+
+#formContainer .difficulty {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 35px;
+}
+
+#formContainer .difficultyInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.difficultyInfo .difficultyContainer {
+    margin-top: 10%;
+}
+
+/* Picture Properties */
+#formContainer .GlobalPicture {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.pictureTitle {
+    font-size: 18px;
+}
+
+#formContainer .picture {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 40px;
+}
+
+#formContainer .pictureInfo {
+    margin-top: 25%;
+    margin-left: 8.5%; 
+}
+
+.pictureInfo .pictureContainer {
+    margin-top: 10%;
+}
+
+.GlobalPicture .selectPicture {
+    width: 80%;
+}
+
+/* Comment Properties */
+#formContainer .GlobalComment {
+    position: relative;
+    height: 200px;
+    width: 220px;
+    background-color: #E1D8C6;
+    box-shadow: 3px 3px 1px grey;
+    border: 1px solid black;
+}
+
+.commentTitle {
+    font-size: 18px;
+}
+
+#formContainer .comment {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 30px;
+}
+
+#formContainer .commentInfo {
+    margin-top: 10%;
+    height: 80%;
+}
+
+.commentInfo .commentContainer {
+    display: flex;
+    justify-content: center;
+    height: 95%;
+}
+
+.GlobalComment .introduceComment {
+    height: 90%;
+    width: 85%;
+    border: 1px solid black;
+}
+
+
+
+
+/* Footer Properties */
+#formContainer i {
+    color: #545454;
+}
+
+.mandatory {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #545454;
+}
+
+.buttons_NHR {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons_NHR .button {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.nextPage {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.nextPage i {
+    padding: 0.1%;
+    color: #545454;
+}
+
+
+

@@ -25,27 +25,6 @@ function FiltersBox(props) {
         "Paladin",
         "Sorcerer"
     ]
-
-    const cityOptions = [
-        "",
-        "Ab'Dendriel",
-        "Carlin",
-        "Kazordoon",
-        "Thais",
-        "Venore",
-        "Ankhramun",
-        "Darashia",
-        "Edron",
-        "Farmine",
-        "Gray Beach",
-        "Issavi",
-        "Liberty Bay",
-        "Port Hope",
-        "Rathleton",
-        "Roshamuul",
-        "Svargrond",
-        "Yalahar"
-    ]
     
     const teamOptions = [
         "",

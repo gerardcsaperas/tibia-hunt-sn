@@ -1,0 +1,652 @@
+[
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/98/Albino_Plate.gif/revision/latest?cb=20130903162130&amp;path-prefix=en",
+    "name": "Albino Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8c/Amazon_Armor.gif/revision/latest?cb=20150803212141&amp;path-prefix=en",
+    "name": "Amazon Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7e/Ball_Gown.gif/revision/latest?cb=20060319182019&amp;path-prefix=en",
+    "name": "Ball Gown",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fc/Bear_Skin.gif/revision/latest?cb=20190701193323&amp;path-prefix=en",
+    "name": "Bear Skin",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e1/Belted_Cape.gif/revision/latest?cb=20080727132942&amp;path-prefix=en",
+    "name": "Belted Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8f/Blue_Robe.gif/revision/latest?cb=20070311041849&amp;path-prefix=en",
+    "name": "Blue Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Brass_Armor.gif/revision/latest?cb=20050613013254&amp;path-prefix=en",
+    "name": "Brass Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8a/Buckle.gif/revision/latest?cb=20121129191749&amp;path-prefix=en",
+    "name": "Buckle",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/11/Burial_Shroud.gif/revision/latest?cb=20191108194401&amp;path-prefix=en",
+    "name": "Burial Shroud",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f2/Calopteryx_Cape.gif/revision/latest?cb=20111130225545&amp;path-prefix=en",
+    "name": "Calopteryx Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/64/Cape.gif/revision/latest?cb=20060124220159&amp;path-prefix=en",
+    "name": "Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Chain_Armor.gif/revision/latest?cb=20171214210904&amp;path-prefix=en",
+    "name": "Chain Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c2/Coat.gif/revision/latest?cb=20080103151309&amp;path-prefix=en",
+    "name": "Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7c/Crown_Armor.gif/revision/latest?cb=20051004233314&amp;path-prefix=en",
+    "name": "Crown Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Crystalline_Armor.gif/revision/latest?cb=20080625235218&amp;path-prefix=en",
+    "name": "Crystalline Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/85/Dark_Armor.gif/revision/latest?cb=20050504004908&amp;path-prefix=en",
+    "name": "Dark Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/24/Dark_Lord%27s_Cape.gif/revision/latest?cb=20171107215406&amp;path-prefix=en",
+    "name": "Dark Lord's Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e0/Demon_Armor.gif/revision/latest?cb=20050504004913&amp;path-prefix=en",
+    "name": "Demon Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/29/Depth_Lorica.gif/revision/latest?cb=20111130230234&amp;path-prefix=en",
+    "name": "Depth Lorica",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2b/Divine_Plate.gif/revision/latest?cb=20171030111818&amp;path-prefix=en",
+    "name": "Divine Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Doublet.gif/revision/latest?cb=20081212164411&amp;path-prefix=en",
+    "name": "Doublet",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Dragon_Robe.gif/revision/latest?cb=20171030111818&amp;path-prefix=en",
+    "name": "Dragon Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/16/Dragon_Scale_Mail.gif/revision/latest?cb=20050613051315&amp;path-prefix=en",
+    "name": "Dragon Scale Mail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ad/Dream_Shroud.gif/revision/latest?cb=20181107114559&amp;path-prefix=en",
+    "name": "Dream Shroud",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2c/Dwarven_Armor.gif/revision/latest?cb=20051226044141&amp;path-prefix=en",
+    "name": "Dwarven Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d2/Earthborn_Titan_Armor.gif/revision/latest?cb=20080727133100&amp;path-prefix=en",
+    "name": "Earthborn Titan Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/aa/Earthheart_Cuirass.gif/revision/latest?cb=20151112192214&amp;path-prefix=en",
+    "name": "Earthheart Cuirass",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/bc/Earthheart_Hauberk.gif/revision/latest?cb=20151112192215&amp;path-prefix=en",
+    "name": "Earthheart Hauberk",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8e/Earthheart_Platemail.gif/revision/latest?cb=20151112192216&amp;path-prefix=en",
+    "name": "Earthheart Platemail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/aa/Earthmind_Raiment.gif/revision/latest?cb=20151112192216&amp;path-prefix=en",
+    "name": "Earthmind Raiment",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b1/Earthsoul_Tabard.gif/revision/latest?cb=20151112192217&amp;path-prefix=en",
+    "name": "Earthsoul Tabard",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/28/Elite_Draken_Mail.gif/revision/latest?cb=20100619202221&amp;path-prefix=en",
+    "name": "Elite Draken Mail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/01/Elven_Mail.gif/revision/latest?cb=20091105230512&amp;path-prefix=en",
+    "name": "Elven Mail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d9/Embrace_of_Nature.gif/revision/latest?cb=20190701193800&amp;path-prefix=en",
+    "name": "Embrace of Nature",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fa/Ethno_Coat.gif/revision/latest?cb=20080727133006&amp;path-prefix=en",
+    "name": "Ethno Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/dc/Falcon_Plate.gif/revision/latest?cb=20180605182038&amp;path-prefix=en",
+    "name": "Falcon Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3e/Fireborn_Giant_Armor.gif/revision/latest?cb=20080727133330&amp;path-prefix=en",
+    "name": "Fireborn Giant Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5b/Fireheart_Cuirass.gif/revision/latest?cb=20151112192219&amp;path-prefix=en",
+    "name": "Fireheart Cuirass",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/62/Fireheart_Hauberk.gif/revision/latest?cb=20151112192219&amp;path-prefix=en",
+    "name": "Fireheart Hauberk",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/ba/Fireheart_Platemail.gif/revision/latest?cb=20151112192220&amp;path-prefix=en",
+    "name": "Fireheart Platemail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2f/Firemind_Raiment.gif/revision/latest?cb=20151112192220&amp;path-prefix=en",
+    "name": "Firemind Raiment",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ab/Firesoul_Tabard.gif/revision/latest?cb=20151112192221&amp;path-prefix=en",
+    "name": "Firesoul Tabard",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/50/Flower_Dress.gif/revision/latest?cb=20090601123338&amp;path-prefix=en",
+    "name": "Flower Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8e/Focus_Cape.gif/revision/latest?cb=20080727133027&amp;path-prefix=en",
+    "name": "Focus Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/46/Frostheart_Cuirass.gif/revision/latest?cb=20151112192345&amp;path-prefix=en",
+    "name": "Frostheart Cuirass",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ec/Frostheart_Hauberk.gif/revision/latest?cb=20151112192345&amp;path-prefix=en",
+    "name": "Frostheart Hauberk",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ec/Frostheart_Platemail.gif/revision/latest?cb=20151112192346&amp;path-prefix=en",
+    "name": "Frostheart Platemail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/be/Frostmind_Raiment.gif/revision/latest?cb=20151112192346&amp;path-prefix=en",
+    "name": "Frostmind Raiment",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Frostsoul_Tabard.gif/revision/latest?cb=20151112192347&amp;path-prefix=en",
+    "name": "Frostsoul Tabard",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/35/Frozen_Plate.gif/revision/latest?cb=20080727134414&amp;path-prefix=en",
+    "name": "Frozen Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/02/Fur_Armor.gif/revision/latest?cb=20150624115623&amp;path-prefix=en",
+    "name": "Fur Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/15/Furious_Frock.gif/revision/latest?cb=20130903162134&amp;path-prefix=en",
+    "name": "Furious Frock",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/08/Ghost_Chestplate.gif/revision/latest?cb=20191113131526&amp;path-prefix=en",
+    "name": "Ghost Chestplate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f0/Gill_Coat.gif/revision/latest?cb=20120622174234&amp;path-prefix=en",
+    "name": "Gill Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/26/Girl%27s_Dress.gif/revision/latest?cb=20170904194759&amp;path-prefix=en",
+    "name": "Girl's Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e7/Glacier_Robe.gif/revision/latest?cb=20071220094532&amp;path-prefix=en",
+    "name": "Glacier Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/32/Glooth_Cape.gif/revision/latest?cb=20140615102655&amp;path-prefix=en",
+    "name": "Glooth Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a8/Gnome_Armor.gif/revision/latest?cb=20171108141040&amp;path-prefix=en",
+    "name": "Gnome Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/d0/Golden_Armor.gif/revision/latest?cb=20050613134413&amp;path-prefix=en",
+    "name": "Golden Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/20/Goo_Shell.gif/revision/latest?cb=20130903162133&amp;path-prefix=en",
+    "name": "Goo Shell",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/a0/Green_Tunic.gif/revision/latest?cb=20070628003226&amp;path-prefix=en",
+    "name": "Green Tunic",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8a/Greenwood_Coat.gif/revision/latest?cb=20171030111819&amp;path-prefix=en",
+    "name": "Greenwood Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f2/Heat_Core.gif/revision/latest?cb=20140613222030&amp;path-prefix=en",
+    "name": "Heat Core",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/b/b7/Heavy_Metal_T-Shirt.gif/revision/latest?cb=20090711023027&amp;path-prefix=en",
+    "name": "Heavy Metal T-Shirt",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6c/Hibiscus_Dress.gif/revision/latest?cb=20170904194908&amp;path-prefix=en",
+    "name": "Hibiscus Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c9/Jacket.gif/revision/latest?cb=20050611173625&amp;path-prefix=en",
+    "name": "Jacket",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8e/Knight_Armor.gif/revision/latest?cb=20090704151418&amp;path-prefix=en",
+    "name": "Knight Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8d/Lavos_Armor.gif/revision/latest?cb=20080625235218&amp;path-prefix=en",
+    "name": "Lavos Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/0d/Leather_Armor.gif/revision/latest?cb=20050504004937&amp;path-prefix=en",
+    "name": "Leather Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/97/Leather_Harness.gif/revision/latest?cb=20121129191749&amp;path-prefix=en",
+    "name": "Leather Harness",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/98/Leopard_Armor.gif/revision/latest?cb=20051004200535&amp;path-prefix=en",
+    "name": "Leopard Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fa/Lightning_Robe.gif/revision/latest?cb=20071218060606&amp;path-prefix=en",
+    "name": "Lightning Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3e/Lion_Plate.gif/revision/latest?cb=20200611034348&amp;path-prefix=en",
+    "name": "Lion Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c4/Living_Armor.gif/revision/latest?cb=20181107122359&amp;path-prefix=en",
+    "name": "Living Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/31/Magic_Plate_Armor.gif/revision/latest?cb=20050601145437&amp;path-prefix=en",
+    "name": "Magic Plate Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Magician%27s_Robe.gif/revision/latest?cb=20170904200159&amp;path-prefix=en",
+    "name": "Magician's Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/27/Magma_Coat.gif/revision/latest?cb=20141213112028&amp;path-prefix=en",
+    "name": "Magma Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4b/Mammoth_Fur_Cape.gif/revision/latest?cb=20070622213343&amp;path-prefix=en",
+    "name": "Mammoth Fur Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4e/Master_Archer%27s_Armor.gif/revision/latest?cb=20080620235056&amp;path-prefix=en",
+    "name": "Master Archer's Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6a/Molten_Plate.gif/revision/latest?cb=20171107215408&amp;path-prefix=en",
+    "name": "Molten Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/23/Mooh%27tah_Plate.gif/revision/latest?cb=20140615103151&amp;path-prefix=en",
+    "name": "Mooh'tah Plate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5f/Native_Armor.gif/revision/latest?cb=20081207143512&amp;path-prefix=en",
+    "name": "Native Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/12/Noble_Armor.gif/revision/latest?cb=20081212163857&amp;path-prefix=en",
+    "name": "Noble Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/af/Oceanborn_Leviathan_Armor.gif/revision/latest?cb=20081206082627&amp;path-prefix=en",
+    "name": "Oceanborn Leviathan Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/11/Old_Cape.gif/revision/latest?cb=20180127134858&amp;path-prefix=en",
+    "name": "Old Cape",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/d/de/Ornate_Chestplate.gif/revision/latest?cb=20111130230744&amp;path-prefix=en",
+    "name": "Ornate Chestplate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/ff/Ornate_Testtplate.gif/revision/latest?cb=20180704171906&amp;path-prefix=en",
+    "name": "Ornate Testtplate",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/5b/Pair_of_Old_Bracers.gif/revision/latest?cb=20191113133225&amp;path-prefix=en",
+    "name": "Pair of Old Bracers",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/45/Paladin_Armor.gif/revision/latest?cb=20080727134448&amp;path-prefix=en",
+    "name": "Paladin Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/a/ae/Pirate_Shirt.gif/revision/latest?cb=20171030111819&amp;path-prefix=en",
+    "name": "Pirate Shirt",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2e/Plate_Armor.gif/revision/latest?cb=20171214210907&amp;path-prefix=en",
+    "name": "Plate Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/42/Prismatic_Armor.gif/revision/latest?cb=20120622164102&amp;path-prefix=en",
+    "name": "Prismatic Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/42/Ranger%27s_Cloak.gif/revision/latest?cb=20080619211000&amp;path-prefix=en",
+    "name": "Ranger's Cloak",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/88/Red_Robe.gif/revision/latest?cb=20171030111819&amp;path-prefix=en",
+    "name": "Red Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f6/Red_Tunic.gif/revision/latest?cb=20140217003813&amp;path-prefix=en",
+    "name": "Red Tunic",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/51/Robe_of_the_Ice_Queen.gif/revision/latest?cb=20171030111820&amp;path-prefix=en",
+    "name": "Robe of the Ice Queen",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/Robe_of_the_Underworld.gif/revision/latest?cb=20080620235056&amp;path-prefix=en",
+    "name": "Robe of the Underworld",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/28/Royal_Draken_Mail.gif/revision/latest?cb=20120409074201&amp;path-prefix=en",
+    "name": "Royal Draken Mail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/79/Royal_Scale_Robe.gif/revision/latest?cb=20170904195931&amp;path-prefix=en",
+    "name": "Royal Scale Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/84/Scale_Armor.gif/revision/latest?cb=20171030111821&amp;path-prefix=en",
+    "name": "Scale Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/ef/Simple_Dress.gif/revision/latest?cb=20051028174304&amp;path-prefix=en",
+    "name": "Simple Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1b/Skullcracker_Armor.gif/revision/latest?cb=20171030111821&amp;path-prefix=en",
+    "name": "Skullcracker Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/cb/Soulmantle.gif/revision/latest?cb=20200611022450&amp;path-prefix=en",
+    "name": "Soulmantle",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/fd/Soulshell.gif/revision/latest?cb=20200611022304&amp;path-prefix=en",
+    "name": "Soulshell",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f0/Soulshroud.gif/revision/latest?cb=20200611022602&amp;path-prefix=en",
+    "name": "Soulshroud",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/0/04/Spectral_Dress.gif/revision/latest?cb=20060319162739&amp;path-prefix=en",
+    "name": "Spectral Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3d/Spellweaver%27s_Robe.gif/revision/latest?cb=20091202012100&amp;path-prefix=en",
+    "name": "Spellweaver's Robe",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/70/Spirit_Cloak.gif/revision/latest?cb=20190503165209&amp;path-prefix=en",
+    "name": "Spirit Cloak",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/87/Studded_Armor.gif/revision/latest?cb=20061213002046&amp;path-prefix=en",
+    "name": "Studded Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/83/Summer_Dress.gif/revision/latest?cb=20170904195726&amp;path-prefix=en",
+    "name": "Summer Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c7/Swamplair_Armor.gif/revision/latest?cb=20171030111822&amp;path-prefix=en",
+    "name": "Swamplair Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2b/Swan_Feather_Cloak.gif/revision/latest?cb=20170725203833&amp;path-prefix=en",
+    "name": "Swan Feather Cloak",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/37/Terra_Mantle.gif/revision/latest?cb=20071218061048&amp;path-prefix=en",
+    "name": "Terra Mantle",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/e/e2/The_Rain_Coat.gif/revision/latest?cb=20090708072135&amp;path-prefix=en",
+    "name": "The Rain Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2e/Thunderheart_Cuirass.gif/revision/latest?cb=20151112192347&amp;path-prefix=en",
+    "name": "Thunderheart Cuirass",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/9/99/Thunderheart_Hauberk.gif/revision/latest?cb=20151112192347&amp;path-prefix=en",
+    "name": "Thunderheart Hauberk",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/3d/Thunderheart_Platemail.gif/revision/latest?cb=20151112192347&amp;path-prefix=en",
+    "name": "Thunderheart Platemail",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/35/Thundermind_Raiment.gif/revision/latest?cb=20151112192348&amp;path-prefix=en",
+    "name": "Thundermind Raiment",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/7/7c/Thundersoul_Tabard.gif/revision/latest?cb=20151112192348&amp;path-prefix=en",
+    "name": "Thundersoul Tabard",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/4/4a/Toga_Mortis.gif/revision/latest?cb=20190701193851&amp;path-prefix=en",
+    "name": "Toga Mortis",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/8/8f/Traditional_Shirt.gif/revision/latest?cb=20191009142236&amp;path-prefix=en",
+    "name": "Traditional Shirt",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/6/6f/Tunic.gif/revision/latest?cb=20170904195801&amp;path-prefix=en",
+    "name": "Tunic",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/5/58/Velvet_Mantle.gif/revision/latest?cb=20090601073128&amp;path-prefix=en",
+    "name": "Velvet Mantle",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/2/2d/Voltage_Armor.gif/revision/latest?cb=20080727134325&amp;path-prefix=en",
+    "name": "Voltage Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/3/38/White_Dress.gif/revision/latest?cb=20060319182108&amp;path-prefix=en",
+    "name": "White Dress",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/c0/Windborn_Colossus_Armor.gif/revision/latest?cb=20080727133120&amp;path-prefix=en",
+    "name": "Windborn Colossus Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/f/f5/Witchhunter%27s_Coat.gif/revision/latest?cb=20171030111822&amp;path-prefix=en",
+    "name": "Witchhunter's Coat",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/1c/Yalahari_Armor.gif/revision/latest?cb=20081211020245&amp;path-prefix=en",
+    "name": "Yalahari Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/1/19/Zaoan_Armor.gif/revision/latest?cb=20091130183332&amp;path-prefix=en",
+    "name": "Zaoan Armor",
+    "type": "Armors"
+  },
+  {
+    "image": "https://static.wikia.nocookie.net/tibia/images/c/ce/Zaoan_Robe.gif/revision/latest?cb=20091129023955&amp;path-prefix=en",
+    "name": "Zaoan Robe",
+    "type": "Armors"
+  }
+]

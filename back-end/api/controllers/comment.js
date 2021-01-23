@@ -15,6 +15,7 @@ async function create(req, res) {
 
     try {
         const comment = new Comment(req.body)
+        comment.user = req.user._id
         await comment.save()
 
         const huntingRecord = await HuntingRecord.findById(req.params.id)
