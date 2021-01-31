@@ -4,7 +4,7 @@ import FormBox from '../../custom/FormBox/FormBox';
 import { API_URL, vocations } from '../../../config';
 import axios from 'axios';
 import { DebounceInput } from 'react-debounce-input';
-import { nameWithoutSpace } from '../../../utils/nameWithoutSpace';
+import nameWithoutSpace from '../../../utils/nameWithoutSpace';
 import { cityOptions } from '../../../config';
 import './NewHuntingRecord.scss';
 

@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ContentBox from '../../custom/ContentBox/ContentBox';
 import FormBox from '../../custom/FormBox/FormBox';
-import { nameWithoutSpace } from '../../../utils/nameWithoutSpace';
+import nameWithoutSpace from '../../../utils/nameWithoutSpace';
 import NumberFormat from 'react-number-format';
 import './NewHuntingRecord.scss';
 
