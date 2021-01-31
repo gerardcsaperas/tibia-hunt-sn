@@ -95,7 +95,7 @@ async function findCharmById(req, res) {
 
 /*
 type:   POST
-desc:   Post images to Cloudinary
+desc:   Post profile images to Cloudinary
 auth:   Private
 */
 async function postProfileImage(req, res) {
@@ -120,6 +120,29 @@ async function postProfileImage(req, res) {
     }
 }
 
+/*
+type:   POST
+desc:   Post hunting images to Cloudinary
+auth:   Private
+*/
+async function postHuntingRecordImage(req, res) {
+    try {
+        const fileStr = req.body.data;
+        const uploaded = await Cloudinary.uploader.upload(fileStr, {
+            upload_preset: 'tibiahuntingrecords_hunting-records'
+        });
+        
+        if (!uploaded) {
+            throw new Error();
+        }
+
+        res.status(200).send(uploaded.secure_url);
+    } catch(e) {
+        console.log(`There was something wrong when trying to upload your image to Cloudinary. ${e.message}`)
+        res.status(500).json({ message: `There was something wrong when trying to upload your image to Cloudinary. ${e.message}` })
+    }
+}
+
 module.exports = {
     findItems,
     findItemById,
@@ -127,5 +150,6 @@ module.exports = {
     findImbuementById,
     findCharms,
     findCharmById,
-    postProfileImage
+    postProfileImage,
+    postHuntingRecordImage
 }
