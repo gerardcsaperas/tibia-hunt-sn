@@ -1,10 +1,18 @@
+@import '../styles/Library.scss';
+
 .listContainer {
     display: flex;
     justify-content: center;
     padding: 0px;
 }
 
-.recordsList {
+li {
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        max-width: 300px;
+    }
+
     list-style: none;
 }
 

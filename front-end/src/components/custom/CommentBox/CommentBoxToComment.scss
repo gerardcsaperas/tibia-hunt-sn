@@ -1,67 +1,18 @@
 @import '../../styles/Library.scss';
 
-#comBoxComment {
-    min-height: 120px;
-    width: 95%;
-    margin: 2% auto;
-    box-shadow: 0 4px 2px -2px gray;
+.CommentBox {
+    .button__box {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        padding-bottom: 10px;
 
-    p.username {
-        text-align: center;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        color: $char-name;
-        -webkit-text-stroke: 1px black;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .rightData {
-        textarea {
-            padding: 10px;
-            width: 80%;
-            height: 65%;
+        button {
+            width: 75px;
+            height: 20px;
+            background-color: #545454;
+            color: white;
+            border-radius: 2.5px;
         }
     }
-}
-
-#comBoxComment .headLine {
-    height: 20px;
-    background: #545454;
-    color: white;
-    align-content: center;
-}
-
-#comBoxComment .commentContent {
-    background: #F1E0C6;
-    display: flex;
-    min-height: 120px;
-}
-
-#comBoxComment .commentContent .leftData {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-}
-
-#comBoxComment .commentContent .rightData {
-    position: relative;
-    display: flex;
-    width: 75%;
-    align-items: center;
-}
-
-
-
-#comBoxComment .rightData button {
-    width: 75px;
-    height: 20px;
-    background-color: #545454;
-    color: white;
-    border-radius: 2.5px;
-    position: absolute;
-    bottom: 11%;
-    right: 20px;
 }

@@ -1,18 +1,16 @@
 import React from 'react'
 import './FormBox.scss';
 
+// Redux Store
+import { useSelector } from 'react-redux'
+import { selectViewport } from '../../layout/viewportSlice'
 
-function FormBox({ title, imgSrc, form, width, margin}) {
-
-    const style = {
-        width: width && (width),
-        margin: margin && (margin)
-    }
+function FormBox({ title, imgSrc, form, className}) {
 
     return (
-        <div className="FormBox" style={style}>
+        <div className={`FormBox ${className}`}>
             <h1>{title}</h1>
-            <img className="box-icon" src={imgSrc}/>
+            { imgSrc && <img className="box-icon" src={imgSrc}/> }
             {form}
         </div>
     )

@@ -1,5 +1,11 @@
+@import '../../styles/Library.scss';
+
 div.SmallTable {
-    width: 280px;
+
+    @media (max-width: $breakpoint-tablet) {
+    }
+
+    width: 100%;
     margin: auto;
     margin-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -30,6 +36,11 @@ div.SmallTable {
 
         p:first-child {
             text-align: left;
+        }
+
+        i {
+            margin-left: 5px;
+            cursor: pointer;
         }
     }
 }

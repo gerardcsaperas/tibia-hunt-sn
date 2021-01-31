@@ -8,9 +8,10 @@ import StarRatings from 'react-star-ratings';
 // Redux
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../user/userSlice'
+import { selectViewport } from '../../layout/viewportSlice'
 
 function CommentBoxToDisplay(props) {
-
+    const { width } = useSelector(selectViewport);
     const user = useSelector(selectUser);
     const { uid } = user
     const [ likesDislikes, setLikesDislikes ] = useState();
@@ -26,21 +27,33 @@ function CommentBoxToDisplay(props) {
         return null;
     }
 
-    const { id, comment, createdAt, isOp, likes, dislikes } = props
-    const { username, stars } = props.user;
+    const { receiver, notificationReference, id, comment, createdAt, isOp, likes, dislikes } = props
+    const { username, stars } = props.user || { username: '(user deleted)', stars: 0 };
 
-    const patchLikes = async () => {
+    const patchLikes = async (likeOrDislike) => {
         try {
-          const config = {
-              headers: {
-                  'Authorization': `Bearer ${user.token}`
-              }
-          };
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            };
 
-          const body = likesDislikes
+            const body = likesDislikes
           
-          await axios.put(`${API_URL}/comment/${id}`, body, config);          
+            const response = await axios.put(`${API_URL}/comment/${id}`, body, config);
+            if (response.status === 201 && response.data) {
 
+                const notificationBody = {
+                    receiver,
+                    notificationType: likeOrDislike,
+                    notificationReference,
+                    notificationOrigin: 'comment'                    
+                }
+
+                const postNotification = await axios.post(`${API_URL}/notification`, notificationBody, config);
+                return
+            }
+          
         } catch(e) {
             console.error(e);
         }
@@ -62,9 +75,9 @@ function CommentBoxToDisplay(props) {
             ...likesDislikes,
             likes: likesArray,
             dislikes: dislikesArray
-          })
+        })
   
-          patchLikes()
+        patchLikes('like')
     }
 
     const handleCommentDislike = () => {
@@ -85,26 +98,24 @@ function CommentBoxToDisplay(props) {
           dislikes: dislikesArray
         })
 
-        patchLikes()
+        patchLikes('dislike')
     }
 
     return (
-        <div id="comBoxDisplay">
-            <div className="headLine">
-                <p>{createdAt}</p>
+        <div className="CommentBox">
+            <div className="date headLine">
+                <p>{new Date(createdAt).toString().slice(0,34)}</p>
             </div>
 
             <div className="commentContent">
                 <div className="leftData">
-                    <div>
-                        <p className="username">{username}</p>
-                        <StarRatings
+                    <p className="username">{username}</p>
+                    <StarRatings
                         rating={stars}
-                        starDimension="20px"
+                        starDimension={ width > 600 ? "20px" : "10px" }
                         starSpacing="1px"
                         starRatedColor="gold"
-                        />
-                    </div>
+                    />
                 </div>
 
                 <div className="rightData">

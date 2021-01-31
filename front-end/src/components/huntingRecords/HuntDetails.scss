@@ -1,213 +1,187 @@
+@import '../styles/Library.scss';
+
 #huntDetails {
+
+    @media (max-width: $breakpoint-tablet) {
+
+        .createdAt {
+            font-size: 10px;
+            margin: 0;
+            text-align: end;
+        }
+
+        .socialMedia {
+            i {
+                color: #545454;
+            }
+        }
+
+        .lootPicDetail {
+            img {
+                width: 100%;
+                max-width: 35rem;
+            }
+        }
+
+        .headLine {
+            height: auto;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        display: flex;
+
+        #huntDetails__likes.socialMedia {
+            position: absolute;
+            top: -60px;
+
+            i {
+                color: white;
+            }
+        }
+
+        #editHunt {
+            position: absolute;
+        }
+        
+        .createdAt {
+            position: absolute;
+            top: -65px;
+            right: 0;
+            color: white;
+        }
+
+        .lootPicDetail {
+            img {
+                width: 35rem;
+            }
+        }
+
+        .leftOrganiser {
+            width: 300px;
+        }
+
+        .rightOrganiser {
+            padding-left: 20px;
+            width: 100%;
+        }
+
+        .details__box {
+            width: 280px;
+        }
+    }
+
     position: relative;
-    display: flex;
+
+    .details__box, .setContainer {
+        margin: 20px auto;
+    }
 
     #huntDetails__likes.socialMedia {
-        position: absolute;
-        top: -63px;
         display: flex;
         i {
             font-size: 16px;
-            margin:10px;
+            margin: 5px;
             padding: 0;
             cursor: pointer;
         }
     }
 
-    .createdAt {
-        position: absolute;
-        top: -65px;
-        right: 0;
-        color: white;
+    #editHunt {
+        font-size: 16px;
+        top: -15px;
+        right: -15px;
+        margin: 10px;
+        padding: 0;
+        cursor: pointer;
+        color: $fontawesome-icons-brown;
+    }
+
+    .leftOrganiser {
+        margin-top: 2%;
+    }
+
+    .userInformation {
+        text-align: center; 
+    }
+
+    .inline-img {
+        width: 12px;
+        margin-left: 5px;
+        margin-right: 1px;
+    }
+
+    .headLine {
+        p {
+            background: #545454;
+            color: #FFF;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding: 2.5px 5px;
+            font-weight: bold;
+        }
+    }
+
+    .details__box {
+        margin-top: 20px;
+        min-height: 40px;
+        box-shadow: 0 4px 2px -2px gray;
+
+        .infoLight {
+            background: #F5EFE4;
+        }
+
+        .infoDark {
+            background: #E1D8C6;
+        }
+
+        .infoDark, .infoLight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 20px;
+
+            p, span {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin: 0;
+            }
+        }
+
+        .details__content {
+            background: #F5EFE4;
+            min-height: 40px;
+            padding: 5px;
+
+            p {
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+
+        .supplies__content {
+            background: #F5EFE4;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 10px;
+        }
     }
 }
 
-/*---- Left Side ----- */
-
-.leftOrganiser {
-    width: 25%;
-    margin-top: 2%;
-}
-
-.userInformation {
-    text-align: center; 
-}
-
-.setContainer {
-    margin-top: 10%;
-    width: 280px;
-    height: 240px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.setContainer img {
-    width: 140px;
-}
-
-.headLine {
-    height: 20px;
-    background: #545454;
-    color: white;
-}
-
-.headLine p {
-    height: 20px;
-    margin:0;
-    align-items: center;
-    padding-left: 2%;
-    font-size: 14px;;
-    font-weight: 600;
-}
-
-#huntDetails .set {
-    background: #F5EFE4;
-    height: 91.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.charInfoContainer {
-    margin-top: 10%;
-    width: 280px;
-    height: 120px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.infoLight {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #F5EFE4;
-    height: 20px;
-}
-
-.infoLight p {
-    padding-left: 2%;
-    padding-right: 2%;
-    margin: 0;
-}
-
-.infoDark {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #E1D8C6;
-    height: 20px;
-}
-
-.infoDark p {
-    padding-left: 2%;
-    padding-right: 2%;
-    margin: 0;
-}
-
-#huntDetails .basicInformation {
-    height: 100px;
-    margin-top: 10%;
-    width: 280px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-#huntDetails .team {
-    min-height: 20px;
-    margin-top: 10%;
-    width: 280px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-#huntDetails .supplies {
-    min-height: 40px;
-    margin-top: 10%;
-    width: 280px;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.suppliesContent {
-    padding-left: 2%;
-    background: #F5EFE4;
-    min-height: 40px;
-}
-
-.supplies ol {
-    padding: 0;
-    margin:0;
-    padding-left: 2%;
-}
-
-.supplies li {
-    list-style: none;
-}
-
-.suppliesContent p {
-    padding: 0;
-    margin:0;
-}
-
 /*---- Right Side ----*/
-
-.rightOrganiser {
-    width: 75%;
-    padding-left: 20px;
-}
 
 .lootPicDetail {
     margin-top: 2%;
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
-    
-}
-
-.lootPicDetail img {
-    width: 35rem;
-}
-
-.commentBox {
-    min-height: 120px;
-    width: 95%;
-    margin: 2% auto;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.commentBox .headLine {
-    height: 20px;
-    background: #545454;
-    color: white;
-    align-content: center;
-}
-
-.commentBox .headLine p {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 12px;
-    font-weight: 600;
-    padding-right: 1%;
-}
-
-.commentContent {
-    background: #F1E0C6;
-    display: flex;
-    min-height: 120px;
-}
-
-.commentContent .leftData {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-}
-
-.commentContent .rightData {
-    position: relative;
-    display: flex;
-    width: 75%;
-    align-items: center;
 }
 
 .rightData textarea {
-    width: 80%;
+    width: 100%;
     height: 75%;
+    margin: 10px;
 }
 
 .rightData button {

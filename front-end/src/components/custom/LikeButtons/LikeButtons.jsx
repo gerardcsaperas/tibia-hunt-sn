@@ -21,10 +21,14 @@ function LikeButtons(props) {
         }
     }, [props])
 
+    useEffect(() => {
+        console.log(uid);
+    }, [uid])
+
     return (
         <div className="socialMedia" id={props.id || null }>
-            <i className={`${likesType} fa-thumbs-up`} onClick={handleClickLike} style={{color: color || "black"}}> {`${likes.length}`}</i>
-            <i className={`${dislikesType} fa-thumbs-down`} onClick={handleClickDislike} style={{color: color || "black"}}> {`${dislikes.length}`}</i>
+            <i className={`${likesType} fa-thumbs-up`} onClick={handleClickLike}> {`${likes.length}`}</i>
+            <i className={`${dislikesType} fa-thumbs-down`} onClick={handleClickDislike}> {`${dislikes.length}`}</i>
             { comments && (<i class="far fa-comment"> {`${commentsNum}`}</i>) }
         </div>
     )

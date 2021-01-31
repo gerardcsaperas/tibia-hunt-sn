@@ -1,8 +1,23 @@
+@import '../../styles/Library.scss';
+
 .filters {
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 95%;
+        padding: 10px;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        width: 700px;
+
+        .grill {
+            grid-template-columns: 150px 150px 150px;
+        }
+    }
+
     font-family: Verdana,Arial,Times New Roman,sans-serif;
     background-color: #E1D8C6;
     border: 1px solid black;
-    width: 700px;
     box-shadow: 3px 3px 1px grey;
     margin-top: 5%;
     padding: 0;
@@ -22,7 +37,6 @@
     .grill {
         padding-top: 50px;
         display: grid;
-        grid-template-columns: 150px 150px 150px;
         column-gap: 10px;
         row-gap: 15px;
         justify-content: space-around;

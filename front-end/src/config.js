@@ -1,5 +1,5 @@
 export const API_URL = process.env.API_URL || 'http://localhost:5001/TibiaHuntingRecords_Api'
-export const vocations = ['', 'Druid', 'Elder Druid', 'Knight', 'Elite Knight', 'Paladin', 'Royal Paladin', 'Sorcerer', 'Master Sorcerer'];
+export const vocations = ['', 'Druid', 'ED', 'Knight', 'EK', 'Paladin', 'RP', 'Sorcerer', 'MS'];
 export const cityOptions = [
     "",
     "Ab'Dendriel",

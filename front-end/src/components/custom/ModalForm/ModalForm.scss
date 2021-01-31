@@ -1,5 +1,14 @@
+@import '../../styles/Library.scss';
 
 div.ModalFormBg {
+
+    @media (min-width: $breakpoint-tablet) {
+        .ModalForm__content {
+            min-width: 320px;
+        }
+    }
+
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.85);
     position: fixed;
     top: 0;
@@ -39,7 +48,6 @@ div.ModalFormBg {
             color: black;
             min-height: 100px;
             padding: 20px;
-            min-width: 320px;
         }
     }
 }

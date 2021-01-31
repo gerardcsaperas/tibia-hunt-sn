@@ -1,0 +1,109 @@
+@import '../styles/Library.scss';
+
+
+#navbar {
+    background-color: $background-blue;
+    width: 100%;
+    height: 40px;
+    color: #FBD34D;
+    font-family: Verdana,Arial,Times New Roman,sans-serif;
+    align-items: center;
+    display: flex;
+
+    @media (max-width: $breakpoint-mobile) {
+        justify-content: center;
+    }
+
+    .section {
+        position: relative;
+        color: gold;
+        margin-left: 2%;
+
+        @media (max-width: $breakpoint-mobile) {
+            margin: auto 15px;
+        }
+
+        h5 {
+            cursor: pointer;
+            user-select: none;
+            height: 40px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .newNotifications {
+            position: absolute;
+            background: red;
+            width: 15px;
+            height: 15px;
+            font-size: 10px;
+            color: white;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 2px;
+            left: 10px;
+        }
+    }
+
+    .notifications__box {
+        width: 180px;
+        max-height: 250px;
+        z-index: 10;
+        position: absolute;
+        background-color: rgba(5, 17, 34, 0.85);
+        overflow-y: scroll;
+
+        .notification__card {
+            display: block;
+            font-size: 12px;
+            min-height: 30px;
+            color: white;
+            padding: 7px;
+            line-height: 16px;
+            margin: 0;
+        }
+
+        .notification__card:hover {
+            background-color: $background-blue;
+        }
+
+        i {
+            font-size: 12px;
+        }
+    }
+}
+
+#navbar i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: gold;
+}
+
+.contact {
+    margin-left: 2%;
+   
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+  
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+
+

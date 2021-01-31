@@ -9,9 +9,8 @@ function ContentBox(props) {
 
     // Variable to continuously store viewport dimensions to redux
     const windowDimensions = useSelector(selectViewport);
-
     const desktopComponent = (
-        <div className="ContentBox" style={{width: parseInt(props.width)}}>
+        <div className="ContentBox" style={{width: windowDimensions.width > parseInt(props.width) ? parseInt(props.width) : '90%'}}>
             <div className="ContentBox__title">
                 <h3>{props.title}</h3>
             </div>
@@ -25,7 +24,7 @@ function ContentBox(props) {
         <h1 style={{color: "white"}}>Hi! I'm mobile, motherfucker! Reactive! Boooyah!</h1>
     )
 
-    return windowDimensions.width > 700 ? desktopComponent : mobileComponent;
+    return desktopComponent;
 }
 
 export default ContentBox

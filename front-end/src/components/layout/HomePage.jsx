@@ -13,9 +13,9 @@ function HomePage() {
     <Fragment>
       <div className="text">
         <p className="lore">Dear tibians,</p>
-        <p className="lore">Welcome to Tibia Hunting Records, a platform that has been created with a clear idea: Solve the where to go problem.</p>
-        <p className="lore">We want to invite you to join this wonderful community and together build the biggest data base for hunting spots ever!</p>    
-        <p className="lore">Join us in this exciting quest and share your best achievents in this wonderful game called tibia!</p>
+        <p className="lore">Welcome to the <strong>beta</strong> version of <strong>Tibia Hunting Records</strong>, a platform that has been created with a clear idea: solve the "where to hunt" problem.</p>
+        <p className="lore">We want to invite you to join this wonderful community and together build the biggest database for hunting spots ever!</p>    
+        <p className="lore">Join us in this exciting quest and share your best achievents in this wonderful game that is Tibia!</p>
       </div>
       <div className="buttons__box">
         <Link className="button" to="/login">Log In</Link>

@@ -6,21 +6,29 @@
 }
 
 .logo {
-    width: 250px;
+    width: 100%;
     padding-top: 1%;
 }
 
+.logo__box {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+}
+
 .chainsLeft {
-    position:absolute;
-    right: 55%;
+    position: absolute;
+    top: 0;
+    left: 10px;
     display: flex;
     flex-direction: column;
     z-index: -1;
 }
 
 .chainsRight {
-    position:absolute;
-    left: 55%;
+    position: absolute;
+    top: 0;
+    right: 10px;
     display: flex;
     flex-direction: column;
     z-index: -1;

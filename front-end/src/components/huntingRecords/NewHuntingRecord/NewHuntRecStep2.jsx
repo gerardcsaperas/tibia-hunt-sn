@@ -10,9 +10,10 @@ import Ammunition from '../../../assets/objects/Ammunition.json';
 import Potions from '../../../assets/objects/Potions.json';
 import Runes from '../../../assets/objects/Runes.json';
 
-const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmmunition, setExpRatio, setExpH, setProfitH }) => {
+const NewHuntRecStep2 = ({ _id, navigation, supplies, setSupplies, ammunition, setAmmunition, setExpRatio, expH, setExpH, profitH, setProfitH }) => {
 	const { next, previous } = navigation;
 	const Supplies = [ ...Runes, ...Potions ];
+	const [ validStep, setValidStep ] = useState(false)
 	const [ selectedSupply, setSelectedSupply ] = useState({
 		name: 'Sudden_Death_Rune',
 		type: 'Runes'
@@ -24,9 +25,16 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 
 	useEffect(
 		() => {
-			console.log(selectedSupply);
+			if (
+				expH &&
+				profitH &&
+				expH !== '' &&
+				profitH !== ''
+			) {
+				setValidStep(true)
+			}
 		},
-		[ selectedSupply ]
+		[ expH, profitH ]
 	);
 
 	const handleSuppliesChange = (e, type) => {
@@ -128,7 +136,7 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 					supplies && (
 						supplies.map((supply, index) => {
 							return (
-								<span key={index} onClick={(e, index) => removeIndexSupply(e, index)}>
+								<span key={index} onClick={(e) => removeIndexSupply(e, index)}>
 									<img src={`../images/${supply.type}/${supply.name}.jpg`} />
 									x {supply.ammount}
 								</span>
@@ -140,7 +148,7 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 					ammunition && (
 						ammunition.map((ammo, index) => {
 							return (
-								<span key={index} onClick={(e, index) => removeIndexAmmunition(e, index)}>
+								<span key={index} onClick={(e) => removeIndexAmmunition(e, index)}>
 									<img src={`../images/Ammunition/${ammo.name}.jpg`} />
 									x {ammo.ammount}
 								</span>
@@ -166,11 +174,13 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 		<div className="form-input-row">
 			<label>Exp/h</label>
 				<NumberFormat
+					value={expH}
                     thousandSeparator={true}
                     allowNegative={false}
                     suffix=' exp/h'
 					name="expH"
-					spellcheck="false"
+					spellCheck="false"
+					autoComplete="off"
                 	onValueChange={(values) => setExpH(values.value)}
 				/>
 		</div>
@@ -180,10 +190,12 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 		<div className="form-input-row">
 			<label>Profit/h</label>
 				<NumberFormat
+					value={profitH}
                     thousandSeparator={true}
                     allowNegative={false}
 					suffix=' gp/h'
-					spellcheck="false"
+					spellCheck="false"
+					autoComplete="off"
                     name="profitH"
                 	onValueChange={(values) => setProfitH(values.value)}
 				/>
@@ -195,7 +207,7 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 			<div id="formContainer">
 				<FormBox title="Supplies" imgSrc="../images/Backpack.gif" form={suppliesForm} margin="10px" />
 				<FormBox title="Experience*" imgSrc="../images/XP_Boost.png" form={experienceForm} margin="10px" />
-				<FormBox title="Loot*" imgSrc="../images/Treasure_Chest.gif" form={lootForm} margin="10px" />
+				<FormBox title="Loot*" imgSrc="../images/Tibia_Coins.gif" form={lootForm} margin="10px" />
 			</div>
 
 			{/* Footer Section */}
@@ -207,7 +219,7 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 				<button className="button" onClick={previous}>
 					Back
 				</button>
-				<button className="button" onClick={next}>
+				<button className={validStep ? 'button' : 'disabled-button'} onClick={next} disabled={!validStep}>
 					Next
 				</button>
 			</div>
@@ -221,7 +233,7 @@ const NewHuntRecStep2 = ({ navigation, supplies, setSupplies, ammunition, setAmm
 		</Fragment>
 	);
 
-	return <ContentBox width="1000px" title="New Hunting Record" content={content} />;
+	return <ContentBox width="1000px" title={ _id ? "Edit Hunting Record" : "New Hunting Record" } content={content} />;
 };
 
 export default NewHuntRecStep2;

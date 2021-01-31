@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useStep } from 'react-hooks-helper';
 import { API_URL, vocations } from '../../../config';
 import axios from 'axios';
-
+import { useParams } from 'react-router-dom';
 import NewHuntRecStep1 from './NewHuntRecStep1';
 import NewHuntRecStep2 from './NewHuntRecStep2';
 import NewHuntRecStep3 from './NewHuntRecStep3';
@@ -16,6 +16,7 @@ const steps = [ { id: 'step1' }, { id: 'step2' }, { id: 'step3' }, { id: 'step4'
 
 const NewHuntingRecord = () => {
 	const { token } = useSelector(selectUser);
+	const { _id } = useParams();
 	const [ set, setSet ] = useState({
 		Helmets: 'Leather_Helmet',
 		Amulets_and_Necklaces: 'Scarf',
@@ -37,9 +38,160 @@ const NewHuntingRecord = () => {
 	const [ expH, setExpH ] = useState();
 	const [ expRatio, setExpRatio ] = useState(1.5);
 	const [ profitH, setProfitH ] = useState();
-	const [ preys, setPreys ] = useState(['', '', '']);
-	const [ imbuements, setImbuements ] = useState();
-	const [ charms, setCharms ] = useState();
+	const [ preys, setPreys ] = useState([]);
+	const [ imbuements, setImbuements ] = useState([]);
+	const [ charms, setCharms ] = useState([]);
+	const [ specialEvent, setSpecialEvent ] = useState();
+	const [ difficulty, setDifficulty ] = useState();
+	const [ picture, setPicture ] = useState();
+	const [ opComment, setOpComment ] = useState();
+	const [ saving, setSaving ] = useState(false);
+	const [ saved, setSaved ] = useState(false);
+
+	useEffect(() => {
+		fetchCharacters()
+	}, [])
+
+	useEffect(() => {
+		if (_id) {
+			fetchHuntingRecord(_id)
+		}
+	}, [_id])
+
+	const fetchHuntingRecord = async (_id) => {
+		const config = {
+			headers: {
+				'Authorization': `Bearer ${token}`
+			}
+		}
+
+		try {
+			const response = await axios.get(`${API_URL}/huntingRecord/${_id}`, config);
+			if (response.status === 200) {
+
+				let {
+					ammunition,
+					charms,
+					difficulty,
+					expH,
+					expRatio,
+					imbuements,
+					opComment,
+					preys,
+					profitH,
+					set,
+					specialEvent,
+					spot,
+					supplies,
+					teamComp,
+					huntPicture
+				} = response.data;
+
+				setAmmunition(ammunition)
+				setCharms(charms)
+				setDifficulty(difficulty)
+				setExpH(expH)
+				setExpRatio(expRatio)
+				setImbuements(imbuements)
+				setOpComment(opComment)
+				setPreys(preys)
+				setProfitH(profitH)
+				setSet(set)
+				setSpecialEvent(specialEvent)
+				setSpot(spot)
+				setSupplies(supplies)
+				setTeamComp(teamComp)
+				setPicture(huntPicture)
+			}
+		} catch(e) {
+			console.error(e.message);
+		}
+	}
+
+	const postSpot = async () => {
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${token}`
+			}
+		}
+
+		try {
+			const body = JSON.stringify(spot);
+			const response = await axios.post(`${API_URL}/spot`, body, config);
+			if (response.status === 201 || response.status === 200 && response.data) {
+				return response.data._id;
+			}
+		} catch(e) {
+			console.error(e.message);
+		}
+	}
+
+	const postPicture = async () => {
+		try {
+			const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+				}
+			}
+			const body = JSON.stringify({data: picture});
+			const response = await axios.post(`${API_URL}/image/huntingRecord`, body, config);
+			if (response.status === 200 && response.data) {
+				return response.data;
+			}
+		} catch(e) {
+			console.error(e.message);
+		}
+	}
+
+	const saveHuntingRecord = async () => {
+		setSaving(true);
+		try {
+			const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+				}
+			}
+
+			let spotId;
+			if (!spot._id) {
+				spotId = await postSpot();
+			};
+
+			let huntPicture;
+			if (picture) {
+				huntPicture = await postPicture();
+			}
+			const body = {
+				set,
+				spot: spot._id || spotId,
+				supplies,
+				ammunition,
+				imbuements,
+				charms,
+				preys,
+				huntPicture,
+				expH,
+				profitH,
+				expRatio,
+				difficulty,
+				specialEvent,
+				teamComp,
+				opComment
+			}
+
+			const response = await axios.post(`${API_URL}/huntingRecord`, body, config);
+			if (response.status === 201 && response.data) {
+				setSaved(true);
+				window.location.href = `/record-details/${response.data._id}`
+			}
+
+		} catch(e) {
+			console.error(e.message)
+		}
+	}
 
 	const fetchCharacters = async () => {
 		const options = {
@@ -62,6 +214,7 @@ const NewHuntingRecord = () => {
 	const { id } = step;
 
 	const props = {
+		_id,
 		navigation,
 		set,
 		setSet,
@@ -75,15 +228,28 @@ const NewHuntingRecord = () => {
 		setSupplies,
 		ammunition,
 		setAmmunition,
+		expH,
 		setExpH,
 		setExpRatio,
+		profitH,
 		setProfitH,
 		preys,
 		setPreys,
 		imbuements,
 		setImbuements,
 		charms,
-		setCharms
+		setCharms,
+		specialEvent,
+		setSpecialEvent,
+		difficulty,
+		setDifficulty,
+		picture,
+		setPicture,
+		opComment,
+		setOpComment,
+		saveHuntingRecord,
+		saving,
+		saved
 	};
 
 	switch (id) {

@@ -1,7 +1,50 @@
 @import '../../styles/Library.scss';
 
-#comBoxDisplay {
-    min-height: 120px;
+.CommentBox {
+
+    @media (max-width: $breakpoint-mobile) {
+        .headLine {
+            p {
+                font-size: 10px;
+            }
+        }
+
+        .commentContent {
+            flex-direction: column;
+            .leftData {
+                display: flex;
+                flex-direction: row;
+                padding: 2.5px 5px;
+
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }
+
+            .rightData {
+                padding: 0 5px;
+            }
+        }
+
+    }
+
+    @media (min-width: $breakpoint-mobile) {
+        .commentContent {
+            min-height: 120px;
+            .leftData {
+                flex-direction: column;
+                align-items: center;
+                width: 25%;
+            }
+            .rightData {
+                width: 75%;
+            }
+        }
+    }
+    
+    background: #F1E0C6;
     width: 95%;
     margin: 2% auto;
     box-shadow: 0 4px 2px -2px gray;
@@ -31,42 +74,25 @@
                 cursor: pointer;
             }
         }
-    }   
-}
+    }
 
-#comBoxDisplay .headLine {
-    height: 20px;
-    background: #545454;
-    color: white;
-    align-content: center;
-}
+    .headLine {
+        p {
+            justify-content: flex-end;
+        }
+    }
 
-#comBoxDisplay .headLine p {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 12px;
-    font-weight: 600;
-    padding-right: 1%;
-}
-
-#comBoxDisplay .commentContent {
-    background: #F1E0C6;
-    display: flex;
-    min-height: 120px;
-}
-
-#comBoxDisplay .commentContent .leftData {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 25%;
-}
-
-#comBoxDisplay .commentContent .rightData {
-    position: relative;
-    display: flex;
-    width: 75%;
-    align-items: center;
+    .commentContent {
+        display: flex;
+        .leftData {
+            display: flex;
+        }
+        .rightData {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 #comBoxDisplay .rightData .rating {

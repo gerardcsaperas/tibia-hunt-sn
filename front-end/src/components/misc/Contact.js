@@ -12,7 +12,7 @@ function Contact() {
         <p className="lore">Dear Tibians,</p>
         <p className="lore">May you have any questions or want to contact us for any other requirements?</p>
         <p className="reach">Reach us at:</p>
-        <p className="email">TibiaHuntingRecords@gmail.com</p>
+        <a className="email" href="mailto:tibiahuntingrecords@gmail.com">tibiahuntingrecords@gmail.com</a>
         <p className="lore">Your administration team,</p> 
         <p className="lore">Gerard & Joel</p>      
         

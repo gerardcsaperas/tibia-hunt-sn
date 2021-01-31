@@ -10,6 +10,8 @@ import Logo from "./components/layout/Logo";
 import HomePage from "./components/layout/HomePage";
 import SignUp from "./components/user/SignUp";
 import LogIn from "./components/user/LogIn";
+import AccountLost from "./components/user/AccountLost";
+import ResetPassword from "./components/user/ResetPassword";
 import Logout from './components/user/Logout';
 import Profile from './components/user/Profile';
 import EditProfile from './components/user/EditProfile';
@@ -47,6 +49,10 @@ function App() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
+		console.log(user);
+	}, [user])
+
+	useEffect(() => {
 		getUser();
 	}, []);
 
@@ -61,6 +67,8 @@ function App() {
 
 		if (localStorageUser && localStorageUser.token) {
 
+			console.log(localStorageUser)
+
 			const options = {
 				headers: {
 					'Authorization': `Bearer ${localStorageUser.token}`
@@ -71,9 +79,9 @@ function App() {
 				let user = await axios.get(`${API_URL}/user`, options)
 		
 				if (!user) {
+					console.log('no user')
 					throw new Error();
 				}
-		
 				dispatch(setUsername(user.data.username));
 				dispatch(setAvatar(user.data.avatar));
 				dispatch(setEmail(user.data.email));
@@ -96,13 +104,13 @@ function App() {
                     'Authorization': `Bearer ${user.token}`
                 }
             };
-
+			console.log(user.token);
             const response = await axios.get(`${API_URL}/character`, config);
             
             if (response.status === 200) {
                 if (response.data.length > 0) {
                     const characters = response.data.map(char => {
-                        return [char.name, char.vocation, char.level]
+                        return [char.name, char.vocation, char.level, char._id]
 					})
                     dispatch(setCharacters(characters));
                 }
@@ -111,7 +119,7 @@ function App() {
         } catch(e) {
             console.error(e);
         }
-    }
+	}
 
 	// Window resize listener to make custom responsive components
 	useEffect(() => {
@@ -143,6 +151,12 @@ function App() {
 			<Route exact path="/signup" >
 				{ authenticated ? <Redirect to="/profile" /> : <SignUp /> }
 			</Route>
+			<Route exact path="/account-lost" >
+				{ authenticated ? <Redirect to="/profile" /> : <AccountLost /> }
+			</Route>
+			<Route exact path="/reset-password/:resetPasswordToken" >
+				{ authenticated ? <Redirect to="/profile" /> : <ResetPassword /> }
+			</Route>
 			<Route exact path="/profile" >
 				{ authenticated ? <Profile /> : <Redirect to="/login" /> }
 			</Route>
@@ -150,6 +164,9 @@ function App() {
 				{ authenticated ? <EditProfile /> : <Redirect to="/signup" /> }
 			</Route>
 			<Route exact path="/characters/new">
+				{ authenticated ? <NewCharacter /> : <Redirect to="/signup" /> }
+			</Route>
+			<Route exact path="/characters/edit/:_id">
 				{ authenticated ? <NewCharacter /> : <Redirect to="/signup" /> }
 			</Route>
 			<Route exact path="/my-records" >
@@ -165,6 +182,9 @@ function App() {
 				<Logout />
 			</Route>
 			<Route exact path="/new-hunting-record">
+				{ authenticated ? <NewHuntingRecord /> : <Redirect to="/login" /> }
+			</Route>
+			<Route exact path="/edit-hunting-record/:_id">
 				{ authenticated ? <NewHuntingRecord /> : <Redirect to="/login" /> }
 			</Route>
       	</Switch>

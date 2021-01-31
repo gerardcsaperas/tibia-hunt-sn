@@ -1,73 +1,124 @@
 import React, { Fragment } from 'react';
 import ContentBox from '../../custom/ContentBox/ContentBox';
 import FormBox from '../../custom/FormBox/FormBox';
+import { API_URL, vocations } from '../../../config';
+import axios from 'axios';
 import "./NewHuntingRecord.scss";
 
-const NewHuntRecStep4 = ({ navigation }) => {
+// State Store
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../user/userSlice'
 
+const NewHuntRecStep4 = ({
+  _id,
+  navigation, 
+  specialEvent,
+  setSpecialEvent,
+  difficulty,
+  setDifficulty,
+  opComment,
+  setOpComment,
+  picture,
+  setPicture,
+  saveHuntingRecord,
+  saving,
+  saved
+}) => {
+  const { user } = useSelector(selectUser);
   const { next, previous } = navigation;
+
+  const specialEvents = [ '', 'Double Exp', 'Double Loot', 'Rapid Respawn', 'Boosted Creature' ]
+  const specialEventForm = <div className="form specialEvent">
+    <div className="form-input-row">
+      <select name="specialEvent" value={specialEvent} onChange={(e) => setSpecialEvent(e.target.value)}>
+        {
+          specialEvents.map((event, index) => {
+            return <option key={index} value={event}>{event}</option>
+          })
+        }
+      </select>
+    </div>
+  </div>
+
+  const difficulties = [ '', 'Easy', 'Medium', 'Hard', 'Extreme' ];
+  const difficultiesForm = <div className="form difficulties">
+    <div className="form-input-row">
+      <select name="difficulty" value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+        {
+          difficulties.map((difficulty, index) => {
+            return <option key={index} value={difficulty}>{difficulty}</option>
+          })
+        }
+      </select>
+    </div>
+  </div>
+
+  const handleFileInputChange = (e) => {
+    const file = e.target.files[0];
+    previewFile(file);
+  }
+
+  const previewFile = (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+        setPicture(reader.result);
+    }
+  }
+
+  const huntPictureForm = <div className="form">
+    <div className="form-input-row">
+      <input className="file" type="file" name="picture" onChange={(e) => handleFileInputChange(e)} autoComplete="off"/>
+      </div>
+        { picture && (
+          <img
+            src={picture}
+            alt="chosen"
+            style={{height: '100px'}}
+          />
+        )}
+  </div>
+
+  const commentForm = <div className="form">
+    <div className="form-input-row">
+        <textarea name="opComment" value={opComment} onChange={(e) => setOpComment(e.target.value)}></textarea>
+    </div>
+  </div>
 
   const content = (
          <Fragment>
         
            <div id="formContainer">
 
-              {/* Events Section */}
-              <div className="GlobalEvents">
-               <h1 className="eventsTitle">Events</h1>
-               <img className="events" src={"../images/Tibia_Coins.gif"}/>
-    
-               <div className="eventsInfo">
-                <div className="eventsContainer">
-                  <label>Special Event:</label>
-                  <select className="selectCity"/>
-                </div>
-               </div>
-              </div>
+              <FormBox
+                title="Special Event"
+                imgSrc="../images/Tibia_Coins.gif"
+                form={specialEventForm}
+              />
 
-              {/* Difficulty Section */}
-              <div className="GlobalDifficulty">
-               <h1 className="difficultyTitle">Difficulty:</h1>
-               <img className="difficulty" src={"../images/Squeezing_Gear_of_Girlpower.gif"}/>
-    
-               <div className="difficultyInfo">
-                <div className="difficultyContainer">
-                  <label>Difficulty:</label>
-                  <select className="selectCity"/>
-                </div>
-               </div>
-              </div>
+              <FormBox
+                title="Difficulty"
+                imgSrc="../images/Squeezing_Gear_of_Girlpower.gif"
+                form={difficultiesForm}
+              />
 
-              {/* Picture Section */}
-              <div className="GlobalPicture">
-               <h1 className="pictureTitle">Picture</h1>
-               <img className="picture" src={"../images/Norseman_Doll.gif"}/>
-    
-               <div className="pictureInfo">
-                <div className="pictureContainer">
-                  <label>Upload:</label>
-                  <input className="selectPicture" type="file"/>
-                </div>
-               </div>
-              </div>
+              <FormBox
+                title="Hunt Picture"
+                imgSrc="../images/Norseman_Doll.gif"
+                form={huntPictureForm}
+              />
 
-              {/* Comment Section */}
-              <div className="GlobalComment">
-               <h1 className="commentTitle">Comment</h1>
-               <img className="comment" src={"../images/Achievement_Grade_Symbol.gif"}/>
-    
-               <div className="commentInfo">
-                <div className="commentContainer">
-                  <textarea className="introduceComment" type="number"/>
-                </div>
-               </div>
-              </div>
-
+              <FormBox
+                title="Comment"
+                imgSrc="../images/Achievement_Grade_Symbol.gif"
+                form={commentForm}
+              />
            </div>
     
            <div className="buttons_NHR">
-             <button className="button" onClick={previous}>Back</button>
-             <button className="button" onClick={next}>Save</button>
+             <button className={ !saving ? 'button' : 'disabled-button' } onClick={previous}>Back</button>
+             { !saved && <button className={ !saving ? 'button' : 'disabled-button' } onClick={saveHuntingRecord}>{ !saving ? 'Save' : 'Saving...' }</button> }
+             { saved && <button className='button disabled'>Saved</button> }
            </div>
     
            <div className="nextPage">
@@ -82,10 +133,10 @@ const NewHuntRecStep4 = ({ navigation }) => {
     
         return (
         <ContentBox
-           width="1000px"
-           title="New Hunting Record"
-           content={content}
-        ></ContentBox>
+            width="1200px"
+            title={ _id ? "Edit Hunting Record" : "New Hunting Record" }
+            content={content}
+        />
         )
          
 };

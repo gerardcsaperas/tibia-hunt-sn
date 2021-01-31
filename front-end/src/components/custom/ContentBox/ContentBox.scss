@@ -1,6 +1,19 @@
 @import '../../styles/Library.scss';
 
 div.ContentBox {
+
+    @media (min-width: $breakpoint-mobile) {
+        .ContentBox__title {
+            overflow: hidden;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        .delete-hunting-record {
+            position: absolute;
+        }
+    }
+
     position: relative;
     margin-top: 50px;
     margin-left: auto;
@@ -34,4 +47,25 @@ div.ContentBox {
         padding: 20px;
         width: 100%;
     }
+
+    .delete-character,
+    .delete-hunting-record,
+    .delete-account {
+        font-size: 16px;
+        color: $fontawesome-icons-brown;
+        cursor: pointer;
+    }
+
+    .delete-character,
+    .delete-account {
+        position: absolute;
+        top: 50px;
+        right: 12.5px;
+    }
+
+    .delete-hunting-record {
+        top: -5px;
+        right: 20px;
+    }
+
 }

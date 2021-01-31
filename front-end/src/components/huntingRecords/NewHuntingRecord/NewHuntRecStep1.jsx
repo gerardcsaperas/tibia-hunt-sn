@@ -29,7 +29,7 @@ import Wands from '../../../assets/objects/Wands.json';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../user/userSlice';
 
-const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, teamComp, setTeamComp }) => {
+const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characters, teamComp, setTeamComp }) => {
 	const { token } = useSelector(selectUser);
 	const { next } = navigation;
 	const ItemArrays = [ Amulets_and_Necklaces, Armors, Boots, Helmets, Legs, Rings ];
@@ -61,8 +61,8 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 				return (
 					<Fragment>
 						{set &&
-						set[type] && <img src={`../images/${type}/${set[type]}.jpg`} className={`select${type}`} />}
-						<select className={`select${type}`} onChange={(e) => handleItemSelection(type, e)}>
+						set[type] && <img src={`../images/${type}/${set[type]}.jpg`} className={`${type}`} />}
+						<select className={`${type}`} onChange={(e) => handleItemSelection(type, e)}>
 							{itemArray.map((item, index) => {
 								return (
 									<option value={nameWithoutSpace(item.name)} key={index}>
@@ -77,9 +77,9 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 			<Fragment>
 				{set &&
 				set.Weapons && (
-					<img src={`../images/${set.Weapons.type}/${set.Weapons.name}.jpg`} className="selectWeapons" />
+					<img src={`../images/${set.Weapons.type}/${set.Weapons.name}.jpg`} className="Weapons" />
 				)}
-				<select className="selectWeapons" onChange={(e) => handleObjectSelection('Weapons', e)}>
+				<select className="Weapons" onChange={(e) => handleObjectSelection('Weapons', e)}>
 					{Weapons.map((weapon, index) => {
 						return (
 							<option
@@ -98,9 +98,9 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 			<Fragment>
 				{set &&
 				set.Shields && (
-					<img src={`../images/${set.Shields.type}/${set.Shields.name}.jpg`} className="selectShields" />
+					<img src={`../images/${set.Shields.type}/${set.Shields.name}.jpg`} className="Shields" />
 				)}
-				<select className="selectShields" onChange={(e) => handleObjectSelection('Shields', e)}>
+				<select className="Shields" onChange={(e) => handleObjectSelection('Shields', e)}>
 					{Shields.map((shield, index) => {
 						return (
 							<option
@@ -163,14 +163,10 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 		fetchSpots(spot);
 	};
 
-	const changeFirstCharTeamComp = (e) => {
-		teamComp.splice(0, 1, e.target.value);
-	};
-
 	useEffect(
 		() => {
 			if (!teamComp || teamComp.length < 2) {
-				characters && setTeamComp([ characters[0] ]);
+				characters && characters.length > 0 && setTeamComp([ characters[0] ]);
 			}
 		},
 		[ characters ]
@@ -228,6 +224,13 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 		</Fragment>
 	);
 
+	const changeFirstCharTeamComp = (e) => {
+		const character = JSON.parse(e.target.value)
+		const newArray = [...teamComp];
+		newArray.splice(0, 1, character);
+		setTeamComp(newArray)
+	};
+
 	const handleOtherMembersChange = (e) => {
 		setOtherMembers({
 			...otherMembers,
@@ -251,6 +254,14 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 		setTeamComp(newArray);
 	};
 
+	useEffect(() => {
+		console.log(characters)
+	}, [characters])
+
+	useEffect(() => {
+		console.log(teamComp)
+	}, [teamComp])
+
 	const teamCompForm = (
 		<div className="form teamComp">
 			<div className="teamcomp-form__left">
@@ -260,7 +271,7 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 						{characters &&
 							characters.map((character, index) => {
 								return (
-									<option value={character} key={index}>
+									<option value={JSON.stringify(character)} key={index}>
 										{character.name}
 									</option>
 								);
@@ -315,13 +326,19 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 	const content = (
 		<Fragment>
 			<div id="formContainer">
-				<FormBox title="Set*" imgSrc="../images/Golden_Armor.gif" form={equipmentForm} margin="10px" />
+				<FormBox
+					className="setForm"
+					title="Set*"
+					imgSrc="../images/Golden_Armor.gif"
+					form={equipmentForm}
+					margin="10px"
+				/>
 				<FormBox title="Spot*" imgSrc="../images/Treasure_Map.gif" form={spotForm} margin="10px" />
 				<FormBox
+					className="team-comp__form-box"
 					title="Team Comp*"
 					imgSrc="../images/Party_Hat.gif"
 					form={teamCompForm}
-					width="50%"
 					margin="10px"
 				/>
 			</div>
@@ -346,7 +363,7 @@ const NewHuntRecStep1 = ({ navigation, set, setSet, spot, setSpot, characters, t
 		</Fragment>
 	);
 
-	return <ContentBox width="1000px" title="New Hunting Record" content={content} />;
+	return <ContentBox width="1000px" title={ _id ? "Edit Hunting Record" : "New Hunting Record" } content={content} />;
 };
 
 export default NewHuntRecStep1;

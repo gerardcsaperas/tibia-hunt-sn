@@ -6,11 +6,6 @@ import HuntSummary from '../huntingRecords/HuntSummary';
 import FiltersBox from '../custom/FiltersBox/FiltersBox';
 import "./HuntingRecordsList.scss";
 
-// Redux
-import { useSelector } from 'react-redux'
-import { selectUser } from '../user/userSlice'
-
-
 function AllRecords() {
 
     const [ huntList, setHuntList ] = useState();

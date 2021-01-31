@@ -8,9 +8,10 @@ import './CommentBoxToComment.scss';
 // Redux
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../user/userSlice'
+import { selectViewport } from '../../layout/viewportSlice'
 
 function CommentBoxToComment(props) {
-
+    const { width } = useSelector(selectViewport);
     const user = useSelector(selectUser);
     const { username, stars, uid } = user
     let { recordID }  = useParams();
@@ -37,7 +38,14 @@ function CommentBoxToComment(props) {
             }
             
             const response = await axios.post(`${API_URL}/comment/${recordID}`, body, config);          
-            if (response.status === 201) {
+            if (response.status === 201 && response.data) {
+                const notificationBody = {
+                    receiver: props.receiver,
+                    notificationType: 'comment',
+                    notificationReference: props.notificationReference,
+                    notificationOrigin: 'huntingRecord'                    
+                }
+                const postNotification = await axios.post(`${API_URL}/notification`, notificationBody, config);
                 window.location.reload()
             }
             
@@ -47,24 +55,23 @@ function CommentBoxToComment(props) {
     }
 
     return (
-        <div id="comBoxComment">
-            <div className="headLine"></div>
+        <div className="CommentBox">
             <div className="commentContent">
                 <div className="leftData">
-                    <div>
-                        <p className="username">{username}</p>
-                        <StarRatings
+                    <p className="username">{username}</p>
+                    <StarRatings
                         rating={stars}
-                        starDimension="20px"
+                        starDimension={ width > 600 ? "20px" : "10px" }
                         starSpacing="1px"
                         starRatedColor="gold"
-                        />
-                    </div>
+                    />
                 </div>
                 <div className="rightData">
                     <textarea onChange={(e) => setText(e.target.value)} placeholder="Add a comment"></textarea>
-                    <button onClick={postComment}>Post</button>
                 </div>
+            </div>
+            <div className="button__box">
+                <button onClick={postComment}>Post</button>
             </div>
         </div>
     )

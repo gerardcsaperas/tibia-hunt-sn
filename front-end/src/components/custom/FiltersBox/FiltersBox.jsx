@@ -66,12 +66,13 @@ function FiltersBox(props) {
             <form className="grill">
                 <div className="dividers">
                     <label>Your Level:</label>
-                    <input name="level" type="number" min="1" onChange={handleChange}/>
+                    <input name="level" type="number" min="1" onChange={handleChange} autoComplete="off"/>
                 </div>
 
                 <div className="dividers">
                     <label>Minimum Exp/h:</label>
                     <NumberFormat
+                    autoComplete="off"
                     thousandSeparator={true}
                     allowNegative={false}
                     suffix={' exp/h'}
@@ -82,6 +83,7 @@ function FiltersBox(props) {
                 <div className="dividers">
                     <label>Minimum Profit/h:</label>
                     <NumberFormat
+                    autoComplete="off"
                     thousandSeparator={true}
                     isNumericString={true}
                     allowNegative={false}
@@ -108,7 +110,7 @@ function FiltersBox(props) {
                     </select>
                 </div>
                 <div className="dividers">
-                    <label>Max. Difficulty:</label>
+                    <label>Difficulty:</label>
                     <select className="selector" name="difficulty" onChange={handleChange}>
                         {
                         difficultyOptions.map((Difficulty, index) => {

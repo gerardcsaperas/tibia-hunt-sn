@@ -83,6 +83,7 @@ function LogIn() {
         </div>
         {error ? <p style={{color: "red"}}>Invalid credentials</p> : null }
         <p>Not a member yet?<Link to="/signup">Sign Up</Link></p>
+        <Link to="/account-lost">Account Lost?</Link>
     </form>
   )
 

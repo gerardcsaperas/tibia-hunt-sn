@@ -1,89 +1,30 @@
+@import '../../styles/Library.scss';
+
 #formContainer {
+
+    @media (min-width: $breakpoint-tablet) {
+        display: flex;
+
+        .teamComp {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .teamcomp-form__left {
+                i {
+                    position: absolute;
+                    right: -16px;
+                }
+            }
+            .teamcomp-form__right {
+                height: 100%;
+                text-align: center;
+            }
+        }
+        
+    }
+
     margin-top: 2%;
     padding-bottom: 1%;
-    display: flex;
     justify-content: space-around;
-
-    .setImgContainer {
-
-        position: relative;
-        height: 100%;
-        width: 100%;
-        background: url("../../../assets/set.jpg") center no-repeat;
-
-            select, img {
-                position: absolute;
-                width: 32px;
-                height: 32px;
-                border: 0px;
-                color: transparent;
-                outline: none;
-                background: transparent;
-                cursor: pointer;
-            }
-
-            option {
-                color: #545454
-            }
-
-            select {
-                font-display: none;
-            }
-
-            img {
-                background: #2b2b2b;
-            }
-
-            .selectHelmets {
-                top: 55px;
-                left: 101px;
-            }
-            
-            .selectBackpack {                
-                top: 18px;
-                right: 57px;
-            }
-
-            .selectAmulets_and_Necklaces {
-                top: 69px;
-                left: 63.5px;
-            }
-            
-            .selectArmors {
-                top: 90.5px;
-                left: 101px;
-            }
-            
-            .selectWeapons {
-                top: 104.5px;
-                left: 63.5px;
-            }
-            
-            .selectShields {
-                top: 104.5px;
-                right: 65px;
-            }
-            
-            .selectLegs {
-                bottom: 91.5px;
-                left: 101px;
-            }
-            
-            .selectBoots {
-                bottom: 55.5px;
-                left: 101px;
-            }
-            
-            .selectRings {
-                bottom: 77.5px;
-                left: 63.5px;
-            }
-            
-            .selectTorch {
-                bottom: 38px;
-                right: 57px;
-            }
-    }
     
     .spot {
         .spot-dropdown__content {
@@ -104,22 +45,9 @@
         }
     }
 
-    .teamComp {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        .teamcomp-form__left {
-            i {
-                position: absolute;
-                right: -16px;
-            }
-        }
-        .teamcomp-form__right {
-            height: 100%;
-            text-align: center;
-        }
-    }
-
-    .supplies {
+    .supplies,
+    .imbuements,
+    .charms {
         select {
             width: 60%;
             margin-right: 10px;
@@ -138,6 +66,16 @@
                 margin: 5px;
                 cursor: pointer;
             }
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    }
+
+    .charms {
+        select {
+            width: 85%;
         }
     }
 }

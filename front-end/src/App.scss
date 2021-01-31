@@ -1,9 +1,9 @@
-@import './components/styles/Library.css';
+@import './components/styles/Library.scss';
 
 body {
     margin: 0;
     background-image: url("./assets/tibia-background-artwork.jpg");
-    background-color: var(--background-blue);
+    background-color: $background-blue;
     background-repeat: no-repeat;
     /* background-position: 0px 40px; */
     background-position: center top;
@@ -17,6 +17,19 @@ body {
 
 .button {
     background: linear-gradient(to bottom, #005EEE, #00088F, #005EEE, #00088F, #005EEE);
+    color: #FBD34D;
+    border: 1px solid #FFD700;
+    border-radius: 2.5px;
+    height: 30px;
+    width: 125px;
+    font-weight: 600;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;    
+}
+
+.button-warning {
+    background: linear-gradient(to bottom, #ee0000, #8f0000, #ee0000, #8f0000, #ee0000);
     color: #FBD34D;
     border: 1px solid #FFD700;
     border-radius: 2.5px;
@@ -56,6 +69,11 @@ a.button {
     display: flex;
     justify-content: space-evenly;
     bottom: 2.5rem;
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .error {
@@ -88,4 +106,90 @@ p.form-tip {
 .flex-row {
     display: flex;
     flex-direction: row;
+}
+
+p.username {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: $char-name;
+    -webkit-text-stroke: 1px black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.setContainer {
+    width: 200px;
+    margin-top: 20px;
+    box-shadow: 0 4px 2px -2px gray;
+    background: #E1D8C6;
+}
+
+.setForm {
+    .setImgContainer {
+        margin-top: 40px;
+    }
+}
+
+.setImgContainer {
+    position: absolute;
+    position: relative;
+    height: 200px;
+    background: url("./assets/set_clean.png") center no-repeat;
+    
+    select, img {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border: 0px;
+        color: transparent;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    option {
+        color: #545454
+    }
+
+    .Amulets_and_Necklaces {
+        top: 45px;
+        left: 52px;
+    }
+
+    .Weapons {
+        top: 80.5px;
+        left: 52px;
+    }
+
+    .Rings {
+        bottom: 56px;
+        left: 52px;
+    }
+
+    .Helmets {
+        top: 32px;
+        left: 86px;
+    }
+    
+    .Armors {
+        top: 66.5px;
+        left: 86px;
+    }
+
+    .Legs {
+        bottom: 69.5px;
+        left: 86px;
+    }
+    
+    .Boots {
+        bottom: 33.5px;
+        left: 86px;
+    }
+    
+    .Shields {
+        top: 80.5px;
+        right: 50.5px;
+    }
 }

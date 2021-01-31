@@ -17,8 +17,6 @@ import {
     setCountry
 } from './userSlice';
 
-
-//HERE
 function EditProfile() {
 
     const user = useSelector(selectUser);
@@ -40,6 +38,8 @@ function EditProfile() {
     const [ savedAuthSuccessfully, setSavedAuthSuccessfully ] = useState(false);
     const [ errorSavingAuth, setErrorSavingAuth ] = useState(false);
     const [ errorSaving, setErrorSaving ] = useState(false);
+    const [ showDeleteModal, setShowDeleteModal ] = useState(false);
+    const [ deleteEmail, setDeleteEmail ] = useState();
 
     const showModalForm = (target) => {
         setModalTarget(target);
@@ -111,7 +111,6 @@ function EditProfile() {
         try {
 
             if (picture) {
-                console.log('picture', picture)
                 await uploadImage(picture);
             }
 
@@ -199,13 +198,60 @@ function EditProfile() {
         setModalForm(false);
     }
 
+    const deleteAccountForm = (
+        <div className="form">
+            <div className="form-input-row">
+                <p>Are you sure you want to delete your account?</p>
+            </div>
+            <div className="form-input-row">
+                <label>Email</label>
+                <input type="password" name="password" onChange={(e) => setDeleteEmail(e.target.value)} autoComplete="off"/>
+                <p className="form-tip">You are trying to permanently delete your account. Type your email in order to do so.</p>
+            </div>
+        </div>
+    )
+
+    const deleteAccount = async () => {
+
+        if (deleteEmail !== user.email) {
+            return;
+        }
+
+        try {
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            };
+
+            const response = await axios.delete(`${API_URL}/user`, config);
+
+            if (response.status === 204) {
+                localStorage.clear();
+                window.location.href = '/'
+            }
+        } catch(e) {
+            console.error(e.message);
+        }
+    }
+
+    const deleteAccountModal = (
+        <Fragment>
+            <FormBox form={deleteAccountForm} />
+            <div className="buttons__box">
+                <button className="button" onClick={() => closeModalForm()}>Back</button>
+                <button className="button-warning" onClick={deleteAccount}>Delete</button>
+            </div>
+        </Fragment> 
+    )
+
     const modalContent = (
         <Fragment>
-        <FormBox form={switchModalForm(modalTarget)} />
-        <div className="buttons__box">
-            <button className="button" onClick={() => closeModalForm()}>Back</button>
-            <button className="button" onClick={saveProfileAuth}>Save</button>
-        </div>
+            <FormBox form={switchModalForm(modalTarget)} />
+            <div className="buttons__box">
+                <button className="button" onClick={() => closeModalForm()}>Back</button>
+                <button className="button" onClick={saveProfileAuth}>Save</button>
+            </div>
         </Fragment> 
     )
 
@@ -488,23 +534,40 @@ function EditProfile() {
             <div className="form-input-row">
                 <label>Username</label>
                 <input type="text" name="username-view" placeholder={user.username} autoComplete="off" disabled/>
-                <i className="fas fa-pen" onClick={() => showModalForm('username')}></i>
+                <i className="fas fa-pen"
+                    onClick={() => showModalForm('username')}
+                />
             </div>   
             <div className="form-input-row">
                 <label>Password</label>
                 <input type="password" name="password-view" placeholder="********" autoComplete="off" disabled/>
-                <i className="fas fa-pen" onClick={() => showModalForm('password')}></i>
+                <i
+                    className="fas fa-pen"
+                    onClick={() => showModalForm('password')}
+                />
             </div>
             <div className="form-input-row">
                 <label>Email</label>
                 <input type="text" name="email-view" placeholder={user.email} autoComplete="off" disabled/>
-                <i className="fas fa-pen" onClick={() => showModalForm('email')}></i>
+                <i
+                    className="fas fa-pen"
+                    onClick={() => showModalForm('email')}
+                />
             </div>
         </form>
     )
 
     const content = (
         <Fragment>
+            <i className="fas fa-trash delete-account" onClick={() => setShowDeleteModal(true)}/>
+            { showDeleteModal &&
+                <ModalForm
+                    title="Delete Account"
+                    content={deleteAccountModal}
+                    modalForm={showDeleteModal}
+                    setModalForm={setShowDeleteModal}
+                />
+            }
         <FormBox form={form} />
         { modalForm ? 
             <ModalForm
@@ -513,6 +576,8 @@ function EditProfile() {
                 content={modalContent}
                 success={savedAuthSuccessfully}
                 error={errorSavingAuth}
+                modalForm={modalForm}
+                setModalForm={setModalForm}
             />
             : null    
         }

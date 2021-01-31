@@ -17,6 +17,7 @@ import { selectCharacters } from '../character/characterSlice'
 function Profile() {
     const user = useSelector(selectUser);
     const { characters } = useSelector(selectCharacters);
+    const [ deleteCharacterModal, setDeleteCharacterModal ] = useState(false);
 
     const passUserData = () => {
 
@@ -42,14 +43,15 @@ function Profile() {
     const content = (
         <div className="Profile">
             <Link to="/edit-profile"><i className="fas fa-cog"></i></Link>
+            <Link to="/logout"><i className="fas fa-sign-out-alt"></i></Link>
             <div className="image-box">
                 <img className="profile-image" src={user.avatar || "/images/default_user.jpg"}/>
             </div>
-            <p className="char-name">{user.username}</p>
+            <p className="username">{user.username}</p>
 
             <div className="stars-box">
                 { renderStars() }
-                <Link to="/star-system"><i className="help fas fa-question-circle"></i></Link>
+                {/* <Link to="/star-system"><i className="help fas fa-question-circle"></i></Link> */}
             </div>
             <SmallTable
             title="Account Information"
@@ -58,6 +60,9 @@ function Profile() {
             <SmallTable
             title="Characters"
             data={characters}
+            icons={[
+                'fas fa-edit'
+            ]}
             />
             <Link className="link" to="/characters/new"><i className="fas fa-plus-circle"></i>Add New Character</Link>
             <div className="buttons__box">
