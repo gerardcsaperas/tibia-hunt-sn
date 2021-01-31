@@ -29,7 +29,7 @@ async function findMine(req, res) {
     const filter = queryToMongoFilter(req.query);
 
     try {
-        const huntingRecords = await HuntingRecord .find({ user: req.user._id }).populate("spot")
+        const huntingRecords = await HuntingRecord .find(filter.conditions).populate("spot")
         res.status(200).send(huntingRecords);
     } catch(e) {
         console.log(`Error retrieving hunting records for user ${req.user._id}. Error: ${e.message}`)
