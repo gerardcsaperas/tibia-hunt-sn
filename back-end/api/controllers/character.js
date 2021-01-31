@@ -20,6 +20,23 @@ async function findMine(req, res) {
 }
 
 /*
+type:    GET
+desc:    Get characters by id
+auth:    Private
+*/
+async function findById(req, res) {
+    try {
+        const character = await Character.findById(req.params.id)
+
+        res.status(200).send(character);
+
+    } catch(e) {
+        console.log(`Error retrieving characters for user ${req.user._id}. Error: ${e.message}`)
+        res.status(400).json({ message: `Error retrieving characters for user ${req.user._id}. Error: ${e.message}` })
+    }
+}
+
+/*
 type:    POST
 desc:    Create characters
 auth:    Private
@@ -57,7 +74,7 @@ async function update(req, res) {
         updates.forEach((update) => (character[update] = req.body[update]));
 
         await character.save();
-        res.status(201).send(character);
+        res.status(200).send(character);
 	} catch (e) {
         console.log(`There was an error updating your character. Error: ${e.message}`);
 		res.status(400).json({ message: `There was an error updating your character. Error: ${e.message}` })
@@ -113,6 +130,7 @@ async function updateTibiaData() {
 
 module.exports = {
     findMine,
+    findById,
     create,
     update,
     remove,
