@@ -70,9 +70,9 @@ const huntingRecordSchema = new Schema(
 					required: true,
 					type: Number,
 					min: 0
-				},
-				id: false
-			}
+				}
+			} ,
+			{ id: false }
 		],
 		ammunition: [
 			{
@@ -84,45 +84,29 @@ const huntingRecordSchema = new Schema(
 					required: true,
 					type: Number,
 					min: 0
-				},
-				id: false
-			}
+				}
+			} ,
+			{ id: false }
 		],
 		imbuements: [
 			{
-				imbuement: {
-					type: Schema.Types.ObjectId,
-					ref: 'Imbuement'
-				},
+				name: String,
 				ammount: {
 					type: Number,
 					required: true,
 					min: 0
-				},
-				id: false
-			}
+				}
+			} ,
+			{ id: false }
 		],
-		charms: [
-			{
-				charm: {
-					type: Schema.Types.ObjectId,
-					ref: 'Charm'
-				},
-				ammount: {
-					type: Number,
-					required: true,
-					min: 0
-				},
-				id: false
-			}
-		],
+		charms: [String],
 		preys: [{
 			type: String,
 			enum: [ 'Experience', 'Loot', 'Damage Reduction', 'Damage Reduction' ]
 		}],
 		huntPicture: {
 			type: String,
-			default: 'NoLoot.png'
+			default: '/images/default_loot.jpg'
 		},
 		expH: {
 			type: Number,
@@ -138,26 +122,11 @@ const huntingRecordSchema = new Schema(
 		},
 		difficulty: {
 			type: String,
-			default: 'Easy',
 			enum: [ 'Easy', 'Medium', 'Hard', 'Extreme' ]
 		},
-		specialEvents: {
-			doubleExp: {
-				type: Boolean,
-				default: false
-			},
-			DoubleLoot: {
-				type: Boolean,
-				default: false
-			},
-			RapidRespawn: {
-				type: Boolean,
-				default: false
-			},
-			BoostedCreature: {
-				type: Boolean,
-				default: false
-			}
+		specialEvent: {
+			type: String,
+			enum: [ 'Double Exp', 'Double Loot', 'Rapid Respawn', 'Boosted Creature' ]
 		},
 		teamComp: [
 			{

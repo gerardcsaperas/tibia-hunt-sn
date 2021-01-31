@@ -69,7 +69,15 @@ const userSchema = new Schema({
 		min: 0,
 		max: 5
 	},
-    tokens: [String]
+	tokens: [String],
+	resetPasswordToken: {
+		type: String,
+		required: false
+	},
+	resetPasswordExpires: {
+		type: Number,
+		required: false
+	}
 },
 {
     // Track user creation and update

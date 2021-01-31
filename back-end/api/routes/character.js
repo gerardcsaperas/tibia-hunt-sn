@@ -4,6 +4,7 @@ const characterController = require('../controllers/character.js');
 const router = new express.Router();
 
 router.get('/character', auth, characterController.findMine);
+router.get('/character/:id', auth, characterController.findById);
 router.post('/character', auth, characterController.create);
 router.put('/character/:id', auth, characterController.update);
 router.delete('/character/:id', auth, characterController.remove);

@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const notificationSchema = new Schema({
-    user: {
+    emitter: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    receiver: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
@@ -14,7 +18,7 @@ const notificationSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        enum: ['comment', 'like'] // What is the notification about? Did someone like? Or comment?
+        enum: ['comment', 'like', 'dislike'] // What is the notification about? Did someone like? Or comment?
     },
     notificationReference: {
         required: true,

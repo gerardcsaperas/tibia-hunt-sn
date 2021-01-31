@@ -21,7 +21,7 @@ const characterSchema = new Schema({
     vocation: {
         type: String,
         required: true,
-        enum: ['Knight', 'Elite Knight', 'Paladin', 'Royal Paladin', 'Druid', 'Elder Druid', 'Sorcerer', 'Master Sorcerer']
+        enum: ['Knight', 'EK', 'Paladin', 'RP', 'Druid', 'ED', 'Sorcerer', 'MS']
     },
     level: {
         type: Number,

@@ -5,5 +5,6 @@ const router = new express.Router();
 
 router.get('/notification', auth, notificationController.findMine);
 router.post('/notification', auth, notificationController.create);
+router.get('/notification/seen', auth, notificationController.updateSeen);
 
 module.exports = router;
