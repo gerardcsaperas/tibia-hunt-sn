@@ -24,6 +24,13 @@ async function create(req, res) {
     const spot = new Spot(req.body);
 
 	try {
+        const alreadyExists = await Spot.findOne({ name: { $regex: `^${req.body.name}$`, $options: "i"}, city: req.body.city })
+
+        if (alreadyExists) {
+            console.log(alreadyExists)
+            return res.status(201).send(spot);
+        }
+
         await spot.save()
         res.status(201).send(spot);
 	} catch (e) {
