@@ -27,6 +27,7 @@ function LogIn() {
   const [ email, setBodyEmail ] = useState('');
   const [ password, setPassword ] = useState('');
   const [ error, setError ] = useState(false);
+  const [ errorMsg, setErrorMsg ] = useState();
 
   const updateEmail = (e) => {
     setBodyEmail(e.target.value);
@@ -63,11 +64,18 @@ function LogIn() {
 				dispatch(setToken(token));
 				dispatch(authenticate());
       } else {
-
+        console.log('here')
+        setError(true);
       }
       
     } catch(e) {
-      console.error(e);
+      setError(true);
+      if (e.request.status === 400) {
+        setErrorMsg('Invalid Credentials');
+      } else {
+        setErrorMsg('Something went wrong, please contact us if the error persists.')
+      }
+      
     }
   };
 
@@ -81,7 +89,7 @@ function LogIn() {
           <label>Password:</label>
           <input type="password" name="password" onChange={(e) => updatePassword(e)} autoComplete="off"/>
         </div>
-        {error ? <p style={{color: "red"}}>Invalid credentials</p> : null }
+        {error ? <p style={{color: "red"}}>{ errorMsg }</p> : null }
         <p>Not a member yet?<Link to="/signup">Sign Up</Link></p>
         <Link to="/account-lost">Account Lost?</Link>
     </form>
