@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import axios from "axios";
 import { API_URL } from "../../config";
 import ContentBox from '../custom/ContentBox/ContentBox';
-import HuntSummary from '../huntingRecords/HuntSummary';
+import HuntSummary from './HuntSummary';
 import FiltersBox from '../custom/FiltersBox/FiltersBox';
 import "./HuntingRecordsList.scss";
 
@@ -34,7 +34,7 @@ function AllRecords() {
 
             query && (config.params = query);
 
-            const response = await axios.get(`${API_URL}/huntingRecord`, config);    
+            const response = await axios.get(`${API_URL}/huntingRecord/mine`, config);    
 
             if (response.status === 200) {
                     return setHuntList([...response.data])     
@@ -69,7 +69,7 @@ function AllRecords() {
     <ContentBox
       height="700px"
       width="980px"
-      title="All Records"
+      title="My Records"
       content={content}
     ></ContentBox>
     )

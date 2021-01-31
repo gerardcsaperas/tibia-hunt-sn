@@ -12,7 +12,7 @@ import './NewCharacter.scss';
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
 import { selectUser } from '../user/userSlice'
-import { addCharacter } from '../character/characterSlice'
+import { addCharacter } from './characterSlice'
 
 function NewCharacter(props) {
     const user = useSelector(selectUser);
