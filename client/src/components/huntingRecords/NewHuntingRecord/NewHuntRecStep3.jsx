@@ -8,7 +8,7 @@ import "./NewHuntingRecord.scss";
 const NewHuntRecStep3 = ({ _id, navigation, preys, setPreys, imbuements, setImbuements, charms, setCharms }) => {
 
   const { next, previous } = navigation;
-  const preyOptions = [ '', 'Experience', 'Loot', 'Damage Reduction', 'Damage Reduction' ];
+  const preyOptions = [ '', 'Experience', 'Loot', 'Damage Reduction', 'Damage Boost' ];
   const handlePreysChange = (e) => {
     const newArray = preys;
     let index = parseInt(e.target.name)
