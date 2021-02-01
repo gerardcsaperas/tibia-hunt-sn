@@ -19,7 +19,7 @@ function HomePage() {
       </div>
       <div className="buttons__box">
         <Link className="button" to="/login">Log In</Link>
-        <Link className="button" to="/hunting-records">Hunting Records</Link>
+        <Link className="button" to="/all-records">Hunting Records</Link>
       </div>
     </Fragment>
   )
