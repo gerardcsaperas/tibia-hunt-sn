@@ -19,7 +19,22 @@ function queryToMongoFilter(queryParams) {
                 queryParams[param] !== "" && filter.conditions.$and.push({ "profitH": { $gte: queryParams[param] } })
                 break;
             case 'vocation':
-                queryParams[param] !== "" && filter.conditions.$and.push({ "teamComp.vocation": { $regex: queryParams[param], $options: 'i' } })
+                switch (queryParams[param]) {
+                    case 'Knight':
+                        filter.conditions.$and.push({ "teamComp.vocation": { $in: ['Knight', 'EK'] } })
+                        break;
+                    case 'Paladin':
+                        filter.conditions.$and.push({ "teamComp.vocation": { $in: ['Paladin', 'RP'] } })
+                        break;
+                    case 'Druid':
+                        filter.conditions.$and.push({ "teamComp.vocation": { $in: ['Druid', 'ED'] } })
+                        break;
+                    case 'Sorcerer':
+                        filter.conditions.$and.push({ "teamComp.vocation": { $in: ['Sorcerer', 'MS'] } })
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case 'difficulty':
                 queryParams[param] !== "" && filter.conditions.$and.push({ "difficulty": queryParams[param] })
