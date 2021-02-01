@@ -6,8 +6,11 @@ import HuntSummary from './HuntSummary';
 import FiltersBox from '../custom/FiltersBox/FiltersBox';
 import "./HuntingRecordsList.scss";
 
-function AllRecords() {
+import { useSelector } from 'react-redux'
+import { selectUser } from '../user/userSlice'
 
+function AllRecords() {
+    const { token } = useSelector(selectUser);
     const [ huntList, setHuntList ] = useState();
     const [ expH, setExpH ] = useState('');
     const [ query, setQuery ] = useState({});
@@ -30,7 +33,11 @@ function AllRecords() {
     
     const getHuntList = async() => {
         try {
-            const config = {};
+            const config = {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            };
 
             query && (config.params = query);
 
