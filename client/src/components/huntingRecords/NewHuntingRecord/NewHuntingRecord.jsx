@@ -161,9 +161,10 @@ const NewHuntingRecord = () => {
 			};
 
 			let huntPicture;
-			if (picture) {
+			if (picture && picture !== '/images/default_loot.jpg') {
 				huntPicture = await postPicture();
 			}
+
 			const body = {
 				set,
 				spot: spot._id || spotId,
@@ -182,7 +183,10 @@ const NewHuntingRecord = () => {
 				opComment
 			}
 
-			const response = await axios.post(`${API_URL}/huntingRecord`, body, config);
+			const response = _id ? 
+			await axios.put(`${API_URL}/huntingRecord/${_id}`, body, config) :
+			await axios.post(`${API_URL}/huntingRecord`, body, config);
+			
 			if (response.status === 201 && response.data) {
 				setSaved(true);
 				window.location.href = `/record-details/${response.data._id}`
