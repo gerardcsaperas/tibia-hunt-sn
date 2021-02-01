@@ -102,7 +102,7 @@ const huntingRecordSchema = new Schema(
 		charms: [String],
 		preys: [{
 			type: String,
-			enum: [ 'Experience', 'Loot', 'Damage Reduction', 'Damage Reduction' ]
+			enum: [ 'Experience', 'Loot', 'Damage Reduction', 'Damage Boost' ]
 		}],
 		huntPicture: {
 			type: String,
