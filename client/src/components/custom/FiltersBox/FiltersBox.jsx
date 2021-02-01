@@ -65,7 +65,7 @@ function FiltersBox(props) {
             <img className="loupe" src="./images/Loupe.gif" alt="Loupe" />
             <form className="grill">
                 <div className="dividers">
-                    <label>Your Level:</label>
+                    <label>Max Level:</label>
                     <input name="level" type="number" min="1" onChange={handleChange} autoComplete="off"/>
                 </div>
 
