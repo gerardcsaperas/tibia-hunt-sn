@@ -49,10 +49,6 @@ function App() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		console.log(user);
-	}, [user])
-
-	useEffect(() => {
 		getUser();
 	}, []);
 
@@ -66,8 +62,6 @@ function App() {
 		let localStorageUser = JSON.parse(localStorage.getItem('TibiaHuntingRecordsUser'));
 
 		if (localStorageUser && localStorageUser.token) {
-
-			console.log(localStorageUser)
 
 			const options = {
 				headers: {
@@ -104,7 +98,6 @@ function App() {
                     'Authorization': `Bearer ${user.token}`
                 }
             };
-			console.log(user.token);
             const response = await axios.get(`${API_URL}/character`, config);
             
             if (response.status === 200) {
