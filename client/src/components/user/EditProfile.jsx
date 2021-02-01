@@ -123,9 +123,9 @@ function EditProfile() {
                 setSavedSuccessfully(true);
                 dispatch(setAvatar(response.data.avatar));
                 dispatch(setCountry(response.data.country));
-                // setTimeout(() => {
-                //     window.location.href = '/profile'
-                // }, 1500)
+                setTimeout(() => {
+                    window.location.href = '/profile'
+                }, 1500)
             }
 
         } catch(e) {
