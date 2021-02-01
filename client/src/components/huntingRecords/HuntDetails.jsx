@@ -12,7 +12,6 @@ import axios from "axios";
 import { API_URL } from "../../config";
 import './HuntDetails.scss';
 
-
 // Redux
 import { useSelector } from 'react-redux'
 import { selectUser } from '../user/userSlice'
@@ -225,14 +224,17 @@ function HuntDetails() {
       return (
         <div id="huntDetails">
           <p className="createdAt">{new Date(createdAt).toString().slice(0,34)}</p>
-          <LikeButtons
-              id="huntDetails__likes"
-              likes={likes}
-              dislikes={dislikes}
-              handleClickLike={handleHuntingRecordLike}
-              handleClickDislike={handleHuntingRecordDislike}
-              comments={false}
-          />
+          { 
+              authenticated && 
+              <LikeButtons
+                  id="huntDetails__likes"
+                  likes={likes}
+                  dislikes={dislikes}
+                  handleClickLike={handleHuntingRecordLike}
+                  handleClickDislike={handleHuntingRecordDislike}
+                  comments={false}
+              />
+          }
           { huntUser._id === uid && (
             <div className="delete-edit__box">
                 <Link to={`/edit-hunting-record/${_id}`}>
@@ -253,7 +255,7 @@ function HuntDetails() {
           <div className="leftOrganiser">
 
             <div className="userInformation">
-              <img src="/images/default_user.jpg" alt="profilePic"></img>
+              <img src={huntUser.avatar} alt="profilePic"></img>
               <p className="username">{huntUser.username}</p>
               <StarRatings
                   rating={huntUser.stars}
@@ -353,7 +355,7 @@ function HuntDetails() {
 
             {/*-- Team --*/}
             <SmallTable
-            title="Additional Team"
+            title="Team"
             data={team}
             marginTop={"20px"}
             />
