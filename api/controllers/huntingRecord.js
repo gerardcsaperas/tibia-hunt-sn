@@ -11,7 +11,7 @@ async function find(req, res) {
     const filter = queryToMongoFilter(req.query);
 
     try {
-        const huntingRecords = await HuntingRecord.find(filter.conditions).populate("spot")
+        const huntingRecords = await HuntingRecord.find(filter.conditions).populate("spot").sort("-expH")
         res.status(200).send(huntingRecords);
     } catch(e) {
         console.log(`Error retrieving hunting records. Error: ${e.message}`)
@@ -27,9 +27,14 @@ auth:    Private
 async function findMine(req, res) {
 
     const filter = queryToMongoFilter(req.query);
+    if (!filter.conditions || !filter.conditions.$and) {
+        filter.conditions.$and = [{ user: req.user._id }]
+    } else {
+        filter.conditions.$and.push({ user: req.user._id })
+    }
 
     try {
-        const huntingRecords = await HuntingRecord .find(filter.conditions).populate("spot")
+        const huntingRecords = await HuntingRecord.find(filter.conditions).populate("spot").sort("-expH")
         res.status(200).send(huntingRecords);
     } catch(e) {
         console.log(`Error retrieving hunting records for user ${req.user._id}. Error: ${e.message}`)
