@@ -5,10 +5,6 @@ import './SmallTable.scss'
 function SmallTable(props) {
 
     const differentEvenOdd = (index) => (index % 2 > 0 ? '#E1D8C6' : '#F5EFE4') 
-    
-    useEffect(() => {
-        console.log(props.icons)
-    }, [props.icons])
 
     if (!props.data || props.data.length === 0) {
         return null;
