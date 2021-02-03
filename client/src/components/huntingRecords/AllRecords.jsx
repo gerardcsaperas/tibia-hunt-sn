@@ -47,34 +47,22 @@ function AllRecords() {
 
     const content = (
         <Fragment>
-            <p>We found a bug! 🐛</p>
-            <p>
-                You might still be able to access{" "}
-                <a href="/my-records">"My Records"</a>.
-            </p>
-            <p>If you're not, you're the one who caused the bug! 🌚</p>
-            <p>
-                Take a break from the website, go hunting for a bit and come
-                back around 19:30. It should be solved by then.
-            </p>
-            <p>Kind Regards,</p>
-            <p>Gerard</p>
+            <FiltersBox handleChange={handleChange} filterClick={getHuntList} />
+            <ol className="listContainer">
+                <li className="recordsList">
+                    {huntList && huntList.length > 0
+                        ? huntList.map((huntingRecord, index) => {
+                              return (
+                                  <HuntSummary
+                                      data={huntingRecord}
+                                      key={index}
+                                  />
+                              );
+                          })
+                        : null}
+                </li>
+            </ol>
         </Fragment>
-        // <Fragment>
-        //     <FiltersBox handleChange={handleChange} filterClick={getHuntList} />
-        //     <ol className="listContainer">
-        //         <li className="recordsList">
-        //             {
-        //                 huntList && huntList.length > 0 ?
-        //                     huntList.map((huntingRecord, index) => {
-        //                     return <HuntSummary data={huntingRecord} key={index} />
-
-        //                 })
-        //                  : null
-        //             }
-        //         </li>
-        //     </ol>
-        // </Fragment>
     );
 
     return (
