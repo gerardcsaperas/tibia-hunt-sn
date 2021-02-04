@@ -41,6 +41,13 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 		vocation: '',
 		level: 1
 	});
+	const axeWeapons = Weapons.filter(weapon => weapon.type ==="Axe_Weapons")
+	const clubWeapons = Weapons.filter(weapon => weapon.type ==="Club_Weapons")
+	const swordWeapons = Weapons.filter(weapon => weapon.type ==="Sword_Weapons")
+	const distanceWeapons = Weapons.filter(weapon => weapon.type ==="Distance_Weapons")
+	const rodWeapons = Weapons.filter(weapon => weapon.type ==="Rods")
+	const wandWeapons = Weapons.filter(weapon => weapon.type ==="Wands")
+
 	const [ validStep, setValidStep ] = useState(false);
 	const handleItemSelection = (type, e) => {
 		setSet({
@@ -80,7 +87,49 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 					<img src={`../images/${set.Weapons.type}/${set.Weapons.name}.jpg`} className="Weapons" />
 				)}
 				<select className="Weapons" onChange={(e) => handleObjectSelection('Weapons', e)}>
-					{Weapons.map((weapon, index) => {
+					<optgroup label="Axe Weapons">
+						{
+							axeWeapons.map((weapon, index) => {
+						return <option key={index} value={weapon.name}>{weapon.name}</option>
+						})
+						}
+					</optgroup>
+					<optgroup label="Club Weapons">
+						{
+							clubWeapons.map((weapon, index) => {
+							return <option key={index} value={weapon.name}>{weapon.name}</option>
+							})
+						}
+					</optgroup>
+					<optgroup label="Sword Weapons">
+						{
+							swordWeapons.map((weapon, index) => {
+							return <option key={index} value={weapon.name}>{weapon.name}</option>
+							})
+						}
+					</optgroup>
+					<optgroup label="Distance Weapons">
+						{
+							distanceWeapons.map((weapon, index) => {
+							return <option key={index} value={weapon.name}>{weapon.name}</option>
+							})
+						}
+					</optgroup>
+					<optgroup label="Rods">
+						{
+							rodWeapons.map((weapon, index) => {
+							return <option key={index} value={weapon.name}>{weapon.name}</option>
+							})
+						}
+					</optgroup>
+					<optgroup label="Wands">
+						{
+							wandWeapons.map((weapon, index) => {
+							return <option key={index} value={weapon.name}>{weapon.name}</option>
+							})
+						}
+					</optgroup>
+					{/* {Weapons.map((weapon, index) => {
 						return (
 							<option
 								value={JSON.stringify({
@@ -92,7 +141,7 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 								{weapon.name}
 							</option>
 						);
-					})}
+					})} */}
 				</select>
 			</Fragment>
 			<Fragment>
