@@ -48,6 +48,8 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 	const rodWeapons = Weapons.filter(weapon => weapon.type ==="Rods")
 	const wandWeapons = Weapons.filter(weapon => weapon.type ==="Wands")
 
+	const [ selectedWeapon, setSelectedWeapon ] = useState();
+
 	const [ validStep, setValidStep ] = useState(false);
 	const handleItemSelection = (type, e) => {
 		setSet({
@@ -61,6 +63,7 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 			[type]: JSON.parse(e.target.value)
 		});
 	};
+
 	const equipmentForm = (
 		<div className="setImgContainer">
 			{ItemArrays.map((itemArray) => {
@@ -87,6 +90,8 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 					<img src={`../images/${set.Weapons.type}/${set.Weapons.name}.jpg`} className="Weapons" />
 				)}
 				<select className="Weapons" onChange={(e) => handleObjectSelection('Weapons', e)}>
+				{/* <select className="Weapons" onChange={(e) => setSelectedWeapon({...selectedWeapon, [e.target.name]: e.target.value})}>
+				
 					<optgroup label="Axe Weapons">
 						{
 							axeWeapons.map((weapon, index) => {
@@ -128,20 +133,23 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 							return <option key={index} value={weapon.name}>{weapon.name}</option>
 							})
 						}
-					</optgroup>
-					{/* {Weapons.map((weapon, index) => {
+					</optgroup> */}
+					
+					{Weapons.map((weapon, index) => {
+						console.log(weapon.name)
+						console.log(weapon.type)
 						return (
-							<option
-								value={JSON.stringify({
-									name: nameWithoutSpace(weapon.name),
-									type: weapon.type
-								})}
-								key={index}
-							>
-								{weapon.name}
-							</option>
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
 						);
-					})} */}
+					})}
 				</select>
 			</Fragment>
 			<Fragment>
