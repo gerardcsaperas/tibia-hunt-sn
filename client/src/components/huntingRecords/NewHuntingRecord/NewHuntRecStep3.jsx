@@ -147,9 +147,15 @@ const NewHuntRecStep3 = ({
                     />
                     <i
                         className="fas fa-plus-circle"
-                        onClick={() =>
-                            setImbuements(imbuements.concat(selectedImbuement))
-                        }
+                        onClick={() => {
+                            if (selectedImbuement.ammount &&
+                                selectedImbuement.ammount >= 1) {
+                                setImbuements(imbuements.concat(selectedImbuement))
+                            } else {
+                                selectedImbuement.ammount = 1;
+                                setImbuements(imbuements.concat(selectedImbuement))
+                            }
+                        }}
                     />
                 </div>
             </div>
@@ -246,10 +252,10 @@ const NewHuntRecStep3 = ({
             </div>
 
             <div className="nextPage">
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="fas fa-circle"></i>
+                <i className="far fa-circle"></i>
             </div>
         </Fragment>
     );

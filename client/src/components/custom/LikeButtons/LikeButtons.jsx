@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 // Redux
 import { useSelector } from "react-redux";
@@ -9,7 +8,6 @@ function LikeButtons(props) {
     const { uid } = useSelector(selectUser);
 
     const {
-        color,
         likes,
         dislikes,
         handleClickLike,
@@ -48,7 +46,7 @@ function LikeButtons(props) {
                 {" "}
                 {`${dislikes.length}`}
             </i>
-            {comments && <i class="far fa-comment"> {`${commentsNum}`}</i>}
+            {comments && <i className="far fa-comment"> {`${commentsNum}`}</i>}
         </div>
     );
 }

@@ -164,10 +164,10 @@ const NewHuntRecStep4 = ({
             </div>
 
             <div className="nextPage">
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="far fa-circle"></i>
+                <i className="fas fa-circle"></i>
             </div>
         </Fragment>
     );

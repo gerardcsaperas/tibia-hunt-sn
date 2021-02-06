@@ -27,7 +27,7 @@ auth:    Private
 async function findById(req, res) {
 
     try {
-        const user = await User.findById(req.params.id);
+        const user = await User.findById(req.params.id).select('username stars avatar');
 
         if(!user) {
             return res.status(404).json({ message: `We couldn't find user with id ${req.params.id}` })

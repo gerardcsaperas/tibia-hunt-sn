@@ -5,36 +5,6 @@ const { Cloudinary } = require('../utils/cloudinary');
 
 /*
 type:    GET
-desc:    Get all items
-auth:    Public
-*/
-async function findItems(req, res) {
-    try {
-        const items = await Item.find();
-        res.status(200).send(items);
-    } catch(e) {
-        console.log(`There was a problem trying to retrieve items. Error: ${e.message}`);
-        res.status(500).json({ message: `There was a problem trying to retrieve items. Error: ${e.message}` })
-    }
-}
-
-/*
-type:    GET
-desc:    Get a single item by id
-auth:    Public
-*/
-async function findItemById(req, res) {
-    try {
-        const item = await Item.findById(req.params.id);
-        res.status(200).send(item);
-    } catch(e) {
-        console.log(`There was a problem trying to retrieve item ${req.params.id}. Error: ${e.message}`);
-        res.status(500).json({ message: `There was a problem trying to retrieve item ${req.params.id}. Error: ${e.message}` })
-    }
-}
-
-/*
-type:    GET
 desc:    Get all imbuements
 auth:    Public
 */
@@ -144,8 +114,6 @@ async function postHuntingRecordImage(req, res) {
 }
 
 module.exports = {
-    findItems,
-    findItemById,
     findImbuements,
     findImbuementById,
     findCharms,

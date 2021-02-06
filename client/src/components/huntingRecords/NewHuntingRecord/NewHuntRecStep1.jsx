@@ -80,10 +80,10 @@ const NewHuntRecStep1 = ({
     };
     const equipmentForm = (
         <div className="setImgContainer">
-            {ItemArrays.map((itemArray) => {
+            {ItemArrays.map((itemArray, index) => {
                 let type = itemArray[0].type;
                 return (
-                    <Fragment>
+                    <Fragment key={index}>
                         {set && set[type] && (
                             <img
                                 src={`../images/${type}/${set[type]}.jpg`}
@@ -269,9 +269,10 @@ const NewHuntRecStep1 = ({
                         }
                     >
                         {fetchedSpots &&
-                            fetchedSpots.map((spot) => {
+                            fetchedSpots.map((spot, index) => {
                                 return (
                                     <p
+                                        key={index}
                                         onClick={() =>
                                             selectSpotFromDropdown(spot)
                                         }
@@ -427,10 +428,10 @@ const NewHuntRecStep1 = ({
             </div>
 
             <div className="nextPage">
-                <i class="fas fa-circle" />
-                <i class="far fa-circle" />
-                <i class="far fa-circle" />
-                <i class="far fa-circle" />
+                <i className="fas fa-circle" />
+                <i className="far fa-circle" />
+                <i className="far fa-circle" />
+                <i className="far fa-circle" />
             </div>
         </Fragment>
     );

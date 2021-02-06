@@ -1,5 +1,10 @@
 [
   {
+    "name": "No Shield",
+    "image": "empty",
+    "type": "Shields"
+  },
+  {
     "name": "Adamant Shield",
     "image": "https://static.wikia.nocookie.net/tibia/images/e/e2/Adamant_Shield.gif/revision/latest?cb=20180912220944&amp;path-prefix=en",
     "type": "Shields"

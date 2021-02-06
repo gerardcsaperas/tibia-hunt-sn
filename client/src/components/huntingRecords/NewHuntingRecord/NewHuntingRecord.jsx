@@ -256,6 +256,7 @@ const NewHuntingRecord = () => {
         setAmmunition,
         expH,
         setExpH,
+        expRatio,
         setExpRatio,
         profitH,
         setProfitH,

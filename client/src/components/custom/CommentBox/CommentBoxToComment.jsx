@@ -13,7 +13,7 @@ import { selectViewport } from '../../layout/viewportSlice'
 function CommentBoxToComment(props) {
     const { width } = useSelector(selectViewport);
     const user = useSelector(selectUser);
-    const { username, stars, uid } = user
+    const { username, stars } = user
     let { recordID }  = useParams();
     const [ text, setText ] = useState();
     if (!props) {
@@ -45,7 +45,7 @@ function CommentBoxToComment(props) {
                     notificationReference: props.notificationReference,
                     notificationOrigin: 'huntingRecord'                    
                 }
-                const postNotification = await axios.post(`${API_URL}/notification`, notificationBody, config);
+                await axios.post(`${API_URL}/notification`, notificationBody, config);
                 window.location.reload()
             }
             

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import './ContentBox.scss';
 
 // Redux Store
@@ -18,10 +18,6 @@ function ContentBox(props) {
                 <div className="ContentBox__content">{props.content}</div>
             </div>
         </div>
-    )
-
-    const mobileComponent = (
-        <h1 style={{color: "white"}}>Hi! I'm mobile, motherfucker! Reactive! Boooyah!</h1>
     )
 
     return desktopComponent;

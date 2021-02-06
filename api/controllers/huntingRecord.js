@@ -107,6 +107,10 @@ async function update(req, res) {
             return res.status(404).json({ message: `We couldn't find hunting record with id ${req.params.id}` })
         }
 
+        if (!req.user._id.equals(huntingRecord.user)) {
+            return res.status(403).json({ message: "You do not have permissions on this record." })
+        }
+
         updates.forEach((update) => (huntingRecord[update] = req.body[update]));
 
         await huntingRecord.save();

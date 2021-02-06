@@ -17,6 +17,7 @@ const NewHuntRecStep2 = ({
     setSupplies,
     ammunition,
     setAmmunition,
+    expRatio,
     setExpRatio,
     expH,
     setExpH,
@@ -190,6 +191,7 @@ const NewHuntRecStep2 = ({
                 <select
                     name="expRatio"
                     onChange={(e) => setExpRatio(e.target.value)}
+                    value={expRatio}
                 >
                     <option value={1}>100%</option>
                     <option value={1.5} defaultValue>
@@ -276,10 +278,10 @@ const NewHuntRecStep2 = ({
             </div>
 
             <div className="nextPage">
-                <i class="far fa-circle" />
-                <i class="fas fa-circle" />
-                <i class="far fa-circle" />
-                <i class="far fa-circle" />
+                <i className="far fa-circle" />
+                <i className="fas fa-circle" />
+                <i className="far fa-circle" />
+                <i className="far fa-circle" />
             </div>
         </Fragment>
     );

@@ -27,7 +27,7 @@ function CommentBoxToDisplay(props) {
         return null;
     }
 
-    const { receiver, notificationReference, id, comment, createdAt, isOp, likes, dislikes } = props
+    const { receiver, notificationReference, id, comment, createdAt, isOp } = props
     const { username, stars } = props.user || { username: '(user deleted)', stars: 0 };
 
     const patchLikes = async (likeOrDislike) => {
@@ -50,7 +50,7 @@ function CommentBoxToDisplay(props) {
                     notificationOrigin: 'comment'                    
                 }
 
-                const postNotification = await axios.post(`${API_URL}/notification`, notificationBody, config);
+                await axios.post(`${API_URL}/notification`, notificationBody, config);
                 return
             }
           
@@ -120,19 +120,18 @@ function CommentBoxToDisplay(props) {
 
                 <div className="rightData">
                     <p>{comment}</p>
-                    <div className="rating">
-                        
-                        { !isOp && likesDislikes && (
-                            <LikeButtons
-                            likes={likesDislikes.likes}
-                            dislikes={likesDislikes.dislikes}
-                            handleClickLike={handleCommentLike}
-                            handleClickDislike={handleCommentDislike}
-                            comments={false}
-                        />
-                        )}
-                    </div>
                 </div>
+            </div>
+            <div className="rating">
+                { !isOp && likesDislikes && (
+                    <LikeButtons
+                        likes={likesDislikes.likes}
+                        dislikes={likesDislikes.dislikes}
+                        handleClickLike={handleCommentLike}
+                        handleClickDislike={handleCommentDislike}
+                        comments={false}
+                    />
+                )}
             </div>
         </div>
     )

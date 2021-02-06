@@ -173,7 +173,11 @@ function HuntDetails() {
                     {higherSkill}
                     <img
                         className="inline-img"
-                        src={`../images/${set.Shields.type}/${set.Shields.name}.jpg`}
+                        src={
+                            set.Shields.name !== "No_Shield" ?
+                            `../images/${set.Shields.type}/${set.Shields.name}.jpg` :
+                            `../images/Shields/Dwarven_Shield.jpg`
+                        }
                     />
                     {skills.shielding}
                 </p>
@@ -220,7 +224,7 @@ function HuntDetails() {
             opComment,
             preys,
             profitH,
-            specialEvents,
+            specialEvent,
             spot,
             supplies,
             ammunition,
@@ -317,6 +321,7 @@ function HuntDetails() {
                                         default:
                                             return (
                                                 <img
+                                                    key={index}
                                                     className={`${type}`}
                                                     src={`../images/${type}/${set[type]}.jpg`}
                                                     alt={`${set[type]}`}
@@ -325,6 +330,7 @@ function HuntDetails() {
                                         case "Shields":
                                             return (
                                                 <img
+                                                    key={index}
                                                     className={`${type}`}
                                                     src={`../images/${set[type].type}/${set[type].name}.jpg`}
                                                     alt={`${set[type].name}`}
@@ -333,6 +339,7 @@ function HuntDetails() {
                                         case "Weapons":
                                             return (
                                                 <img
+                                                    key={index}
                                                     className={`${type}`}
                                                     src={`../images/${set[type].type}/${set[type].name}.jpg`}
                                                     alt={`${set[type].name}`}
@@ -493,7 +500,7 @@ function HuntDetails() {
                             <p>Special Event</p>
                         </div>
                         <div className="details__content">
-                            <p>{specialEvents}</p>
+                            <p>{specialEvent}</p>
                         </div>
                     </div>
                 </div>
@@ -515,7 +522,7 @@ function HuntDetails() {
                         user={huntUser}
                         isOp={true}
                     />
-                    {comments.map((comment) => {
+                    {comments.map((comment, index) => {
                         let {
                             _id,
                             text,
@@ -526,6 +533,7 @@ function HuntDetails() {
                         } = comment;
                         return (
                             <CommentBoxToDisplay
+                                key={index}
                                 receiver={huntUser._id}
                                 notificationReference={huntDetails._id}
                                 id={_id}

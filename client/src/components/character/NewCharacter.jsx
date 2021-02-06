@@ -10,19 +10,17 @@ import ModalForm from '../custom/ModalForm/ModalForm';
 import './NewCharacter.scss';
 
 // Redux
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { selectUser } from '../user/userSlice'
-import { addCharacter } from './characterSlice'
 
 function NewCharacter(props) {
     const user = useSelector(selectUser);
-    const dispatch = useDispatch();
     const { _id } = useParams();
     const [ characterName, setCharacterName ] = useState('');
     const [ nameError, setNameError ] = useState(false);
     const [ tibiaApiSync, setApiSync ] = useState(false);
+    const [ apiError, setApiError ] = useState(false);
     const [ charDoesNotExistError, setCharDoesNotExistError ] = useState(false);
-    const [ loading, setLoading ] = useState(false);
     const [ disabledInputs, setDisabledInputs ] = useState(false);
     const [ level, setLevel ] = useState(1);
     const [ levelError, setLevelError ] = useState(false);
@@ -90,14 +88,16 @@ function NewCharacter(props) {
     }
 
     const getTibiaData = async(characterName) => {
-        setLoading(true);
         const response = await axios.get(`https://api.tibiadata.com/v2/characters/${characterName}.json`);
         
+        if (response.status !== 200) {
+            setApiError(true);
+        }
+
         if (response.data.characters.error === "Character does not exist.") {
             setApiSync(false);
             setDisabledInputs(false);
             setCharDoesNotExistError(true);
-            setLoading(false);
             return;
         }
 
@@ -105,12 +105,13 @@ function NewCharacter(props) {
         setLevel(character.level);
         setVocation(shortenVocation(character.vocation));
         setWorld(character.world);
-        setLoading(false);
     }
 
     const updateCharacterName = (characterName) => {
         setApiSync(false);
         setNameError(false);
+        setCharDoesNotExistError(false);
+        setApiError(false);
         setCharacterName(characterName);
     }
 
@@ -201,7 +202,7 @@ function NewCharacter(props) {
             </div>
             <div className="form-input-row" style={{flexDirection: "row", alignItems: "center"}}>
                 <label>Sync with Tibia.com?</label>
-                <input type="checkbox" style={{width: "30px"}} onChange={() => setApiSync(!tibiaApiSync)} checked={tibiaApiSync} disabled={loading}/>
+                <input type="checkbox" style={{width: "30px"}} onChange={() => setApiSync(!tibiaApiSync)} checked={tibiaApiSync} disabled={disabledInputs || characterName === ""}/>
             </div>
             <div className="form-input-row">
                 <label>Level*</label>
@@ -230,32 +231,34 @@ function NewCharacter(props) {
                 </select>
             </div>
             <p className="form-tip">*Mandatory field.</p>
+            { charDoesNotExistError && <p className="error">Character does not exist.</p>}
+            { apiError && <p className="error">There was an error trying to fetch your character.</p> }
         </div>
     ) : (       
         <div className="form NewCharacter" style={{paddingTop: "40px"}}>
             <h1>Skills</h1>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Axe.gif"}/>Axe Fighting</label>
+                <label><img className="label-miniature" src={"../../images/Axe.gif"} alt="axe"/>Axe Fighting</label>
                 <input type="number" name="axeFighting" min="1" value={axeFighting} onChange={(e) => setAxeFighting(e.target.value)} autoComplete="off" />
             </div>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Mace.gif"}/>Club Fighting</label>
+                <label><img className="label-miniature" src={"../../images/Mace.gif"} alt="mace"/>Club Fighting</label>
                 <input type="number" name="clubFighting" min="1" value={clubFighting} onChange={(e) => setClubFighting(e.target.value)} autoComplete="off" />
             </div>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Sword.gif"}/>Sword Fighting</label>
+                <label><img className="label-miniature" src={"../../images/Sword.gif"} alt="sword"/>Sword Fighting</label>
                 <input type="number" name="swordFighting" min="1" value={swordFighting} onChange={(e) => setSwordFighting(e.target.value)} autoComplete="off" />
             </div>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Spear.gif"}/>Distance Fighting</label>
+                <label><img className="label-miniature" src={"../../images/Spear.gif"} alt="spear"/>Distance Fighting</label>
                 <input type="number" name="distanceFighting" min="1" value={distanceFighting} onChange={(e) => setDistanceFighting(e.target.value)} autoComplete="off" />
             </div>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Shields/Dwarven_Shield.jpg"}/>Shielding</label>
+                <label><img className="label-miniature" src={"../../images/Shields/Dwarven_Shield.jpg"} alt="dwarven shield"/>Shielding</label>
                 <input type="number" name="shielding" min="1" value={shielding} onChange={(e) => setShielding(e.target.value)} autoComplete="off" />
             </div>
             <div className="form-input-row">
-                <label><img className="label-miniature" src={"../../images/Spellbook.gif"}/>Magic Level</label>
+                <label><img className="label-miniature" src={"../../images/Spellbook.gif"} alt="spellbook"/>Magic Level</label>
                 <input type="number" name="magicLevel" min="1" value={magicLevel} onChange={(e) => setMagicLevel(e.target.value)} autoComplete="off" />
             </div>
         </div>)

@@ -140,7 +140,7 @@ function MyNavBar() {
             </div>
 
             <div className="contact">
-                <NavLink to="/contact"><i class="far fa-address-book"></i>{renderMenuText('Contact')}</NavLink>  
+                <NavLink to="/contact"><i className="far fa-address-book"></i>{renderMenuText('Contact')}</NavLink>  
             </div>
 
         </div>

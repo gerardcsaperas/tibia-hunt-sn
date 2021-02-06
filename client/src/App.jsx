@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import {
     BrowserRouter as Router,
@@ -50,72 +50,70 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        const getUser = async () => {
+            let localStorageUser = JSON.parse(
+                localStorage.getItem("TibiaHuntingRecordsUser")
+            );
+    
+            if (localStorageUser && localStorageUser.token) {
+                const options = {
+                    headers: {
+                        Authorization: `Bearer ${localStorageUser.token}`,
+                    },
+                };
+    
+                try {
+                    let user = await axios.get(`${API_URL}/user`, options);
+    
+                    if (!user) {
+                        console.log("no user");
+                        throw new Error();
+                    }
+                    dispatch(setUsername(user.data.username));
+                    dispatch(setAvatar(user.data.avatar));
+                    dispatch(setEmail(user.data.email));
+                    dispatch(setCountry(user.data.country));
+                    dispatch(setStars(user.data.stars));
+                    dispatch(setUid(user.data._id));
+                    dispatch(setToken(localStorageUser.token));
+                    dispatch(authenticate());
+                } catch (e) {
+                    console.error(
+                        "There was an error when trying to verify your user. " +
+                            e.message
+                    );
+                }
+            }
+        };
         getUser();
     }, []);
 
     useEffect(() => {
         if (authenticated) {
+            const getCharacters = async () => {
+                try {
+                    const config = {
+                        headers: {
+                            Authorization: `Bearer ${user.token}`,
+                        },
+                    };
+                    const response = await axios.get(`${API_URL}/character`, config);
+        
+                    if (response.status === 200) {
+                        if (response.data.length > 0) {
+                            const characters = response.data.map((char) => {
+                                return [char.name, char.vocation, char.level, char._id];
+                            });
+                            dispatch(setCharacters(characters));
+                        }
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            };
             getCharacters();
         }
     }, [authenticated]);
-
-    const getUser = async () => {
-        let localStorageUser = JSON.parse(
-            localStorage.getItem("TibiaHuntingRecordsUser")
-        );
-
-        if (localStorageUser && localStorageUser.token) {
-            const options = {
-                headers: {
-                    Authorization: `Bearer ${localStorageUser.token}`,
-                },
-            };
-
-            try {
-                let user = await axios.get(`${API_URL}/user`, options);
-
-                if (!user) {
-                    console.log("no user");
-                    throw new Error();
-                }
-                dispatch(setUsername(user.data.username));
-                dispatch(setAvatar(user.data.avatar));
-                dispatch(setEmail(user.data.email));
-                dispatch(setCountry(user.data.country));
-                dispatch(setStars(user.data.stars));
-                dispatch(setUid(user.data._id));
-                dispatch(setToken(localStorageUser.token));
-                dispatch(authenticate());
-            } catch (e) {
-                console.error(
-                    "There was an error when trying to verify your user. " +
-                        e.message
-                );
-            }
-        }
-    };
-
-    const getCharacters = async () => {
-        try {
-            const config = {
-                headers: {
-                    Authorization: `Bearer ${user.token}`,
-                },
-            };
-            const response = await axios.get(`${API_URL}/character`, config);
-
-            if (response.status === 200) {
-                if (response.data.length > 0) {
-                    const characters = response.data.map((char) => {
-                        return [char.name, char.vocation, char.level, char._id];
-                    });
-                    dispatch(setCharacters(characters));
-                }
-            }
-        } catch (e) {
-            console.error(e);
-        }
-    };
 
     // Window resize listener to make custom responsive components
     useEffect(() => {

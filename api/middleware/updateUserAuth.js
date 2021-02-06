@@ -11,6 +11,14 @@ const updateUserAuth = async (req, res, next) => {
                     continue;
                 }
 
+                if (update === 'email') {
+                    continue;
+                }
+
+                if (update === 'stars') {
+                    return res.status(403).json({ message: "You're not allowed to update stars manually. One star less for you! :(|" })
+                }
+
                 if (
                     update === 'newUsername' ||
                     update === 'newPassword' ||
