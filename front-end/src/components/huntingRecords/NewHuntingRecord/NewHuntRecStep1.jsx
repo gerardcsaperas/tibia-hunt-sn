@@ -90,54 +90,9 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 					<img src={`../images/${set.Weapons.type}/${set.Weapons.name}.jpg`} className="Weapons" />
 				)}
 				<select className="Weapons" onChange={(e) => handleObjectSelection('Weapons', e)}>
-				{/* <select className="Weapons" onChange={(e) => setSelectedWeapon({...selectedWeapon, [e.target.name]: e.target.value})}>
-				
-					<optgroup label="Axe Weapons">
+					<optgroup className="divider" label="Axe Weapons">
 						{
-							axeWeapons.map((weapon, index) => {
-						return <option key={index} value={weapon.name}>{weapon.name}</option>
-						})
-						}
-					</optgroup>
-					<optgroup label="Club Weapons">
-						{
-							clubWeapons.map((weapon, index) => {
-							return <option key={index} value={weapon.name}>{weapon.name}</option>
-							})
-						}
-					</optgroup>
-					<optgroup label="Sword Weapons">
-						{
-							swordWeapons.map((weapon, index) => {
-							return <option key={index} value={weapon.name}>{weapon.name}</option>
-							})
-						}
-					</optgroup>
-					<optgroup label="Distance Weapons">
-						{
-							distanceWeapons.map((weapon, index) => {
-							return <option key={index} value={weapon.name}>{weapon.name}</option>
-							})
-						}
-					</optgroup>
-					<optgroup label="Rods">
-						{
-							rodWeapons.map((weapon, index) => {
-							return <option key={index} value={weapon.name}>{weapon.name}</option>
-							})
-						}
-					</optgroup>
-					<optgroup label="Wands">
-						{
-							wandWeapons.map((weapon, index) => {
-							return <option key={index} value={weapon.name}>{weapon.name}</option>
-							})
-						}
-					</optgroup> */}
-					
-					{Weapons.map((weapon, index) => {
-						console.log(weapon.name)
-						console.log(weapon.type)
+						axeWeapons.map((weapon, index) => {
 						return (
 								<option
 									value={JSON.stringify({
@@ -148,8 +103,95 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 								> 
 									{weapon.name}
 								</option>
-						);
-					})}
+								);
+							})
+						}
+					</optgroup>
+					<optgroup className="divider" label="Club Weapons">
+						{
+						clubWeapons.map((weapon, index) => {
+						return (
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
+								);
+							})
+						}
+					</optgroup>
+					<optgroup className="divider" label="Sword Weapons">
+						{
+						swordWeapons.map((weapon, index) => {
+						return (
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
+								);
+							})
+						}
+					</optgroup>
+					<optgroup className="divider" label="Distance Weapons">
+						{
+						distanceWeapons.map((weapon, index) => {
+						return (
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
+								);
+							})
+						}
+					</optgroup>
+					<optgroup className="divider" label="Rods">
+						{
+						rodWeapons.map((weapon, index) => {
+						return (
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
+								);
+							})
+						}
+					</optgroup>
+					<optgroup className="divider" label="Wands">
+						{
+						wandWeapons.map((weapon, index) => {
+						return (
+								<option
+									value={JSON.stringify({
+										name: nameWithoutSpace(weapon.name),
+										type: weapon.type
+									})}
+									key={index}
+								> 
+									{weapon.name}
+								</option>
+								);
+							})
+						}
+					</optgroup>	
 				</select>
 			</Fragment>
 			<Fragment>
