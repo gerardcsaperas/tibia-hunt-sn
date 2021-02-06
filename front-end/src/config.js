@@ -11,6 +11,7 @@ export const cityOptions = [
     "Darashia",
     "Edron",
     "Farmine",
+    "Feyrist",
     "Gray Beach",
     "Issavi",
     "Liberty Bay",

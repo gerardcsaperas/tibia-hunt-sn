@@ -209,6 +209,7 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 								})}
 								key={index}
 							>
+								{""}
 								{shield.name}
 							</option>
 						);
