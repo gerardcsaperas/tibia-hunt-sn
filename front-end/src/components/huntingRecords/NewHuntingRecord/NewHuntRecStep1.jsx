@@ -48,7 +48,7 @@ const NewHuntRecStep1 = ({ _id, navigation, set, setSet, spot, setSpot, characte
 	const rodWeapons = Weapons.filter(weapon => weapon.type ==="Rods")
 	const wandWeapons = Weapons.filter(weapon => weapon.type ==="Wands")
 
-	const [ selectedWeapon, setSelectedWeapon ] = useState();
+	console.log(spot)
 
 	const [ validStep, setValidStep ] = useState(false);
 	const handleItemSelection = (type, e) => {

@@ -19,6 +19,13 @@ const NewHuntRecStep2 = ({ _id, navigation, supplies, setSupplies, ammunition, s
 		type: 'Runes'
 	});
 
+	const runes = Supplies.filter(supply => supply.type ==="Runes")
+	const potions = Supplies.filter(supply => supply.type ==="Potions")
+
+	const arrows = Ammunition.filter(ammo => ammo.name.includes("Arrow"))
+	const bolts = Ammunition.filter(ammo => ammo.name.includes("Bolt"))
+	
+
 	const [ selectedAmmunition, setSelectedAmmunition ] = useState({
 		name: 'Arrow'
 	});
@@ -78,24 +85,43 @@ const NewHuntRecStep2 = ({ _id, navigation, supplies, setSupplies, ammunition, s
 			<div className="form-input-row">
 				<label>Supplies</label>
 				<div className="flex-row">
-					<select
-						name="supply"
-						onChange={(e) => handleSuppliesChange(e, 'supply')}
-					>
-						{Supplies.map((item, index) => {
-							return (
-								<option
-									value={
-										JSON.stringify({
-										name: nameWithoutSpace(item.name),
-										type: item.type
-									})} 
-									key={index}
-								>
-									{item.name}
-								</option>
-							);
-						})}
+					<select name="supply" onChange={(e) => handleSuppliesChange(e, 'supply')}>
+						<optgroup className="divider" label="Runes">
+							{
+								runes.map((item, index) => {
+								return (
+									<option
+										value={
+											JSON.stringify({
+											name: nameWithoutSpace(item.name),
+											type: item.type
+										})} 
+										key={index}
+									>
+										{item.name}
+									</option>
+									);
+								})
+							}
+						</optgroup>
+						<optgroup className="divider" label="Potions">
+							{
+								potions.map((item, index) => {
+								return (
+									<option
+										value={
+											JSON.stringify({
+											name: nameWithoutSpace(item.name),
+											type: item.type
+										})} 
+										key={index}
+									>
+										{item.name}
+									</option>
+									);
+								})
+							}
+						</optgroup>
 					</select>
 					<input
 						type="number"
@@ -109,17 +135,30 @@ const NewHuntRecStep2 = ({ _id, navigation, supplies, setSupplies, ammunition, s
 			<div className="form-input-row">
 				<label>Ammunition</label>
 				<div className="flex-row">
-					<select
-						name="name"
-						onChange={handleAmmunitionChange}
-					>
-						{Ammunition.map((item, index) => {
-							return (
-								<option value={nameWithoutSpace(item.name)} key={index}>
-									{item.name}
-								</option>
-							);
-						})}
+					<select name="name" onChange={handleAmmunitionChange}>
+						<optgroup className="divider" label="Arrows">
+							{
+								arrows.map((item, index) => {
+								return (
+									<option value={nameWithoutSpace(item.name)} key={index}>
+										{item.name}
+									</option>
+									);
+								})
+							}
+						</optgroup>
+						<optgroup className="divider" label="Bolts">
+							{
+								bolts.map((item, index) => {
+								return (
+									<option value={nameWithoutSpace(item.name)} key={index}>
+										{item.name}
+									</option>
+									);
+								})
+							}
+						</optgroup>
+						
 					</select>
 					<input
 						name="ammount"
